@@ -1,5 +1,48 @@
 \chapter{Dataset}\label{chapter:Dataset}
 
-\section{Section}
+\section{Dataset Construction}
+The base structure of the dataset consists of three columns: the website's HTML, 
+a corresponding image, such as a screenshot, and the accessibility issues found 
+in the HTML. \newline
 
-\subsection{Subsection}
+\subsection{Data Collection}
+To make sure that the following steps deliver a meaningful result, the 
+dataset created for this study, tries to reflect real-world UI examples
+from different areas. \newline
+There have been a few attempts and analysis in the area of design-to-code, in 
+order to see how well current LLMs can perform this task. Some Researches  
+have open-sourced their dataset which allowed us to selectively pick good 
+examples for this study. Especially, the dataset \textit{Design2Code}~\parencite{si2024design2code} 
+and \textit{WebCode2M}~\parencite{gui2024webcode2m} have described promising 
+approaches concerning the data collection and cleaning. Both datasets contain
+real-world examples of webpages. \newline
+Therefore, 28 examples of the dataset \textit{Design2Code} and 25 examples of 
+the dataset \textit{WebCode2M} have been manually selected in order to ensure 
+a wide range of different areas and styles. \newline
+Manually erzählen
+
+\subsection{Data Refinement}
+Due to certain characteristics
+
+\subsubsection{Code Purification}
+Webpage code often contains redundant or not visible elements which can 
+cause violations against certain wcag criteria. Since those elements are not 
+required for image-to-code tasks, we have filtered them out the data entries
+to make sure that our analysis provides a fair comparison of real-world and 
+generated frontend code.
+
+\subsubsection{No External Dependencies}
+For our study, we assume a setting where only screenshots and corresponding 
+prompts will be provided. This means that no external sources for elements 
+such as images are taken into account. Instead of an external source, we 
+only provide a \textit{placeholder} source without changing the general 
+layout of the UI. \newline
+For similar reasons, the datasets, stated above, have deleted all href 
+attributes and links in the frontend code. While this does not change the 
+layout of a webpage, it automatically violates against WCAG CRITERIA (GENAU).
+To prevent the assumption that every webpage violates against this criteria, 
+we have added empty href links to the dataset.
+
+
+\subsection{Accessibility Violations}
+Due to certain characteristics
