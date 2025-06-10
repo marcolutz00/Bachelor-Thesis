@@ -26,7 +26,7 @@ our manual selection, we present the domain distribution in a pie chart in Figur
   \label{fig:dataset_distribution}
 \end{figure*}
 
-\section{Data Mutation}
+\section{Dataset Mutation}
 Due to the fact that Design2Code and Webcode2m use different strategies to purify
 their data, it is necessary to align both datasets in order to get a fair comparison.
 This includes removing all external dependencies such as multimedia files (e.g. images
@@ -35,5 +35,28 @@ placeholders like src=\"placeholder.jpg\" for images or href=\"\#\" for <a> Tags
 Lastly, we remove all of the non-visible content (advertisement-related, hidden) 
 of the webpages, because it is not necessary in an Image-to-Code environment and 
 could only add negatively to the accessibility score.\newline
-In a last step
+In a last step we try to minimize the risk of data leakage. Both datasets have been
+uploaded a few months before the official knowledge-cutoff of some of the LLMs, which
+we use, to Huggingface and theoretically, they were publicly available at that time. 
+While Design2Code has uploaded its data 3 months before the knowledge-cutoff, in the 
+case of Webcode2m, it was only 2 months. To tackle this issue, we mutate the dataset
+in the following way without adding or removing (max ±10 \%) many 
+accessibility violations:
+\begin{itemize}
+  \item \textbf{Text:} The entire text has been rewritten by a LLM. While the meaning
+    and the length (max ±20 \%) remains roughly the same, the wording changes
+    completely, in order to avoid memorization based on text snippets.
+  \item \textbf{Text Font:} To change the visual appearance of the data entries, we 
+    define a set of 5 commonly used fonts in webpages. Based on a random sample, we 
+    change the text font for each data entry.
+  \item \textbf{Colors:} The \textit{HUE} color code of each element is slightly
+    changed based on a random shift (±20 degrees). Apart from that, the saturation
+    and lightness of the color is changed by a maximum of ±20 \%.
+\end{itemize}
+Those changes combined allow us to alter the dataset in such a way to minimize the
+risk of data leakage. At this point, it is important to mention, that the mutations
+described above, caused some new, artificial accessibility violations. Nevertheless,
+the amount of new violations remains small ($\approx$ 1 new violation / file) and 
+thus is seen as negligible.
+
 

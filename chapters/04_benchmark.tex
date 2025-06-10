@@ -1,5 +1,14 @@
 \chapter{Benchmarks}\label{chapter:Benchmarks}
 
-\section{Section}
+\section{Visual and Structural}
+As the main instruction for LLMs for this study remains an Image-to-Code task, it 
+is necessary to evaluate the generated HTML/CSS code based on visual and structural
+similarity. One approach which seems very promising has been presented in the 
+paper Design2Code. This approach is more fine-grained than former ideas, since 
+it compares the input and the output on a component-level rather than in its entirety.
+The authors describe a sophisticated matching algorithm that combines the 
+HTML elements in the ground truth with those in the generated code. Based on this 
+matching, it is then possible to run several metrics, such as text-similarity,
+position-similarity, color-difference, clip score and area sum score.
 
-\subsection{Subsection}
+\section{Accessibility}
