@@ -4,9 +4,43 @@
 \chapter{Introduction}\label{chapter:introduction}
 
 \section{Section}
-The creation of Websites or user interfaces (UIs) normally follows a similar pattern.
-First UI designs are created with the help of special design tools. Those UI designs or 
-images present the 
+High quality web user interfaces are the backbone of our modern society. They allow us 
+to present products or services in an interactive way and reach billions of users every day.
+However, the creation of Websites or user interfaces (UIs) follows a similar and repetitive 
+pattern. \newline
+First UI designs are created with the help of special design tools. The UI designs present 
+the foundation for software developers. In a second step, those designs are translated into 
+functional UI code which tries to resemble the intended layout and structure, but also obey
+to other design aspects. \newline
+One essential, but yet frequently underestimated aspect in this process is \textit{accessibility}:
+According to the official \textit{WCAG} guidelines, code must be  perceivable, operable, 
+understandable and robust for people with various disabilities.\newline
+Complying with accessibility standards is not only an optional, moral aspect of 
+web development, but it now has to follow regulatory boundaries. Ensuring accessibility
+is no longer optional. For instance the \textit{European Accessibility Act} comes into 
+effect on June 28, 2025 and obliges any e-commerce or digital service in the EU 
+to comply with those standards.\newline
+Current Large-Language Models (LLMs) have shown signifant improvements in automatic
+code generation. Especially \textit{Image-to-Code} tasks where UI designs are given as 
+input and LLMs output the functional UI code, have been tested by various researchers in 
+the past. Several benchmarks have shown the competitive performance of LLMs on those tasks.
+However, the capability of modern LLMs to generate accessible Code in an Image-to-Code 
+environment has only started to gain researchers interest quite recently. Existing 
+research in this field have compared human to the generated code and tried to better
+align with the accessibility standards. Nevertheless, this has never been tested in 
+an Image-to-Code environment. Apart from that, accessibility does not only concern 
+the visual appearance of a web user interace, but also its functionality. Thus, it 
+requires the LLMs to have a deeper understanding than in classical Image-to-Code scenarios
+where LLMs only reproduce the input images pixel perfectly.
+
+\subsection{Our Contributions}
+In order to close this gap, we propose a large scale accessibility evaluation of LLM-based
+web code generation while also taking the visual similarity into account. Therefore,
+we use a dataset which contains of 53 real-world webpage examples which have been 
+gathered from existing datasets and mutated in order to prevent data leakage.
+It covers a wide spectrum of layouts, content areas and accessibility features.\newline
+This dataset
+
 
 
 
