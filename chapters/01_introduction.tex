@@ -35,11 +35,22 @@ where LLMs only reproduce the input images pixel perfectly.
 
 \subsection{Our Contributions}
 In order to close this gap, we propose a large scale accessibility evaluation of LLM-based
-web code generation while also taking the visual similarity into account. Therefore,
-we use a dataset which contains of 53 real-world webpage examples which have been 
-gathered from existing datasets and mutated in order to prevent data leakage.
-It covers a wide spectrum of layouts, content areas and accessibility features.\newline
-This dataset
+web code generation while also taking the visual similarity into account. 
+\begin{itemize}
+  \item Therefore, we use a dataset which contains of 53 real-world webpage 
+  examples which have been gathered from existing datasets and mutated in 
+  order to prevent data leakage. It covers a wide spectrum of layouts, content 
+  areas and accessibility features.
+  \item This dataset is then used in a reproducible evaluation pipeline which 
+  measures both the visual similarity (pixel/DOM fidelity), as well as the 
+  accessibility compliance. Therefore, we propose different benchmarks in 
+  order to measure the performance of the LLMs.
+  \item This environment will be tested in an in-depth comparison pipeline of 4 
+  state-of-the-art LLMs across different prompting strategies.
+\end{itemize}
+
+
+
 
 
 
