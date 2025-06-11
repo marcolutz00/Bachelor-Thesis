@@ -34,108 +34,25 @@ requires the LLMs to have a deeper understanding than in classical Image-to-Code
 where LLMs only reproduce the input images pixel perfectly.
 
 \subsection{Our Contributions}
-In order to close this gap, we propose a large scale accessibility evaluation of LLM-based
-web code generation while also taking the visual similarity into account. 
-\begin{itemize}
-  \item Therefore, we use a dataset which contains of 53 real-world webpage 
-  examples which have been gathered from existing datasets and mutated in 
-  order to prevent data leakage. It covers a wide spectrum of layouts, content 
-  areas and accessibility features.
-  \item This dataset is then used in a reproducible evaluation pipeline which 
-  measures both the visual similarity (pixel/DOM fidelity), as well as the 
-  accessibility compliance. Therefore, we propose different benchmarks in 
-  order to measure the performance of the LLMs.
-  \item This environment will be tested in an in-depth comparison pipeline of 4 
-  state-of-the-art LLMs across different prompting strategies.
-\end{itemize}
+In order to close this gap, we propose a large scale accessibility evaluation pipeline of LLM-based
+Image-to-Code generation. Even if the main contribution of this thesis is in the field 
+of accessibility, the visual and structural similarity will also be taken into account.\newline
+For this pipeline we use a dataset as input which contains of 53 real-world webpage 
+examples which have been gathered from existing datasets and mutated in 
+order to minimize data leakage. It covers a wide spectrum of layouts, content 
+areas and accessibility features. This dataset is the ground truth and also contains 
+information about the accessibility violations of the human developers.\newline
+This dataset is then used in a reproducible evaluation pipeline which 
+measures both the visual and structural similarity (pixel/DOM fidelity), as well as the 
+accessibility compliance. Therefore, we propose different benchmarks in 
+order to measure the performance of the LLMs. The corresponding data for the benchmarks
+will be evaluated during analyses after the code generation.\newline
+This environment will be tested in an in-depth comparison of 4 state-of-the-art LLMs 
+with vision capabilities (gpt-4o, gemini flash 2.0, llama 3.2 vision, qwen 7B vl).
+Those LLMs are tested across the images of the dataset and different prompting 
+strategies. We also propose a technique and implementation details to get the best 
+results.
 
 
 
 
-
-
-
-
-
-\subsection{Subsection}
-Citation test~\parencite{latex}.
-See~\autoref{tab:sample}, \autoref{fig:sample-drawing}, \autoref{fig:sample-plot}, \autoref{fig:sample-listing}.
-
-\begin{table}[htpb]
-  \caption[Example table]{An example for a simple table.}\label{tab:sample}
-  \centering
-  \begin{tabular}{l l l l}
-    \toprule
-      A & B & C & D \\
-    \midrule
-      1 & 2 & 1 & 2 \\
-      2 & 3 & 2 & 3 \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-\begin{figure}[htpb]
-  \centering
-  % This should probably go into a file in figures/
-  \begin{tikzpicture}[node distance=3cm]
-    \node (R0) {$R_1$};
-    \node (R1) [right of=R0] {$R_2$};
-    \node (R2) [below of=R1] {$R_4$};
-    \node (R3) [below of=R0] {$R_3$};
-    \node (R4) [right of=R1] {$R_5$};
-
-    \path[every node]
-      (R0) edge (R1)
-      (R0) edge (R3)
-      (R3) edge (R2)
-      (R2) edge (R1)
-      (R1) edge (R4);
-  \end{tikzpicture}
-  \caption[Example drawing]{An example for a simple drawing.}\label{fig:sample-drawing}
-\end{figure}
-
-\begin{figure}[htpb]
-  \centering
-
-  \pgfplotstableset{col sep=&, row sep=\\}
-  % This should probably go into a file in data/
-  \pgfplotstableread{
-    a & b    \\
-    1 & 1000 \\
-    2 & 1500 \\
-    3 & 1600 \\
-  }\exampleA
-  \pgfplotstableread{
-    a & b    \\
-    1 & 1200 \\
-    2 & 800 \\
-    3 & 1400 \\
-  }\exampleB
-  % This should probably go into a file in figures/
-  \begin{tikzpicture}
-    \begin{axis}[
-        ymin=0,
-        legend style={legend pos=south east},
-        grid,
-        thick,
-        ylabel=Y,
-        xlabel=X
-      ]
-      \addplot table[x=a, y=b]{\exampleA};
-      \addlegendentry{Example A};
-      \addplot table[x=a, y=b]{\exampleB};
-      \addlegendentry{Example B};
-    \end{axis}
-  \end{tikzpicture}
-  \caption[Example plot]{An example for a simple plot.}\label{fig:sample-plot}
-\end{figure}
-
-\begin{figure}[htpb]
-  \centering
-  \begin{tabular}{c}
-  \begin{lstlisting}[language=SQL]
-    SELECT * FROM tbl WHERE tbl.str = "str"
-  \end{lstlisting}
-  \end{tabular}
-  \caption[Example listing]{An example for a source code listing.}\label{fig:sample-listing}
-\end{figure}

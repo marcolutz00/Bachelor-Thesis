@@ -2344,8 +2344,12 @@
     <bcf:datasource type="file" datatype="bibtex">bibliography.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">latex</bcf:citekey>
-    <bcf:citekey order="2">latex</bcf:citekey>
+    <bcf:citekey order="1">alshayban2020accessibility</bcf:citekey>
+    <bcf:citekey order="2">chae2024thinkexecute</bcf:citekey>
+    <bcf:citekey order="3">suh2025accessiblecode</bcf:citekey>
+    <bcf:citekey order="4">alshayban2020accessibility</bcf:citekey>
+    <bcf:citekey order="5">chae2024thinkexecute</bcf:citekey>
+    <bcf:citekey order="6">suh2025accessiblecode</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

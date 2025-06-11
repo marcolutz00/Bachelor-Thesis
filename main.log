@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.5)  10 JUN 2025 18:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.5)  11 JUN 2025 17:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1151,42 +1151,25 @@ chapter 1.
 
 
 
-]
-LaTeX Font Info:    Trying to load font information for TS1+pplx on input line 40.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1pplx.fd
-File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
-)
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 136.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 137.
-) (./chapters/02_related_work.tex [2] [3]
+]) (./chapters/02_related_work.tex [2]
 chapter 2.
-) (./chapters/03_dataset.tex [4
+) (./chapters/03_dataset.tex [3
 
 
 ]
 chapter 3.
-<figures/dataset_distribution.png, id=126, 499.8675pt x 358.33875pt>
+<figures/dataset_distribution.png, id=125, 499.8675pt x 358.33875pt>
 File: figures/dataset_distribution.png Graphic file (type png)
 <use figures/dataset_distribution.png>
 Package pdftex.def Info: figures/dataset_distribution.png  used on input line 24.
 (pdftex.def)             Requested size: 418.25555pt x 299.84332pt.
-[5
+LaTeX Font Info:    Trying to load font information for TS1+pplx on input line 43.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1pplx.fd
+File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
+) [4
 
 
-] [6 <./figures/dataset_distribution.png>]) (./chapters/04_benchmark.tex [7]
+] [5 <./figures/dataset_distribution.png>]) (./chapters/04_benchmark.tex [6]
 chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 15--22
@@ -1198,22 +1181,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--36
 
  []
 
-[8
+[7
 
 
-]) (./chapters/05_empirical_study.tex [9]
+] [8]) (./chapters/05_empirical_study.tex [9]
 chapter 5.
-) (./chapters/06_evaluation.tex [10
+[10
 
 
-]
+] [11]) (./chapters/06_evaluation.tex [12]
 chapter 6.
-) (./chapters/07_conclusion.tex [11
+) (./chapters/07_conclusion.tex [13
 
 
 ]
 chapter 7.
-) [12
+) [14
 
 
 ]
@@ -1222,7 +1205,7 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 55.
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
- [13
+ [15
 
 
 ]
@@ -1231,13 +1214,25 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 56.
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
- [14
+ [16
 
 
 ]
 chapter without number
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/pplx/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 58.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
 No complaints by nag.
-[15
+[17
 
 
 ] (./main.aux)
@@ -1248,18 +1243,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49300 strings out of 478268
- 1103778 string characters out of 5846347
- 2088400 words of memory out of 5000000
- 66348 multiletter control sequences out of 15000+600000
- 519921 words of font info for 289 fonts, out of 8000000 for 9000
+ 48375 strings out of 478268
+ 1086250 string characters out of 5846347
+ 2083391 words of memory out of 5000000
+ 65357 multiletter control sequences out of 15000+600000
+ 526612 words of font info for 336 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 115i,19n,109p,10683b,2367s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (22 pages, 162974 bytes).
+ 115i,8n,109p,10683b,2367s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (24 pages, 196671 bytes).
 PDF statistics:
- 324 PDF objects out of 1000 (max. 8388607)
- 281 compressed objects within 3 object streams
- 62 named destinations out of 1000 (max. 500000)
- 78074 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 376 PDF objects out of 1000 (max. 8388607)
+ 328 compressed objects within 4 object streams
+ 70 named destinations out of 1000 (max. 500000)
+ 82234 words of extra memory for PDF output out of 89155 (max. 10000000)
 

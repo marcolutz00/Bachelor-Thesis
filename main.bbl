@@ -19,31 +19,207 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
-    \entry{latex}{book}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5d77435450d10a850a5b58577b9a456b}{%
-           family={Lamport},
-           familyi={L\bibinitperiod},
-           given={Leslie},
-           giveni={L\bibinitperiod},
+    \entry{alshayban2020accessibility}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=1f41949b83312bce526833415433ea59}{%
+           family={Alshayban},
+           familyi={A\bibinitperiod},
+           given={Abdulaziz},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7991df34ab6f7cacecbbbffd7df908cf}{%
+           family={Ahmed},
+           familyi={A\bibinitperiod},
+           given={Iftekhar},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7243bc9dcb94a297bc863f672dc9db0c}{%
+           family={Malek},
+           familyi={M\bibinitperiod},
+           given={Sam},
+           giveni={S\bibinitperiod},
            givenun=0}}%
       }
       \list{publisher}{1}{%
-        {Addison-Wesley Professional}%
+        {ACM}%
       }
-      \strng{namehash}{5d77435450d10a850a5b58577b9a456b}
-      \strng{fullhash}{5d77435450d10a850a5b58577b9a456b}
-      \strng{bibnamehash}{5d77435450d10a850a5b58577b9a456b}
-      \strng{authorbibnamehash}{5d77435450d10a850a5b58577b9a456b}
-      \strng{authornamehash}{5d77435450d10a850a5b58577b9a456b}
-      \strng{authorfullhash}{5d77435450d10a850a5b58577b9a456b}
-      \field{labelalpha}{Lam94}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \strng{namehash}{86840e67d47ddaca4af7e9aac061ba0f}
+      \strng{fullhash}{86840e67d47ddaca4af7e9aac061ba0f}
+      \strng{bibnamehash}{86840e67d47ddaca4af7e9aac061ba0f}
+      \strng{authorbibnamehash}{86840e67d47ddaca4af7e9aac061ba0f}
+      \strng{authornamehash}{86840e67d47ddaca4af7e9aac061ba0f}
+      \strng{authorfullhash}{86840e67d47ddaca4af7e9aac061ba0f}
+      \field{labelalpha}{AAM20}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{LaTeX : A Documentation Preparation System User's Guide and Reference Manual}
-      \field{year}{1994}
+      \field{booktitle}{Proceedings of the 42nd International Conference on Software Engineering (ICSE)}
+      \field{title}{Accessibility Issues in Android Apps: State of Affairs, Sentiments, and Ways Forward}
+      \field{year}{2020}
+      \field{pages}{1323\bibrangedash 1334}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1145/3377811.3380392
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3377811.3380392
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3377811.3380392
+      \endverb
+    \endentry
+    \entry{chae2024thinkexecute}{article}{}
+      \name{author}{11}{}{%
+        {{un=0,uniquepart=base,hash=5adf35c08b0ae176835d34b15a904b38}{%
+           family={Chae},
+           familyi={C\bibinitperiod},
+           given={Hyungjoo},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=6c1fa52d5524a93710ccd70d35b2d0ae}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Yeonghyeon},
+           giveni={Y\bibinitperiod},
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=bff0730b751bd0c704fb41abc4604d73}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Seungone},
+           giveni={S\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=eaf4d7bc3f84a937abf32f94ca017ef2}{%
+           family={Ong},
+           familyi={O\bibinitperiod},
+           given={Kai\bibnamedelima Tzu-iunn},
+           giveni={K\bibinitperiod\bibinitdelim T\bibinithyphendelim i\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b2ab21f63d80150bdd14c7b6b56cc33f}{%
+           family={Kwak},
+           familyi={K\bibinitperiod},
+           given={Beong-woo},
+           giveni={B\bibinithyphendelim w\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=80ae6727bf163396609f8f15f31b0de7}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Moohyeon},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f0cec89048cae711a08960c1e0f8b161}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Seonghwan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9900094fc763bb4ba200e50c43279573}{%
+           family={Kwon},
+           familyi={K\bibinitperiod},
+           given={Taeyoon},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cd085ea7b890d266a6057330bf8953f8}{%
+           family={Chung},
+           familyi={C\bibinitperiod},
+           given={Jiwan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=200883e8fe54d4ac8aca152db92a5d8d}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Youngjae},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4400d17fdfab1c6fafec82253d4df6fb}{%
+           family={Yeo},
+           familyi={Y\bibinitperiod},
+           given={Jinyoung},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5ae5c865c679732d2fbbb773cbdbd628}
+      \strng{fullhash}{baa047741bd805dc4671254248ea0fd5}
+      \strng{bibnamehash}{baa047741bd805dc4671254248ea0fd5}
+      \strng{authorbibnamehash}{baa047741bd805dc4671254248ea0fd5}
+      \strng{authornamehash}{5ae5c865c679732d2fbbb773cbdbd628}
+      \strng{authorfullhash}{baa047741bd805dc4671254248ea0fd5}
+      \field{labelalpha}{Cha+24}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{arXiv preprint arXiv:2404.02575}
+      \field{title}{Language Models as Compilers: Simulating Pseudocode Execution Improves Algorithmic Reasoning in Language Models}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.48550/arXiv.2404.02575
+      \endverb
+      \verb{eprint}
+      \verb 2404.02575
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2404.02575
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2404.02575
+      \endverb
+    \endentry
+    \entry{suh2025accessiblecode}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=c42b083adc0e56a83478e05918c96f2b}{%
+           family={Suh},
+           familyi={S\bibinitperiod},
+           given={Hyunjae},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=552ac112bb7a8fbd7cf7d1205ed8b0f3}{%
+           family={Tafreshipour},
+           familyi={T\bibinitperiod},
+           given={Mahan},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7243bc9dcb94a297bc863f672dc9db0c}{%
+           family={Malek},
+           familyi={M\bibinitperiod},
+           given={Sam},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7991df34ab6f7cacecbbbffd7df908cf}{%
+           family={Ahmed},
+           familyi={A\bibinitperiod},
+           given={Iftekhar},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e346a43653b1e920ef0b4542f405f38b}
+      \strng{fullhash}{e346a43653b1e920ef0b4542f405f38b}
+      \strng{bibnamehash}{e346a43653b1e920ef0b4542f405f38b}
+      \strng{authorbibnamehash}{e346a43653b1e920ef0b4542f405f38b}
+      \strng{authornamehash}{e346a43653b1e920ef0b4542f405f38b}
+      \strng{authorfullhash}{e346a43653b1e920ef0b4542f405f38b}
+      \field{labelalpha}{Suh+25}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{arXiv preprint arXiv:2503.15885}
+      \field{title}{Human or LLM? A Comparative Study on Accessible Code Generation Capability}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.48550/arXiv.2503.15885
+      \endverb
+      \verb{eprint}
+      \verb 2503.15885
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2503.15885
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2503.15885
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

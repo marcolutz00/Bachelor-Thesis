@@ -1,5 +1,104 @@
 \chapter{Experiment}\label{chapter:Experiment}
 
-\section{Section}
+\section{Experiment Setup}
+In this thesis, we test the capabilities of LLMs to generate accessible code in an 
+Image-to-Code environment. Therefore, a pipeline is used which provides the LLMs an 
+image with instructions to replicate this image in HTML/CSS. In the following, 
+advanced prompting techniques are also provided to guide the LLMs to generate
+accessible code. The output of the LLMs is then analyzed on visual and structural 
+similarity, as well as on accessibility compliance, based on WCAG 2.2 standards.\newline
+After the generation of the LLMs' output for the Image-to-Code task, the HTML/CSS
+is first analyzed on visual and structural similarity as described above and afterwards
+analyzed on accessibility violations with the help of axe-core, lighthouse and pa11y.
 
-\subsection{Subsection}
+
+\subsection{Model Selection}
+The selection of the LLMs is a decisive factor for the interpretation of the results.
+To see the diffences of performance, we decided to use different types of 
+state-of-the-art models. They differentiate in size, architecture and use case, but 
+they all have vision capabilities in common.
+In order to provide a general picture, we identified three model groups of interest:
+\begin{itemize}
+  \item \textbf{Commercial:} Big, commercial models build the foundation of our tests.
+    We use \textit{gpt-4o} and \textit{gemini flash 2.0} as representatives of this group.
+    They have not been specifically trained for Image-to-Code tasks, but prior papers 
+    already show promising results in this field.
+  \item \textbf{Small, Open-Source:} Small, open-source models build the second group. 
+    Theoretically, they should be more accessible for the public and could be hosted 
+    on local machines. The representatives of this group are \textit{llama 3.2 vision}
+    and \textit{qwen 7B vl}. While the models are signifant smaller, they still have been 
+    trained on a lot of data.
+  \item \textbf{Fine-tuned:} The last group are fine-tuned models. In this case, we 
+    consider models which have been trained specifically on similar Image-to-Code 
+    tasks. We use \textit{VLM WebSight finetuned} which is a fine-tuned version official
+    the models \textit{SigLIP} and \textit{Mistral 7B v0.1}. It has been trained on the 
+    \textit{Websight} dataset which contains more than 800,000 HTML/CSS data entries. 
+\end{itemize}
+
+\section{Prompting Techniques}
+In order to understand the models' capabilities to generate accessible code, we test
+the models with different prompting techniques. Prior research has shown that more 
+advanced prompting techniques can help to improve the generation of robust and 
+accurate code. Therefore, we combine commonly used techniques with 
+advanced prompting techniques to guide the LLMs to create more accessible code.
+All prompts can be seen in the appendix.
+
+\subsection{Naive}
+The naive approach only instructs the LLMs to accurately fulfill Image-to-Code tasks
+without mentioning accessibility in its prompt. This shows how state-of-the-art 
+LLMs perform in generating accessible code naturally without instructing it to 
+do so.
+
+\subsection{Zero-Shot}
+The zero-shot approach resembles the naive approach in terms of the Image-to-Code
+instructions. However, here the LLMs are explicitly instructed to obey the WCAG 
+2.2 standards. The prompt does not contain examples, however it emphasizes 
+accessibility by reminding it about the WCAG standards including a link to 
+official WCAG standards.
+
+\subsection{Reasoning}
+The reasoning prompt is used to let the LLMs reason about the task and possible 
+accessibility problems within the generation. Similar to prior work, we use 
+a prompt to generate reasoning steps internally with \"Let’s think step by 
+step.\" before generating the output~\parencite{chae2024thinkexecute}.
+
+\subsection{Iterative}
+The iterative approach follows a similar approach to recent findings in the area
+of generating more accessible code~\parencite{suh2025accessiblecode}. This 
+prompting technique lets the LLMs generate Image-to-Code tasks by using the naive 
+prompting technique in the base iteration. Afterwards, the generated output is 
+analyzed and accessibility violations found are incorporated with a refinement 
+message to the LLMs. The objective is to instruct the LLMs to create a more 
+accessible code based on the violations found in the code. The iterative approach 
+contains one naive prompt and three rounds of code refinement. If the LLMs 
+generate code without any accessibility violations within one round, the 
+iterations stop.
+
+\subsection{Component-Aware}
+In this thesis, we introduce the component-aware approach. This approach combines 
+a target-oriented \textit{few-shot} prompt combined with 
+\textit{Retrieval Augmented Generation (RAG)}.\newline
+The few-shot approach presented in prior papers had the disadvantage that it only
+provided general examples without taking the differences in elements and components 
+for each data entry into account. Especially, in the case of accessibility with 
+a wide range of different standards, those examples could not be exhaustive or cover 
+all relevant standards for a data entry. In this thesis, we present a methodology to 
+pre-process the images given as input and detect relevant frontend elements within it.
+Along with specific examples, those elements are given as input to the LLMs.\newline
+In a first step, the input image is segmented into multiple masks. Those masks 
+represent different elements on the webpage which follow different accessibility 
+standards. Based on their bounding boxes, the image is croped into smaller pieces 
+and those pieces are processed in OpenAI's \textit{CLIP-Model} to get the 
+corresponding text embeddings. The text embeddings have been defined as a disjoint 
+set of frontend elements (such as 
+\textit{button}, \textit{form}, \textit{image}, \textit{paragraph}, \textit{list}, 
+\ldots). \newline
+In a second step, those identified frontend components are used to retrieve
+relevant examples from a pre-defined set of examples. This set of examples is
+collected from the official WCAG website and stored externally. In case one 
+component is included in one of the images, the examples are sent as input to
+the LLMs. 
+
+\section{Accessibility Evaluation}
+
+\section{Similarity Evaluation}
