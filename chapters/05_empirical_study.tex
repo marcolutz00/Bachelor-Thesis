@@ -56,6 +56,13 @@ instructions. However, here the LLMs are explicitly instructed to obey the WCAG
 accessibility by reminding it about the WCAG standards including a link to 
 official WCAG standards.
 
+\subsection{Few-Shot}
+The zero-shot approach resembles the naive approach in terms of the Image-to-Code
+instructions. However, here the LLMs are explicitly instructed to obey the WCAG 
+2.2 standards. The prompt does not contain examples, however it emphasizes 
+accessibility by reminding it about the WCAG standards including a link to 
+official WCAG standards.
+
 \subsection{Reasoning}
 The reasoning prompt is used to let the LLMs reason about the task and possible 
 accessibility problems within the generation. Similar to prior work, we use 
@@ -74,30 +81,6 @@ contains one naive prompt and three rounds of code refinement. If the LLMs
 generate code without any accessibility violations within one round, the 
 iterations stop.
 
-\subsection{Component-Aware}
-In this thesis, we introduce the component-aware approach. This approach combines 
-a target-oriented \textit{few-shot} prompt combined with 
-\textit{Retrieval Augmented Generation (RAG)}.\newline
-The few-shot approach presented in prior papers had the disadvantage that it only
-provided general examples without taking the differences in elements and components 
-for each data entry into account. Especially, in the case of accessibility with 
-a wide range of different standards, those examples could not be exhaustive or cover 
-all relevant standards for a data entry. In this thesis, we present a methodology to 
-pre-process the images given as input and detect relevant frontend elements within it.
-Along with specific examples, those elements are given as input to the LLMs.\newline
-In a first step, the input image is segmented into multiple masks. Those masks 
-represent different elements on the webpage which follow different accessibility 
-standards. Based on their bounding boxes, the image is croped into smaller pieces 
-and those pieces are processed in OpenAI's \textit{CLIP-Model} to get the 
-corresponding text embeddings. The text embeddings have been defined as a disjoint 
-set of frontend elements (such as 
-\textit{button}, \textit{form}, \textit{image}, \textit{paragraph}, \textit{list}, 
-\ldots). \newline
-In a second step, those identified frontend components are used to retrieve
-relevant examples from a pre-defined set of examples. This set of examples is
-collected from the official WCAG website and stored externally. In case one 
-component is included in one of the images, the examples are sent as input to
-the LLMs. 
 
 \section{Accessibility Evaluation}
 
