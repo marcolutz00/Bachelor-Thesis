@@ -1,8 +1,30 @@
 \chapter{Related Work}\label{chapter:RelatedWork}
 
+\section{Background}
+Large Language Models (LLMs) and their performances in various domains are improving 
+rapidly. Especially, in the domain of coding those models show promising results. 
+It is therefore not surprising to see attempts to automate frontend code generation.
+
+\section{Image-to-Code}
+The focus of the first attempts in this area was to capture the image as precise as 
+possible in order to translate it into Frontend Code. As \textit{pix2code}~\parencite{beltramelli2017pix2code} 
+used a combination of CNN encoder with a LSTM decoder to translate screenshots into 
+a frontend specific language. While it showed promising results for the possibility 
+of end-to-end learning, it could not create standard HTML/CSS.\newline
+Within the recent years, LLMs have improved a lot and new vision capabilities have been 
+added to the models. Instead of further retraining models, researchers have 
+explored the capabilities of different prompting structures. A prominent example is
+\textit{DCGen}~\parencite{wan2024dcgen} where researchers have segmented screenshots 
+into smaller, visual segments, let LLMs generate code for each segment and reassemble 
+them them afterwards. This approach reduces the misplacement of components and shows
+improvements in the visual similarity.\newline
+Other related papers explored ways to improve prompting techniques (paper). They 
+showed that advanced prompting techniques, such as few-shot, chain-of-thought and 
+self-reflection can improve the performance without changing the models parameters.
+
+
 \section{Web Accessibility}
 asf
 
-\section{Image-to-Code}
-sided
-
+\section{AI-enhanced GUI testing}
+adsf

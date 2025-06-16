@@ -69,6 +69,43 @@
       \verb https://doi.org/10.1145/3377811.3380392
       \endverb
     \endentry
+    \entry{beltramelli2017pix2code}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c026bb9f137d7fb540e8e2690e756f86}{%
+           family={Beltramelli},
+           familyi={B\bibinitperiod},
+           given={Tony},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c026bb9f137d7fb540e8e2690e756f86}
+      \strng{fullhash}{c026bb9f137d7fb540e8e2690e756f86}
+      \strng{bibnamehash}{c026bb9f137d7fb540e8e2690e756f86}
+      \strng{authorbibnamehash}{c026bb9f137d7fb540e8e2690e756f86}
+      \strng{authornamehash}{c026bb9f137d7fb540e8e2690e756f86}
+      \strng{authorfullhash}{c026bb9f137d7fb540e8e2690e756f86}
+      \field{labelalpha}{Bel17}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{arXiv preprint arXiv:1705.07962}
+      \field{title}{pix2code: Generating Code from a Graphical User Interface Screenshot}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.48550/arXiv.1705.07962
+      \endverb
+      \verb{eprint}
+      \verb 1705.07962
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1705.07962
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1705.07962
+      \endverb
+    \endentry
     \entry{chae2024thinkexecute}{article}{}
       \name{author}{11}{}{%
         {{un=0,uniquepart=base,hash=5adf35c08b0ae176835d34b15a904b38}{%
@@ -219,6 +256,79 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/2503.15885
+      \endverb
+    \endentry
+    \entry{wan2024dcgen}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=747384ae31b320890e9936a8dc82b11d}{%
+           family={Wan},
+           familyi={W\bibinitperiod},
+           given={Yuxuan},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7da60c649bd161a6fe82f2ba70ea3da9}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Chaozheng},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9b53e627b81965a9877bcd6095958c47}{%
+           family={Dong},
+           familyi={D\bibinitperiod},
+           given={Yi},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ea392bf57e05695a2a152ef2a5fc6062}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Wenxuan},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2a10ef69c7a04870672210c5652c073f}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Shuqing},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b34c59123609d2461f65956c1edaa174}{%
+           family={Huo},
+           familyi={H\bibinitperiod},
+           given={Yintong},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=89afa2af91c8dfa048fdcec740d6684e}{%
+           family={Lyu},
+           familyi={L\bibinitperiod},
+           given={Michael\bibnamedelima R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ef112f43f614aef2aae3db59e2af7f8e}
+      \strng{fullhash}{64c9bc0469d296bf5e377440d54c31a0}
+      \strng{bibnamehash}{64c9bc0469d296bf5e377440d54c31a0}
+      \strng{authorbibnamehash}{64c9bc0469d296bf5e377440d54c31a0}
+      \strng{authornamehash}{ef112f43f614aef2aae3db59e2af7f8e}
+      \strng{authorfullhash}{64c9bc0469d296bf5e377440d54c31a0}
+      \field{labelalpha}{Wan+24}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{arXiv preprint arXiv:2406.16386}
+      \field{title}{Automatically Generating UI Code from Screenshot: A Divide-and-Conquer-Based Approach}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.48550/arXiv.2406.16386
+      \endverb
+      \verb{eprint}
+      \verb 2406.16386v3
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2406.16386
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2406.16386
       \endverb
     \endentry
   \enddatalist

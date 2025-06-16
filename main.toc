@@ -5,8 +5,10 @@
 \contentsline {section}{\numberline {1.1}Section}{1}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Our Contributions}{2}{subsection.1.1.1}%
 \contentsline {chapter}{\numberline {2}Related Work}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Web Accessibility}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.1}Background}{3}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Image-to-Code}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Web Accessibility}{3}{section.2.3}%
+\contentsline {section}{\numberline {2.4}AI-enhanced GUI testing}{3}{section.2.4}%
 \contentsline {chapter}{\numberline {3}Dataset}{4}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Construction}{4}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Content Distribution}{4}{subsection.3.1.1}%
