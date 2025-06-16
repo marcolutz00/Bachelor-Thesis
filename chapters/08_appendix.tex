@@ -1,0 +1,115 @@
+\chapter{Appendix}\label{chapter:Appendix}
+
+\section{Prompts}
+\definecolor{myblue}{RGB}{0,55,205}
+
+\tikzset{
+  promptbox/.style={
+    draw=myblue,
+    dashed,
+    dash pattern=on 3pt off 2pt,
+    rounded corners=6pt,
+    line width=.8pt,
+    font=\normalsize,
+    inner sep=6pt,
+    align=left,
+  },
+}
+
+% Breiten für die beiden Reihen (nach Belieben anpassen)
+\newcommand{\topboxwidth}{0.47\textwidth}
+\newcommand{\botboxwidth}{0.30\textwidth}
+\newcommand{\hgap}{6mm}   % horizontaler Abstand zwischen Boxen
+\newcommand{\vgap}{6mm}
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[node distance=\hgap]  % stellt den h-Abstand
+%--------------------------------------------------------------
+%  REIHE 1 – zwei Boxen
+%--------------------------------------------------------------
+% 1 a) Direct Prompt (linke Box oben)
+\node[promptbox,
+      text width=\topboxwidth,
+      anchor=north west]                    % links oben beginnen
+      (direct)
+{%
+  \centering\bfseries Naive Prompt\\[4pt]
+  \textcolor{myblue}{\emph{(Instruction):}}\\
+  {\footnotesize 
+  You are an expert web developer who specializes in HTML and CSS.
+  Your task is to replicate the provided UI screenshot of a webpage pixel-perfectly using HTML and CSS.\newline
+  \par}
+
+  \textcolor{myblue}{\emph{[Guidelines]:}}\\
+  \begin{enumerate}\itemsep2pt
+    \item {\footnotesize \textbf{Layout}: Structure the markup so the spatial arrangement of every element exactly matches the screenshot.\par}
+    \item {\footnotesize \textbf{Styling}: Reproduce fonts, colors, spacing, sizes, borders, shadows, and any other visual details as closely as possible.\par}
+    \item {\footnotesize \textbf{Content}: Include all visible text, icons, and graphic elements.\par}
+    \item {\footnotesize \textbf{Image placeholders}: Blue boxes represent images. Use `<img>` and as a source the placeholder file `src="src/placeholder.jpg"`
+    to reserve space. However, the appropriate height and width is very important.\par}
+    \item {\footnotesize \textbf{Delivery format}: Output **only** the complete HTML and CSS code in **one file** — no additional comments or explanations.\par}
+  \end{enumerate}
+
+   {\footnotesize  
+    Now convert the following image into HTML/CSS according to these requirements.
+    \par}
+};
+
+% 1 b) zweite Box oben (Beispiel: Mark Prompt)
+\node[promptbox,
+      text width=\topboxwidth,
+      right=\hgap of direct.north east,     % rechts daneben
+      anchor=north west]                    % obere Kante ausrichten
+      (markTop)
+{%
+  \centering\bfseries Accessibility Reminder\\[4pt]
+  \textcolor{myblue}{\emph{(Instruction):}}
+  In the first screenshot, elements are highlighted…%
+};
+
+%--------------------------------------------------------------
+%  Koordinate für die zweite Reihe
+%--------------------------------------------------------------
+\coordinate (row2) at ($(direct.south west) + (0,-\vgap)$); % direkt unter Direct Prompt
+
+%--------------------------------------------------------------
+%  REIHE 2 – drei Boxen
+%--------------------------------------------------------------
+% 2 a) Chain-of-Thought Prompt
+\node[promptbox,
+      text width=\botboxwidth,
+      anchor=north west] (cot) at (row2)
+{%
+  \centering\bfseries Zero-Shot Prompt\\[4pt]
+  \textcolor{myblue}{\emph{(sg):}} You should think step by step:\\[2pt]
+  \begin{enumerate}\itemsep0pt
+    \item Understand the interaction…
+    \item Locate interactive elements…
+    \item Implement the interaction…
+  \end{enumerate}
+  Combine HTML, CSS and JavaScript codes into one file…%
+};
+
+% 2 b) Failure-aware Prompt
+\node[promptbox,
+      text width=\botboxwidth,
+      right=\hgap of cot] (fap)
+{%
+  \centering\bfseries Few-Shot Prompt (FAP)\\[4pt]
+  \textcolor{myblue}{\emph{(Instruction):}}
+  There are ten types of errors you should avoid…%
+};
+
+% 2 c) dritte Box unten  – Platzhalter
+\node[promptbox,
+      text width=\botboxwidth,
+      right=\hgap of fap] (extra)
+{%
+  \centering\bfseries Chain-of-Thought Prompt (CoT)\\[4pt]
+  Hier kannst du bei Bedarf eine fünfte Bubble ergänzen…%
+};
+
+\end{tikzpicture}
+\caption{Overview of Prompts.}
+\end{figure}

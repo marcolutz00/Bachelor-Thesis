@@ -19,6 +19,32 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
+    \entry{wcag22}{standard}{}
+      \list{organization}{1}{%
+        {World Wide Web Consortium}%
+      }
+      \field{labelalpha}{24}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{day}{12}
+      \field{month}{12}
+      \field{number}{REC-WCAG22-20241212}
+      \field{title}{Web Content Accessibility Guidelines (WCAG) 2.2}
+      \field{type}{W3C Recommendation}
+      \field{urlday}{16}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.w3.org/TR/WCAG22/
+      \endverb
+      \verb{url}
+      \verb https://www.w3.org/TR/WCAG22/
+      \endverb
+    \endentry
     \entry{alshayban2020accessibility}{inproceedings}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=1f41949b83312bce526833415433ea59}{%
@@ -67,6 +93,69 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1145/3377811.3380392
+      \endverb
+    \endentry
+    \entry{aljedaani2024chatgpt}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=444a03c1b087dd29f5a72b4b5d0c37e0}{%
+           family={Aljedaani},
+           familyi={A\bibinitperiod},
+           given={Wajdi},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a778a25f7afbab963456ecc3b66fad12}{%
+           family={Habib},
+           familyi={H\bibinitperiod},
+           given={Abdulrahman},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=90bbbfeedf2c02c92680a1e4cd2d4f0f}{%
+           family={Aljohani},
+           familyi={A\bibinitperiod},
+           given={Ahmed},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a4ad24157f5ad558622468fdd96f906a}{%
+           family={Eler},
+           familyi={E\bibinitperiod},
+           given={Marcelo\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9d3212355a30aee6cbd651e74a322daf}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Yunhe},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \strng{namehash}{9a8c00c5c3087260b6651d5d8b9988eb}
+      \strng{fullhash}{f82f0da42f4788a9e185314a83464d25}
+      \strng{bibnamehash}{f82f0da42f4788a9e185314a83464d25}
+      \strng{authorbibnamehash}{f82f0da42f4788a9e185314a83464d25}
+      \strng{authornamehash}{9a8c00c5c3087260b6651d5d8b9988eb}
+      \strng{authorfullhash}{f82f0da42f4788a9e185314a83464d25}
+      \field{labelalpha}{Alj+24}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 21st International Web for All Conference (W4A '24)}
+      \field{series}{W4A '24}
+      \field{title}{Does {ChatGPT} Generate Accessible Code? Investigating Accessibility Challenges in {LLM}-Generated Source Code}
+      \field{year}{2024}
+      \field{pages}{165\bibrangedash 176}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1145/3677846.3677854
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3677846.3677854
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3677846.3677854
       \endverb
     \endentry
     \entry{beltramelli2017pix2code}{article}{}
@@ -329,6 +418,33 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/2406.16386
+      \endverb
+    \endentry
+    \entry{webaim2025million}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=790eee551afe5a8832859712ba1b5f4f}{%
+           family={WebAIM},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{fullhash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{bibnamehash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{authorbibnamehash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{authornamehash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{authorfullhash}{790eee551afe5a8832859712ba1b5f4f}
+      \field{labelalpha}{Web25}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-06-16}
+      \field{title}{The WebAIM Million - An annual accessibility analysis of the top 1,000,000 home pages}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://webaim.org/projects/million/
+      \endverb
+      \verb{url}
+      \verb https://webaim.org/projects/million/
       \endverb
     \endentry
   \enddatalist

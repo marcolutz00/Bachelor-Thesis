@@ -2346,14 +2346,23 @@
   <bcf:section number="0">
     <bcf:citekey order="1">beltramelli2017pix2code</bcf:citekey>
     <bcf:citekey order="2">wan2024dcgen</bcf:citekey>
-    <bcf:citekey order="3">alshayban2020accessibility</bcf:citekey>
-    <bcf:citekey order="4">chae2024thinkexecute</bcf:citekey>
-    <bcf:citekey order="5">suh2025accessiblecode</bcf:citekey>
-    <bcf:citekey order="6">beltramelli2017pix2code</bcf:citekey>
-    <bcf:citekey order="7">wan2024dcgen</bcf:citekey>
-    <bcf:citekey order="8">alshayban2020accessibility</bcf:citekey>
-    <bcf:citekey order="9">chae2024thinkexecute</bcf:citekey>
-    <bcf:citekey order="10">suh2025accessiblecode</bcf:citekey>
+    <bcf:citekey order="3">wcag22</bcf:citekey>
+    <bcf:citekey order="4">webaim2025million</bcf:citekey>
+    <bcf:citekey order="5">aljedaani2024chatgpt</bcf:citekey>
+    <bcf:citekey order="6">aljedaani2024chatgpt</bcf:citekey>
+    <bcf:citekey order="7">suh2025accessiblecode</bcf:citekey>
+    <bcf:citekey order="8">suh2025accessiblecode</bcf:citekey>
+    <bcf:citekey order="9">alshayban2020accessibility</bcf:citekey>
+    <bcf:citekey order="10">chae2024thinkexecute</bcf:citekey>
+    <bcf:citekey order="11">suh2025accessiblecode</bcf:citekey>
+    <bcf:citekey order="12">beltramelli2017pix2code</bcf:citekey>
+    <bcf:citekey order="13">wan2024dcgen</bcf:citekey>
+    <bcf:citekey order="14">wcag22</bcf:citekey>
+    <bcf:citekey order="15">webaim2025million</bcf:citekey>
+    <bcf:citekey order="16">aljedaani2024chatgpt</bcf:citekey>
+    <bcf:citekey order="17">suh2025accessiblecode</bcf:citekey>
+    <bcf:citekey order="18">alshayban2020accessibility</bcf:citekey>
+    <bcf:citekey order="19">chae2024thinkexecute</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
