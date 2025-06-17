@@ -1,5 +1,100 @@
 \chapter{Appendix}\label{chapter:Appendix}
 
+\section{Results Data Leakage}
+\sisetup{
+  table-format = 1.4,    % maximal 1 Vorkommastelle, 4 Nachkommastellen
+  detect-all            % übernimmt Schriftart/Fettdruck
+}
+
+% ---------- eigene Spaltentypen ----------
+\newcolumntype{d}{S}     % „d“ steht für Dezimalspalte
+
+\begin{table}[htbp]
+\centering
+\caption{OpenAI GPT-4o: Data Leakage based on 3 iterations}
+\small                 % optional verkleinern
+\setlength{\tabcolsep}{6pt} % enger packen, falls nötig
+\begin{tabular}{
+  l               % Model
+  l               % Prompt
+  | d        % Full Page (3 Spalten)
+  | d d d d d     % Interaction Part (5 Spalten)
+}
+\toprule
+\cmidrule(lr){3-3}\cmidrule(l){4-8}
+\multicolumn{2}{c|}{\textbf{}} & {Final Score} & {Size} & {Text} & {Position} & {Text Color} & {CLIP}\\
+\midrule
+% ---------------- Modell 1 ----------------
+\multirow{4}{*}{Test Dataset} 
+  & Naive & \bfseries 0.3220 & 0.2100 & 0.1531 & 0.0415 & \bfseries 0.2090 & \bfseries 0.3449\\
+  & Zero-Shot    & 0.2031 & 0.1085 & 0.0894 & 0.0352 & 0.1212 & 0.1979\\
+  & Few-Shot   & 0.2752 & 0.1706 & 0.1188 & 0.0514 & 0.1706 & 0.2647\\
+  & Reasoning & 0.2668 & 0.1675 & 0.1204 & 0.0427 & 0.1669 & 0.2692\\
+  & Iterative & 0.2668 & 0.1675 & 0.1204 & 0.0427 & 0.1669 & 0.2692\\
+\midrule
+% ---------------- Modell 2 ----------------
+\multirow{4}{*}{Experiment Dataset}
+  & Naive & 0.4169 & 0.3230 & 0.2177 & 0.0952 & 0.2529 & 0.4786\\
+  & Zero-Shot    & 0.3895 & 0.2806 & 0.1981 & 0.0744 & 0.2259 & 0.4305\\
+  & Few-Shot   & \bfseries 0.4586 & \bfseries 0.3541 & \bfseries 0.2468 & \bfseries 0.1348 & \bfseries 0.2798 & \bfseries 0.5267\\
+  & Reasoning & 0.4217 & 0.2899 & 0.2209 & 0.1015 & 0.2529 & 0.4786\\
+  & Iterative & 0.4217 & 0.2899 & 0.2209 & 0.1015 & 0.2529 & 0.4786\\
+\midrule
+% ---------------- weitere Modelle hier ----------------
+% (dupliziere das obige Muster)
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Gemini-2.0-flash: Data Leakage based on 3 iterations}
+\small                 % optional verkleinern
+\setlength{\tabcolsep}{6pt} % enger packen, falls nötig
+\begin{tabular}{
+  l               % Model
+  l               % Prompt
+  | d        % Full Page (3 Spalten)
+  | d d d d d     % Interaction Part (5 Spalten)
+}
+\toprule
+\cmidrule(lr){3-3}\cmidrule(l){4-8}
+\multicolumn{2}{c|}{\textbf{}} & {Final Score} & {Size} & {Text} & {Position} & {Text Color} & {CLIP}\\
+\midrule
+% ---------------- Modell 1 ----------------
+\multirow{4}{*}{Test Dataset} 
+  & Naive & \bfseries 0.3220 & 0.2100 & 0.1531 & 0.0415 & \bfseries 0.2090 & \bfseries 0.3449\\
+  & Zero-Shot    & 0.2031 & 0.1085 & 0.0894 & 0.0352 & 0.1212 & 0.1979\\
+  & Few-Shot   & 0.2752 & 0.1706 & 0.1188 & 0.0514 & 0.1706 & 0.2647\\
+  & Reasoning & 0.2668 & 0.1675 & 0.1204 & 0.0427 & 0.1669 & 0.2692\\
+  & Iterative & 0.2668 & 0.1675 & 0.1204 & 0.0427 & 0.1669 & 0.2692\\
+\midrule
+% ---------------- Modell 2 ----------------
+\multirow{4}{*}{Experiment Dataset}
+  & Naive & 0.4169 & 0.3230 & 0.2177 & 0.0952 & 0.2529 & 0.4786\\
+  & Zero-Shot    & 0.3895 & 0.2806 & 0.1981 & 0.0744 & 0.2259 & 0.4305\\
+  & Few-Shot   & \bfseries 0.4586 & \bfseries 0.3541 & \bfseries 0.2468 & \bfseries 0.1348 & \bfseries 0.2798 & \bfseries 0.5267\\
+  & Reasoning & 0.4217 & 0.2899 & 0.2209 & 0.1015 & 0.2529 & 0.4786\\
+  & Iterative & 0.4217 & 0.2899 & 0.2209 & 0.1015 & 0.2529 & 0.4786\\
+\midrule
+% ---------------- weitere Modelle hier ----------------
+% (dupliziere das obige Muster)
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
 \section{Prompts}
 \definecolor{myblue}{RGB}{0,55,205}
 
@@ -126,3 +221,87 @@
 \end{tikzpicture}
 \caption{Overview of Prompts.}
 \end{figure}
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+\section{Accessibility Violations Resolved}
+\pgfplotsset{compat=1.18}                    % aktuelle Syntax
+
+% ---------------- Farben definieren ---------------------
+\definecolor{usable}{RGB}{ 54, 95,230}   % kräftiges Blau
+\definecolor{unusable}{RGB}{234,127,111} % rötlicher Ton
+
+\begin{tikzpicture}
+\begin{axis}[
+  % --- Achsen-/Diagramm-Eigenschaften -------------------
+  xbar stacked,                 % horizontale, gestapelte Balken
+  xmin=0, xmax=100,             % 0–100 %
+  width=13cm, height=12cm,      % Gesamtgröße
+  bar width=8pt,                % Balkendicke
+  enlarge y limits=0.05,        % etwas Luft oben/unten
+  xlabel={Percentage (\%)},
+  axis x line*=bottom,          % nur untere x-Achse
+  axis y line*=left,            % nur linke y-Achse
+  ytick=data,                   % ein Tick pro Kategorie
+  y tick label style={font=\small},
+  % --- Legende oben -------------------------------------
+  legend style={
+    at={(0.5,1.06)}, anchor=south, draw=none,
+    legend cell align=left, font=\small
+  },
+  % --- Werte im Balken (nur im 1. Plot) -----------------
+  nodes near coords,
+  nodes near coords style={
+    font=\scriptsize\bfseries, text=white, anchor=center
+  },
+  every node near coord/.append style={
+    /pgf/number format/.cd, fixed, precision=0,  % nur ganze %
+    /tikz/.cd
+  },
+  % --- Kategorien (y-Achse) in genau der Reihenfolge ----
+  symbolic y coords={
+    Claude (Mark), Claude (CoT), Claude (Direct),
+    GPT-4o (Mark), GPT-4o (CoT), GPT-4o (Direct),
+    Gemini (Mark), Gemini (CoT), Gemini (Direct),
+    Qwen-72B (Mark), Qwen-72B (CoT), Qwen-72B (Direct),
+    Qwen-7B (Mark), Qwen-7B (CoT), Qwen-7B (Direct),
+    Qwen-3B (Mark), Qwen-3B (CoT), Qwen-3B (Direct)
+  }
+]
+% ---------- 1. Plot: Usable (blau) + Prozentzahlen -------
+% ---------- 1. Plot: Usable -----------------------------
+\addplot+[xbar,fill=usable] coordinates {
+  (77,{Claude (Mark)})   (69,{Claude (CoT)})   (66,{Claude (Direct)})
+  (81,{GPT-4o (Mark)})   (74,{GPT-4o (CoT)})   (73,{GPT-4o (Direct)})
+  (64,{Gemini (Mark)})   (53,{Gemini (CoT)})   (47,{Gemini (Direct)})
+  (54,{Qwen-72B (Mark)}) (43,{Qwen-72B (CoT)}) (41,{Qwen-72B (Direct)})
+  (32,{Qwen-7B (Mark)})  (22,{Qwen-7B (CoT)})  (30,{Qwen-7B (Direct)})
+  (18,{Qwen-3B (Mark)})  (19,{Qwen-3B (CoT)})  (17,{Qwen-3B (Direct)})
+};
+
+% ---------- 2. Plot: Unusable ---------------------------
+\addplot+[xbar,fill=unusable,nodes near coords={}] coordinates {
+  (23,{Claude (Mark)})   (31,{Claude (CoT)})   (34,{Claude (Direct)})
+  (19,{GPT-4o (Mark)})   (26,{GPT-4o (CoT)})   (27,{GPT-4o (Direct)})
+  (36,{Gemini (Mark)})   (47,{Gemini (CoT)})   (53,{Gemini (Direct)})
+  (46,{Qwen-72B (Mark)}) (57,{Qwen-72B (CoT)}) (59,{Qwen-72B (Direct)})
+  (68,{Qwen-7B (Mark)})  (78,{Qwen-7B (CoT)})  (70,{Qwen-7B (Direct)})
+  (82,{Qwen-3B (Mark)})  (81,{Qwen-3B (CoT)})  (83,{Qwen-3B (Direct)})
+};
+
+\legend{Usable, Unusable}
+\end{axis}
+\end{tikzpicture}

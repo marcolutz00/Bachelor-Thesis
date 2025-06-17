@@ -49,14 +49,14 @@ of our existing dataset, we assume that no data leakage has occurred.\newline
 This test dataset has 20 data entries and has been collected the following way:
 
 \begin{itemize}
-  \item \textbf{Mutation of old Data:} We use 10 randomly-selected data entries of our existing 
+  \item \textbf{Mutation of existing Data Entries:} We use 10 randomly-selected data entries of our existing 
   dataset. 
-  \item \textbf{Collection of new Data:} The other 10 data entries have been collected from 
+  \item \textbf{Collection of new Data Entries:} The other 10 data entries have been collected from 
   two Github repositories which contain frontend webpages. Those webpages have been crawled 
   and added to the dataset.
 \end{itemize}
 
-\subsection{Mutation of old Data}
+\subsection{Mutation of existing Data Entries}
 The mutation of the data entries tries to change the existing ones without losing the 
 reference to the real-world. The goal is to change the data entries in such a way, that
 the LLMs cannot memorize the data entries, without adding artificial noise or new 

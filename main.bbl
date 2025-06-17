@@ -292,6 +292,73 @@
       \verb https://arxiv.org/abs/2404.02575
       \endverb
     \endentry
+    \entry{si2024design2code}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=50e55ce524a6cabd5d5e862c580e6869}{%
+           family={Si},
+           familyi={S\bibinitperiod},
+           given={Chenglei},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=59fcb540a2298abe7ac08e0cf2cd90ae}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yanzhe},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b7084c71af5e6ed93c8537dce93d4856}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2d3579ec7df6d4114e1dcbc418a92dd1}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Zhengyuan},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b7c590b7d8bce1d94cc14195bf6b9b40}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Ruibo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6ff611991cba7ee48521ab941158ac2f}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Diyi},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a131dcc77ff7d9e2dc996c715a68f245}
+      \strng{fullhash}{ac13835092957480dd00493e0934d61e}
+      \strng{bibnamehash}{ac13835092957480dd00493e0934d61e}
+      \strng{authorbibnamehash}{ac13835092957480dd00493e0934d61e}
+      \strng{authornamehash}{a131dcc77ff7d9e2dc996c715a68f245}
+      \strng{authorfullhash}{ac13835092957480dd00493e0934d61e}
+      \field{labelalpha}{Si+24}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{arXiv preprint arXiv:2403.03163v3}
+      \field{title}{Design2Code: Benchmarking Multimodal Code Generation for Automated Front-End Engineering}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.48550/arXiv.2403.03163
+      \endverb
+      \verb{eprint}
+      \verb 2403.03163v3
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.48550/arXiv.2403.03163
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.48550/arXiv.2403.03163
+      \endverb
+    \endentry
     \entry{suh2025accessiblecode}{article}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=c42b083adc0e56a83478e05918c96f2b}{%
