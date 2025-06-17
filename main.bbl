@@ -447,6 +447,91 @@
       \verb https://webaim.org/projects/million/
       \endverb
     \endentry
+    \entry{xiao2024interaction2code}{article}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=908ec63a9e37ed0da7ad17be4fee56c4}{%
+           family={Xiao},
+           familyi={X\bibinitperiod},
+           given={Jingyu},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=747384ae31b320890e9936a8dc82b11d}{%
+           family={Wan},
+           familyi={W\bibinitperiod},
+           given={Yuxuan},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b34c59123609d2461f65956c1edaa174}{%
+           family={Huo},
+           familyi={H\bibinitperiod},
+           given={Yintong},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=00fc59ae1653335dc63b68233bc70598}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zixin},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a5c1da4c30d45b59c4b1ae3784550044}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Xinyi},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ea392bf57e05695a2a152ef2a5fc6062}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Wenxuan},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=938121f1f088f7502c88733a9ce2da3e}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Zhiyao},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f3d32915ff548d4b55bb78cee22be006}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yuhang},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=89afa2af91c8dfa048fdcec740d6684e}{%
+           family={Lyu},
+           familyi={L\bibinitperiod},
+           given={Michael\bibnamedelima R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7f470b22e1bda2a47f575d52e7d79830}
+      \strng{fullhash}{952548c6d78d4128a007f4eb82c12b1a}
+      \strng{bibnamehash}{952548c6d78d4128a007f4eb82c12b1a}
+      \strng{authorbibnamehash}{952548c6d78d4128a007f4eb82c12b1a}
+      \strng{authornamehash}{7f470b22e1bda2a47f575d52e7d79830}
+      \strng{authorfullhash}{952548c6d78d4128a007f4eb82c12b1a}
+      \field{labelalpha}{Xia+24}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{arXiv preprint arXiv:2411.03292}
+      \field{title}{Interaction2Code: Benchmarking MLLM-based Interactive Webpage Code Generation from Interactive Prototyping}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.48550/arXiv.2411.03292
+      \endverb
+      \verb{eprint}
+      \verb 2411.03292
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2411.03292
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2411.03292
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

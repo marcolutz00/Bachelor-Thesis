@@ -41,6 +41,8 @@ the models with different prompting techniques. Prior research has shown that mo
 advanced prompting techniques can help to improve the generation of robust and 
 accurate code. Therefore, we combine commonly used techniques with 
 advanced prompting techniques to guide the LLMs to create more accessible code.
+The wording of the prompts is similar to the one of prior research~\parencite{suh2025accessiblecode, xiao2024interaction2code}.
+The content is the same while we have enriched the prompts with more details.\newline
 All prompts can be seen in the appendix.
 
 \subsection{Naive}
@@ -57,17 +59,15 @@ accessibility by reminding it about the WCAG standards including a link to
 official WCAG standards.
 
 \subsection{Few-Shot}
-The zero-shot approach resembles the naive approach in terms of the Image-to-Code
-instructions. However, here the LLMs are explicitly instructed to obey the WCAG 
-2.2 standards. The prompt does not contain examples, however it emphasizes 
-accessibility by reminding it about the WCAG standards including a link to 
-official WCAG standards.
+The few-shot approach resembles the zero-shot prompt, however it is enriched with 
+explicit examples to support the LLM to generate more accessible code.
+Since the number of possible examples is too large, we decided to 
 
 \subsection{Reasoning}
 The reasoning prompt is used to let the LLMs reason about the task and possible 
 accessibility problems within the generation. Similar to prior work, we use 
-a prompt to generate reasoning steps internally with \"Let’s think step by 
-step.\" before generating the output~\parencite{chae2024thinkexecute}.
+a prompt to generate reasoning steps with \"Let’s think step by 
+step.\" as part of the output~\parencite{chae2024thinkexecute}.
 
 \subsection{Iterative}
 The iterative approach follows a similar approach to recent findings in the area
