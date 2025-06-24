@@ -11,7 +11,7 @@
 
 \begin{table}[htbp]
 \centering
-\caption{OpenAI GPT-4o: Data Leakage based on 3 iterations}
+\caption{OpenAI GPT-4o: Data Leakage (DL) based on 3 iterations}
 \small                 % optional verkleinern
 \setlength{\tabcolsep}{6pt} % enger packen, falls nötig
 \begin{tabular}{
@@ -22,23 +22,29 @@
 }
 \toprule
 \cmidrule(lr){3-3}\cmidrule(l){4-8}
-\multicolumn{2}{c|}{\textbf{}} & {Final Score} & {Size} & {Text} & {Position} & {Text Color} & {CLIP}\\
+\multicolumn{2}{c|}{\textbf{}} & {\bfseries Final Score} & {Size} & {Text} & {Position} & {Text Color} & {CLIP}\\
 \midrule
 % ---------------- Modell 1 ----------------
-\multirow{4}{*}{Test Dataset} 
-  & Naive & \bfseries 0.3220 & 0.2100 & 0.1531 & 0.0415 & \bfseries 0.2090 & \bfseries 0.3449\\
-  & Zero-Shot    & 0.2031 & 0.1085 & 0.0894 & 0.0352 & 0.1212 & 0.1979\\
-  & Few-Shot   & 0.2752 & 0.1706 & 0.1188 & 0.0514 & 0.1706 & 0.2647\\
-  & Reasoning & 0.2668 & 0.1675 & 0.1204 & 0.0427 & 0.1669 & 0.2692\\
-  & Iterative & 0.2668 & 0.1675 & 0.1204 & 0.0427 & 0.1669 & 0.2692\\
+\multirow{4}{*}{DL Test Dataset} 
+  & Naive & \bfseries 0.8917 & 0.8812 & 0.9701 & 0.8562 & 0.8451 & 0.906\\
+  & Zero-Shot    & \bfseries 0.8889 & 0.866 & 0.9737 & 0.8543 & 0.8407 & 0.9098\\
+  & Few-Shot   & \bfseries 0 & 0 & 0 & 0 & 0 & 0\\
+  & Reasoning & \bfseries 0.8924 & 0.8819 & 0.9755 & 0.8498 & 0.8449 & 0.91\\
+  & Iterative & \bfseries 0.8908 & 0.8819 & 0.9748 & 0.8475 & 0.8391 & 0.9109\\
+  & Iterative Refine 1 & \bfseries 0.8878 & 0.8729 & 0.974 & 0.8469 & 0.8372 & 0.9081\\
+  & Iterative Refine 2 & \bfseries 0.8887 & 0.8642 & 0.9771 & 0.8516 & 0.8439 & 0.9069\\
+  & Iterative Refine 3 & \bfseries 0.8871 & 0.8497 & 0.979 & 0.8511 & 0.8483 & 0.9076\\
 \midrule
 % ---------------- Modell 2 ----------------
 \multirow{4}{*}{Experiment Dataset}
-  & Naive & 0.4169 & 0.3230 & 0.2177 & 0.0952 & 0.2529 & 0.4786\\
-  & Zero-Shot    & 0.3895 & 0.2806 & 0.1981 & 0.0744 & 0.2259 & 0.4305\\
-  & Few-Shot   & \bfseries 0.4586 & \bfseries 0.3541 & \bfseries 0.2468 & \bfseries 0.1348 & \bfseries 0.2798 & \bfseries 0.5267\\
-  & Reasoning & 0.4217 & 0.2899 & 0.2209 & 0.1015 & 0.2529 & 0.4786\\
-  & Iterative & 0.4217 & 0.2899 & 0.2209 & 0.1015 & 0.2529 & 0.4786\\
+  & Naive & \bfseries 0.8896 & 0.868 & 0.9661 & 0.8578 & 0.8456 & 0.9107\\
+  & Zero-Shot    & \bfseries 0.8779 & 0.8124 & 0.9663 & 0.8558 & 0.8467 & 0.9083\\
+  & Few-Shot   & \bfseries 0 & 0 & 0 & 0 & 0 & 0\\
+  & Reasoning & \bfseries 0.8791 & 0.8348 & 0.9652 & 0.8549 & 0.8358 & 0.9048\\
+  & Iterative & \bfseries 0.8854 & 0.8447 & 0.9694 & 0.8577 & 0.8412 & 0.914\\
+  & Iterative Refine 1 & \bfseries 0.8786 & 0.8306 & 0.9677 & 0.858 & 0.8233 & 0.9131\\
+  & Iterative Refine 2 & \bfseries 0.8767 & 0.8148 & 0.968 & 0.854 & 0.8315 & 0.915\\
+  & Iterative Refine 3 & \bfseries 0.8731 & 0.811 & 0.9685 & 0.855 & 0.8181 & 0.9127\\
 \midrule
 % ---------------- weitere Modelle hier ----------------
 % (dupliziere das obige Muster)
@@ -48,7 +54,7 @@
 
 \begin{table}[htbp]
 \centering
-\caption{Gemini-2.0-flash: Data Leakage based on 3 iterations}
+\caption{Gemini-2.0-flash: Data Leakage (DL) based on 3 iterations}
 \small                 % optional verkleinern
 \setlength{\tabcolsep}{6pt} % enger packen, falls nötig
 \begin{tabular}{
@@ -59,23 +65,29 @@
 }
 \toprule
 \cmidrule(lr){3-3}\cmidrule(l){4-8}
-\multicolumn{2}{c|}{\textbf{}} & {Final Score} & {Size} & {Text} & {Position} & {Text Color} & {CLIP}\\
+\multicolumn{2}{c|}{\textbf{}} & {\bfseries Final Score} & {Size} & {Text} & {Position} & {Text Color} & {CLIP}\\
 \midrule
 % ---------------- Modell 1 ----------------
-\multirow{4}{*}{Test Dataset} 
-  & Naive & \bfseries 0.3220 & 0.2100 & 0.1531 & 0.0415 & \bfseries 0.2090 & \bfseries 0.3449\\
-  & Zero-Shot    & 0.2031 & 0.1085 & 0.0894 & 0.0352 & 0.1212 & 0.1979\\
-  & Few-Shot   & 0.2752 & 0.1706 & 0.1188 & 0.0514 & 0.1706 & 0.2647\\
-  & Reasoning & 0.2668 & 0.1675 & 0.1204 & 0.0427 & 0.1669 & 0.2692\\
-  & Iterative & 0.2668 & 0.1675 & 0.1204 & 0.0427 & 0.1669 & 0.2692\\
+\multirow{4}{*}{DL Test Dataset} 
+  & Naive & \bfseries 0.8801 & 0.7992 & 0.9685 & 0.8591 & 0.8251 & 0.9079\\
+  & Zero-Shot    & \bfseries 0.8798 & 0.8297 & 0.977 & 0.8645 & 0.8141 & 0.9134\\
+  & Few-Shot   & \bfseries 0 & 0 & 0 & 0 & 0 & 0\\
+  & Reasoning & \bfseries 0.8683 & 0.799 & 0.9741 & 0.8541 & 0.8093 & 0.905\\
+  & Iterative & \bfseries 0.8823 & 0.8298 & 0.9742 & 0.8624 & 0.836 & 0.9091\\
+  & Iterative Refine 1 & \bfseries 0.8783 & 0.8297 & 0.9753 & 0.8616 & 0.8136 & 0.9112\\
+  & Iterative Refine 2 & \bfseries 0.8874 & 0.8617 & 0.9774 & 0.871 & 0.8182 & 0.9086\\
+  & Iterative Refine 3 & \bfseries 0.8899 & 0.8682 & 0.9773 & 0.8719 & 0.8224 & 0.9099\\
 \midrule
 % ---------------- Modell 2 ----------------
 \multirow{4}{*}{Experiment Dataset}
-  & Naive & 0.4169 & 0.3230 & 0.2177 & 0.0952 & 0.2529 & 0.4786\\
-  & Zero-Shot    & 0.3895 & 0.2806 & 0.1981 & 0.0744 & 0.2259 & 0.4305\\
-  & Few-Shot   & \bfseries 0.4586 & \bfseries 0.3541 & \bfseries 0.2468 & \bfseries 0.1348 & \bfseries 0.2798 & \bfseries 0.5267\\
-  & Reasoning & 0.4217 & 0.2899 & 0.2209 & 0.1015 & 0.2529 & 0.4786\\
-  & Iterative & 0.4217 & 0.2899 & 0.2209 & 0.1015 & 0.2529 & 0.4786\\
+  & Naive & \bfseries 0.8712 & 0.7992 & 0.9686 & 0.8591 & 0.8215 & 0.9079\\
+  & Zero-Shot    & \bfseries 0.8685 & 0.7875 & 0.9687 & 0.862 & 0.8166 & 0.9094\\
+  & Few-Shot   & \bfseries 0 &  0 &  0 &  0 &  0 &  0\\
+  & Reasoning & \bfseries 0.868 & 0.7916 & 0.963 & 0.8594 & 0.7996 & 0.9067\\
+  & Iterative & \bfseries 0.8707 & 0.7891 & 0.9686 & 0.8657 & 0.8209 & 0.9093\\
+  & Iterative Refine 1 & \bfseries 0.8622 & 0.7703 & 0.9654 & 0.8616 & 0.8073 & 0.9064\\
+  & Iterative Refine 2 & \bfseries 0.8676 & 0.7803 & 0.9683 & 0.8724 & 0.8132 & 0.9039\\
+  & Iterative Refine 3 & \bfseries 0.8609 & 0.7708 & 0.9672 & 0.8707 & 0.7939 & 0.9017\\
 \midrule
 % ---------------- weitere Modelle hier ----------------
 % (dupliziere das obige Muster)

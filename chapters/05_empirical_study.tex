@@ -5,8 +5,12 @@ In this thesis, we test the capabilities of LLMs to generate accessible code in 
 Image-to-Code environment. Therefore, a pipeline is used which provides the LLMs an 
 image with instructions to replicate this image in HTML/CSS. In the following, 
 advanced prompting techniques are also provided to guide the LLMs to generate
-accessible code. The output of the LLMs is then analyzed on visual and structural 
-similarity, as well as on accessibility compliance, based on WCAG 2.2 standards.\newline
+accessible code. 
+The output of the LLMs for each parameter tuple (Model, Prompting Technique) 
+is then analyzed on visual and structural 
+similarity, as well as on accessibility compliance, based on WCAG 2.2 standards.
+In order to cope with the probabilistic nature of LLMs, each experiment with a 
+predefined tuple of parameters will be tested within 3 experiment runs.\newline
 After the generation of the LLMs' output for the Image-to-Code task, the HTML/CSS
 is first analyzed on visual and structural similarity as described above and afterwards
 analyzed on accessibility violations with the help of axe-core, lighthouse and pa11y.
@@ -83,5 +87,135 @@ iterations stop.
 
 
 \section{Accessibility Evaluation}
+In order to provide a comprehensive analysis of the accessibility violations, 
+we divide the analysis into 3 categories. Those categories differentiate in 
+terms of quantitive and qualitive analysis as well as in its depth.
+
+\subsection{Quantitive Analysis}
+Figure x shows the quantitive analysis of the amount and type of Accessibility 
+Violations found during the 3 experiment runs for each tuple of parameters.
+Based on this figure, we can observe several interesting findings.\newline
+Firstly, the amount and types of Accessibility Violations show a similar 
+patterns across the different models. While overall \textit{gpt-4o} produced
+slightly less violations, its numbers and distribution show a similar 
+structure. Without refinement techniques, Color contrast violations, 
+as well as HTML landmark and region 
+issues are the predominantly cause for at least 75\% of all violations in both
+gemini's flash-2.5 and in gpt-4o model and with diverse prompting techniques.\newline
+While gemini seems to have more color contrast violations, 
+landmark and region rules cause more problems for the gpt-4o model. Those 
+findings are confirmed across different parameters.\newline
+The subsequent types of violations are in the fields of missing labels,
+links without distinguishable color, issues with the HTML header and 
+the size of frontend components. The results show a noticeable trend that 
+only a small subset of possible WCAG violations cause non-negligible amounts 
+of violations in an Image-to-Code environment. Especially in the case of 
+gpt-4o, there are only 6 types of violations which cause more than 10
+violations combined across all prompting techniques in our dataset.\newline
+Similar to related papers in this field (paper xxx), our results also show 
+that different prompting techniques only have small impact on the findings.
+Even if the naive prompting approach does not instruct the LLMs to generate
+code with compliance to the WCAG standards, it still only shows slightly 
+increased amounts of violations than more advanced prompting techniques such as 
+zero-shot or reasoning.\newline
+Figure xyy shows the violations found in the ground truth HTML/CSS of our 
+dataset. The human-written HTML/CSS of our dataset counts 1339 accessibility 
+violations, leading to $\sim$25.26 violations per file across the whole dataset.
+On the other hand, even gemini with the naive prompting technique,
+the worst performing set of parameter, had a maximum of 917 accessibility 
+violations, leading to $\sim$17.3 violations per file across the whole dataset.
+This shows that LLMs write by default more accessible code than humans by 
+incorporating the most important rules. However, as described above they 
+struggle with more complex rules such as color contrast or landmarks
+that require further information or thinking.
+
+IR noch mit aufnehmen.
+IW-IR noch mit aufnehmen.
+Verteilung der Issues bei Human und LLms mit aufnehmen.
+Bar Charts noch mit aufnehmen ohne iterative
+
+
+\subsection{Qualitive Analysis}
+In a first step, we analyze how consistent violations are within different 
+within different experiment runs and dataset entries. Figure xy shows the 
+consistency of the type and the amount of a violation by using the 
+\textit{cosine-similarity}. Therefore, we analyze the type of violation
+and its amount per file in vector-like structure. 
+The cosine-similarity is then calculated between the vectors of the 
+different experiment runs and dataset entries. This allows us to 
+analyze how similar the violations are and to understand how consistent
+the LLMs are in generating accessible code.
+
+\newcommand{\vect}[1]{\begin{pmatrix}#1\end{pmatrix}}
+\newcommand{\issues}{k}                   % Anzahl der Issue-Klassen
+\newcommand{\vx}{\mathbf x}
+\newcommand{\vy}{\mathbf y}
+
+\begin{enumerate}
+  \item \textbf{Amount of Issues}  
+        For each test run and file we are counting the number of violations per class
+        \[
+          \left(
+            \begin{array}{@{}l r@{}}
+              \text{Issue}_{1}: & x_{1}\\
+              \text{Issue}_{2}: & x_{2}\\
+              \vdots           & \vdots\\
+              \text{Issue}_{\issues}: & x_{\issues}
+            \end{array}
+          \right)
+          \xmapsto{\text{to vector}}
+          \vx \;:=\;
+          \vect{x_{1}\\x_{2}\\\vdots\\x_{\issues}} \in \mathbb R^{\issues}.
+        \]
+
+  \item \textbf{Calculation of Cosine Similarity}  
+        Given two experiment runs with $\vx,\vy\in\mathbb R^{\issues}$, we define
+        \[
+          \operatorname{cos\_sim}(\vx,\vy)=
+          \frac{\vx^{\mathsf T}\vy}{\lVert\vx\rVert\,\lVert\vy\rVert}
+          \quad\in[0,1].
+        \]
+\end{enumerate}
+
+This cosine similarity is then plotted into a heatmap comparing the different 
+experiment runs and files. The results can be seen in figure ab below. It 
+is noticeable that most of the tiles show a bright color, referring to a 
+high cosine similarity. The tiles with a darker color are mainly caused 
+by 2 reasons. The first reason are files with only little violations 
+that cause smaller cosine similarities due to the non-consistent 
+distribution of violations. The second reason are randomly-generated 
+files which have been mutated in such a way that they chose colors that 
+comply with the Color Contrast Rules. Since overall the color constrast 
+issues are one of the most common issues, this leads to a lower cosine 
+similarity.\newline
+Those findings are consistent different models and 
+prompting techniques. This demonstrates that the accessibility issues are 
+consistent across multiple runs and not caused by halluzination of the 
+LLMs but are based on their training data and the underlying parameters.\newline
+In a last step, the question arises wether the violations found across
+different dataset entries are caused by the same frontend components, such 
+as a button or a label on the Input Image. This step required a mapping
+of violations across the different results and their corresponding
+components in the frontend. As table rt describes, $\sim$50\% of the 
+violations in each run can be directly accounted to the same frontend 
+elements. This demonstrates that half of the violations are caused by 
+violations within the image inputs. Only the other half can not be directly 
+connected to other violations and thus are caused by the LLMs' halluzinations.\newline
+Especially, this qualitative analysis shows that pre-processing steps which 
+analyze possible violations in the input image, could further reduce the 
+amount of violations.
+
 
 \section{Similarity Evaluation}
+Since Image-to-Code main task is to copy the input image as precise as possible,
+we have analysed the performance across the different parameter sets to see how 
+exact their results remain. The results in table as in the appendix 
+indicate that the final scores decrease slightly when further accessibility 
+instructions are mentioned to the LLMs. While the text and position similarity 
+remains constant, the size and especially the text color similarity scores 
+decrease. This is caused due to accessibility compliance that can cause the
+LLMs to choose different colors and even component sizes to align with the 
+WCAG issues. However, the changes in terms of the final score are very small 
+and almost negligible.\newline
+Overall, similar to former research gpt-4o demonstrates the best performance 
+in this field by outperforming gemini flash-2.0 by a few percent.
