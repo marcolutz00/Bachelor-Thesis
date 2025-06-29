@@ -198,21 +198,26 @@
 {%
   \centering\bfseries Zero-Shot Prompt\\[4pt]
   \textcolor{myblue}{\emph{(Instruction):}} \\[2pt]
-  {\underline{\texttt{Naive Prompt}}}\\+\\
+  {\underline{\texttt{Naive Prompt}}}\\
+  +\\
   {\underline{\texttt{Accessibility Reminder}}}
 };
 
-% 2 b) Failure-aware Prompt
+% 2 b) Few-Shot Prompt
 \node[promptbox,
       text width=\boxwidth,
       right=\hgap of cot] (fap)
 {%
   \centering\bfseries Few-Shot Prompt\\[4pt]
-  \textcolor{myblue}{\emph{(Instruction):}}
-  Blublub%
+  \textcolor{myblue}{\emph{(Instruction):}}\\[2pt]
+  {\underline{\texttt{Naive Prompt}}}\\+\\
+  {\underline{\texttt{Accessibility Reminder}}}\\+\\
+  {\footnotesize Detailed accessibility rules with correct/incorrect examples for each rule.
+  Each rule comes with \texttt{[}name, description, correct\_example, counter\_example\texttt{]}. \\+\\
+  \textit{8 Few-Shot examples.} \par}
 };
 
-% 2 c) dritte Box unten  – Platzhalter
+% 2 c) Chain-of-Thought
 \node[promptbox,
       text width=\boxwidth,
       right=\hgap of fap] (extra)

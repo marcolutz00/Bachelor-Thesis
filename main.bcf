@@ -2356,18 +2356,22 @@
     <bcf:citekey order="10">alshayban2020accessibility</bcf:citekey>
     <bcf:citekey order="11">suh2025accessiblecode</bcf:citekey>
     <bcf:citekey order="11">xiao2024interaction2code</bcf:citekey>
-    <bcf:citekey order="12">chae2024thinkexecute</bcf:citekey>
-    <bcf:citekey order="13">suh2025accessiblecode</bcf:citekey>
-    <bcf:citekey order="14">si2024design2code</bcf:citekey>
-    <bcf:citekey order="15">beltramelli2017pix2code</bcf:citekey>
-    <bcf:citekey order="16">wan2024dcgen</bcf:citekey>
-    <bcf:citekey order="17">wcag22</bcf:citekey>
-    <bcf:citekey order="18">webaim2025million</bcf:citekey>
-    <bcf:citekey order="19">aljedaani2024chatgpt</bcf:citekey>
-    <bcf:citekey order="20">suh2025accessiblecode</bcf:citekey>
-    <bcf:citekey order="21">alshayban2020accessibility</bcf:citekey>
-    <bcf:citekey order="22">xiao2024interaction2code</bcf:citekey>
-    <bcf:citekey order="23">chae2024thinkexecute</bcf:citekey>
+    <bcf:citekey order="12">suh2025accessiblecode</bcf:citekey>
+    <bcf:citekey order="13">wcag22</bcf:citekey>
+    <bcf:citekey order="14">chae2024thinkexecute</bcf:citekey>
+    <bcf:citekey order="15">suh2025accessiblecode</bcf:citekey>
+    <bcf:citekey order="16">si2024design2code</bcf:citekey>
+    <bcf:citekey order="17">webaim2025million</bcf:citekey>
+    <bcf:citekey order="18">si2024design2code</bcf:citekey>
+    <bcf:citekey order="19">beltramelli2017pix2code</bcf:citekey>
+    <bcf:citekey order="20">wan2024dcgen</bcf:citekey>
+    <bcf:citekey order="21">wcag22</bcf:citekey>
+    <bcf:citekey order="22">webaim2025million</bcf:citekey>
+    <bcf:citekey order="23">aljedaani2024chatgpt</bcf:citekey>
+    <bcf:citekey order="24">suh2025accessiblecode</bcf:citekey>
+    <bcf:citekey order="25">alshayban2020accessibility</bcf:citekey>
+    <bcf:citekey order="26">xiao2024interaction2code</bcf:citekey>
+    <bcf:citekey order="27">chae2024thinkexecute</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
