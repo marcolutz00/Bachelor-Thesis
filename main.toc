@@ -30,15 +30,21 @@
 \contentsline {subsection}{\numberline {5.2.2}Zero-Shot}{11}{subsection.5.2.2}%
 \contentsline {subsection}{\numberline {5.2.3}Few-Shot}{11}{subsection.5.2.3}%
 \contentsline {subsection}{\numberline {5.2.4}Reasoning}{11}{subsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.2.5}Iterative}{11}{subsection.5.2.5}%
-\contentsline {section}{\numberline {5.3}Advanced Accessibility Strategies}{11}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Color-Aware Iterative Approach}{12}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Multi-Agent Approach}{12}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.3}Advanced Strategies}{11}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Iterative Feedback}{11}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Color-Aware Feedback}{12}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Iterative Multi-Agent}{12}{subsection.5.3.3}%
 \contentsline {chapter}{\numberline {6}Evaluation}{13}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Accessibility}{13}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}Quantitive Analysis}{13}{subsection.6.1.1}%
+\contentsline {subsubsection}{\nonumberline Prompting Techniques}{13}{subsubsection*.7}%
+\contentsline {subsubsection}{\nonumberline Advanced Strategies}{13}{subsubsection*.9}%
 \contentsline {subsection}{\numberline {6.1.2}Qualitive Analysis}{14}{subsection.6.1.2}%
+\contentsline {subsubsection}{\nonumberline Prompting Techniques}{14}{subsubsection*.11}%
+\contentsline {subsubsection}{\nonumberline Advanced Strategies}{14}{subsubsection*.13}%
 \contentsline {section}{\numberline {6.2}Image-to-Code Similarity}{15}{section.6.2}%
+\contentsline {subsubsection}{\nonumberline Prompting Techniques}{15}{subsubsection*.15}%
+\contentsline {subsubsection}{\nonumberline Advanced Strategies}{15}{subsubsection*.17}%
 \contentsline {chapter}{\numberline {7}Conclusion}{16}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Section}{16}{section.7.1}%
 \contentsline {subsection}{\numberline {7.1.1}Future Directions}{16}{subsection.7.1.1}%
@@ -46,7 +52,7 @@
 \contentsline {section}{\numberline {8.1}Results Data Leakage}{17}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Prompts}{18}{section.8.2}%
 \contentsline {section}{\numberline {8.3}Accessibility Violations Resolved}{19}{section.8.3}%
-\contentsline {chapter}{\nonumberline List of Figures}{20}{chapter*.11}%
-\contentsline {chapter}{\nonumberline List of Tables}{21}{chapter*.12}%
-\contentsline {chapter}{\nonumberline Bibliography}{22}{chapter*.13}%
+\contentsline {chapter}{\nonumberline List of Figures}{20}{chapter*.21}%
+\contentsline {chapter}{\nonumberline List of Tables}{21}{chapter*.22}%
+\contentsline {chapter}{\nonumberline Bibliography}{22}{chapter*.23}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

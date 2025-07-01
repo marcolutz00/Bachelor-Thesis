@@ -7,6 +7,8 @@ we divide the analysis into 3 categories. Those categories differentiate in
 terms of quantitive and qualitive analysis as well as in its depth.
 
 \subsection{Quantitive Analysis}
+\subsubsection{Prompting Techniques}
+\subsubsection{Advanced Strategies}
 Figure x shows the quantitive analysis of the amount and type of Accessibility 
 Violations found during the 3 experiment runs for each tuple of parameters.
 Based on this figure, we can observe several interesting findings.\newline
@@ -52,6 +54,8 @@ Bar Charts noch mit aufnehmen ohne iterative
 
 
 \subsection{Qualitive Analysis}
+\subsubsection{Prompting Techniques}
+\subsubsection{Advanced Strategies}
 In a first step, we analyze how consistent violations are within different 
 within different experiment runs and dataset entries. Figure xy shows the 
 consistency of the type and the amount of a violation by using the 
@@ -131,6 +135,8 @@ fully to accessibility best practices.
 
 
 \section{Image-to-Code Similarity}
+\subsubsection{Prompting Techniques}
+\subsubsection{Advanced Strategies}
 Since Image-to-Code main task is to copy the input image as precise as possible,
 we have analysed the performance across the different parameter sets to see how 
 exact their results remain. The results in table as in the appendix 
@@ -150,96 +156,100 @@ in this field by outperforming gemini flash-2.0 by a few percent.
 
 
 
-% --------------------------------------------------------------------
-% 1) FULL-WIDTH BAR CHART (Figure*)
-% --------------------------------------------------------------------
-\begin{figure*}[!ht]           % * = span both columns in two-column layout
-\centering
-\resizebox{\linewidth}{!}{     % guarantees “full page width”
-\begin{tikzpicture}
-\begin{axis}[
-  ybar,
-  bar width=3pt,
-  ymin=0,   ymax=420,
-  symbolic x coords={CC,LR,LB,LC,HD,SZ,TH,LG,LA,AT},
-  xtick=data,
-  xticklabel style={rotate=45, anchor=east},
-  ylabel={Average nodes failed},
-  enlarge x limits=0.15,
-  legend style={
-     font=\footnotesize,
-     at={(0.5,0.98)}, anchor=north, legend columns=3},
-  every node near coord/.append style={font=\scriptsize}
-]
-% ----------- DATA SERIES (EXAMPLE VALUES) -----------------
-\addplot+[draw=none, fill=blue!70] coordinates {
-  (CC,350) (LR,275) (LB,130) (LC,100) (HD,80)
-  (SZ,12)  (TH,9)   (LG,5)   (LA,4)   (AT,2)
-}; \addlegendentry{gemini-naive}
+% % --------------------------------------------------------------------
+% % 1) FULL-WIDTH BAR CHART (Figure*)
+% % --------------------------------------------------------------------
+% \begin{figure*}[!ht]           % * = span both columns in two-column layout
+% \centering
+% \resizebox{\linewidth}{!}{     % guarantees “full page width”
+% \begin{tikzpicture}
+% \begin{axis}[
+%   ybar,
+%   bar width=5pt,
+%   ymin=0,   ymax=420,
+%   symbolic x coords={CC,LR,LB,LC,HD,SZ},
+%   xtick=data,
+%   xticklabel style={rotate=45, anchor=east},
+%   ylabel={Average nodes failed},
+%   enlarge x limits = {abs=0.35},
+%   legend columns = 4,
+%   legend style = {
+%      font = \scriptsize,
+%      column sep = 2pt,
+%      draw = none, fill = none,
+%      at = {(0.5,1.02)}, anchor = south
+%   }
 
-\addplot+[draw=none, fill=orange!80] coordinates {
-  (CC,330) (LR,260) (LB,128) (LC,95)  (HD,77)
-  (SZ,11)  (TH,8)   (LG,4.7) (LA,4.3) (AT,2.1)
-}; \addlegendentry{gemini-zero-shot}
+% ]
+% % ----------- DATA SERIES (EXAMPLE VALUES) -----------------
+% \addplot+[draw=none, fill=blue!70] coordinates {
+%   (CC,350) (LR,275) (LB,130) (LC,100) (HD,80)
+%   (SZ,12)
+% }; \addlegendentry{gemini-naive}
 
-\addplot+[draw=none, fill=yellow!80] coordinates {
-  (CC,330) (LR,260) (LB,128) (LC,95)  (HD,77)
-  (SZ,11)  (TH,8)   (LG,4.7) (LA,4.3) (AT,2.1)
-}; \addlegendentry{gemini-few-shot}
+% \addplot+[draw=none, fill=orange!80] coordinates {
+%   (CC,330) (LR,260) (LB,128) (LC,95) (HD,77)
+%   (SZ,11)
+% }; \addlegendentry{gemini-zero-shot}
 
-\addplot+[draw=none, fill=black!80] coordinates {
-  (CC,330) (LR,260) (LB,128) (LC,95)  (HD,77)
-  (SZ,11)  (TH,8)   (LG,4.7) (LA,4.3) (AT,2.1)
-}; \addlegendentry{gemini-reason}
+% \addplot+[draw=none, fill=yellow!80] coordinates {
+%   (CC,325) (LR,255) (LB,125) (LC,92) (HD,75)
+%   (SZ,10)
+% }; \addlegendentry{gemini-few-shot}
 
-\addplot+[draw=none, fill=red!80] coordinates {
-  (CC,330) (LR,260) (LB,128) (LC,95)  (HD,77)
-  (SZ,11)  (TH,8)   (LG,4.7) (LA,4.3) (AT,2.1)
-}; \addlegendentry{gemini-iterative}
+% \addplot+[draw=none, fill=black!80] coordinates {
+%   (CC,320) (LR,250) (LB,122) (LC,90) (HD,73)
+%   (SZ,9)
+% }; \addlegendentry{gemini-reason}
 
-\addplot+[draw=none, fill=green!80] coordinates {
-  (CC,330) (LR,260) (LB,128) (LC,95)  (HD,77)
-  (SZ,11)  (TH,8)   (LG,4.7) (LA,4.3) (AT,2.1)
-}; \addlegendentry{gemini-iterative-refine-1}
+% \addplot+[draw=none, fill=red!80] coordinates {
+%   (CC,315) (LR,245) (LB,120) (LC,88) (HD,70)
+%   (SZ,8)
+% }; \addlegendentry{gemini-iterative}
 
-\addplot+[draw=none, fill=green!20] coordinates {
-  (CC,330) (LR,260) (LB,128) (LC,95)  (HD,77)
-  (SZ,11)  (TH,8)   (LG,4.7) (LA,4.3) (AT,2.1)
-}; \addlegendentry{gemini-iterative-refine-2}
+% \addplot+[draw=none, fill=green!80] coordinates {
+%   (CC,310) (LR,240) (LB,118) (LC,85) (HD,68)
+%   (SZ,7)
+% }; \addlegendentry{gemini-iterative-refine-1}
 
-\addplot+[draw=none, fill=purple!80] coordinates {
-  (CC,330) (LR,260) (LB,128) (LC,95)  (HD,77)
-  (SZ,11)  (TH,8)   (LG,4.7) (LA,4.3) (AT,2.1)
-}; \addlegendentry{gemini-iterative-refine-3}
+% \addplot+[draw=none, fill=green!20] coordinates {
+%   (CC,305) (LR,235) (LB,115) (LC,82) (HD,65)
+%   (SZ,6)
+% }; \addlegendentry{gemini-iterative-refine-2}
+
+% \addplot+[draw=none, fill=purple!80] coordinates {
+%   (CC,300) (LR,230) (LB,112) (LC,80) (HD,62)
+%   (SZ,5)
+% }; \addlegendentry{gemini-iterative-refine-3}
+
+% \end{axis}
+% \end{tikzpicture}}
+% \caption{Mean number of WCAG violations per rule group. Abbreviations are explained in Table~\ref{tab:abbr}.}
+% \label{fig:wcag-fullwidth}
+% \end{figure*}
 
 
-\end{axis}
-\end{tikzpicture}}
-\caption{Mean number of WCAG violations per rule group. Abbreviations are explained in Table~\ref{tab:abbr}.}
-\label{fig:wcag-fullwidth}
-\end{figure*}
-
-% --------------------------------------------------------------------
-% 2) EXPLANATORY TABLE FOR THE ABBREVIATIONS
-% --------------------------------------------------------------------
-\begin{table}[!ht]
-\centering
-\caption{Mapping of two-letter abbreviations to WCAG rule groups (used in Fig.~\ref{fig:wcag-fullwidth}).}
-\label{tab:abbr}
-\begin{tabularx}{\linewidth}{@{} l X @{}}
-\toprule
-\textbf{Abbr.} & \textbf{WCAG rule group} \\
-\midrule
-CC & Color Contrast: Text \\ 
-LR & Landmark \& Region: Missing \& Unique Landmarks \\
-LB & Label: Multiple Elements; Content Missing \\
-LC & Links: Distinguishable Color \\
-HD & Headings: Wrong Order; Empty \& Missing Headings \\
-SZ & Size: Target Size; Element Too Small \\
-TH & Tables: Table Headers \\
-LG & Language: Document Lang Missing / Invalid \\
-LA & Links: Missing Descriptive Content of \texttt{<a>} \\
-AT & Alt-Text: Images \\
-\bottomrule
-\end{tabularx}
-\end{table}
+% % --------------------------------------------------------------------
+% % 2) EXPLANATORY TABLE FOR THE ABBREVIATIONS
+% % --------------------------------------------------------------------
+% \begin{table}[!ht]
+% \centering
+% \caption{Mapping of two-letter abbreviations to WCAG rule groups (used in Fig.~\ref{fig:wcag-fullwidth}).}
+% \label{tab:abbr}
+% \begin{tabularx}{\linewidth}{@{} l X @{}}
+% \toprule
+% \textbf{Abbr.} & \textbf{WCAG rule group} \\
+% \midrule
+% CC & Color Contrast: Text \\ 
+% LR & Landmark \& Region: Missing \& Unique Landmarks \\
+% LB & Label: Multiple Elements; Content Missing \\
+% LC & Links: Distinguishable Color \\
+% HD & Headings: Wrong Order; Empty \& Missing Headings \\
+% SZ & Size: Target Size; Element Too Small \\
+% TH & Tables: Table Headers \\
+% LG & Language: Document Lang Missing / Invalid \\
+% LA & Links: Missing Descriptive Content of \texttt{<a>} \\
+% AT & Alt-Text: Images \\
+% \bottomrule
+% \end{tabularx}
+% \end{table}

@@ -79,7 +79,20 @@ accessibility problems within the generation. Similar to prior work, we use
 a prompt to generate reasoning steps with \"Let’s think step by 
 step.\" as part of the output~\parencite{chae2024thinkexecute}.
 
-\subsection{Iterative}
+
+
+\section{Advanced Strategies}
+To solve the limitations of current prompting techniques, we test three 
+advanced improvement strategies. One is an iterative approach that uses the 
+feedback from accessibility tools in an iterative manner to improve the code.
+The second is a composite approach which combines 
+pre-processing and post-processing techniques to improve the LLMs' output.
+The last approach is a multi-agent approach that uses further 
+state-of-the-art LLMs to detect and solve accessibility violations. \newline
+The advanced strategies are compared to old approaches and the capabilities 
+of AI models to resolve accessibility violations are analyzed.
+
+\subsection{Iterative Feedback}
 The iterative approach follows a similar approach to recent findings in the area
 of generating more accessible code~\parencite{suh2025accessiblecode}. This 
 prompting technique lets the LLMs generate Image-to-Code tasks by using the naive 
@@ -91,17 +104,7 @@ contains one naive prompt and three rounds of code refinement. If the LLMs
 generate code without any accessibility violations within one round, the 
 iterations stop.
 
-
-\section{Advanced Accessibility Strategies}
-To solve the limitations of current prompting techniques, we test two 
-advanced improvement strategies. One is a composite approach which combines 
-pre-processing and post-processing techniques to improve the LLMs' output.
-The second approach is a multi-agent approach that uses further 
-state-of-the-art LLMs to detect and solve accessibility violations. \newline
-The advanced strategies are compared to old approaches and the capabilities 
-of AI models to resolve accessibility violations are analyzed.
-
-\subsection{Color-Aware Iterative Approach}
+\subsection{Color-Aware Feedback}
 This approach uses an advanced block detection algorithm in order to receive
 the UI text components and its corresponding bounding boxes in an image. This 
 algorithm is based on previous works~\parencite{si2024design2code} and 
@@ -117,14 +120,18 @@ violations found are combined with a refinement message to serve as input
 for a refinement round. In contrast to the iterative approach, we only use 
 one round of improvements.
 
-\subsection{Multi-Agent Approach}
+\subsection{Iterative Multi-Agent}
 In a combination with different agents, this approach uses a 3-layer architecture
-to detect, identify and fix violations in the code. \newline
-The first layer finds the place in the code which violates a certain standard.
-Only the marked regions are submitted to the next layer. The second layer 
-identifies the issues. It classifies them based on the WCAG 2.2 standards by 
-adding the name, its severity and an explanation of the violation. In a last 
-layer, the violations are patched with another agent. It creates a solution 
-and an explanation to the user.\newline
+to detect, identify and fix violations in the code. In comparison to the 
+approaches above, it is fully based on LLMs and does not use any pre- or 
+post-processing techniques. \newline
+The first layer, called \textit{Issue Detector}, finds the place in the code which 
+violates a certain standard and outputs the violations in a pre-defined format.
+Based on this output, the second layer \textit{Issue Identifier} classifies the issues. 
+It identifies them based on the WCAG 2.2 standards by 
+adding the guideline's name and the severity of the violation. In a last 
+layer, the \textit{Issue Resolver}, the violations are patched. In order to be 
+as precise as possible, without adding new violations, we resolve the violations 
+in batch sizes of \textit{n=5}.\newline
 This architecture allows a clean separation between the location, the type and 
-the solution to accessibility violations. Its layout can be seen in image xxy.
+the solution to accessibility violations. Its structure can be seen in image xxy.
