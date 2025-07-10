@@ -3,56 +3,69 @@
 
 \chapter{Introduction}\label{chapter:introduction}
 
-\section{Section}
-High quality web user interfaces are the backbone of our modern society. They allow us 
-to present products or services in an interactive way and reach billions of users every day.
-However, the creation of Websites or user interfaces (UIs) follows a similar and repetitive 
-pattern. \newline
-First UI designs are created with the help of special design tools. The UI designs present 
-the foundation for software developers. In a second step, those designs are translated into 
-functional UI code which tries to resemble the intended layout and structure, but also obey
-to other design aspects. \newline
-One essential, but yet frequently underestimated aspect in this process is \textit{accessibility}:
-According to the official \textit{WCAG} guidelines, code must be  perceivable, operable, 
-understandable and robust for people with various disabilities.\newline
-Complying with accessibility standards is not only an optional, moral aspect of 
-web development, but it now has to follow regulatory boundaries. Ensuring accessibility
-is no longer optional. For instance the \textit{European Accessibility Act} comes into 
+\section{Motivation}
+High quality webpages are the backbone of our modern society. 
+For billions of people the internet and thus webpages are the central access point 
+for information, education, work, trade and culture. Irrespective of 
+its content, such as shop, private blogs or news pages, each webpage is 
+evaluated based on its usability.
+However, yet the creation of webpages or user interfaces (UIs) follows a similar and repetitive 
+pattern. First UI designs are created with the help of web-design tools. Those UI designs present 
+the foundation for software developers. In a second step, they are translated into 
+functional UI code which tries to resemble the intended layout and structure as 
+close as possible. \newline
+One essential, but yet frequently underestimated aspect of quality in this process is \textit{accessibility}:
+According to the official \textit{WCAG} guidelines, code must be perceivable, operable, 
+understandable and robust. This allows users with visual, hearing or cognitive
+impairments, as well as users of assistive technologies, to follow the content
+of a webpage.\newline
+Complying with accessibility standards is not only an optional or moral aspect of 
+web development, but it now has to follow regulatory boundaries. For instance the 
+\textit{European Accessibility Act} came into 
 effect on June 28, 2025 and obliges any e-commerce or digital service in the EU 
-to comply with those standards.\newline
-Current Large-Language Models (LLMs) have shown signifant improvements in automatic
-code generation. Especially \textit{Image-to-Code} tasks where UI designs are given as 
-input and LLMs output the functional UI code, have demonstrated that especially for 
-less complex webpages LLMs show good performance~\parencite{si2024design2code}. 
-Several benchmarks have shown the competitive performance of LLMs on those tasks.
-However, the capability of modern LLMs to generate accessible Code in an Image-to-Code 
-environment has only started to gain researchers interest quite recently. Existing 
-research in this field have compared human to the generated code and tried to better
-align with the accessibility standards. Nevertheless, this has never been tested in 
-an Image-to-Code environment. Apart from that, accessibility does not only concern 
-the visual appearance of a web user interace, but also its functionality. Thus, it 
-requires the LLMs to have a deeper understanding than in classical Image-to-Code scenarios
-where LLMs only reproduce the input images pixel perfectly.
+to comply with those standards. Neglecting to do so could result in warnings,
+reputational damage and loss of sales in the future.\newline
+At the same time, thanks to Large-Language Models (LLMs) we experience signifant 
+improvements in automatic code generation. Current LLMs are capable to perform
+\textit{Image-to-Code} tasks where based on a UI design or screenshot,
+LLMs generate functional frontend code code. Recent research has demonstrated 
+that especially for 
+less complex webpages LLMs show decent performance~\parencite{si2024design2code}. \newline
+But can LLMs also generate accessible frontend code in a realistic image-to-code scenario? 
+This question has hardly been investigated to date. Especially due 
+to rising frontend code generation, it will be interesting to see 
+how the WCAG compliance will influence the visual similarity.
 
 \subsection{Our Contributions}
+
+\subsubsection{Evaluation Pipeline}
 In order to close this gap, we propose a large scale accessibility evaluation pipeline of LLM-based
-Image-to-Code generation. Even if the main contribution of this thesis is in the field 
-of accessibility, the visual and structural similarity will also be taken into account.\newline
-For this pipeline we use a dataset as input which contains of 53 real-world webpage 
-examples which have been gathered from existing datasets and mutated in 
-order to minimize data leakage. It covers a wide spectrum of layouts, content 
-areas and accessibility features. This dataset is the ground truth and also contains 
-information about the accessibility violations of the human developers.\newline
-This dataset is then used in a reproducible evaluation pipeline which 
-measures both the visual and structural similarity (pixel/DOM fidelity), as well as the 
-accessibility compliance. Therefore, we propose different benchmarks in 
-order to measure the performance of the LLMs. The corresponding data for the benchmarks
-will be evaluated during analyses after the code generation.\newline
-This environment will be tested in an in-depth comparison of 4 state-of-the-art LLMs 
-with vision capabilities (gpt-4o, gemini flash 2.0, llama 3.2 vision, qwen 7B vl).
-Those LLMs are tested across the images of the dataset and different prompting 
-strategies. We also propose a technique and implementation details to get the best 
-results.
+Image-to-Code generation. This pipeline combines visual and structural fidelity with an automatic 
+WCAG conformity check. Therefore, we propose different benchmarks in 
+order to measure the performance of the LLMs.
+
+\subsubsection{Realistic Dataset}
+We create a realistic dataset that contains of 53 real-world webpage 
+examples which have been gathered from existing datasets and slightly mutated to
+minimize noise within the data. It covers a wide spectrum of layouts, content 
+areas and accessibility features. This dataset contains the screenshots 
+of each webpage, but also the HTML/CSS created by human developers.
+
+\subsubsection{Model Comparison}
+We conduct an in-depth comparison of 3 state-of-the-art LLMs 
+with vision capabilities (gpt-4o, gemini flash 2.0, qwen 7B vl) under the 
+same experiment conditions. The LLMs are tested across different prompting 
+strategies, as well as pre- and post-processing techniques.
+
+\subsubsection{Quantitative and Qualitative Evaluation}
+Each result will be analyzed based on a quantitative and qualitative 
+evaluation. We analyze differences across the LLMs and outline their
+reasons.
+
+\subsubsection{Best-Practice Guidelines}
+Based on our experience, we present concrete best-practice guidelines, how 
+to combine different techniques in order to achieve a maximum amount 
+of accessibility compliance.
 
 
 

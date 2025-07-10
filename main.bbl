@@ -158,6 +158,34 @@
       \verb https://doi.org/10.1145/3677846.3677854
       \endverb
     \endentry
+    \entry{alphaonelabs_education}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cb5aca9d6b97a47ac967ed6f13f61a1b}{%
+           family={{AlphaOne Labs}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{cb5aca9d6b97a47ac967ed6f13f61a1b}
+      \strng{fullhash}{cb5aca9d6b97a47ac967ed6f13f61a1b}
+      \strng{bibnamehash}{cb5aca9d6b97a47ac967ed6f13f61a1b}
+      \strng{authorbibnamehash}{cb5aca9d6b97a47ac967ed6f13f61a1b}
+      \strng{authornamehash}{cb5aca9d6b97a47ac967ed6f13f61a1b}
+      \strng{authorfullhash}{cb5aca9d6b97a47ac967ed6f13f61a1b}
+      \field{labelalpha}{Alp25}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/alphaonelabs/alphaonelabs-education-website}}
+      \field{note}{GitHub repository}
+      \field{title}{AlphaOneLabs Education Website}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://github.com/alphaonelabs/alphaonelabs-education-website
+      \endverb
+      \verb{url}
+      \verb https://github.com/alphaonelabs/alphaonelabs-education-website
+      \endverb
+    \endentry
     \entry{beltramelli2017pix2code}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=c026bb9f137d7fb540e8e2690e756f86}{%
@@ -292,6 +320,146 @@
       \verb https://arxiv.org/abs/2404.02575
       \endverb
     \endentry
+    \entry{nuranferhan_ecommerce}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3825e1e45e03b99fa16dfc85769ba32e}{%
+           family={Ferhan},
+           familyi={F\bibinitperiod},
+           given={Nuran},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3825e1e45e03b99fa16dfc85769ba32e}
+      \strng{fullhash}{3825e1e45e03b99fa16dfc85769ba32e}
+      \strng{bibnamehash}{3825e1e45e03b99fa16dfc85769ba32e}
+      \strng{authorbibnamehash}{3825e1e45e03b99fa16dfc85769ba32e}
+      \strng{authornamehash}{3825e1e45e03b99fa16dfc85769ba32e}
+      \strng{authorfullhash}{3825e1e45e03b99fa16dfc85769ba32e}
+      \field{labelalpha}{Fer25}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/nuranferhan/e-commerce-site}}
+      \field{note}{GitHub repository}
+      \field{title}{E-Commerce Site}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://github.com/nuranferhan/e-commerce-site
+      \endverb
+      \verb{url}
+      \verb https://github.com/nuranferhan/e-commerce-site
+      \endverb
+    \endentry
+    \entry{gui2024webcode2m}{article}{}
+      \name{author}{13}{}{%
+        {{un=0,uniquepart=base,hash=3fd6d82ef03fab5113e6a204b24df54c}{%
+           family={Gui},
+           familyi={G\bibinitperiod},
+           given={Yi},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=1e181d320377f5c489b768686bb952ee}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Zhen},
+           giveni={Z\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=763d627054b8ba1e68b70d34e0f76ab1}{%
+           family={Wan},
+           familyi={W\bibinitperiod},
+           given={Yao},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ec4a66be7b14edeae96b0021a495a279}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Yemin},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d7086ec21f72e8e904e3dfb11f97caa6}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Hongyu},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cbba6f8400b9e13d55993b4612949abb}{%
+           family={Su},
+           familyi={S\bibinitperiod},
+           given={Yi},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a83c9cfc40f465e5490e50cb90e5975a}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Bohua},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e991036400f5d80358b9053eb366266b}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Dongping},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a052d15b1553cd3381be869a0626cf52}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Siyuan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1035fe71d584ffddaebc266241b37db5}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Xing},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=972983ffa49e41b3d6c32cf89e31699a}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Wenbin},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c358204b5c649d29bcb0ba18cea44777}{%
+           family={Jin},
+           familyi={J\bibinitperiod},
+           given={Hai},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=78602a740c55ebc62bc5530e131d12d1}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xiangliang},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1040d5caf2a65bbb0e672940b5345e93}
+      \strng{fullhash}{c292de2f137e4f266cc68864774d60ae}
+      \strng{bibnamehash}{c292de2f137e4f266cc68864774d60ae}
+      \strng{authorbibnamehash}{c292de2f137e4f266cc68864774d60ae}
+      \strng{authornamehash}{1040d5caf2a65bbb0e672940b5345e93}
+      \strng{authorfullhash}{c292de2f137e4f266cc68864774d60ae}
+      \field{labelalpha}{Gui+24}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{arXiv preprint arXiv:2404.06369}
+      \field{title}{WebCode2M: A Real-World Dataset for Code Generation from Webpage Designs}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.48550/arXiv.2404.06369
+      \endverb
+      \verb{eprint}
+      \verb 2404.06369v2
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2404.06369
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2404.06369
+      \endverb
+    \endentry
     \entry{si2024design2code}{article}{}
       \name{author}{6}{}{%
         {{un=0,uniquepart=base,hash=50e55ce524a6cabd5d5e862c580e6869}{%
@@ -306,12 +474,12 @@
            given={Yanzhe},
            giveni={Y\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=b7084c71af5e6ed93c8537dce93d4856}{%
+        {{un=1,uniquepart=given,hash=b7084c71af5e6ed93c8537dce93d4856}{%
            family={Li},
            familyi={L\bibinitperiod},
            given={Ryan},
            giveni={R\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=2d3579ec7df6d4114e1dcbc418a92dd1}{%
            family={Yang},
            familyi={Y\bibinitperiod},

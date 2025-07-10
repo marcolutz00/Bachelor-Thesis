@@ -1,0 +1,19 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'main.blg'
+[71] biber-darwin:340> INFO - === Thu Jul 10, 2025, 19:22:45
+[88] Biber.pm:418> INFO - Reading 'main.bcf'
+[182] Biber.pm:972> INFO - Found 13 citekeys in bib section 0
+[195] Biber.pm:4383> INFO - Processing section 0
+[206] Biber.pm:4574> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[210] bibtex.pm:1713> INFO - LaTeX decoding ...
+[229] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliography.bib'
+[350] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[351] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[351] Biber.pm:4203> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[351] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[372] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[387] bbl.pm:757> INFO - Output to main.bbl
+[387] Biber.pm:130> WARN - Duplicate entry key: 'beltramelli2017pix2code' in file 'bibliography.bib', skipping ...
+[387] Biber.pm:130> WARN - Duplicate entry key: 'wan2024dcgen' in file 'bibliography.bib', skipping ...
+[387] Biber.pm:130> WARN - BibTeX subsystem: /var/folders/j0/z37d__mj75g9k_jcd30hbw0c0000gn/T/biber_tmp_Bv3l/f4d088b3f9f145b5c3058da33afd57d4_65403.utf8, line 11, warning: 14 characters of junk seen at toplevel
+[387] Biber.pm:132> INFO - WARNINGS: 3

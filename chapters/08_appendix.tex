@@ -28,7 +28,7 @@
 \multirow{4}{*}{DL Test Dataset} 
   & Naive & \bfseries 0.8917 & 0.8812 & 0.9701 & 0.8562 & 0.8451 & 0.906\\
   & Zero-Shot    & \bfseries 0.8889 & 0.866 & 0.9737 & 0.8543 & 0.8407 & 0.9098\\
-  & Few-Shot   & \bfseries 0 & 0 & 0 & 0 & 0 & 0\\
+  & Few-Shot   & \bfseries 0.8929 & 0.8929 & 0.9756 & 0.8486 & 0.8394 & 0.9078\\
   & Reasoning & \bfseries 0.8924 & 0.8819 & 0.9755 & 0.8498 & 0.8449 & 0.91\\
   & Iterative & \bfseries 0.8908 & 0.8819 & 0.9748 & 0.8475 & 0.8391 & 0.9109\\
   & Iterative Refine 1 & \bfseries 0.8878 & 0.8729 & 0.974 & 0.8469 & 0.8372 & 0.9081\\
@@ -71,7 +71,7 @@
 \multirow{4}{*}{DL Test Dataset} 
   & Naive & \bfseries 0.8801 & 0.7992 & 0.9685 & 0.8591 & 0.8251 & 0.9079\\
   & Zero-Shot    & \bfseries 0.8798 & 0.8297 & 0.977 & 0.8645 & 0.8141 & 0.9134\\
-  & Few-Shot   & \bfseries 0 &  0 &  0 &  0 &  0 &  0\\
+  & Few-Shot   & \bfseries 0.8729 &  0.8131 &  0.9645 &  0.8562 &  0.8242 &  0.9067\\
   & Reasoning & \bfseries 0.8683 & 0.799 & 0.9741 & 0.8541 & 0.8093 & 0.905\\
   & Iterative & \bfseries 0.8823 & 0.8298 & 0.9742 & 0.8624 & 0.836 & 0.9091\\
   & Iterative Refine 1 & \bfseries 0.8783 & 0.8297 & 0.9753 & 0.8616 & 0.8136 & 0.9112\\
@@ -107,6 +107,28 @@
 
 
 
+
+
+\usetikzlibrary{matrix, positioning}
+\newlength{\colgap}   \setlength{\colgap}{7mm}   % horizontaler Spaltenabstand
+\newlength{\rowgap}   \setlength{\rowgap}{8mm}   % vertikaler Zeilenabstand
+
+% Box-Stil (kannst du natürlich anpassen)
+\tikzset{
+  promptbox/.style={
+    draw,
+    rounded corners=3pt,
+    very thick,
+    inner sep=6pt,
+    align=left,
+    font=\footnotesize,
+  }
+}
+
+% Breiten (müssen zusammen mit \colgap < \linewidth bleiben!)
+\newlength{\bigboxwidth} \setlength{\bigboxwidth}{0.57\linewidth}
+\newlength{\boxwidth}    \setlength{\boxwidth}{0.27\linewidth}
+
 \section{Prompts}
 \definecolor{myblue}{RGB}{0,55,205}
 
@@ -127,14 +149,10 @@
 \newlength{\vgap}\setlength{\vgap}{6mm}   % vertikaler Abstand
 
 % Breite einer „normalen“ Box   (3 Stück + 2 Lücken = \textwidth)
-\newlength{\boxwidth}
 \setlength{\boxwidth}{\dimexpr(\textwidth-2\hgap)/3\relax}
 
 % Breite der großen Box (nimmt zwei Spalten ein)
-\newlength{\bigboxwidth}
 \setlength{\bigboxwidth}{\dimexpr2\boxwidth+\hgap\relax}
-
-
 
 \begin{figure}[ht]
 \centering
@@ -238,6 +256,9 @@
 \end{tikzpicture}
 \caption{Overview of Prompts.}
 \end{figure}
+
+
+
 
 
 
