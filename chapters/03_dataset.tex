@@ -5,7 +5,7 @@ The main goal is to gather a diverse and high-quality dataset which represents s
 real-world HTML/CSS webpages. The dataset should (1) include multiple domains and layouts,
 (2) contain annotated accessibility violations and (3) has a reasonable size to be
 statistically relevant, but is also small enough to be analyzed manually.
-There is no public dataset which fullfills all requirements.
+There is no publicly available dataset which fullfills all requirements.
 
 \section{Construction}
 Two promising examples in the field of Image-to-Code are \textit{Design2Code}~\parencite{si2024design2code} 
@@ -36,16 +36,17 @@ their data, it is necessary to align both datasets.
 This includes (1) removing all external dependencies such as multimedia files (images, 
 audio, videos, links), replacing them with placeholders such as src="placeholder.jpg" 
 for images or href="\#" for <a> Tags. Furthermore, (2) scripts and other dynamic 
-content are neutralised.
+contents are neutralised.
 Lastly, (3) non-visible content, such as advertisement-related tags or hidden elements 
 are removed, because they are not required in an Image-to-Code environment and 
-could only bias the accessibility score negatively.
+could possibly bias the accessibility score negatively.
 
 
 \section{Data Leakage}
 In a last step we try to rule out the risk of data leakage. Both datasets have been
-published On Huggingface within three months of the LLMs' official knowledge-cutoff.
-This means that theoretically both datasets could have been part of the LLM' training
+published on Huggingface within three months of the official knowledge-cutoff 
+of \textit{GPT-4o} and \textit{Gemini flash 2.0}.
+This means that theoretically both datasets could have been part of the LLMs' training
 data.
 Therefore, we create a 
 new, leakage-proof dataset of 20 entries which we test the LLMs on and compare their 
@@ -54,11 +55,11 @@ This test dataset has 20 data entries and we construct it as follows:
 
 \begin{itemize}
   \item \textbf{Mutation of existing Data Entries:} We use 10 randomly-selected data entries of our existing 
-  dataset. Each data entry has been rewritten by an LLM. While the meaning
+  dataset. Each data entry has been (1) rewritten by an LLM. While the meaning
     and the length (max ±20 \%) remains roughly the same, the wording changes
-    completely. The text appearance is further changed by a set of 5 commonly used fonts in webpages and 
-    by changing the \textit{HUE} color code of each element slightly based on a random shift (±20 degrees). \newline
-    Additionally, We randomly change the structure of the data entries manually. Structural 
+    completely. The text appearance (2) is further changed by a set of 5 commonly used fonts in webpages and 
+    by changing (3) the \textit{HUE} color code of each element slightly based on a random shift (±20 degrees). \newline
+    Additionally, we randomly change (4) the structure of the data entries manually. Structural 
     blocks, such as headers, tables and images, are shuffled within and across different 
     pages. This ensures a completely new layout, while making sure that the new data entries 
     remain realistic and similar to their real-world origin.
@@ -72,13 +73,11 @@ This test dataset has 20 data entries and we construct it as follows:
 
 
 \subsection{Results}
-As can be seen in the final results in the appendix, across 
-all different prompting techniques both models performed better on the 
-\textit{Data Leakage Test Dataset} in terms of the combined final score.
-The results also do not show a statistical 
-signifcant difference in terms of the benchmarks between both datasets.
-Since we do not have any evidence for data leakage, 
-we assume that the LLMs have not seen the existing data and therefore continue 
-with the tests.
+Across all prompting techniques, \textit{GPT-4o} and \textit{Gemini flash 2.0} 
+performed better on the 
+\textit{leakage-test split} than on the original dataset in terms of their final scores.
+Since the results do not show any statistically significant drop in performance, we 
+do not have any evidence for data leakage and assume that the LLMs have not seen the existing 
+data. We proceed with the full dataset in the following experiments.
 
 

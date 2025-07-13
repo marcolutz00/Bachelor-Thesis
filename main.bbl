@@ -158,34 +158,6 @@
       \verb https://doi.org/10.1145/3677846.3677854
       \endverb
     \endentry
-    \entry{alphaonelabs_education}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=cb5aca9d6b97a47ac967ed6f13f61a1b}{%
-           family={{AlphaOne Labs}},
-           familyi={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{cb5aca9d6b97a47ac967ed6f13f61a1b}
-      \strng{fullhash}{cb5aca9d6b97a47ac967ed6f13f61a1b}
-      \strng{bibnamehash}{cb5aca9d6b97a47ac967ed6f13f61a1b}
-      \strng{authorbibnamehash}{cb5aca9d6b97a47ac967ed6f13f61a1b}
-      \strng{authornamehash}{cb5aca9d6b97a47ac967ed6f13f61a1b}
-      \strng{authorfullhash}{cb5aca9d6b97a47ac967ed6f13f61a1b}
-      \field{labelalpha}{Alp25}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://github.com/alphaonelabs/alphaonelabs-education-website}}
-      \field{note}{GitHub repository}
-      \field{title}{AlphaOneLabs Education Website}
-      \field{year}{2025}
-      \verb{urlraw}
-      \verb https://github.com/alphaonelabs/alphaonelabs-education-website
-      \endverb
-      \verb{url}
-      \verb https://github.com/alphaonelabs/alphaonelabs-education-website
-      \endverb
-    \endentry
     \entry{beltramelli2017pix2code}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=c026bb9f137d7fb540e8e2690e756f86}{%
@@ -318,6 +290,34 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/2404.02575
+      \endverb
+    \endentry
+    \entry{deque2023accessibility}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=97feed1662b5e6326c17dc979729369a}{%
+           family={Deque},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{97feed1662b5e6326c17dc979729369a}
+      \strng{fullhash}{97feed1662b5e6326c17dc979729369a}
+      \strng{bibnamehash}{97feed1662b5e6326c17dc979729369a}
+      \strng{authorbibnamehash}{97feed1662b5e6326c17dc979729369a}
+      \strng{authornamehash}{97feed1662b5e6326c17dc979729369a}
+      \strng{authorfullhash}{97feed1662b5e6326c17dc979729369a}
+      \field{labelalpha}{Deq21}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.deque.com/blog/automated-testing-study-identifies-57-percent-of-digital-accessibility-issues}}
+      \field{note}{Accessed: 2025-07-10}
+      \field{title}{Deque Study Shows Its Automated Testing Identifies 57 Percent of Digital Accessibility Issues, Surpassing Accepted Industry Benchmarks}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.deque.com/blog/automated-testing-study-identifies-57-percent-of-digital-accessibility-issues
+      \endverb
+      \verb{url}
+      \verb https://www.deque.com/blog/automated-testing-study-identifies-57-percent-of-digital-accessibility-issues
       \endverb
     \endentry
     \entry{nuranferhan_ecommerce}{misc}{}
@@ -458,6 +458,37 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/2404.06369
+      \endverb
+    \endentry
+    \entry{alphaonelabs_education}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b011da15e649ac931ab7066b90eb245c}{%
+           family={Labs},
+           familyi={L\bibinitperiod},
+           given={AlphaOne},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b011da15e649ac931ab7066b90eb245c}
+      \strng{fullhash}{b011da15e649ac931ab7066b90eb245c}
+      \strng{bibnamehash}{b011da15e649ac931ab7066b90eb245c}
+      \strng{authorbibnamehash}{b011da15e649ac931ab7066b90eb245c}
+      \strng{authornamehash}{b011da15e649ac931ab7066b90eb245c}
+      \strng{authorfullhash}{b011da15e649ac931ab7066b90eb245c}
+      \field{labelalpha}{Lab25}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/alphaonelabs/alphaonelabs-education-website}}
+      \field{note}{GitHub repository}
+      \field{title}{AlphaOneLabs Education Website}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://github.com/alphaonelabs/alphaonelabs-education-website
+      \endverb
+      \verb{url}
+      \verb https://github.com/alphaonelabs/alphaonelabs-education-website
       \endverb
     \endentry
     \entry{si2024design2code}{article}{}

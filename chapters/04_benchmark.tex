@@ -1,90 +1,124 @@
 \chapter{Benchmarks}\label{chapter:Benchmarks}
 
-\section{Visual and Structural}
-As the main instruction for LLMs for this study remains an Image-to-Code task, it 
+\section{Visual and Structural Similarity}
+The main instruction for LLMs for this experiment remains an Image-to-Code task, where 
+we input a webpage screenshot and expect a working HTML/CSS as output.
+Therefore, it 
 is necessary to evaluate the generated HTML/CSS code based on visual and structural
-similarity. One approach which seems very promising has been presented in the 
-paper Design2Code. This approach is more fine-grained than former ideas, since 
-it compares the input and the output on a component-level rather than in its entirety.
-The authors describe a sophisticated matching algorithm that combines the 
+similarity. \newline
+One fine-grained approach has been introduced by \textit{Design2Code}~\parencite{si2024design2code}.
+It compares the input against the output based on component-level metrics rather than in its entirety.
+The matching algorithm combines the 
 HTML elements in the ground truth with those in the generated code. Based on this 
-matching, it is then possible to run several metrics, such as text-similarity,
-position-similarity, color-difference, clip score and area sum score.
+matching, the following metrics are calculated and combined with equal 
+weights in a final score:
+\begin{itemize}
+  \item \textbf{Text-similarity:} Compares the text content of the HTML elements based on 
+  the sequence-matching algorithm of Python's difflib library.
+  \item \textbf{Position-similarity:} Evaluates the position fidelity of the HTML elements
+  by comparing the bounding boxes of the elements in the ground truth and the generated code.
+  \item \textbf{Color-difference:} Calculates the text color difference between two blocks 
+  using the \textit{CIEDE2000} color difference formula.
+  \item \textbf{Clip score:} Uses the \textit{CLIP} model to compare the visual similarity.
+  \item \textbf{Area sum score:} Calculates the area of the bounding boxes and compares its
+  size.
+\end{itemize}
+The combination of those scores allows to get a balanced view of the visual and 
+structural similarity of the input and output.
 
-\section{Accessibility}
-In order to measure and compare the accessibility improvements in terms of 
-quantity and severity of the violations we use two different metrics.\newline
-The first metric is the \textit{Inaccessibility Rate} (IR) which has been used in previous 
-research in this field~\parencite{alshayban2020accessibility}. This metric divides the amount of nodes with accessibility 
-violations by the amount of nodes which are susceptible for violations. The 
-interpretation of this metric is straight-forward, since it allows us to get the 
-percentage of nodes with violations compared to the total amount of nodes.\newline
+
+\section{Accessibility Metrics}
+Apart from the amount of accessibility violations, we measure and compare the 
+accessibility improvements in terms of 
+quantity and severity with two metrics:
+\begin{itemize}
+  \item The \textit{Inaccessibility Rate} (IR) has been used in previous, comparable
+research~\parencite{alshayban2020accessibility}. It measures the 
+percentage of DOM nodes with violations compared to the total amount of DOM nodes.
+Therefore, it divides the amount of nodes with accessibility 
+violations by the amount of nodes which are susceptible for violations.\newline
 \begin{equation}
     \mathrm{IR} = \frac{N_{\mathrm{violations}}}{N_{\mathrm{total}}}
 \end{equation}
-However, the Inaccessibility Rate does not take the severity of issues into account.
-Thus, we have created the \textit{Impact-Weighted Inaccessibility Rate} (IWIR). This metric 
-uses the impacts of Accessibility Violations found (minor, moderate, serious, critical)
-and assigns them to a value (1, 3, 6, 10). Our scoring reflects the non-linear 
-increase in impact for people with disablities if a violation with a higher 
-impact takes place within the code. Finally, the Impact-Weighted Inaccessibility Rate 
-is calculated by creating the sum over all Violations found multiplied by the 
-corresponding value for the severity. This sum is then divided by the amount of violations
-found multiplied by the highest impact score. By dividing the sum above through the worst 
-possible outcome, a situation where every violation is critical, allows to get an 
-understanding of the severity of the violations found.\newline
+\item To capture the severity of accessibility violations according to the WCAG impact levels,
+we introduce the \textit{Impact-Weighted Inaccessibility Rate} (IWIR). It 
+uses the pre-defined impacts of accessibility violations found 
+(minor, moderate, serious, critical)
+and assigns them to a value (1, 3, 6, 10). This scoring reflects the non-linear 
+increase in impact for people with disablities, if a violation with a higher 
+impact takes place within the code. Finally, we normalise the sum of all 
+impact values by the worst-case scenario.\newline
 \begin{equation}
   \mathrm{IWIR} = 
     \frac{\displaystyle\sum_{i=1}^{k} v_i \, w_i}
          {\displaystyle\sum_{i=1}^{k} v_i \, w_{\mathrm{max}}}
   \label{eq:iwir}
 \end{equation}
+\begin{table}[ht]
+\centering
+
+\caption{Severity weights used in IWIR.}
+  \label{tab:weights}
+  \begin{tabular}{lcc}
+  \toprule
+  Impact level & WCAG level & Weight $w_i$ \\
+  \midrule
+  Minor    & AAA          & 1  \\
+  Moderate & AA or AAA    & 3  \\
+  Serious  & A or AA      & 6  \\
+  Critical & A          & 10 \\
+  \bottomrule
+  \end{tabular}
+\end{table}
+
+\end{itemize}
+
 The combination of both metrics allows us to understand wether LLMs can not only decrease
 the amount of accessibility violations, but also its severity.
 
 \subsection{Accessibility Tools}
-As prior papers have estimated, $\approx$ 96\% contain accessibility violations 
-in its source code. Thus, the accessibility compliance remains a central issue for 
-developers (paper). Nowadays, there exist many accessibility tools which are 
-specialized in detecting violations. They work in similar ways, however they
-differentiate in their approaches.
-It is important to mention that there still exist accessibility standards which 
-can only be checked with manual tests. No tool can analyze all violations automatically, 
-however a combination of various tools in this area can help to minimize the 
+The accessibility compliance has become a central issue for 
+developers. Nowadays, there exist many accessibility tools which are 
+specialized in detecting accessibility violations. 
+According to former studies, automated testing can detect up to $\sim$60\% 
+of accessibility issues~\parencite{deque2023accessibility}. This makes them 
+valuable for developers, however they can not replace manual testing completely.
+However a combination of various tools can help to minimize the 
 oversight of accessibility violations during the tests.
-Therefore for our experiment, we decided to use combine 3
-light-weight but high-precision tools in this field.\newline
-The Axe-Core engine is a promising candidate in this fields, due to its \textit{zero 
-false-positives} approach. This means that this engine works more conservative 
-in terms of reporting accessibility violations than other tools.
-We use the eponymous tool axe-core which is based on this engine.\newline
-Google Lighthouse Accessibility works with the same engine,
-however during tests, it found additional violations which made it another promising
-candidate.\newline
-Lastly during test on our dataset, we found out that in for accessibility standards 
-axe-core seems to be too conservative and produces \textit{false-negatives}. While 
-they can not be extinguished completely, they can be reduced by combining it with 
-another tool. Based on those results, \textit{pa11y} completes the list of automatic
-accessibility tools used in this pipeline. Especially in areas where the other tools
-seem to fail reporting violations, it has its strengths.\newline
-While this combination of different tools might not clear false-negatives, it can
-help to minimize their occurrence.
+Therefore, we decided to use combine 3
+light-weight but complementary tools for our experiment.
+They work in similar ways, however they
+differentiate in their approaches.
+\begin{itemize}
+  \item \textbf{Axe-Core (4.10.3):} The Axe-Core engine uses a \textit{zero 
+  false-positives} approach. This means that the engine highlights only 
+  those violations which are certain to be violations. This is a
+  conservative approach which can possibly lead to \textit{false-negatives} in some cases.
+  \item \textbf{Google Lighthouse Accessibility (12.4.0):} Even if Google Lighthouse Accessibility 
+  works with the same axe-core engine, it found additional, complementary violations during tests.
+  \item \textbf{Pa11y (8.0.0):} During tests on our dataset, we found out that pa11y has 
+  strengths in detecting violations, especially in areas where the other tools
+  seem to fail. Therefore, we decide to use it as our third complementary tool.
+\end{itemize}
 
-\subsubsection{Mapping between Tools}
+While this combination of different tools might not clear false-negatives, it can
+help to minimize and reduce their occurrence.
+
+\subsubsection{Cross-Tool Mapping}
 Generally WCAG standards are based on a predefined multi-level structure. The 
-principle (perceivable, operable, understandable, robust) builds the first level 
-and defines the main categories of accessibility. The second level are the 
-guidelines which are based on the principles. The third level are the success
-criteria which are based on the guidelines. The success criteria are the
-actual accessibility standards which can be checked. The last level are the 
-techniques which are used to check the success criteria. They are more fine-grained
+\textit{principle} (perceivable, operable, understandable, robust) builds the first level 
+and defines the main categories of accessibility. The second level - the 
+\textit{guidelines} are based on the principles. The third level are the \textit{success
+criteria} which are based on the guidelines. The success criteria are the
+actual accessibility standards which can be checked. The last level - \textit{the 
+techniques} are used to check the success criteria. They are more fine-grained
 than success criteria and split into multiple different checks.\newline
 While the operating principles of axe-core, lighthouse and pa11y are similar, their 
-output varies. This is because they operate on different reporting levels. While 
-axe-core and lighthouse operate on the level of success criterion, pa11y operates 
-on the level of techniques. In order to combine the three tools and detect 
-similar violations, this inequality requires a manual mapping of techniques to 
-their corresponding success criterion. This has been implemented for the most
-common 200 pa11y violations and 100 axe-core (Zahlen?) violations. 
-This mapping is used to combine the results of the three tools.
+output varies since they operate on different reporting levels. While 
+axe-core and lighthouse operate on the success criterion level, pa11y operates 
+on the level of techniques. In order to aggregate the three tools 
+and de-duplicate the violations found, we create a JSON mapping covering the $\sim$90 most
+common WCAG techniques and $\sim$55 success criteria. 
+With the help of this mapping, the output of all three tools can be combined in an 
+automatic pipeline.
 

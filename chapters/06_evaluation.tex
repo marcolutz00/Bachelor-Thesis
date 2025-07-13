@@ -1,70 +1,82 @@
 \chapter{Evaluation}\label{chapter:Evaluation}
 
 
-\section{Accessibility}
-In order to provide a comprehensive analysis of the accessibility violations, 
-we divide the analysis into 3 categories. Those categories differentiate in 
-terms of quantitive and qualitive analysis as well as in its depth.
+\section{Accessibility Results}
+In order to provide a comprehensive analysis of the amount and type of accessibility violations, 
+we divide the analysis into 3 categories. We report both a quantitive with aggregate 
+metrics and a qualitive analysis with fine-grained explanations.
 
 \subsection{Quantitive Analysis}
 \subsubsection{Prompting Techniques}
-\subsubsection{Advanced Strategies}
-Figure x shows the quantitive analysis of the amount and type of Accessibility 
-Violations found during the 3 experiment runs for each tuple of parameters.
-Based on this figure, we can observe several interesting findings.\newline
-Firstly, the amount and types of Accessibility Violations show a similar 
-patterns across the different models. While overall \textit{gpt-4o} produced
-slightly less violations, its numbers and distribution show a similar 
-structure. 
-Without the refinement techniques, we also see a very skewed error profile. 
-Color contrast violations, as well as HTML landmark and region 
-issues are the predominantly cause for at least 75\% of all violations in both
-gemini's flash-2.5 and in gpt-4o model and with diverse prompting techniques.\newline
-While gemini seems to have more color contrast violations, 
-landmark and region rules cause more problems for the gpt-4o model. Those 
-findings are confirmed across different parameters.\newline
-The subsequent types of violations are in the fields of missing labels,
-links without distinguishable color, issues with the HTML header and 
-the size of frontend components. The results show a noticeable trend that 
-only a small subset of possible WCAG violations cause non-negligible amounts 
-of violations in an Image-to-Code environment. Especially in the case of 
-gpt-4o, there are only 6 types of violations which cause more than 10
-violations combined across all prompting techniques in our dataset.\newline
-Similar to related papers in this field (paper xxx), our results also show 
-that different prompting techniques only have small impact on the findings.
-Even if the naive prompting approach does not instruct the LLMs to generate
-code with compliance to the WCAG standards, it still only shows slightly 
-increased amounts of violations than more advanced prompting techniques such as 
-zero-shot or reasoning.\newline
-Figure xyy shows the violations found in the ground truth HTML/CSS of our 
-dataset. The human-written HTML/CSS of our dataset counts 1339 accessibility 
+Figure xy illustrates the comparison of the average amount of violations, the
+Inaccessibility Rate (IR) and the Impact-Weighted Inaccessibility Rate (IWIR) between 
+the human baseline and the models with the corresponding prompting techniques.
+
+\paragraph{Key observations:}
+Even the weakest LLM outperforms the human baseline regarding the average amount
+of violations per webpage and the IR. Only the IWIR remains constant, only showing small 
+differences across the models. The human-written HTML/CSS of our dataset counts 1339 accessibility 
 violations, leading to $\sim$25.26 violations per file across the whole dataset.
 On the other hand, even gemini with the naive prompting technique,
 the worst performing set of parameter, had a maximum of 917 accessibility 
-violations, leading to $\sim$17.3 violations per file across the whole dataset.
-This shows that LLMs write by default more accessible code than humans by 
-incorporating the most important rules. However, as described above they 
-struggle with more complex rules such as color contrast or landmarks
-that require further information or thinking.
+violations, leading to $\sim$17.3 violations per file across the whole dataset.\newline
+GPT‑4o achieved the lowest average amount of violations per webpage, IR and IWIR.\newline
+Advanced prompting techniques show only little effect, compared to the naive baseline, 
+demonstrating the LLMs' inherent understanding of accessibility. 
+Even if the naive prompting approach does not instruct the LLMs to generate
+code with compliance to the WCAG standards, it still only shows slightly 
+increased amounts of violations than more advanced prompting techniques.
 
-IR noch mit aufnehmen.
-IW-IR noch mit aufnehmen.
-Verteilung der Issues bei Human und LLms mit aufnehmen.
-Bar Charts noch mit aufnehmen ohne iterative
+\paragraph{Error Distribution:}
+Figure yxc illustrates the distribution of violations per WCAG success criterion.
+The distribution shows a similar left-skewed distribution across all models, indicating 
+that the models have a similar understanding of the WCAG rules.\newline
+At least 65\% of all violations are caused by color contrast and 
+landmark and region issues. This finding is not only consistent across the different models
+and prompting techniques, but also in human-written code.
+\newline
+The following types of violations are mainly caused by missing labels, wrong link colors, 
+issues with header tags and the size of frontend components. This demonstates that only 
+a small subset of WCAG violations have relevant and non-negligible amount of violations. 
+Especially GPT-4o shows illustrates this clearly, as only 6 types of violations cause 
+94\%(number check) of all violations.\newline
+The results also show differences between the models. While gemini seems to have more color 
+contrast violations, landmark and region rules cause
+more problems for the GPT-4o model.
 
 
 \subsection{Qualitive Analysis}
-\subsubsection{Prompting Techniques}
-\subsubsection{Advanced Strategies}
-In a first step, we analyze how consistent violations are within different 
-within different experiment runs and dataset entries. Figure xy shows the 
-consistency of the type and the amount of a violation by using the 
-\textit{cosine-similarity}. Therefore, we analyze the type of violation
-and its amount per file in vector-like structure. 
-The cosine-similarity is then calculated between the vectors of the 
-different experiment runs and dataset entries. This allows us to 
-analyze how similar the violations are and to understand how consistent
-the LLMs are in generating accessible code.
+\subsubsection{Consistency}
+We model the consistency of violations found within different 
+experiment runs and dataset entries. Therefore, we use the \textit{cosine-similarity} for 
+each k-dimenstional error vector, where each dimension represents the amount of a specific 
+WCAG violation. The cosine-similarity is then calculated between the vectors of the 
+different experiment runs and dataset entries. As the heatmap in figure yys illustrates,
+light colors are dominating the tiles, indicating a high cosine similarity (mü = 0.9). This 
+indicates that the LLMs do not only produce similar accessibility violations, but also that 
+the amount of each type violation is consistent across each input webpage. Darker tiles 
+coincide with lower cosine similarites. The majority of those darker tiles are mainly caused 
+by webpages with only a few violations. For those webpages, halluzinations or randomly 
+created mutations by the LLMs, such 
+as new colors or missing landmarks, have a larger impact on the cosine similarity, as 
+the distribution of violations is not consistent. 
+
+\subsubsection{Concentration of Violations}
+While we do not know 
+the exact training data of each model, we can infer by the observations that the 
+models have been trained on similar underlying data. This also alligns with the 
+error distribution of human developers, as WebAIM’s 2025 “Million” report shows.
+In this report, 79\% (number check) of webpages fail the color contrast guidelines,
+while 43\% (number check) of webpages do not use landmarks correctly. 
+Combined with the other WCAG rules that can be found in non-negligible amounts, 
+they are considered more complex and require a deeper understanding of the 
+underlying HTML/CSS structure. \newline
+This bias is faithfully reflected in the LLMs'
+results, which gives us confidence to hypothesize that scraped code from 
+forums like StackOverflow inforced this shortcut in the models' weights. 
+Answers on forums often only start with the first <div> element, not showing 
+the full page structure. This could explain the incorrect usage of landmarks and 
+regions.
 
 \newcommand{\vect}[1]{\begin{pmatrix}#1\end{pmatrix}}
 \newcommand{\issues}{k}                   % Anzahl der Issue-Klassen
