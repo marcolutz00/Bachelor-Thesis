@@ -7,9 +7,10 @@
 \contentsline {table}{\numberline {4.1}{\ignorespaces Severity weights used in IWIR.\relax }}{9}{table.caption.14}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Most common colors used by the LLMs.\relax }}{18}{table.caption.30}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {8.1}{\ignorespaces OpenAI GPT-4o: Data Leakage (DL) based on 3 iterations\relax }}{19}{table.caption.32}%
-\contentsline {table}{\numberline {8.2}{\ignorespaces Gemini-2.0-flash: Data Leakage (DL) based on 3 iterations\relax }}{19}{table.caption.33}%
+\contentsline {table}{\numberline {8.1}{\ignorespaces OpenAI GPT-4o: Data Leakage (DL) based on 3 iterations\relax }}{20}{table.caption.35}%
+\contentsline {table}{\numberline {8.2}{\ignorespaces Gemini-2.0-flash: Data Leakage (DL) based on 3 iterations\relax }}{20}{table.caption.36}%
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

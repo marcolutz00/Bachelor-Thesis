@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.5)  13 JUL 2025 20:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.5)  14 JUL 2025 20:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1389,9 +1389,14 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [16]) (./chapters/07_conclusion.tex [17]
+ [16]
+Underfull \hbox (badness 10000) in paragraph at lines 165--173
+
+ []
+
+[17]) (./chapters/07_conclusion.tex [18]
 chapter 7.
-) (./chapters/08_appendix.tex [18
+) (./chapters/08_appendix.tex [19
 
 
 ]
@@ -1415,7 +1420,7 @@ Overfull \hbox (20.9357pt too wide) in paragraph at lines 60--96
  [][] 
  []
 
-[19
+[20
 
 
 ]
@@ -1442,16 +1447,16 @@ Overfull \hbox (38.3999pt too wide) in paragraph at lines 256--257
  [][] 
  []
 
-[20]
+[21]
 Package pgfplots info on input line 321: Using 'lua backend=false' for axis: stacked plots unsupported (yet).
 Package pgfplots info on input line 321: Using 'lua backend=false' for axis: x coord trafo unsupported.
-) [21]
+) [22]
 Package tocbasic Info: character protrusion at lof deactivated on input line 72.
  (./main.lof)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
- [22
+ [23
 
 
 ]
@@ -1460,7 +1465,7 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 73.
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
- [23
+ [24
 
 
 ]
@@ -1472,12 +1477,12 @@ Package biblatex Warning: No driver for entry type 'standard'.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplx/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-[24
+[25
 
 
 ]
 No complaints by nag.
-[25] (./main.aux)
+[26] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1485,18 +1490,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55530 strings out of 478268
- 1275892 string characters out of 5846347
- 2262334 words of memory out of 5000000
- 72124 multiletter control sequences out of 15000+600000
- 570115 words of font info for 537 fonts, out of 8000000 for 9000
+ 55543 strings out of 478268
+ 1276021 string characters out of 5846347
+ 2261404 words of memory out of 5000000
+ 72125 multiletter control sequences out of 15000+600000
+ 570466 words of font info for 543 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  110i,17n,106p,10683b,2678s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (32 pages, 494246 bytes).
+Output written on main.pdf (33 pages, 496678 bytes).
 PDF statistics:
- 603 PDF objects out of 1000 (max. 8388607)
- 533 compressed objects within 6 object streams
- 137 named destinations out of 1000 (max. 500000)
+ 612 PDF objects out of 1000 (max. 8388607)
+ 541 compressed objects within 6 object streams
+ 141 named destinations out of 1000 (max. 500000)
  157087 words of extra memory for PDF output out of 184870 (max. 10000000)
 

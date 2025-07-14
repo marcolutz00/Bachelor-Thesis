@@ -146,6 +146,52 @@ a human bias which come from the vast training data that does not adhere
 fully to accessibility best practices.
 
 
+\subsubsection{Dominance of Default Colors}
+A further fine-grained analysis of the violations (Table xy) reveals that the 
+majority of color contrast violations are caused by a small subset of colors.
+After inspecting the most common colors, those colors can
+be classified as \textit{default colors}. They are often used by browsers and 
+popular frameworks and thus have been learned by the LLMs. For instance, we 
+identified two public color palettes - the \textit{Google Color Palette} and the
+\textit{Bootstrap v3-v5} - that explain a majority of the violation.
+\begin{itemize}
+  \item \textbf{Gemini.} 13 out of 127 colors that violate the color contrast 
+  rules matches exactly one of the two color palettes. They are accounting for 
+  63\% of all misses, 69\% if black (\#000000) and white (\#ffffff) are included.
+  \item \textbf{GPT-4o.} 11 out of 237 colors match, leading to 23\% of all violations 
+  (39\% if black and white are included).
+\end{itemize}
+
+Gemini appears to use a larger amount of boiler-plate colors, for instance 
+using Bootstrap's link color \#007bff and its grey scale colors such as 
+\#777777 - \#999999. \newline
+On the other hand, apart from some default colors, GPT-4o uses a wider variety 
+of colors. It appears that GPT-4o is more likely to mix its own colors into the
+generated code, rather than relying on boiler-plate colors. This hypothesis
+can be further supported by the fact that GPT-4o is able to solve a higher 
+percentage of color contrast violations than Gemini. \newline
+
+
+\begin{table}[ht]
+\centering
+\caption{Most common colors used by the LLMs.}
+  \label{tab:colors}
+  \begin{tabular}{lccc}
+  \toprule
+  Model        & Distinct Colors                 & Top-7 colors     & Percentage of       \\
+               &         with Violations         &                  & all color contrast   \\ 
+               &                                 &                  &  violations          \\ \midrule
+  GPT-4o       & 127          & \#ffffff, \#777777, \#007bff, \#0000ee,  & tbd \\
+               &              & \#888888, \#999999, \#29abe2              &  \\
+  Gemini       & 237          & \#ffffff, \#777777, \#888888, \#999999,  & tbd \\
+  Flash 2.0    &              & \#ff0000, \#007bff, \#808080               &  \\
+  Qwen 2.5-vl  & 0            &     & tbd \\
+               &              &     &     \\
+  \bottomrule
+  \end{tabular}
+\end{table}
+
+
 \section{Image-to-Code Similarity}
 \subsubsection{Prompting Techniques}
 \subsubsection{Advanced Strategies}
