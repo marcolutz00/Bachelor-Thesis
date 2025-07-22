@@ -5,18 +5,27 @@
 \documentclass[headsepline,footsepline,footinclude=false,oneside,fontsize=11pt,paper=a4,listof=totoc,bibliography=totoc]{scrbook} % one-sided
 
 \usepackage{amsmath}
+\usepackage{ragged2e}
+\usepackage{array}  
+\usepackage{xurl}
 \usepackage[utf8]{inputenc}
 \usepackage{tikz}
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{siunitx} 
-\usepackage{pgfplots}
+\usepackage{pgfplots, pgfplotstable}
+\usepackage{filecontents}
+\usepackage{graphicx}
 \usepackage{mathtools}
-\usepackage{pgfplots}
 \usepackage{tabularx, booktabs}
 \usepackage{caption, subcaption}
 \usepackage{adjustbox}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{xcolor,tcolorbox}
+
+
 
 \pgfplotsset{compat=1.18}
 \usetikzlibrary{pgfplots.groupplots}

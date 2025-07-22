@@ -45,20 +45,19 @@
 \contentsline {paragraph}{\nonumberline Key observations:}{15}{paragraph*.21}%
 \contentsline {paragraph}{\nonumberline Error Distribution:}{15}{paragraph*.23}%
 \contentsline {subsection}{\numberline {6.1.2}Qualitive Analysis}{16}{subsection.6.1.2}%
-\contentsline {subsubsection}{\nonumberline Consistency}{16}{subsubsection*.25}%
-\contentsline {subsubsection}{\nonumberline Concentration of Violations}{16}{subsubsection*.27}%
-\contentsline {subsubsection}{\nonumberline Dominance of Default Colors}{17}{subsubsection*.29}%
-\contentsline {section}{\numberline {6.2}Image-to-Code Similarity}{17}{section.6.2}%
-\contentsline {subsubsection}{\nonumberline Prompting Techniques}{17}{subsubsection*.32}%
-\contentsline {subsubsection}{\nonumberline Advanced Strategies}{17}{subsubsection*.34}%
-\contentsline {chapter}{\numberline {7}Conclusion}{19}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Section}{19}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Future Directions}{19}{subsection.7.1.1}%
-\contentsline {chapter}{\numberline {8}Appendix}{20}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Results Data Leakage}{20}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Prompts}{21}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Accessibility Violations Resolved}{22}{section.8.3}%
-\contentsline {chapter}{\nonumberline List of Figures}{23}{chapter*.38}%
-\contentsline {chapter}{\nonumberline List of Tables}{24}{chapter*.39}%
-\contentsline {chapter}{\nonumberline Bibliography}{25}{chapter*.40}%
+\contentsline {subsubsection}{\nonumberline Consistency}{16}{subsubsection*.26}%
+\contentsline {subsubsection}{\nonumberline Concentration of Violations}{16}{subsubsection*.29}%
+\contentsline {subsubsection}{\nonumberline Dominance of Default Colors}{17}{subsubsection*.31}%
+\contentsline {section}{\numberline {6.2}Image-to-Code Similarity}{18}{section.6.2}%
+\contentsline {subsubsection}{\nonumberline Prompting Techniques}{18}{subsubsection*.34}%
+\contentsline {subsubsection}{\nonumberline Advanced Strategies}{18}{subsubsection*.36}%
+\contentsline {chapter}{\numberline {7}Conclusion}{20}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Section}{20}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Future Directions}{20}{subsection.7.1.1}%
+\contentsline {chapter}{\numberline {8}Appendix}{21}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Results Data Leakage}{21}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Results Code Similarity}{22}{section.8.2}%
+\contentsline {chapter}{\nonumberline List of Figures}{27}{chapter*.44}%
+\contentsline {chapter}{\nonumberline List of Tables}{28}{chapter*.45}%
+\contentsline {chapter}{\nonumberline Bibliography}{29}{chapter*.46}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

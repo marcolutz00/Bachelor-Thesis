@@ -8,8 +8,10 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Experiment Pipeline\relax }}{12}{figure.caption.17}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Gemini: Distribution of WCAG violations across the dataset.\relax }}{19}{figure.caption.27}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Overview of Prompts.\relax }}{21}{figure.caption.37}%
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Lack of semantic landmarks in the generated code.\relax }}{24}{figure.caption.41}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Overview of Prompts used.\relax }}{25}{figure.caption.42}%
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

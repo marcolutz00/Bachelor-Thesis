@@ -27,6 +27,8 @@ Even if the naive prompting approach does not instruct the LLMs to generate
 code with compliance to the WCAG standards, it still only shows slightly 
 increased amounts of violations than more advanced prompting techniques.
 
+
+
 \paragraph{Error Distribution:}
 Figure yxc illustrates the distribution of violations per WCAG success criterion.
 The distribution shows a similar left-skewed distribution across all models, indicating 
@@ -45,6 +47,50 @@ contrast violations, landmark and region rules cause
 more problems for the GPT-4o model.
 
 
+\begin{table}[htbp]
+  \centering
+  \footnotesize
+  \caption{Accessibility benchmarks: Inaccessibility Rate (IR), Impact‑Weighted
+           Inaccessibility Rate (IWIR), Average Number of Violations per webpage
+           (ANV) and Total Violations (TV).}
+  \label{tab:webcode2m}
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{l *{3}{cccc}} 
+    \toprule
+    \multirow{2}{*}{\textbf{Technique}} &
+      \multicolumn{4}{c}{\textbf{Gemini Flash 2.0}} &
+      \multicolumn{4}{c}{\textbf{ChatGPT‑4o}} &
+      \multicolumn{4}{c}{\textbf{Qwen2.5vl‑7B}} \\
+
+    \cmidrule(lr){2-5}\cmidrule(lr){6-9}\cmidrule(l){10-13}
+      & IR & IWIR & ANV & TV
+      & IR & IWIR & ANV & TV
+      & IR & IWIR & ANV & TV \\
+    \midrule
+    Naive                & 0.1142 & 0.4770 & 15.45 & 819 & 0.1222 & 0.4710 & 13.75 & 729 & 0.1070 & 0.4025 & 6.21 & 329 \\
+    Zero‑Shot            & 0.1033 & 0.4774 & 14.25 & 755  & 0.1002 & 0.4735 & 12.33 & 653  & 0.1094 & 0.3906 & 5.53 & 293 \\
+    Few‑Shot             & 0.1093 & 0.4791 & 15.74 & 834  & 0.0796 & 0.4464 & 9.49 & 503  & 0.0823 & 0.4092 & 5.92 & 314 \\
+    CoT            & 0.1107 & 0.4831 & 14.28 & 757  & 0.0861 & 0.4453 & 10.04 & 532 & \underline{\textbf{0.0689}} & 0.4599 & 6.49 & 344 \\
+    IterativeRef1     & 0.0308 & 0.3872 & 5.85 & 310  & 0.0173 & 0.3188 & 2.43 & 129  & 0.0956 & 0.3513 & 5.79 & 307 \\
+    IterativeRef2     & 0.0175 & 0.2596 & 3.45 & 183  & 0.0076 & 0.2128 & 1.09 & 58  & 0.0830 & 0.2875 & 5.17 & 274 \\
+    IterativeRef3     & \underline{\textbf{0.0136}} & \underline{\textbf{0.2148}} & 2.77 & 147
+                         & \underline{\textbf{0.0044}} & \underline{\textbf{0.1356}} & \underline{\textbf{0.68}} & \underline{\textbf{36}}
+                         & 0.0768 & \underline{\textbf{0.2775}} & 5.04 & 267 \\
+    Composite            & 0.0174 & 0.3493 & \underline{\textbf{2.58}} & \underline{\textbf{137}} & 0.0235 & 0.3368 & 3.34 & 177  & 0.0898 & 0.4044 & \underline{\textbf{4.96}} & \underline{\textbf{263}} \\
+    Agent                & 0.0836 & 0.4700 & 13.08 & 693  & 0.0886 & 0.4180 & 11.28 & 598  & 0.0997 & 0.4042 & 6.08 & 322 \\
+    \bottomrule
+\addlinespace[2pt]
+\textbf{Human Baseline} & \textbf{0.1131} & \textbf{0.565} & \textbf{25.26} & \textbf{1339} 
+                        & \textbf{0.1131} & \textbf{0.565} & \textbf{25.26} & \textbf{1339} 
+                        & \textbf{0.1131} & \textbf{0.565} & \textbf{25.26} & \textbf{1339} \\
+\bottomrule
+  \end{tabular}
+\end{table}
+
+
+
+
+
 \subsection{Qualitive Analysis}
 \subsubsection{Consistency}
 We model the consistency of violations found within different 
@@ -60,6 +106,15 @@ by webpages with only a few violations. For those webpages, halluzinations or ra
 created mutations by the LLMs, such 
 as new colors or missing landmarks, have a larger impact on the cosine similarity, as 
 the distribution of violations is not consistent. 
+
+
+\begin{figure*}[p]
+  \centering
+  \includegraphics[width=\textwidth]{figures/gemini_wcag_bar.png}
+  \caption{Gemini: Distribution of WCAG violations across the dataset.}
+  \label{fig:gemini_wcag_bar}
+\end{figure*}
+
 
 \subsubsection{Concentration of Violations}
 While we do not know 
@@ -157,8 +212,8 @@ identified two public color palettes - the \textit{Google Color Palette} and the
 \begin{itemize}
   \item \textbf{Gemini.} 13 out of 127 colors that violate the color contrast 
   rules matches exactly one of the two color palettes. They are accounting for 
-  63\% of all misses, 69\% if black (\#000000) and white (\#ffffff) are included.
-  \item \textbf{GPT-4o.} 11 out of 237 colors match, leading to 23\% of all violations 
+  65\% of all misses, 71\% if black (\#000000) and white (\#ffffff) are included.
+  \item \textbf{GPT-4o.} 10 out of 237 colors match, leading to 24\% of all violations 
   (39\% if black and white are included).
 \end{itemize}
 
@@ -181,10 +236,10 @@ percentage of color contrast violations than Gemini. \newline
   Model        & Distinct Colors                 & Top-7 colors     & Percentage of       \\
                &         with Violations         &                  & all color contrast   \\ 
                &                                 &                  &  violations          \\ \midrule
-  GPT-4o       & 127          & \#ffffff, \#777777, \#007bff, \#0000ee,  & tbd \\
-               &              & \#888888, \#999999, \#29abe2              &  \\
-  Gemini       & 237          & \#ffffff, \#777777, \#888888, \#999999,  & tbd \\
-  Flash 2.0    &              & \#ff0000, \#007bff, \#808080               &  \\
+  Gemini       & 127          & \#ffffff, \#777777, \#007bff, \#0000ee,  & 75\% \\
+  Flash 2.0             &              & \#888888, \#999999, \#29abe2              &  \\
+  GPT-4o       & 237          & \#ffffff, \#777777, \#888888, \#999999,  & 48\%  \\
+      &              & \#ff0000, \#007bff, \#00ffff              &  \\
   Qwen 2.5-vl  & 0            &     & tbd \\
                &              &     &     \\
   \bottomrule

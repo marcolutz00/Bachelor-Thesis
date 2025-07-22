@@ -7,10 +7,14 @@
 \contentsline {table}{\numberline {4.1}{\ignorespaces Severity weights used in IWIR.\relax }}{9}{table.caption.14}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Most common colors used by the LLMs.\relax }}{18}{table.caption.30}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces Accessibility benchmarks: Inaccessibility Rate (IR), Impact‑Weighted Inaccessibility Rate (IWIR), Average Number of Violations per webpage (ANV) and Total Violations (TV).\relax }}{16}{table.caption.24}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Most common colors used by the LLMs.\relax }}{18}{table.caption.32}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {8.1}{\ignorespaces OpenAI GPT-4o: Data Leakage (DL) based on 3 iterations\relax }}{20}{table.caption.35}%
-\contentsline {table}{\numberline {8.2}{\ignorespaces Gemini-2.0-flash: Data Leakage (DL) based on 3 iterations\relax }}{20}{table.caption.36}%
+\contentsline {table}{\numberline {8.1}{\ignorespaces OpenAI GPT-4o: Data Leakage (DL) based on 3 iterations\relax }}{21}{table.caption.37}%
+\contentsline {table}{\numberline {8.2}{\ignorespaces Gemini-2.0-flash: Data Leakage (DL) based on 3 iterations\relax }}{21}{table.caption.38}%
+\contentsline {table}{\numberline {8.3}{\ignorespaces Results of Code Similarity for each model based on 3 runs.\relax }}{22}{table.caption.39}%
+\contentsline {table}{\numberline {8.4}{\ignorespaces Accessibility violations (absolute and mean per file) across prompting techniques and models.\relax }}{23}{table.caption.40}%
+\contentsline {table}{\numberline {8.5}{\ignorespaces Mapped Accessibility-Violations\relax }}{26}{table.caption.43}%
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
