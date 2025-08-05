@@ -4,6 +4,8 @@
 %\documentclass[headsepline,footsepline,footinclude=false,fontsize=11pt,paper=a4,listof=totoc,bibliography=totoc,BCOR=12mm,DIV=12]{scrbook} % two-sided
 \documentclass[headsepline,footsepline,footinclude=false,oneside,fontsize=11pt,paper=a4,listof=totoc,bibliography=totoc]{scrbook} % one-sided
 
+
+\usepackage[dvipsnames,table]{xcolor}
 \usepackage{amsmath}
 \usepackage{ragged2e}
 \usepackage{array}  
@@ -23,8 +25,8 @@
 \usepackage{adjustbox}
 \usepackage{listings}
 \usepackage{float}
-\usepackage{xcolor,tcolorbox}
-
+\usepackage{tcolorbox}
+\usepackage{enumitem}
 
 
 \pgfplotsset{compat=1.18}
@@ -36,13 +38,13 @@
 
 % TODO: change thesis information
 \newcommand*{\getUniversity}{Technische Universität München}
-\newcommand*{\getFaculty}{School of Computation, Information and Technology}
+\newcommand*{\getFaculty}{School of Computation, Information and Technology - Informatics}
 \newcommand*{\getTitle}{From UI Images to Accessible Code: Leveraging LLMs for Automated Frontend Generation}
-\newcommand*{\getTitleGer}{From UI Images to Accessible Code: Leveraging LLMs for Automated Frontend Generation}
+\newcommand*{\getTitleGer}{Von UI-Bildern zu barrierefreiem Code: Nutzung von LLMs für die automatisierte Frontend-Generierung}
 \newcommand*{\getAuthor}{Marco Lutz}
 \newcommand*{\getDoctype}{Bachelor's Thesis in Information Systems}
 \newcommand*{\getSupervisor}{Sidong Feng}
-\newcommand*{\getAdvisor}{Chunyang Chen}
+\newcommand*{\getAdvisor}{Prof. Dr. Chunyang Chen}
 \newcommand*{\getSubmissionDate}{11.08.2025}
 \newcommand*{\getSubmissionLocation}{Munich}
 

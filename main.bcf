@@ -40,7 +40,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="multivalued">
       <bcf:key>labelnamespec</bcf:key>
@@ -163,7 +163,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortingtemplatename</bcf:key>
-      <bcf:value>anyt</bcf:value>
+      <bcf:value>nty</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortsets</bcf:key>
@@ -274,7 +274,7 @@
   <bcf:options component="biblatex" type="online">
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="multivalued">
       <bcf:key>labelnamespec</bcf:key>
@@ -2344,57 +2344,83 @@
     <bcf:datasource type="file" datatype="bibtex">bibliography.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">si2024design2code</bcf:citekey>
-    <bcf:citekey order="2">beltramelli2017pix2code</bcf:citekey>
-    <bcf:citekey order="3">wan2024dcgen</bcf:citekey>
-    <bcf:citekey order="4">wcag22</bcf:citekey>
-    <bcf:citekey order="5">webaim2025million</bcf:citekey>
-    <bcf:citekey order="6">aljedaani2024chatgpt</bcf:citekey>
-    <bcf:citekey order="7">aljedaani2024chatgpt</bcf:citekey>
-    <bcf:citekey order="8">suh2025accessiblecode</bcf:citekey>
-    <bcf:citekey order="9">suh2025accessiblecode</bcf:citekey>
-    <bcf:citekey order="10">si2024design2code</bcf:citekey>
-    <bcf:citekey order="11">gui2024webcode2m</bcf:citekey>
-    <bcf:citekey order="12">alphaonelabs_education</bcf:citekey>
-    <bcf:citekey order="13">nuranferhan_ecommerce</bcf:citekey>
-    <bcf:citekey order="14">si2024design2code</bcf:citekey>
-    <bcf:citekey order="15">alshayban2020accessibility</bcf:citekey>
-    <bcf:citekey order="16">deque2023accessibility</bcf:citekey>
-    <bcf:citekey order="17">suh2025accessiblecode</bcf:citekey>
-    <bcf:citekey order="17">xiao2024interaction2code</bcf:citekey>
-    <bcf:citekey order="18">suh2025accessiblecode</bcf:citekey>
-    <bcf:citekey order="19">wcag22</bcf:citekey>
-    <bcf:citekey order="20">chae2024thinkexecute</bcf:citekey>
+    <bcf:citekey order="1">web:website</bcf:citekey>
+    <bcf:citekey order="2">wcag21</bcf:citekey>
+    <bcf:citekey order="3">web:disability</bcf:citekey>
+    <bcf:citekey order="4">web:ADA1990</bcf:citekey>
+    <bcf:citekey order="5">web:EAA2019</bcf:citekey>
+    <bcf:citekey order="6">web:copilot</bcf:citekey>
+    <bcf:citekey order="7">web:cursor</bcf:citekey>
+    <bcf:citekey order="8">web:windsurf</bcf:citekey>
+    <bcf:citekey order="9">chen2018ui</bcf:citekey>
+    <bcf:citekey order="9">feng2022auto</bcf:citekey>
+    <bcf:citekey order="10">cali2025prototype</bcf:citekey>
+    <bcf:citekey order="10">mowar2025codea11y</bcf:citekey>
+    <bcf:citekey order="10">wu2025ui2code</bcf:citekey>
+    <bcf:citekey order="11">wan2024dcgen</bcf:citekey>
+    <bcf:citekey order="12">zhou2024declarui</bcf:citekey>
+    <bcf:citekey order="13">aljedaani2024chatgpt</bcf:citekey>
+    <bcf:citekey order="14">suh2025accessiblecode</bcf:citekey>
+    <bcf:citekey order="15">beltramelli2017pix2code</bcf:citekey>
+    <bcf:citekey order="16">wan2024dcgen</bcf:citekey>
+    <bcf:citekey order="17">wcag21</bcf:citekey>
+    <bcf:citekey order="18">webaim2025million</bcf:citekey>
+    <bcf:citekey order="19">aljedaani2024chatgpt</bcf:citekey>
+    <bcf:citekey order="20">aljedaani2024chatgpt</bcf:citekey>
     <bcf:citekey order="21">suh2025accessiblecode</bcf:citekey>
-    <bcf:citekey order="22">si2024design2code</bcf:citekey>
-    <bcf:citekey order="23">webaim2025million</bcf:citekey>
-    <bcf:citekey order="24">si2024design2code</bcf:citekey>
-    <bcf:citekey order="25">beltramelli2017pix2code</bcf:citekey>
-    <bcf:citekey order="26">wan2024dcgen</bcf:citekey>
-    <bcf:citekey order="27">wcag22</bcf:citekey>
-    <bcf:citekey order="28">webaim2025million</bcf:citekey>
-    <bcf:citekey order="29">aljedaani2024chatgpt</bcf:citekey>
+    <bcf:citekey order="22">suh2025accessiblecode</bcf:citekey>
+    <bcf:citekey order="23">si2024design2code</bcf:citekey>
+    <bcf:citekey order="24">gui2024webcode2m</bcf:citekey>
+    <bcf:citekey order="25">alphaonelabs_education</bcf:citekey>
+    <bcf:citekey order="26">nuranferhan_ecommerce</bcf:citekey>
+    <bcf:citekey order="27">si2024design2code</bcf:citekey>
+    <bcf:citekey order="28">alshayban2020accessibility</bcf:citekey>
+    <bcf:citekey order="29">deque2023accessibility</bcf:citekey>
     <bcf:citekey order="30">suh2025accessiblecode</bcf:citekey>
-    <bcf:citekey order="31">gui2024webcode2m</bcf:citekey>
-    <bcf:citekey order="32">alphaonelabs_education</bcf:citekey>
-    <bcf:citekey order="33">nuranferhan_ecommerce</bcf:citekey>
-    <bcf:citekey order="34">alshayban2020accessibility</bcf:citekey>
-    <bcf:citekey order="35">deque2023accessibility</bcf:citekey>
-    <bcf:citekey order="36">xiao2024interaction2code</bcf:citekey>
-    <bcf:citekey order="37">chae2024thinkexecute</bcf:citekey>
+    <bcf:citekey order="30">xiao2024interaction2code</bcf:citekey>
+    <bcf:citekey order="31">suh2025accessiblecode</bcf:citekey>
+    <bcf:citekey order="32">wcag21</bcf:citekey>
+    <bcf:citekey order="33">chae2024thinkexecute</bcf:citekey>
+    <bcf:citekey order="34">suh2025accessiblecode</bcf:citekey>
+    <bcf:citekey order="35">si2024design2code</bcf:citekey>
+    <bcf:citekey order="36">webaim2025million</bcf:citekey>
+    <bcf:citekey order="37">web:website</bcf:citekey>
+    <bcf:citekey order="38">wcag21</bcf:citekey>
+    <bcf:citekey order="39">web:disability</bcf:citekey>
+    <bcf:citekey order="40">web:ADA1990</bcf:citekey>
+    <bcf:citekey order="41">web:EAA2019</bcf:citekey>
+    <bcf:citekey order="42">web:copilot</bcf:citekey>
+    <bcf:citekey order="43">web:cursor</bcf:citekey>
+    <bcf:citekey order="44">web:windsurf</bcf:citekey>
+    <bcf:citekey order="45">chen2018ui</bcf:citekey>
+    <bcf:citekey order="46">feng2022auto</bcf:citekey>
+    <bcf:citekey order="47">cali2025prototype</bcf:citekey>
+    <bcf:citekey order="48">mowar2025codea11y</bcf:citekey>
+    <bcf:citekey order="49">wu2025ui2code</bcf:citekey>
+    <bcf:citekey order="50">wan2024dcgen</bcf:citekey>
+    <bcf:citekey order="51">zhou2024declarui</bcf:citekey>
+    <bcf:citekey order="52">aljedaani2024chatgpt</bcf:citekey>
+    <bcf:citekey order="53">suh2025accessiblecode</bcf:citekey>
+    <bcf:citekey order="54">beltramelli2017pix2code</bcf:citekey>
+    <bcf:citekey order="55">webaim2025million</bcf:citekey>
+    <bcf:citekey order="56">si2024design2code</bcf:citekey>
+    <bcf:citekey order="57">gui2024webcode2m</bcf:citekey>
+    <bcf:citekey order="58">alphaonelabs_education</bcf:citekey>
+    <bcf:citekey order="59">nuranferhan_ecommerce</bcf:citekey>
+    <bcf:citekey order="60">alshayban2020accessibility</bcf:citekey>
+    <bcf:citekey order="61">deque2023accessibility</bcf:citekey>
+    <bcf:citekey order="62">xiao2024interaction2code</bcf:citekey>
+    <bcf:citekey order="63">chae2024thinkexecute</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
-  <bcf:sortingtemplate name="anyt">
+  <bcf:sortingtemplate name="nty">
     <bcf:sort order="1">
       <bcf:sortitem order="1">presort</bcf:sortitem>
     </bcf:sort>
-    <bcf:sort order="2">
-      <bcf:sortitem order="1">labelalpha</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="3" final="1">
+    <bcf:sort order="2" final="1">
       <bcf:sortitem order="1">sortkey</bcf:sortitem>
     </bcf:sort>
-    <bcf:sort order="4">
+    <bcf:sort order="3">
       <bcf:sortitem order="1">sortname</bcf:sortitem>
       <bcf:sortitem order="2">author</bcf:sortitem>
       <bcf:sortitem order="3">editor</bcf:sortitem>
@@ -2402,24 +2428,24 @@
       <bcf:sortitem order="5">sorttitle</bcf:sortitem>
       <bcf:sortitem order="6">title</bcf:sortitem>
     </bcf:sort>
+    <bcf:sort order="4">
+      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="2">title</bcf:sortitem>
+    </bcf:sort>
     <bcf:sort order="5">
       <bcf:sortitem order="1">sortyear</bcf:sortitem>
       <bcf:sortitem order="2">year</bcf:sortitem>
     </bcf:sort>
     <bcf:sort order="6">
-      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="2">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="7">
       <bcf:sortitem order="1">volume</bcf:sortitem>
       <bcf:sortitem literal="1" order="2">0</bcf:sortitem>
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
   <bcf:datalist section="0"
-                name="anyt/global//global/global"
+                name="nty/global//global/global"
                 type="entry"
-                sortingtemplatename="anyt"
+                sortingtemplatename="nty"
                 sortingnamekeytemplatename="global"
                 labelprefix=""
                 uniquenametemplatename="global"

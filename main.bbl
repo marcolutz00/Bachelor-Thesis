@@ -18,83 +18,7 @@
 
 
 \refsection{0}
-  \datalist[entry]{anyt/global//global/global}
-    \entry{wcag22}{standard}{}
-      \list{organization}{1}{%
-        {World Wide Web Consortium}%
-      }
-      \field{labelalpha}{24}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labeltitlesource}{title}
-      \field{day}{12}
-      \field{month}{12}
-      \field{number}{REC-WCAG22-20241212}
-      \field{title}{Web Content Accessibility Guidelines (WCAG) 2.2}
-      \field{type}{W3C Recommendation}
-      \field{urlday}{16}
-      \field{urlmonth}{6}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.w3.org/TR/WCAG22/
-      \endverb
-      \verb{url}
-      \verb https://www.w3.org/TR/WCAG22/
-      \endverb
-    \endentry
-    \entry{alshayban2020accessibility}{inproceedings}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=1f41949b83312bce526833415433ea59}{%
-           family={Alshayban},
-           familyi={A\bibinitperiod},
-           given={Abdulaziz},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7991df34ab6f7cacecbbbffd7df908cf}{%
-           family={Ahmed},
-           familyi={A\bibinitperiod},
-           given={Iftekhar},
-           giveni={I\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7243bc9dcb94a297bc863f672dc9db0c}{%
-           family={Malek},
-           familyi={M\bibinitperiod},
-           given={Sam},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {ACM}%
-      }
-      \strng{namehash}{86840e67d47ddaca4af7e9aac061ba0f}
-      \strng{fullhash}{86840e67d47ddaca4af7e9aac061ba0f}
-      \strng{bibnamehash}{86840e67d47ddaca4af7e9aac061ba0f}
-      \strng{authorbibnamehash}{86840e67d47ddaca4af7e9aac061ba0f}
-      \strng{authornamehash}{86840e67d47ddaca4af7e9aac061ba0f}
-      \strng{authorfullhash}{86840e67d47ddaca4af7e9aac061ba0f}
-      \field{labelalpha}{AAM20}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the 42nd International Conference on Software Engineering (ICSE)}
-      \field{title}{Accessibility Issues in Android Apps: State of Affairs, Sentiments, and Ways Forward}
-      \field{year}{2020}
-      \field{pages}{1323\bibrangedash 1334}
-      \range{pages}{12}
-      \verb{doi}
-      \verb 10.1145/3377811.3380392
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1145/3377811.3380392
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1145/3377811.3380392
-      \endverb
-    \endentry
+  \datalist[entry]{nty/global//global/global}
     \entry{aljedaani2024chatgpt}{inproceedings}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=444a03c1b087dd29f5a72b4b5d0c37e0}{%
@@ -137,7 +61,6 @@
       \strng{authorbibnamehash}{f82f0da42f4788a9e185314a83464d25}
       \strng{authornamehash}{9a8c00c5c3087260b6651d5d8b9988eb}
       \strng{authorfullhash}{f82f0da42f4788a9e185314a83464d25}
-      \field{labelalpha}{Alj+24}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
@@ -158,6 +81,55 @@
       \verb https://doi.org/10.1145/3677846.3677854
       \endverb
     \endentry
+    \entry{alshayban2020accessibility}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=1f41949b83312bce526833415433ea59}{%
+           family={Alshayban},
+           familyi={A\bibinitperiod},
+           given={Abdulaziz},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7991df34ab6f7cacecbbbffd7df908cf}{%
+           family={Ahmed},
+           familyi={A\bibinitperiod},
+           given={Iftekhar},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7243bc9dcb94a297bc863f672dc9db0c}{%
+           family={Malek},
+           familyi={M\bibinitperiod},
+           given={Sam},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{86840e67d47ddaca4af7e9aac061ba0f}
+      \strng{fullhash}{86840e67d47ddaca4af7e9aac061ba0f}
+      \strng{bibnamehash}{86840e67d47ddaca4af7e9aac061ba0f}
+      \strng{authorbibnamehash}{86840e67d47ddaca4af7e9aac061ba0f}
+      \strng{authornamehash}{86840e67d47ddaca4af7e9aac061ba0f}
+      \strng{authorfullhash}{86840e67d47ddaca4af7e9aac061ba0f}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 42nd International Conference on Software Engineering (ICSE)}
+      \field{title}{Accessibility Issues in Android Apps: State of Affairs, Sentiments, and Ways Forward}
+      \field{year}{2020}
+      \field{pages}{1323\bibrangedash 1334}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1145/3377811.3380392
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3377811.3380392
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3377811.3380392
+      \endverb
+    \endentry
     \entry{beltramelli2017pix2code}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=c026bb9f137d7fb540e8e2690e756f86}{%
@@ -173,7 +145,6 @@
       \strng{authorbibnamehash}{c026bb9f137d7fb540e8e2690e756f86}
       \strng{authornamehash}{c026bb9f137d7fb540e8e2690e756f86}
       \strng{authorfullhash}{c026bb9f137d7fb540e8e2690e756f86}
-      \field{labelalpha}{Bel17}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
@@ -194,6 +165,58 @@
       \verb{url}
       \verb https://arxiv.org/abs/1705.07962
       \endverb
+    \endentry
+    \entry{cali2025prototype}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=4ecbca3120439b811e8602c78d44cd3b}{%
+           family={Cali},
+           familyi={C\bibinitperiod},
+           given={Elisa},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9f3d5afc75926c627903787d959cfcf6}{%
+           family={Fulcini},
+           familyi={F\bibinitperiod},
+           given={Tommaso},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4388dbb9769bfc6e288c9fc0433bb489}{%
+           family={Coppola},
+           familyi={C\bibinitperiod},
+           given={Riccardo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=73136022141a96cdaef878132a491d93}{%
+           family={Laudadio},
+           familyi={L\bibinitperiod},
+           given={Lorenzo},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=afc92f87aeecf2d2502bff50e00cafa2}{%
+           family={Torchiano},
+           familyi={T\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{02a563dc5a7b0eeb9525eb3e8453da71}
+      \strng{fullhash}{8ecf99e934b12a1289a504c6d35a40fe}
+      \strng{bibnamehash}{8ecf99e934b12a1289a504c6d35a40fe}
+      \strng{authorbibnamehash}{8ecf99e934b12a1289a504c6d35a40fe}
+      \strng{authornamehash}{02a563dc5a7b0eeb9525eb3e8453da71}
+      \strng{authorfullhash}{8ecf99e934b12a1289a504c6d35a40fe}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2025 IEEE/ACM Second IDE Workshop (IDE)}
+      \field{title}{A Prototype VS Code Extension to Improve Web Accessible Development}
+      \field{year}{2025}
+      \field{pages}{52\bibrangedash 57}
+      \range{pages}{6}
     \endentry
     \entry{chae2024thinkexecute}{article}{}
       \name{author}{11}{}{%
@@ -270,7 +293,6 @@
       \strng{authorbibnamehash}{baa047741bd805dc4671254248ea0fd5}
       \strng{authornamehash}{5ae5c865c679732d2fbbb773cbdbd628}
       \strng{authorfullhash}{baa047741bd805dc4671254248ea0fd5}
-      \field{labelalpha}{Cha+24}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
@@ -292,6 +314,55 @@
       \verb https://arxiv.org/abs/2404.02575
       \endverb
     \endentry
+    \entry{chen2018ui}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=44f37120f1686d1133969a7d8cbac0c3}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Chunyang},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=732bf368335c04d5919235bb9ba90fae}{%
+           family={Su},
+           familyi={S\bibinitperiod},
+           given={Ting},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f8aced54282510fa103668bb337e5a4b}{%
+           family={Meng},
+           familyi={M\bibinitperiod},
+           given={Guozhu},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4ae2acd2b75c048ed13c08ebfc75e822}{%
+           family={Xing},
+           familyi={X\bibinitperiod},
+           given={Zhenchang},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=621013bf54d3546375ad71f17f020b5b}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6145aae35cc7de22ed0bef047fd375dc}
+      \strng{fullhash}{394fdec37971272c5417e9dc5b1e2323}
+      \strng{bibnamehash}{394fdec37971272c5417e9dc5b1e2323}
+      \strng{authorbibnamehash}{394fdec37971272c5417e9dc5b1e2323}
+      \strng{authornamehash}{6145aae35cc7de22ed0bef047fd375dc}
+      \strng{authorfullhash}{394fdec37971272c5417e9dc5b1e2323}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 40th International Conference on Software Engineering}
+      \field{title}{From ui design image to gui skeleton: a neural machine translator to bootstrap mobile gui implementation}
+      \field{year}{2018}
+      \field{pages}{665\bibrangedash 676}
+      \range{pages}{12}
+    \endentry
     \entry{deque2023accessibility}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=97feed1662b5e6326c17dc979729369a}{%
@@ -304,7 +375,6 @@
       \strng{authorbibnamehash}{97feed1662b5e6326c17dc979729369a}
       \strng{authornamehash}{97feed1662b5e6326c17dc979729369a}
       \strng{authorfullhash}{97feed1662b5e6326c17dc979729369a}
-      \field{labelalpha}{Deq21}
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{labelnamesource}{author}
@@ -319,6 +389,106 @@
       \verb{url}
       \verb https://www.deque.com/blog/automated-testing-study-identifies-57-percent-of-digital-accessibility-issues
       \endverb
+    \endentry
+    \entry{web:website}{misc}{}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.digitalsilk.com/digital-trends/how-manywebsites-are-there/}}
+      \field{title}{Digital Silk. How Many Websites Are There In 2024?}
+      \field{year}{2025}
+    \endentry
+    \entry{web:disability}{misc}{}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.who.int/news-room/fact-sheets/detail/disability-and-health}}
+      \field{title}{Disability}
+      \field{year}{2025}
+    \endentry
+    \entry{web:EAA2019}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e805fdc2f857f14ffdeeb073480b1449}{%
+           family={{European Parliament and the Council of the European Union}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{e805fdc2f857f14ffdeeb073480b1449}
+      \strng{fullhash}{e805fdc2f857f14ffdeeb073480b1449}
+      \strng{bibnamehash}{e805fdc2f857f14ffdeeb073480b1449}
+      \strng{authorbibnamehash}{e805fdc2f857f14ffdeeb073480b1449}
+      \strng{authornamehash}{e805fdc2f857f14ffdeeb073480b1449}
+      \strng{authorfullhash}{e805fdc2f857f14ffdeeb073480b1449}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Directive (EU) 2019/882 on the Accessibility Requirements for Products and Services (European Accessibility Act)}}
+      \field{urlday}{4}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://eur-lex.europa.eu/eli/dir/2019/882/oj
+      \endverb
+      \verb{url}
+      \verb https://eur-lex.europa.eu/eli/dir/2019/882/oj
+      \endverb
+    \endentry
+    \entry{feng2022auto}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=63e468e704f013c919c572438980dcc9}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Sidong},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ca374004c8255fa35cb3aac0c7347aa8}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Minmin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b10ab4096becce7cb6b5f32a35f95df5}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Tingting},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=76822362e75f3cb69dc18679cfe487dd}{%
+           family={Zhen},
+           familyi={Z\bibinitperiod},
+           given={Yankun},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=44f37120f1686d1133969a7d8cbac0c3}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Chunyang},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {ACM New York, NY}%
+      }
+      \strng{namehash}{15f568e0ef5f79ae44f2f78a165e43b3}
+      \strng{fullhash}{eeb08d5608425f33d471953b32b16b14}
+      \strng{bibnamehash}{eeb08d5608425f33d471953b32b16b14}
+      \strng{authorbibnamehash}{eeb08d5608425f33d471953b32b16b14}
+      \strng{authornamehash}{15f568e0ef5f79ae44f2f78a165e43b3}
+      \strng{authorfullhash}{eeb08d5608425f33d471953b32b16b14}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Transactions on Interactive Intelligent Systems}
+      \field{number}{4}
+      \field{title}{Auto-icon+: An automated end-to-end code generation tool for icon designs in ui development}
+      \field{volume}{12}
+      \field{year}{2022}
+      \field{pages}{1\bibrangedash 26}
+      \range{pages}{26}
     \endentry
     \entry{nuranferhan_ecommerce}{misc}{}
       \name{author}{1}{}{%
@@ -335,7 +505,6 @@
       \strng{authorbibnamehash}{3825e1e45e03b99fa16dfc85769ba32e}
       \strng{authornamehash}{3825e1e45e03b99fa16dfc85769ba32e}
       \strng{authorfullhash}{3825e1e45e03b99fa16dfc85769ba32e}
-      \field{labelalpha}{Fer25}
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{labelnamesource}{author}
@@ -349,6 +518,36 @@
       \endverb
       \verb{url}
       \verb https://github.com/nuranferhan/e-commerce-site
+      \endverb
+    \endentry
+    \entry{web:copilot}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d3b7c913cd04ebfec0e9ec32cb6fd58c}{%
+           family={GitHub},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{fullhash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{bibnamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authorbibnamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authornamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authorfullhash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{GitHub Copilot – Your AI Pair Programmer}
+      \field{urlday}{21}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/features/copilot
+      \endverb
+      \verb{url}
+      \verb https://github.com/features/copilot
       \endverb
     \endentry
     \entry{gui2024webcode2m}{article}{}
@@ -438,7 +637,6 @@
       \strng{authorbibnamehash}{c292de2f137e4f266cc68864774d60ae}
       \strng{authornamehash}{1040d5caf2a65bbb0e672940b5345e93}
       \strng{authorfullhash}{c292de2f137e4f266cc68864774d60ae}
-      \field{labelalpha}{Gui+24}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
@@ -460,6 +658,72 @@
       \verb https://arxiv.org/abs/2404.06369
       \endverb
     \endentry
+    \entry{web:cursor}{misc}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=771cc7ecf8a502fadfc6028654511f05}{%
+           family={Inc.},
+           familyi={I\bibinitperiod},
+           given={Anysphere},
+           giveni={A\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{771cc7ecf8a502fadfc6028654511f05}
+      \strng{fullhash}{771cc7ecf8a502fadfc6028654511f05}
+      \strng{bibnamehash}{771cc7ecf8a502fadfc6028654511f05}
+      \strng{authorbibnamehash}{771cc7ecf8a502fadfc6028654511f05}
+      \strng{authornamehash}{771cc7ecf8a502fadfc6028654511f05}
+      \strng{authorfullhash}{771cc7ecf8a502fadfc6028654511f05}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cursor – The AI Code Editor}
+      \field{urlday}{21}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cursor.com
+      \endverb
+      \verb{url}
+      \verb https://cursor.com
+      \endverb
+    \endentry
+    \entry{web:windsurf}{misc}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=f9edbb94fa6374fe20b1c8c8ff1d2d8c}{%
+           family={Inc.},
+           familyi={I\bibinitperiod},
+           given={Windsurf},
+           giveni={W\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{f9edbb94fa6374fe20b1c8c8ff1d2d8c}
+      \strng{fullhash}{f9edbb94fa6374fe20b1c8c8ff1d2d8c}
+      \strng{bibnamehash}{f9edbb94fa6374fe20b1c8c8ff1d2d8c}
+      \strng{authorbibnamehash}{f9edbb94fa6374fe20b1c8c8ff1d2d8c}
+      \strng{authornamehash}{f9edbb94fa6374fe20b1c8c8ff1d2d8c}
+      \strng{authorfullhash}{f9edbb94fa6374fe20b1c8c8ff1d2d8c}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Windsurf - The most powerful AI Code Editor}
+      \field{urlday}{21}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://windsurf.com
+      \endverb
+      \verb{url}
+      \verb https://windsurf.com
+      \endverb
+    \endentry
     \entry{alphaonelabs_education}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=b011da15e649ac931ab7066b90eb245c}{%
@@ -475,7 +739,6 @@
       \strng{authorbibnamehash}{b011da15e649ac931ab7066b90eb245c}
       \strng{authornamehash}{b011da15e649ac931ab7066b90eb245c}
       \strng{authorfullhash}{b011da15e649ac931ab7066b90eb245c}
-      \field{labelalpha}{Lab25}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -490,6 +753,55 @@
       \verb{url}
       \verb https://github.com/alphaonelabs/alphaonelabs-education-website
       \endverb
+    \endentry
+    \entry{mowar2025codea11y}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=6ca2fd407d7717f4453a9640044c8ce4}{%
+           family={Mowar},
+           familyi={M\bibinitperiod},
+           given={Peya},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7cb7e2c837617c1f0c3cff3dac766332}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Yi-Hao},
+           giveni={Y\bibinithyphendelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=7edf976b3a6f74ae8c8dedbd98d2afca}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=6da3f14e037d996322537f45973aa656}{%
+           family={Steinfeld},
+           familyi={S\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e3c4b36c537719f8c7a76d81e1077879}{%
+           family={Bigham},
+           familyi={B\bibinitperiod},
+           given={Jeffrey\bibnamedelima P},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{111f82491fe9cfa6cc6aaf4260690a9d}
+      \strng{fullhash}{1e5985d0e5d63e36079dcbde0d7cc38f}
+      \strng{bibnamehash}{1e5985d0e5d63e36079dcbde0d7cc38f}
+      \strng{authorbibnamehash}{1e5985d0e5d63e36079dcbde0d7cc38f}
+      \strng{authornamehash}{111f82491fe9cfa6cc6aaf4260690a9d}
+      \strng{authorfullhash}{1e5985d0e5d63e36079dcbde0d7cc38f}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems}
+      \field{title}{CodeA11y: Making AI Coding Assistants Useful for Accessible Web Development}
+      \field{year}{2025}
+      \field{pages}{1\bibrangedash 15}
+      \range{pages}{15}
     \endentry
     \entry{si2024design2code}{article}{}
       \name{author}{6}{}{%
@@ -536,7 +848,6 @@
       \strng{authorbibnamehash}{ac13835092957480dd00493e0934d61e}
       \strng{authornamehash}{a131dcc77ff7d9e2dc996c715a68f245}
       \strng{authorfullhash}{ac13835092957480dd00493e0934d61e}
-      \field{labelalpha}{Si+24}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
@@ -591,7 +902,6 @@
       \strng{authorbibnamehash}{e346a43653b1e920ef0b4542f405f38b}
       \strng{authornamehash}{e346a43653b1e920ef0b4542f405f38b}
       \strng{authorfullhash}{e346a43653b1e920ef0b4542f405f38b}
-      \field{labelalpha}{Suh+25}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
@@ -611,6 +921,36 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/2503.15885
+      \endverb
+    \endentry
+    \entry{web:ADA1990}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=af3bc5ad214279131de50325fb61b15c}{%
+           family={{United States Congress}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{af3bc5ad214279131de50325fb61b15c}
+      \strng{fullhash}{af3bc5ad214279131de50325fb61b15c}
+      \strng{bibnamehash}{af3bc5ad214279131de50325fb61b15c}
+      \strng{authorbibnamehash}{af3bc5ad214279131de50325fb61b15c}
+      \strng{authornamehash}{af3bc5ad214279131de50325fb61b15c}
+      \strng{authorfullhash}{af3bc5ad214279131de50325fb61b15c}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Americans with Disabilities Act}}
+      \field{urlday}{4}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{1990}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ada.gov
+      \endverb
+      \verb{url}
+      \verb https://www.ada.gov
       \endverb
     \endentry
     \entry{wan2024dcgen}{article}{}
@@ -664,7 +1004,6 @@
       \strng{authorbibnamehash}{64c9bc0469d296bf5e377440d54c31a0}
       \strng{authornamehash}{ef112f43f614aef2aae3db59e2af7f8e}
       \strng{authorfullhash}{64c9bc0469d296bf5e377440d54c31a0}
-      \field{labelalpha}{Wan+24}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
@@ -686,6 +1025,30 @@
       \verb https://arxiv.org/abs/2406.16386
       \endverb
     \endentry
+    \entry{wcag21}{online}{}
+      \list{organization}{1}{%
+        {World Wide Web Consortium}%
+      }
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labeltitlesource}{title}
+      \field{day}{6}
+      \field{month}{5}
+      \field{title}{Web Content Accessibility Guidelines (WCAG) 2.1}
+      \field{type}{W3C Recommendation}
+      \field{urlday}{16}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.w3.org/TR/WCAG21/
+      \endverb
+      \verb{url}
+      \verb https://www.w3.org/TR/WCAG21/
+      \endverb
+    \endentry
     \entry{webaim2025million}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=790eee551afe5a8832859712ba1b5f4f}{%
@@ -698,7 +1061,6 @@
       \strng{authorbibnamehash}{790eee551afe5a8832859712ba1b5f4f}
       \strng{authornamehash}{790eee551afe5a8832859712ba1b5f4f}
       \strng{authorfullhash}{790eee551afe5a8832859712ba1b5f4f}
-      \field{labelalpha}{Web25}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
@@ -711,6 +1073,65 @@
       \endverb
       \verb{url}
       \verb https://webaim.org/projects/million/
+      \endverb
+    \endentry
+    \entry{wu2025ui2code}{article}{}
+      \name{author}{5}{}{%
+        {{un=1,uniquepart=given,hash=86756d7b8cb7311613b1c58712b999b3}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Fan},
+           giveni={F\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=4eab333ecac39ccc4074abec0c9f919b}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Cuiyun},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=2a10ef69c7a04870672210c5652c073f}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Shuqing},
+           giveni={S\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=df94f8769c02669d2191cabefaaf2f2c}{%
+           family={Wen},
+           familyi={W\bibinitperiod},
+           given={Xin-Cheng},
+           giveni={X\bibinithyphendelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=61c51cf743fc21d5e6d2958db72d21ef}{%
+           family={Liao},
+           familyi={L\bibinitperiod},
+           given={Qing},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery (ACM)}%
+      }
+      \strng{namehash}{30e0f705e06f46d0f8ba87abc0e8a893}
+      \strng{fullhash}{1aa177cdb75f64335d8e9c77e57314d2}
+      \strng{bibnamehash}{1aa177cdb75f64335d8e9c77e57314d2}
+      \strng{authorbibnamehash}{1aa177cdb75f64335d8e9c77e57314d2}
+      \strng{authornamehash}{30e0f705e06f46d0f8ba87abc0e8a893}
+      \strng{authorfullhash}{1aa177cdb75f64335d8e9c77e57314d2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the ACM on Software Engineering}
+      \field{title}{MLLM-Based UI2Code Automation Guided by UI Layout Information}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.1145/3728925
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1145/3728925
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1145/3728925
       \endverb
     \endentry
     \entry{xiao2024interaction2code}{article}{}
@@ -776,7 +1197,6 @@
       \strng{authorbibnamehash}{952548c6d78d4128a007f4eb82c12b1a}
       \strng{authornamehash}{7f470b22e1bda2a47f575d52e7d79830}
       \strng{authorfullhash}{952548c6d78d4128a007f4eb82c12b1a}
-      \field{labelalpha}{Xia+24}
       \field{sortinit}{X}
       \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
       \field{labelnamesource}{author}
@@ -796,6 +1216,72 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/2411.03292
+      \endverb
+    \endentry
+    \entry{zhou2024declarui}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=223d13cdec5a2080f526cbba151fddf6}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Ting},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=14e6e67151fcd0f9de7104ca4abbe2dc}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Yanjie},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bbe203ccb474a175f598679a28e5081b}{%
+           family={Hou},
+           familyi={H\bibinitperiod},
+           given={Xinyi},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1cecb1b05249000aee05bcc93fdaae70}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Xiaoyu},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ee3f7d7b96add98106db907e189d6c13}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Kai},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=44ddd1947297940fae36faf60cfdc356}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Haoyu},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{299bd035b4515d13a9b7e104310cf01f}
+      \strng{fullhash}{faffea48c541417b4fc8aae85f0f9186}
+      \strng{bibnamehash}{faffea48c541417b4fc8aae85f0f9186}
+      \strng{authorbibnamehash}{faffea48c541417b4fc8aae85f0f9186}
+      \strng{authornamehash}{299bd035b4515d13a9b7e104310cf01f}
+      \strng{authorfullhash}{faffea48c541417b4fc8aae85f0f9186}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{arXiv preprint arXiv:2409.11667}
+      \field{title}{Bridging Design and Development with Automated Declarative UI Code Generation}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.48550/arXiv.2409.11667
+      \endverb
+      \verb{eprint}
+      \verb 2409.11667v1
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2409.11667
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2409.11667
       \endverb
     \endentry
   \enddatalist
