@@ -27,11 +27,14 @@
 \usepackage{float}
 \usepackage{tcolorbox}
 \usepackage{enumitem}
-
+\usepackage{makecell}
+\usepackage[framemethod=tikz]{mdframed}
 
 \pgfplotsset{compat=1.18}
 \usetikzlibrary{pgfplots.groupplots}
 \usetikzlibrary{positioning,calc,matrix}
+
+\definecolor{lightgray}{gray}{0.95}
 
 % TODO: change citation style in settings
 \input{settings}
@@ -49,6 +52,8 @@
 \newcommand*{\getSubmissionLocation}{Munich}
 
 \begin{document}
+
+
 
 % Set page numbering to avoid "destination with the same identifier has been already used" warning for cover page.
 % (see https://en.wikibooks.org/wiki/LaTeX/Hyperlinks#Problems_with_Links_and_Pages).
@@ -68,14 +73,17 @@
 \mainmatter{}
 
 \input{chapters/01_introduction}
+\input{chapters/02_methodology}
 % TODO: add more chapters here
 \input{chapters/02_related_work}
-\input{chapters/03_dataset}
-\input{chapters/04_benchmark}
-\input{chapters/05_empirical_study}
+\input{chapters/03_study}
+% \input{chapters/03_dataset}
+% \input{chapters/04_benchmark}
+% \input{chapters/05_empirical_study}
 \input{chapters/06_evaluation}
 \input{chapters/07_conclusion}
 \input{chapters/08_appendix}
+
 
 \appendix{}
 

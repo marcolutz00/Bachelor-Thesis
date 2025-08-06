@@ -1,0 +1,32 @@
+\begin{table}[htbp]
+  \centering
+  \footnotesize
+  \setlength{\tabcolsep}{2pt}
+  \begin{tabular}{l *{2}{ccccc}}
+    \toprule
+    \multirow{2}{*}{\textbf{Technique}} &
+      \multicolumn{5}{c}{\textbf{GPT}} &
+      \multicolumn{5}{c}{\textbf{Gemini}} \\
+    \cmidrule(lr){2-6}\cmidrule(l){7-11}
+      & Average Violations & Total Violations & CodeSim & IR & IWIR
+      & Average Violations & Total Violations & CodeSim & IR & IWIR \\
+    \midrule
+    Naive               & 13.75 & 729 & \underline{\textbf{88.96\%}} & 12.22\% & 47.10\%
+                        & 15.45 & 819 & \underline{\textbf{87.12\%}} & 11.42\% & 47.70\% \\
+    Zero-Shot           & 12.33 & 653 & 87.79\% & \textemdash & \textemdash
+                        & 14.25 & 755 & 86.85\% & \textemdash & \textemdash \\
+    Few-Shot            &  9.49 & 503 & 87.29\% & \textemdash & \textemdash
+                        & 15.74 & 834 & 86.95\% & \textemdash & \textemdash \\
+    Chain-of-Thought    & 10.04 & 532 & 87.91\% & \textemdash & \textemdash
+                        & 14.28 & 757 & 86.80\% & \textemdash & \textemdash \\
+    ReAct               & \underline{\textbf{0.68}} & \underline{\textbf{36}} & 86.94\% & \textemdash & \textemdash
+                        & \underline{\textbf{2.77}} & \underline{\textbf{147}} & 86.16\% & \textemdash & \textemdash \\
+    Color-Aware         & \textemdash & \textemdash & \textemdash & \textemdash & \textemdash
+                        & \textemdash & \textemdash & \textemdash & \textemdash & \textemdash \\
+    Agentic             & \textemdash & \textemdash & \textemdash & \textemdash & \textemdash
+                        & \textemdash & \textemdash & \textemdash & \textemdash & \textemdash \\
+    \bottomrule
+  \end{tabular}
+  \caption{Performance for advanced prompting techniques (including IR and IWIR).}
+  \label{tab:access-viol-models}
+\end{table}

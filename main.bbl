@@ -218,102 +218,6 @@
       \field{pages}{52\bibrangedash 57}
       \range{pages}{6}
     \endentry
-    \entry{chae2024thinkexecute}{article}{}
-      \name{author}{11}{}{%
-        {{un=0,uniquepart=base,hash=5adf35c08b0ae176835d34b15a904b38}{%
-           family={Chae},
-           familyi={C\bibinitperiod},
-           given={Hyungjoo},
-           giveni={H\bibinitperiod},
-           givenun=0}}%
-        {{un=1,uniquepart=given,hash=6c1fa52d5524a93710ccd70d35b2d0ae}{%
-           family={Kim},
-           familyi={K\bibinitperiod},
-           given={Yeonghyeon},
-           giveni={Y\bibinitperiod},
-           givenun=1}}%
-        {{un=1,uniquepart=given,hash=bff0730b751bd0c704fb41abc4604d73}{%
-           family={Kim},
-           familyi={K\bibinitperiod},
-           given={Seungone},
-           giveni={S\bibinitperiod},
-           givenun=1}}%
-        {{un=0,uniquepart=base,hash=eaf4d7bc3f84a937abf32f94ca017ef2}{%
-           family={Ong},
-           familyi={O\bibinitperiod},
-           given={Kai\bibnamedelima Tzu-iunn},
-           giveni={K\bibinitperiod\bibinitdelim T\bibinithyphendelim i\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=b2ab21f63d80150bdd14c7b6b56cc33f}{%
-           family={Kwak},
-           familyi={K\bibinitperiod},
-           given={Beong-woo},
-           giveni={B\bibinithyphendelim w\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=80ae6727bf163396609f8f15f31b0de7}{%
-           family={Kim},
-           familyi={K\bibinitperiod},
-           given={Moohyeon},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f0cec89048cae711a08960c1e0f8b161}{%
-           family={Kim},
-           familyi={K\bibinitperiod},
-           given={Seonghwan},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=9900094fc763bb4ba200e50c43279573}{%
-           family={Kwon},
-           familyi={K\bibinitperiod},
-           given={Taeyoon},
-           giveni={T\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=cd085ea7b890d266a6057330bf8953f8}{%
-           family={Chung},
-           familyi={C\bibinitperiod},
-           given={Jiwan},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=200883e8fe54d4ac8aca152db92a5d8d}{%
-           family={Yu},
-           familyi={Y\bibinitperiod},
-           given={Youngjae},
-           giveni={Y\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=4400d17fdfab1c6fafec82253d4df6fb}{%
-           family={Yeo},
-           familyi={Y\bibinitperiod},
-           given={Jinyoung},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{5ae5c865c679732d2fbbb773cbdbd628}
-      \strng{fullhash}{baa047741bd805dc4671254248ea0fd5}
-      \strng{bibnamehash}{baa047741bd805dc4671254248ea0fd5}
-      \strng{authorbibnamehash}{baa047741bd805dc4671254248ea0fd5}
-      \strng{authornamehash}{5ae5c865c679732d2fbbb773cbdbd628}
-      \strng{authorfullhash}{baa047741bd805dc4671254248ea0fd5}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprinttype}{arXiv}
-      \field{journaltitle}{arXiv preprint arXiv:2404.02575}
-      \field{title}{Language Models as Compilers: Simulating Pseudocode Execution Improves Algorithmic Reasoning in Language Models}
-      \field{year}{2024}
-      \verb{doi}
-      \verb 10.48550/arXiv.2404.02575
-      \endverb
-      \verb{eprint}
-      \verb 2404.02575
-      \endverb
-      \verb{urlraw}
-      \verb https://arxiv.org/abs/2404.02575
-      \endverb
-      \verb{url}
-      \verb https://arxiv.org/abs/2404.02575
-      \endverb
-    \endentry
     \entry{chen2018ui}{inproceedings}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=44f37120f1686d1133969a7d8cbac0c3}{%
@@ -362,6 +266,40 @@
       \field{year}{2018}
       \field{pages}{665\bibrangedash 676}
       \range{pages}{12}
+    \endentry
+    \entry{web:pa11y}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=828dca29be70adfc12923d9d641035d7}{%
+           family={Contributors},
+           familyi={C\bibinitperiod},
+           given={Pa11y},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{828dca29be70adfc12923d9d641035d7}
+      \strng{fullhash}{828dca29be70adfc12923d9d641035d7}
+      \strng{bibnamehash}{828dca29be70adfc12923d9d641035d7}
+      \strng{authorbibnamehash}{828dca29be70adfc12923d9d641035d7}
+      \strng{authornamehash}{828dca29be70adfc12923d9d641035d7}
+      \strng{authorfullhash}{828dca29be70adfc12923d9d641035d7}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Pa11y is your automated accessibility testing pal}
+      \field{urlday}{21}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{version}{9.0.0}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/pa11y/pa11y
+      \endverb
+      \verb{url}
+      \verb https://github.com/pa11y/pa11y
+      \endverb
     \endentry
     \entry{deque2023accessibility}{misc}{}
       \name{author}{1}{}{%
@@ -490,36 +428,6 @@
       \field{pages}{1\bibrangedash 26}
       \range{pages}{26}
     \endentry
-    \entry{nuranferhan_ecommerce}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=3825e1e45e03b99fa16dfc85769ba32e}{%
-           family={Ferhan},
-           familyi={F\bibinitperiod},
-           given={Nuran},
-           giveni={N\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{3825e1e45e03b99fa16dfc85769ba32e}
-      \strng{fullhash}{3825e1e45e03b99fa16dfc85769ba32e}
-      \strng{bibnamehash}{3825e1e45e03b99fa16dfc85769ba32e}
-      \strng{authorbibnamehash}{3825e1e45e03b99fa16dfc85769ba32e}
-      \strng{authornamehash}{3825e1e45e03b99fa16dfc85769ba32e}
-      \strng{authorfullhash}{3825e1e45e03b99fa16dfc85769ba32e}
-      \field{sortinit}{F}
-      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://github.com/nuranferhan/e-commerce-site}}
-      \field{note}{GitHub repository}
-      \field{title}{E-Commerce Site}
-      \field{year}{2025}
-      \verb{urlraw}
-      \verb https://github.com/nuranferhan/e-commerce-site
-      \endverb
-      \verb{url}
-      \verb https://github.com/nuranferhan/e-commerce-site
-      \endverb
-    \endentry
     \entry{web:copilot}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=d3b7c913cd04ebfec0e9ec32cb6fd58c}{%
@@ -548,6 +456,37 @@
       \endverb
       \verb{url}
       \verb https://github.com/features/copilot
+      \endverb
+    \endentry
+    \entry{web:lighthouse}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Lighthouse – Automated auditing, performance metrics, and best practices for the web}
+      \field{urlday}{21}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{version}{12.8.0}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/GoogleChrome/lighthouse
+      \endverb
+      \verb{url}
+      \verb https://github.com/GoogleChrome/lighthouse
       \endverb
     \endentry
     \entry{gui2024webcode2m}{article}{}
@@ -724,36 +663,6 @@
       \verb https://windsurf.com
       \endverb
     \endentry
-    \entry{alphaonelabs_education}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=b011da15e649ac931ab7066b90eb245c}{%
-           family={Labs},
-           familyi={L\bibinitperiod},
-           given={AlphaOne},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{b011da15e649ac931ab7066b90eb245c}
-      \strng{fullhash}{b011da15e649ac931ab7066b90eb245c}
-      \strng{bibnamehash}{b011da15e649ac931ab7066b90eb245c}
-      \strng{authorbibnamehash}{b011da15e649ac931ab7066b90eb245c}
-      \strng{authornamehash}{b011da15e649ac931ab7066b90eb245c}
-      \strng{authorfullhash}{b011da15e649ac931ab7066b90eb245c}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://github.com/alphaonelabs/alphaonelabs-education-website}}
-      \field{note}{GitHub repository}
-      \field{title}{AlphaOneLabs Education Website}
-      \field{year}{2025}
-      \verb{urlraw}
-      \verb https://github.com/alphaonelabs/alphaonelabs-education-website
-      \endverb
-      \verb{url}
-      \verb https://github.com/alphaonelabs/alphaonelabs-education-website
-      \endverb
-    \endentry
     \entry{mowar2025codea11y}{inproceedings}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=6ca2fd407d7717f4453a9640044c8ce4}{%
@@ -811,12 +720,12 @@
            given={Chenglei},
            giveni={C\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=59fcb540a2298abe7ac08e0cf2cd90ae}{%
+        {{un=1,uniquepart=given,hash=59fcb540a2298abe7ac08e0cf2cd90ae}{%
            family={Zhang},
            familyi={Z\bibinitperiod},
            given={Yanzhe},
            giveni={Y\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=1,uniquepart=given,hash=b7084c71af5e6ed93c8537dce93d4856}{%
            family={Li},
            familyi={L\bibinitperiod},
@@ -921,6 +830,40 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/2503.15885
+      \endverb
+    \endentry
+    \entry{web:axecore}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4fb5f4bdf4a5e1c9710aedd8c27c993c}{%
+           family={Systems},
+           familyi={S\bibinitperiod},
+           given={Deque},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4fb5f4bdf4a5e1c9710aedd8c27c993c}
+      \strng{fullhash}{4fb5f4bdf4a5e1c9710aedd8c27c993c}
+      \strng{bibnamehash}{4fb5f4bdf4a5e1c9710aedd8c27c993c}
+      \strng{authorbibnamehash}{4fb5f4bdf4a5e1c9710aedd8c27c993c}
+      \strng{authornamehash}{4fb5f4bdf4a5e1c9710aedd8c27c993c}
+      \strng{authorfullhash}{4fb5f4bdf4a5e1c9710aedd8c27c993c}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{axe-core: Accessibility engine for automated Web UI testing}
+      \field{urlday}{21}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{version}{4.10.3}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/dequelabs/axe-core
+      \endverb
+      \verb{url}
+      \verb https://github.com/dequelabs/axe-core
       \endverb
     \endentry
     \entry{web:ADA1990}{misc}{}
@@ -1134,6 +1077,116 @@
       \verb http://dx.doi.org/10.1145/3728925
       \endverb
     \endentry
+    \entry{wu2023autogen}{article}{}
+      \name{author}{14}{}{%
+        {{un=1,uniquepart=given,hash=6154e8b767a07e53ba059e3ac7df5d83}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Qingyun},
+           giveni={Q\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=6751ff8ce679fd345d66a156462f1915}{%
+           family={Bansal},
+           familyi={B\bibinitperiod},
+           given={Gagan},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=212f2ffa62575655103450499c26678d}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Jieyu},
+           giveni={J\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=b8a163828804bc78bf30d6151252ce5f}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Yiran},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c57851806a4078dfd1b4e8d429b9a9f}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Beibin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ff3f3d040319c6441a541a662718d7d5}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Erkang},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=357b0b769575e7caa1fa1e98ea04a1fe}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Li},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7cf81b111784e6b097bc8fc66643e33c}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xiaoyun},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d95bd570217b62424a544dcb057c3ede}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Shaokun},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a30bd94c8f427bff99361e9d32e2e0f0}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Jiale},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f71a09c5b133ccb5e81c650d94b1b882}{%
+           family={Awadallah},
+           familyi={A\bibinitperiod},
+           given={Ahmed\bibnamedelima Hassan},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=49ccf4fc1a94855e04184746e8caed94}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={Ryen\bibnamedelima W.},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aa76ebd83aa8c795c67769c23f359cdb}{%
+           family={Burger},
+           familyi={B\bibinitperiod},
+           given={Doug},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=71fb46abf1babb7fa14488bb4e0c23ba}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Chi},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{27f5b053ec5345a5b9c262e2d119186b}
+      \strng{fullhash}{9ebc0e9828b38a56c0dd45b499921f72}
+      \strng{bibnamehash}{9ebc0e9828b38a56c0dd45b499921f72}
+      \strng{authorbibnamehash}{9ebc0e9828b38a56c0dd45b499921f72}
+      \strng{authornamehash}{27f5b053ec5345a5b9c262e2d119186b}
+      \strng{authorfullhash}{9ebc0e9828b38a56c0dd45b499921f72}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2308.08155}
+      \field{title}{AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.48550/arXiv.2308.08155
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2308.08155
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2308.08155
+      \endverb
+    \endentry
     \entry{xiao2024interaction2code}{article}{}
       \name{author}{9}{}{%
         {{un=0,uniquepart=base,hash=908ec63a9e37ed0da7ad17be4fee56c4}{%
@@ -1285,6 +1338,8 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{web:govuk}
+  \missing{web:w3c_examples}
 \endrefsection
 \endinput
 

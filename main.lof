@@ -2,15 +2,16 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Distribution of Topics in Dataset\relax }}{7}{figure.caption.3}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Experiment Pipeline\relax }}{13}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Distribution of Topics in Dataset\relax }}{6}{figure.caption.6}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Example of common accessibility violations.\relax }}{11}{figure.caption.7}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Comparison of semantically rich (left) and structurally shallow (right) HTML snippets\relax }}{13}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Overview of the advanced prompting strategies.\relax }}{14}{figure.caption.18}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces ChatGPT-4o accurately reproduces the visual layout shown in (a), yet omits semantic landmark elements, such as \texttt {<header>} and \texttt {<main>} in the generated HTML (b)\relax }}{24}{figure.caption.30}%
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Overview of Prompts used.\relax }}{24}{figure.caption.31}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces ChatGPT-4o accurately reproduces the visual layout shown in (a), yet omits semantic landmark elements, such as \texttt {<header>} and \texttt {<main>} in the generated HTML (b)\relax }}{25}{figure.caption.42}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Overview of Prompts used.\relax }}{25}{figure.caption.43}%
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -2,19 +2,20 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Taxonomy of the Top-15 automatically detected accessibility issues and their rule identifiers across the different tools. Axe-Core and Lighthouse report their violations based on the same rule set, while Pa11y uses WCAG techniques as reporting base which are shown in the parentheses.\relax }}{5}{table.caption.3}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Severity weights used in IWIR.\relax }}{10}{table.caption.4}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Performance for accessibility violations within the MLLMs-generated UI code.\relax }}{12}{table.caption.10}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Performance for advanced prompting techniques (including IR and IWIR).\relax }}{16}{table.caption.19}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Accessibility benchmarks: Inaccessibility Rate (IR), Impact‑Weighted Inaccessibility Rate (IWIR), Average Number of Violations per webpage (ANV) and Total Violations (TV).\relax }}{18}{table.caption.26}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Most common colors used by the LLMs.\relax }}{20}{table.caption.33}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Accessibility benchmarks: Inaccessibility Rate (IR), Impact‑Weighted Inaccessibility Rate (IWIR), Average Number of Violations per webpage (ANV) and Total Violations (TV).\relax }}{17}{table.caption.14}%
-\contentsline {table}{\numberline {6.2}{\ignorespaces Most common colors used by the LLMs.\relax }}{19}{table.caption.21}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {8.1}{\ignorespaces OpenAI GPT-4o: Data Leakage (DL) based on 3 iterations\relax }}{21}{table.caption.26}%
-\contentsline {table}{\numberline {8.2}{\ignorespaces Gemini-2.0-flash: Data Leakage (DL) based on 3 iterations\relax }}{21}{table.caption.27}%
-\contentsline {table}{\numberline {8.3}{\ignorespaces Results of Code Similarity for each model based on 3 runs.\relax }}{22}{table.caption.28}%
-\contentsline {table}{\numberline {8.4}{\ignorespaces Accessibility violations (absolute and mean per file) across prompting techniques and models.\relax }}{23}{table.caption.29}%
-\contentsline {table}{\numberline {8.5}{\ignorespaces Mapped Accessibility-Violations\relax }}{25}{table.caption.32}%
+\contentsline {table}{\numberline {7.1}{\ignorespaces OpenAI GPT-4o: Data Leakage (DL) based on 3 iterations\relax }}{22}{table.caption.38}%
+\contentsline {table}{\numberline {7.2}{\ignorespaces Gemini-2.0-flash: Data Leakage (DL) based on 3 iterations\relax }}{22}{table.caption.39}%
+\contentsline {table}{\numberline {7.3}{\ignorespaces Results of Code Similarity for each model based on 3 runs.\relax }}{23}{table.caption.40}%
+\contentsline {table}{\numberline {7.4}{\ignorespaces Accessibility violations (absolute and mean per file) across prompting techniques and models.\relax }}{24}{table.caption.41}%
+\contentsline {table}{\numberline {7.5}{\ignorespaces Mapped Accessibility-Violations\relax }}{26}{table.caption.44}%
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

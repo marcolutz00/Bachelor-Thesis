@@ -1,0 +1,45 @@
+\renewcommand{\arraystretch}{1.1}
+\begin{table}
+\tabcolsep=0.5cm
+\centering
+\small
+
+\begin{tabular}{l|c|c|c|c} 
+\hline
+\rowcolor{lightgray} \textbf{Violations} & \textbf{GPT} & \textbf{Gemini} & \textbf{Qwen} & \textbf{Llava}  \\ 
+\hline
+Color contrast & 276 & 365 & 159 & 67 \\
+\hline
+Landmark \& Region & 279 & 265 & 114 & 187 \\
+\hline
+Label & 102 & 105 & 21 & 14 \\
+\hline
+Headings & 26 & 18 & 20 & 17 \\
+\hline
+Target Size & 15 & 13 & 10 & 15 \\
+\hline
+Distinguishable Color Links & 20 & 23 & 2 & 0 \\
+\hline
+Document Language & 0 & 11 & 0 & 0 \\
+\hline
+Table Headers & 1 & 7 & 1 & 0 \\
+\hline
+Incomplete Links & 0 & 4 & 0 & 6 \\
+\hline
+Image Alt-Text & 4 & 5 & 0 & 1 \\
+\hline
+\hline
+\textbf{Total Violations} & 729 & 819 & 329 & 307 \\
+\hline
+\textbf{Average Violations} & 13.75 & 15.45 & 6.21 & 5.79 \\
+\hline
+\textbf{IR} & 12.22\% & 11.42\% & 10.70\% & 12.14\% \\
+\hline
+\textbf{IW-IR} & 47.10\% & 47.70\% & 40.25\% & 40.40\% \\
+\hline
+\textbf{CodeSim} & 88.96\% & 87.12\% & 70.36\% & 50.50\% \\
+\hline
+\end{tabular}
+\caption{Performance for accessibility violations within the MLLMs-generated UI code.}
+\label{tab:table-performance}
+\end{table}
