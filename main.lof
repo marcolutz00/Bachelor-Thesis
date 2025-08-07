@@ -8,10 +8,11 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Example of common accessibility violations.\relax }}{11}{figure.caption.7}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Comparison of semantically rich (left) and structurally shallow (right) HTML snippets\relax }}{13}{figure.caption.15}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Overview of the advanced prompting strategies.\relax }}{14}{figure.caption.18}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Failure example for zero-shot prompting.\relax }}{17}{figure.caption.22}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces ChatGPT-4o accurately reproduces the visual layout shown in (a), yet omits semantic landmark elements, such as \texttt {<header>} and \texttt {<main>} in the generated HTML (b)\relax }}{25}{figure.caption.42}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Overview of Prompts used.\relax }}{25}{figure.caption.43}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces ChatGPT-4o accurately reproduces the visual layout shown in (a), yet omits semantic landmark elements, such as \texttt {<header>} and \texttt {<main>} in the generated HTML (b)\relax }}{28}{figure.caption.55}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Overview of Prompts used.\relax }}{28}{figure.caption.56}%
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

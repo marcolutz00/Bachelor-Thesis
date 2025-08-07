@@ -321,6 +321,23 @@ the established best practices of prior research~\cite{suh2025accessiblecode, xi
     considerations in a structured plan and finally output the code.
     This helps to show intermediate reasoning steps that possibly 
     highlight accessibility-aware thinking.
+    \item Agentic Prompting: 
+    As prior research~\cite{wu2023autogen} has shown, the use of multi-agent 
+    systems, where each agent has a specific task, can lead to better
+    results in complex tasks. Therefore, this strategy splits the 
+    task of creating accessible code into three agents: The 
+    \textit{Detector} agent is designed to detect accessibility violations 
+    in a generated code, instructed with the naive prompt. It outputs a list
+    of snippets with violations, including their location in the code. The 
+    second agent, the \textit{Identifier}, is responsible for classifying 
+    the violations into their respective WCAG guidelines (e.g., 
+    color contrast, landmarks, etc.) and enrich the each violation with 
+    its severity level. The third agent, the \textit{Resolver}, is 
+    instructed to resolve the list of violations in the code. In order to 
+    prevent cascading errors, this agent is instructed to solve batches 
+    of violations, having a size of \(n = 5\). The goal of this strategy 
+    is to evaluate whether decomposing the task into smaller and more 
+    manageable subtasks can improve the overall accessibility.
     \item ReAct Prompting: 
     This strategy first instructs the model to generate HTML/CSS code, 
     according to the naive prompt and then critique its accessibility
@@ -348,23 +365,6 @@ the established best practices of prior research~\cite{suh2025accessiblecode, xi
     utilizing compliant color pairs by supplying this analysis and 
     asking for a revision.
     Note that the refinement loop runs only for one iteration.
-    \item Agentic Prompting: 
-    As prior research~\cite{wu2023autogen} has shown, the use of multi-agent 
-    systems, where each agent has a specific task, can lead to better
-    results in complex tasks. Therefore, this strategy splits the 
-    task of creating accessible code into three agents: The 
-    \textit{Detector} agent is designed to detect accessibility violations 
-    in a generated code, instructed with the naive prompt. It outputs a list
-    of snippets with violations, including their location in the code. The 
-    second agent, the \textit{Identifier}, is responsible for classifying 
-    the violations into their respective WCAG guidelines (e.g., 
-    color contrast, landmarks, etc.) and enrich the each violation with 
-    its severity level. The third agent, the \textit{Resolver}, is 
-    instructed to resolve the list of violations in the code. In order to 
-    prevent cascading errors, this agent is instructed to solve batches 
-    of violations, having a size of \(n = 5\). The goal of this strategy 
-    is to evaluate whether decomposing the task into smaller and more 
-    manageable subtasks can improve the overall accessibility.
 \end{itemize}
 
 Note that all prompting techniques are tested on GPT and Gemini by using the 
@@ -372,8 +372,218 @@ same benchmark dataset.
 
 
 \subsection{Results}
-Table~\ref{tab:access-viol-models} presents
+Table~\ref{tab:access-viol-models} presents the average number of accessibility 
+violations (AV), total violations (TV), code similarity (CodeSim),
+inaccessibility rate (IR) and impact weighted inaccessibility rate (IWIR).
+The results demonstrate that advanced prompting techniques can significantly
+reduce the amount of accessibility issues in the generated code. For instance,
+when using the most advanced prompt (ReAct), 95.75\% of the violations for 
+GPT and 82.07\% for Gemini are resolved, compared to the naive counterpart.
+A similar trend can be observed for the IR and IWIR. While the 
+IR is reduced to 0.68\% for GPT and 1.36\% for Gemini using the ReAct 
+prompt, the IWIR is reduced to 13.56\% and 21.48\%, respectively. However, 
+the effectiveness of each prompting strategy varies across the models and 
+some strategies are more suited for certain models than others.
+
 
 \begingroup
     \input{tables/violations_allprompts.tex}
 \endgroup
+
+\subsubsection{Impact of Zero-Shot Prompting}
+All models show a moderate, but measurable improvement in accessibility 
+violations when a simple instruction about accessibility is added to 
+the prompt. For instance, GPT reduces the average amount of 
+violations by 10.33\% and Gemini by 7.76\%, compared to the 
+naive prompt. However, while the IR shows a similar trend with 
+a considerable reduction for both models, the IWIR remains almost 
+unchanged, even showing a slight increase. This suggests that even 
+if the models are capable of activating their accessibility 
+awareness, even without explicit examples, they still struggle to 
+solve the most severe violations.\newline
+A deeper analysis of the violation types and their distribution 
+reveals that some limitations for the models remain. For example,
+both models often use accessibility-related attributes (e.g., 
+label, alt, role, aria-*) but misuse them and fail to apply them 
+in a consistent manner. Figure~\ref{fig:zero-shot-example} demonstrates
+a representative example. While Gemini generates an e-mail 
+subscription form field, it fails to provide any accessible name,
+e.g, neither a \texttt{<label>} nor an \texttt{aria-label} attribute.
+This indicates that zero-shot prompting triggers awareness, it 
+does not necessarily resolve accessibility gaps and inconsistencies.
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=1\linewidth]{figures/zeroshot-example.png}
+  \caption{Failure example for zero-shot prompting.}
+  \label{fig:zero-shot-example} 
+\end{figure}
+
+\subsubsection{Impact of Few-Shot Prompting}
+The few-shot prompting technique results in a 30.98\% improvement
+in accessibility performance for GPT, with the average number 
+of violations dropping from 13.75 to 9.49 and the IR 
+decreasing from 12.22\% to 7.96\%. By observing 8 
+high-quality, concrete examples, the model is capable of 
+copying the underlying patterns and structure. For instance,
+when provided with an example of correct heading structures, such 
+as \texttt{<h1>}, GPT is able to incorporate this pattern into its
+generation, reducing the average number of heading violations 
+from 26 to 15. Furthermore, the examples presented 
+reflect important accessibility guidelines, having a 
+significant impact on users and therefore also a high 
+severity. This is reflected in the IR, which drops from 
+47.10\% to 44.64\%.
+This demonstrates the importance of concrete 
+examples in guiding the model, especially for concepts like
+accessibility, which may be underrepresented in the training data.\newline
+However, surprisingly Gemini does not show similar improvements, in fact, 
+it performs slightly worse with an increase of 1.88\% in the average
+number of violations. Based on the qualitative analysis, this 
+effect can be attributed to two primary factors. First, Gemini 
+exhibits a 56.52\% increase in violations related to the 
+\emph{Distinguishable Links} category. Due to its exposure 
+to link-related examples, it tends to generate links more 
+frequently, but often without sufficient contrast or 
+styling, violating the WCAG requirements. This phenomenon 
+may be directly linked to the color bias in the training data,
+which has been observed in RQ2. Gemini tends to use generic, default 
+colors and links, such as the primary blue from the Bootstrap framework,
+that is used as the main color for links. This leads to 
+a lack of distinction between links and the body text.\newline
+The second violation category 
+\emph{Landmark \& Region} increases by 12.83\%, due to 
+Gemini's tendency to misuse the semantic 
+elements, such as \texttt{<main>} or \texttt{<nav>}. This 
+can likely be attributed to a misinterpretation of 
+the few-shot examples, which might be replicated 
+directly without deeper semantic understanding in 
+how those elements contribute to accessibility.
+
+\subsubsection{Impact of Chain-of-Thought Prompting}
+Chain-of-Thought prompting results in notable improvements 
+over the naive prompt, i.e., averaging 10.04 vs 13.75 violations
+per UI for GPT and 14.28 vs 15.45 for Gemini. Due to 
+the reasoning instruction before generating code, 
+the models are able to reflect possible accessibility 
+constaints often missed in direct code generation.
+Interestingly, GPT benefits significantly more 
+than Gemini, with a relative improvement of 26.98\% vs 
+7.57\%. This is probably due to the fact that GPT constantly 
+outlines an organized structure to reasoning by 
+recognizing particular accessibility issues 
+(such as contrast ratios and alt text) and integrating them into 
+the code that is generated. In contrast, Gemini's 
+CoT reasoning is less consistent and frequently omits 
+key steps or fails to use the reasoning effectively 
+during code generation.
+
+\subsubsection{Impact of Agentic Prompting}
+Splitting the task into three agents only leads to 
+moderate improvements, as GPT reduces its violations 
+by 17.53\% and Gemini by 14.82\% compared to the naive 
+baseline. Similar to the prior strategies, the IR follows 
+the same trend, dropping from 12.22\% to 8.86\% for GPT and
+from 11.42\% to 8.36\% for Gemini, but the IWIR decreases much less
+with 11.25\% for GPT and only 1.47\% for Gemini.\newline
+The qualitative analysis reveals two main reasons for these 
+results. First, the \textit{Detector} agent misses some 
+violations in the generated code and occasionally even reports 
+false positives. As a result, the \textit{Resolver} agent 
+either does not resolve all violations within the code 
+or changes already correct markup, which leads to new 
+violations. Second, the resolver resolves the violations in 
+batch sizes. This can prevent the Resolver in understanding 
+layout dependencies, leading to small, but significant changes 
+that decrease the layout fidelity which results in the 
+lowest code similarity of all prompting techniques
+(86.12\% for GPT and 85.07\% for Gemini). In general, 
+while the agentic prompting reduces the load per step of 
+the models, it introduces additional noise which 
+propagates through the agents.
+
+\subsubsection{Impact of ReAct Prompting}
+The experiment shows that both GPT and Gemini significantly 
+improve their accessibility performance when using the ReAct 
+prompting strategy. Across three iterative refinement 
+cycles, GPT achieves reductions of 82.33\%, 92.07\% and 95.05\% 
+in accessibility violations compared to the naive prompt, while 
+Gemini improved by 62.14\%, 77.67\% and 82.07\%, respectively.
+Similar improvements can be observed for the IR and IWIR. 
+After 3 iterations, only 0.44\% of nodes in GPT's code
+contain accessibility violations, while Gemini has an IR of 1.36\%.
+Interestingly, not only the amount of violations, but also 
+their severity is reduced. For instance the IWIR drops from 
+47.10\% to 13.56\% for GPT and from 47.70\% to 21.48\% for Gemini.
+This indicates that the model is not only capable of 
+resolving violations, but also prioritizes the violations 
+with severity \emph{serious} or \emph{critical}. After 3 
+refinement iterations, neither GPT nor Gemini produces 
+any violations with severity \emph{critical} and only 
+few with \emph{serious}.\newline 
+The results suggest that even if models not inherently 
+obey all accessibility guidelines, they can be
+guided towards more accessible code by incorporating 
+external observations of the automated tools. GPT 
+consistently outperforms Gemini across all iterations,
+possibly due to its stronger alignment with 
+Reinforcement Learning from Human Feedback (RLHF) which 
+equips it with a better capacity to self-correct and 
+obey instructions based on user-oriented feedback.\newline 
+A notable observation from the ReAct prompting is that the 
+two main categories of accessibility violations, 
+color contrast and landmarks, are significantly reduced.
+While landmark violations are reduced by 98.21\% for GPT and
+95.85\% for Gemini, color contrast violations are reduced by
+90.58\% and 64.93\%, respectively. 
+These results reflect a growing capacity of MLLMs 
+to add feedback into their stylistic choices, which 
+leads to more accessible and visually consistent webpages.\newline 
+However, also the ReAct prompting has its limitations.
+Even though, both 
+models decrease the dependency on framework-based 
+colors, the results still 
+vary across the models. For instance, especially 
+during the first refinement iterations, Gemini still 
+heavily relies on framework-based color palettes, 
+especially, Bootstrap's primary blue, which leads to 
+an increase in those violations of 23\% with 
+this exact color, even though overall the amount 
+of color contrast violations is reduced by 22\%. 
+This suggests that the model might not be able to 
+synthesize its own new colors, but rather tries to
+substitute problematic colors with known colors 
+from its training data.
+Furthermore, some
+attempts to fix particular violations can 
+occasionally lead to new problems elsewhere in 
+the code. As Fig~\ref{??} suggests, the model ... .
+These cascading error may arise from a limited 
+understanding of the codes underlying structure and 
+dependencies, which highlights a potential limitation 
+of current MLLMs.
+
+\subsubsection{Impact of Color-Aware Prompting}
+Enhancing the ReAct prompting technique with pre-computed 
+and WCAG-compliant colors has a different impact on both models.
+While Gemini struggles to invent new colors, it 
+benefits the most with its average number of violations 
+dropping by 83.30\%, compared to the naive prompt and 
+is even able to reduce its number by 6.86\%, compared to 
+the ReAct prompting. While GPT also benefits from this 
+strategy, by reducing its violations by 75.64\%, it does not
+match the improvements of the ReAct prompting strategy.\newline
+Two main reasons can be attrubuted to this finding. First,
+GPT is already able to synthesize new colors. Providing 
+new externally computed colors, occassionally leads to 
+conflicts elsewhere in the code, as the model tries to 
+incorporate these colors. Second, the bounding-box 
+detection of \textit{Design2Code} occasionally groups elements
+together that are not visually connected in the UI. This 
+can lead to situations where the model applies external 
+colors for an entire region, rather than the specific node.
+Overall, the results suggest that adding explicit WCAG-compliant 
+colors can significantly lower contrast violations. However, 
+the underlying model's design capabilities and accuracy 
+determines how beneficial this strategy is.
