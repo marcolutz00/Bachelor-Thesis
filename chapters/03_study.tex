@@ -270,7 +270,7 @@ reduce the violation metrics.
 
 \begin{center}
 \begin{tcolorbox}[colback=black!5!white,colframe=black!75!black,bottom=-0.05pt,top=-0.05pt]
-\textit{Finding:} Due to variations in alignment goals (e.g., GPT's accessibility-aware behavior) and training data composition (e.g., Gemini's dependence on framework-derived styles), accessibility violations differ significantly amongst MLLMs. Open-source models, such as Qwen and Llava, tend to produce simplified, under-specified code, which is the main reason why they report fewer violations.
+\textit{\textbf{Finding:}} Due to variations in alignment goals (e.g., GPT's accessibility-aware behavior) and training data composition (e.g., Gemini's dependence on framework-derived styles), accessibility violations differ significantly amongst MLLMs. Open-source models, such as Qwen and Llava, tend to produce simplified, under-specified code, which is the main reason why they report fewer violations.
 \end{tcolorbox}
 \end{center}
 
@@ -587,3 +587,67 @@ Overall, the results suggest that adding explicit WCAG-compliant
 colors can significantly lower contrast violations. However, 
 the underlying model's design capabilities and accuracy 
 determines how beneficial this strategy is.
+
+
+\begin{center}
+\begin{tcolorbox}[colback=black!5!white,colframe=black!75!black,bottom=-0.05pt,top=-0.05pt]
+\textit{\textbf{Finding:}} Prompting strategies significantly 
+influence the accessibility of MLLM-generated UI code. 
+While the models benefit from explicit guidance, 
+advanced techniques like ReAct prompting yield the most 
+substantial improvements. However, each strategy may also 
+introduce model-specific limitations and, in some cases, 
+create new issues. These findings underscore the importance 
+of aligning prompting strategies with model capabilities 
+to enhance accessibility outcomes.
+\end{tcolorbox}
+\end{center}
+
+
+\section{RQ4: Does data leakage affect the accessibility of MLLM-generated UI code?}
+\subsection{Experiment Setup}
+A concern that is often raised in the context of MLLMs is 
+the possibility of data leakage, where the models have 
+already been exposed to the test data during pretraining, 
+thus leading to inflated performance. This RQ aims to 
+investigate whether such leakage has an impact on the
+the accessibility of the generated code.\newline
+To investigate this, 3 distinct datasets have been created 
+in order to compare model performance. 1) \textbf{Benchmark Dataset},
+which has been used and described in the previous RQs. 2)
+\textbf{Synthetic Dataset}, created with layout mutation and 
+hybrid synthesis techniques. This dataset contains new 
+UI compositions and code which is not likely to have 
+exact matches in the pretraining data. Therefore, 
+heuristic transformation rules have been created to 
+mutate layout structures, elements arragements,
+component colors and text content. In a second step,
+some layouts and components are then interchanged across 
+the UIs, which leads to new compositions. An example 
+of this synthetic dataset is shown in Fig.~\ref{fig:dataleakagemutation}.
+As a result, 10 webpages are synthesized, which are 
+rendered into screenshots and paired with their 
+corresponding mutated HTML/CSS code. 
+3) \textbf{Fresh Dataset}, which is created to complement 
+more up-to-date and real-world examples in the synthetic 
+dataset. This dataset is curated by selecting two 
+open-source web projects~\cite{web:alphaonelabsedu, web:ecommerceferhan}
+that are created after the official knowledge cutoff 
+dates of the MLLMs. These projects contain new samples 
+that are unlikely to have been seen during pretraining.
+However, web code from open repositories often 
+includes dynamically generated content, external dependencies 
+and redundant content, which can bias this accessibility-focused 
+analysis negatively. Therefore, the collected code 
+is manually cleaned according to the previous 
+steps, described in Section~\ref{subchapter:Dataset}.
+Through this process, 10 new webpages are collected and
+their corresponding HTML/CSS and rendered UI screenshots 
+are added to the dataset.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.9\linewidth]{figures/dataleakage.png}
+  \caption{Original web page (left), a heuristically mutated version (middle) with altered colour, layout and text, and a cross-site hybrid combining sections from multiple pages (right). May get drawing inspiration from this paper: GUIGAN: Learning to Generate GUI Designs Using Generative Adversarial Networks}
+  \label{fig:dataleakagemutation} 
+\end{figure}

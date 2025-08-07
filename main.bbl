@@ -428,6 +428,39 @@
       \field{pages}{1\bibrangedash 26}
       \range{pages}{26}
     \endentry
+    \entry{web:ecommerceferhan}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3825e1e45e03b99fa16dfc85769ba32e}{%
+           family={Ferhan},
+           familyi={F\bibinitperiod},
+           given={Nuran},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3825e1e45e03b99fa16dfc85769ba32e}
+      \strng{fullhash}{3825e1e45e03b99fa16dfc85769ba32e}
+      \strng{bibnamehash}{3825e1e45e03b99fa16dfc85769ba32e}
+      \strng{authorbibnamehash}{3825e1e45e03b99fa16dfc85769ba32e}
+      \strng{authornamehash}{3825e1e45e03b99fa16dfc85769ba32e}
+      \strng{authorfullhash}{3825e1e45e03b99fa16dfc85769ba32e}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{E-Commerce Site}
+      \field{urlday}{4}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/nuranferhan/e-commerce-site
+      \endverb
+      \verb{url}
+      \verb https://github.com/nuranferhan/e-commerce-site
+      \endverb
+    \endentry
     \entry{web:copilot}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=d3b7c913cd04ebfec0e9ec32cb6fd58c}{%
@@ -661,6 +694,40 @@
       \endverb
       \verb{url}
       \verb https://windsurf.com
+      \endverb
+    \endentry
+    \entry{web:alphaonelabsedu}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b011da15e649ac931ab7066b90eb245c}{%
+           family={Labs},
+           familyi={L\bibinitperiod},
+           given={Alpha\bibnamedelima One},
+           giveni={A\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b011da15e649ac931ab7066b90eb245c}
+      \strng{fullhash}{b011da15e649ac931ab7066b90eb245c}
+      \strng{bibnamehash}{b011da15e649ac931ab7066b90eb245c}
+      \strng{authorbibnamehash}{b011da15e649ac931ab7066b90eb245c}
+      \strng{authornamehash}{b011da15e649ac931ab7066b90eb245c}
+      \strng{authorfullhash}{b011da15e649ac931ab7066b90eb245c}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Alpha One Labs Education Platform}
+      \field{urlday}{4}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{version}{v1.0}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/alphaonelabs/alphaonelabs-education-website
+      \endverb
+      \verb{url}
+      \verb https://github.com/alphaonelabs/alphaonelabs-education-website
       \endverb
     \endentry
     \entry{mowar2025codea11y}{inproceedings}{}

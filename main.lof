@@ -9,10 +9,11 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Comparison of semantically rich (left) and structurally shallow (right) HTML snippets\relax }}{13}{figure.caption.15}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Overview of the advanced prompting strategies.\relax }}{14}{figure.caption.18}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Failure example for zero-shot prompting.\relax }}{17}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Original web page (left), a heuristically mutated version (middle) with altered colour, layout and text, and a cross-site hybrid combining sections from multiple pages (right). May get drawing inspiration from this paper: GUIGAN: Learning to Generate GUI Designs Using Generative Adversarial Networks\relax }}{20}{figure.caption.33}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces ChatGPT-4o accurately reproduces the visual layout shown in (a), yet omits semantic landmark elements, such as \texttt {<header>} and \texttt {<main>} in the generated HTML (b)\relax }}{28}{figure.caption.55}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Overview of Prompts used.\relax }}{28}{figure.caption.56}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces ChatGPT-4o accurately reproduces the visual layout shown in (a), yet omits semantic landmark elements, such as \texttt {<header>} and \texttt {<main>} in the generated HTML (b)\relax }}{29}{figure.caption.56}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Overview of Prompts used.\relax }}{29}{figure.caption.57}%
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
