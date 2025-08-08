@@ -604,7 +604,131 @@ to enhance accessibility outcomes.
 \end{center}
 
 
-\section{RQ4: Does data leakage affect the accessibility of MLLM-generated UI code?}
+\section{RQ4: How consistent are the accessibility violations across different MLLMs on the same UI screenshot?}
+\subsection{Experiment Setup}
+The objective of this RQ is find out wether different MLLMs 
+cause similar or complementary accessibility violations when 
+asked to generate HTML/CSS from the same UI screenshot.
+Consistent error patterns would indicate that systematic 
+limitations, caused by a similar training data, exist. 
+In contrast, complementary violations would motivate 
+ensemble or shared approaches between the models to improve the 
+overall accessibility of the generated code.
+To investigate this, the benchmark dataset is used, which 
+is prompted to GPT-4o and Gemini-2.0 flash with 
+the naive prompting technique. For every tuple of
+screenshot and model, the list of accessibility violations
+is extracted, sorted and represented by a violation 
+vector, which counts the number of issues per 
+WCAG class. 
+
+
+
+\newcommand{\vect}[1]{\begin{pmatrix}#1\end{pmatrix}}
+\newcommand{\issues}{k}                   % Anzahl der Issue-Klassen
+\newcommand{\vx}{\mathbf x}
+\newcommand{\vy}{\mathbf y}
+
+\textbf{Violation Vectors:}  
+  For each tuple of screenshot and model, the number of violations per class is counted as follows:
+  \[
+  \left(
+    \begin{array}{@{}l r@{}}
+      \text{Issue}_{1}: & x_{1}\\
+      \text{Issue}_{2}: & x_{2}\\
+      \vdots           & \vdots\\
+      \text{Issue}_{\issues}: & x_{\issues}
+    \end{array}
+  \right)
+  \xmapsto{\text{to vector}}
+  \mathbf v \;:=\;
+  \vect{x_{1}\\x_{2}\\\vdots\\x_{\issues}} \in \mathbb R^{\issues}.
+\]
+
+To compare the similarity of the violation vectors, the 
+cosine similarity is used, which is common metric in 
+other research areas. 
+
+\textbf{Cosine Similarity}  
+  Given two vectors with $\vx,\vy\in\mathbb R^{\issues}$, the cosine similarity is defined as:
+  \[
+  \operatorname{cos\_sim}(\mathbf v_1,\mathbf v_2)=
+  \frac{\mathbf v_1^{\mathsf T}\mathbf v_2}{\lVert \mathbf v_1\rVert\,\lVert \mathbf v_2\rVert}
+  \quad\in[0,1].
+\]
+
+
+\subsection{Results}
+Figure~\ref{fig:cosinesimilarity} shows the cosine similarity matrix 
+plotted as a heatmap, where each cell represents the similarity between 
+the violation vectors of different model runs. 
+As the figure shows, the majority of the cells 
+are light-colored, indicating a high cosine similarity 
+between the runs of the models. This is especially true 
+for the upper part of the heatmap, representing the 
+dataset entries of the Design2Code dataset, reaching 
+from example 1 to 28. In this section, the models 
+show a high degree of consistency and similarity, across 
+both models, but also across the individual runs.
+The lower part of the heatmap, representing the
+dataset entries from the dataset Webcode2m, show 
+a more diverse pattern, with a mix of lighter and 
+darker cells. Nevertheless, also in this section, 
+the majority of the cells are light-colored, showing
+that the models are still consistent in their violation 
+patterns. A manual inspection of the darker cells reveals 
+that a great number of lower similarity scores stems from 
+two main reasons: 1) In some runs, a model is capable 
+to generate code with only few violations, leading to 
+a violation vector with many zeros or small values. 
+Even if the other model achieves to generate code 
+which has a relatively low number of violations too, 
+the cosine similarity is highly sensitive to 
+small values, which leads to a low similarity score. 
+This is especially true for the section which stems from 
+the Webcode2m dataset, where the models are able to
+generate code with fewer violations. 
+2) The second reason for lower similarity scores stems 
+from possible cascading errors in the code generation. 
+For instance, if one model generates a code snippet with
+a color palette that is not compliant with WCAG, it 
+is likely that the amount of color contrast violations 
+in this snippet is higher than in other runs which 
+might use a different and better color palette. 
+This can lead to a lower cosine similarity score, even
+if the other violations are similar.\newline 
+Overall, the results suggest that the models generate 
+code snippets with similar amounts of accessibility violations
+and error distributions. The high similarity score 
+indicates that the models are likely to share similar
+limitations and biases, which can be attributed to the
+underlying training data.
+
+\begin{center}
+\begin{tcolorbox}[colback=black!5!white,colframe=black!75!black,bottom=-0.05pt,top=-0.05pt]
+\textit{\textbf{Finding:}} Accessibility violations 
+are highly consistent across GPT and Gemini, with an 
+average cosine similarity of 0.719. This suggests that 
+the models inherit the same systemic blind spots from 
+web-scale training data.
+\end{tcolorbox}
+\end{center}
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.4\linewidth]{figures/cosinesim.png}
+  \caption{Cosine similarity heatmap between the 3 runs of GPT and Gemini on the same UI screenshot. 
+  Each cell represents the cosine similarity of the accessibility violation vectors generated by the models.
+  Light = high similarity, dark = low similarity.}
+  \label{fig:cosinesimilarity} 
+\end{figure}
+
+
+
+
+
+\section{RQ5: Does data leakage affect the accessibility of MLLM-generated UI code?}
 \subsection{Experiment Setup}
 A concern that is often raised in the context of MLLMs is 
 the possibility of data leakage, where the models have 
@@ -612,11 +736,13 @@ already been exposed to the test data during pretraining,
 thus leading to inflated performance. This RQ aims to 
 investigate whether such leakage has an impact on the
 the accessibility of the generated code.\newline
-To investigate this, 3 distinct datasets have been created 
+To investigate this, 2 distinct datasets have been created 
 in order to compare model performance. 1) \textbf{Benchmark Dataset},
 which has been used and described in the previous RQs. 2)
-\textbf{Synthetic Dataset}, created with layout mutation and 
-hybrid synthesis techniques. This dataset contains new 
+\textbf{Synthetic Dataset}, consists of two distinct 
+subsets. The first subset is
+created with layout mutation and 
+hybrid synthesis techniques. This subset contains new 
 UI compositions and code which is not likely to have 
 exact matches in the pretraining data. Therefore, 
 heuristic transformation rules have been created to 
@@ -628,9 +754,9 @@ of this synthetic dataset is shown in Fig.~\ref{fig:dataleakagemutation}.
 As a result, 10 webpages are synthesized, which are 
 rendered into screenshots and paired with their 
 corresponding mutated HTML/CSS code. 
-3) \textbf{Fresh Dataset}, which is created to complement 
+The second subset is created to complement 
 more up-to-date and real-world examples in the synthetic 
-dataset. This dataset is curated by selecting two 
+dataset. This subset is curated by selecting two 
 open-source web projects~\cite{web:alphaonelabsedu, web:ecommerceferhan}
 that are created after the official knowledge cutoff 
 dates of the MLLMs. These projects contain new samples 
@@ -643,7 +769,17 @@ is manually cleaned according to the previous
 steps, described in Section~\ref{subchapter:Dataset}.
 Through this process, 10 new webpages are collected and
 their corresponding HTML/CSS and rendered UI screenshots 
-are added to the dataset.
+are added to the subset.\newline
+The two subsets are then combined into a single 
+synthetic dataset, which is used to compare the 
+models' performance against the benchmark dataset.\newline
+All experiments use the same naive prompting setup 
+and are conducted on GPT-4o and Gemini-2.0 flash. 
+By comparing the code similarity and distribution of 
+accessibility violations across the 
+different datasets, it can be evaluated 
+whether the performance variations suggest
+memorization or data leakage effects.
 
 \begin{figure}
   \centering
@@ -651,3 +787,53 @@ are added to the dataset.
   \caption{Original web page (left), a heuristically mutated version (middle) with altered colour, layout and text, and a cross-site hybrid combining sections from multiple pages (right). May get drawing inspiration from this paper: GUIGAN: Learning to Generate GUI Designs Using Generative Adversarial Networks}
   \label{fig:dataleakagemutation} 
 \end{figure}
+
+\begingroup
+    \input{tables/dataleakage.tex}
+\endgroup
+
+\subsection{Results}
+Table~\ref{tab:dataleakage} shows the results across all 
+three datasets. Overall, the code similarity scores are 
+relatively consistent across the datasets, even showing slightly 
+higher values for the synthetic dataset. While GPT 
+achieves a code similarity of 88.96\% for the benchmark dataset vs 
+89.17\% for the synthetic dataset, Gemini
+achieves 87.12\% vs 88.01\%, respectively. This 
+suggests that the models are not merely memorizing and 
+reproducing the training data, but rather are 
+able to generalize and synthesize new code. The 
+IR changes by 0.5-0.6 percentage points (GPT 
+slightly lower, Gemini slightly higher), which is 
+considered within the variance of the models 
+shown in RQ3. This indicates that the number of 
+DOM nodes with at least one accessibility violation 
+is largely unaffected by the underlying dataset.
+Lastly, both models show a modest increase in the 
+IWIR, with GPT increasing from 47.10\% to 49.47\% 
+and Gemini from 47.70\% to 50.30\%. Manual inspection 
+reveals that the synthetic dataset, especially 
+the 10 mutated UIs, contain more composite sections, 
+which tend to trigger slightly more color 
+contrast violations, and therefore lead 
+to a higher IWIR.\newline
+These findings demonstrate comparable performances 
+in both code fidelity and accessibility metrics across
+the different datasets. This suggests that the results 
+shown in previous RQs are not artificially inflated 
+by data leakage, but rather reflect the overall 
+generalization capabilities of the models. Therefore,
+it can be concluded that data leakage is unlikely to 
+exist or affect the evaluation process of MLLMs in 
+this thesis.
+
+\begin{center}
+\begin{tcolorbox}[colback=black!5!white,colframe=black!75!black,bottom=-0.05pt,top=-0.05pt]
+\textit{Finding:} The consistent performance of 
+MLLMs across the benchmark and synthetic datasets 
+suggests that data leakage is minimal 
+and the models' behavior observed in earlier 
+experiments is not an artifact of memorization 
+or pretraining exposure.
+\end{tcolorbox}
+\end{center}

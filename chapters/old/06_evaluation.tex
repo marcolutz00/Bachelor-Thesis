@@ -133,36 +133,36 @@ Answers on forums often only start with the first <div> element, not showing
 the full page structure. This could explain the incorrect usage of landmarks and 
 regions.
 
-\newcommand{\vect}[1]{\begin{pmatrix}#1\end{pmatrix}}
-\newcommand{\issues}{k}                   % Anzahl der Issue-Klassen
-\newcommand{\vx}{\mathbf x}
-\newcommand{\vy}{\mathbf y}
+% \newcommand{\vect}[1]{\begin{pmatrix}#1\end{pmatrix}}
+% \newcommand{\issues}{k}                   % Anzahl der Issue-Klassen
+% \newcommand{\vx}{\mathbf x}
+% \newcommand{\vy}{\mathbf y}
 
-\begin{enumerate}
-  \item \textbf{Amount of Issues}  
-        For each test run and file we are counting the number of violations per class
-        \[
-          \left(
-            \begin{array}{@{}l r@{}}
-              \text{Issue}_{1}: & x_{1}\\
-              \text{Issue}_{2}: & x_{2}\\
-              \vdots           & \vdots\\
-              \text{Issue}_{\issues}: & x_{\issues}
-            \end{array}
-          \right)
-          \xmapsto{\text{to vector}}
-          \vx \;:=\;
-          \vect{x_{1}\\x_{2}\\\vdots\\x_{\issues}} \in \mathbb R^{\issues}.
-        \]
+% \begin{enumerate}
+%   \item \textbf{Amount of Issues}  
+%         For each test run and file we are counting the number of violations per class
+%         \[
+%           \left(
+%             \begin{array}{@{}l r@{}}
+%               \text{Issue}_{1}: & x_{1}\\
+%               \text{Issue}_{2}: & x_{2}\\
+%               \vdots           & \vdots\\
+%               \text{Issue}_{\issues}: & x_{\issues}
+%             \end{array}
+%           \right)
+%           \xmapsto{\text{to vector}}
+%           \vx \;:=\;
+%           \vect{x_{1}\\x_{2}\\\vdots\\x_{\issues}} \in \mathbb R^{\issues}.
+%         \]
 
-  \item \textbf{Calculation of Cosine Similarity}  
-        Given two experiment runs with $\vx,\vy\in\mathbb R^{\issues}$, we define
-        \[
-          \operatorname{cos\_sim}(\vx,\vy)=
-          \frac{\vx^{\mathsf T}\vy}{\lVert\vx\rVert\,\lVert\vy\rVert}
-          \quad\in[0,1].
-        \]
-\end{enumerate}
+%   \item \textbf{Calculation of Cosine Similarity}  
+%         Given two experiment runs with $\vx,\vy\in\mathbb R^{\issues}$, we define
+%         \[
+%           \operatorname{cos\_sim}(\vx,\vy)=
+%           \frac{\vx^{\mathsf T}\vy}{\lVert\vx\rVert\,\lVert\vy\rVert}
+%           \quad\in[0,1].
+%         \]
+% \end{enumerate}
 
 This cosine similarity is then plotted into a heatmap comparing the different 
 experiment runs and files. The results can be seen in figure ab below. It 

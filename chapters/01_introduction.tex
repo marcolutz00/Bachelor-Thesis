@@ -123,7 +123,29 @@ errors introduced during refinement steps. Those finding provide
 insights for developer and reseachers aiming to guide MLLMs towards 
 more inclusive code generation.\newline
 
-\textbf{RQ4: Does data leakage influence the accessibility of MLLM-generated UI code?}
+
+\textbf{RQ4: How consistent are the accessibility violations across different MLLMs on the same UI screenshot?}
+To investigate the inter-model similarity and consistency of violations, this question compares the 
+accessibility violations of the same UI screenshots 
+across different MLLMs. By comparing the overlap and 
+distribution of violations, it is possible to identify 
+whether different models share the same weaknesses and
+blind spots. Therefore, this analysis uses the same WCAG 
+2.1 pipeline as in previous RQs, combined with the naive prompting 
+strategy. The accessibility violations for each webpage 
+and every model are combined into a single vector whose 
+dimensions count the violations per WCAG rule. The 
+pairwise similarity between models and their corresponding
+webpages is then calculated using cosine similarity of 
+the violations vectors. While low similarity would reveal 
+complementary failure modes that could be used by ensemble 
+repair, high similarity would indicate systemic blind spots 
+inherited from shared training data.\newline
+
+
+
+
+\textbf{RQ5: Does data leakage influence the accessibility of MLLM-generated UI code?}
 To rule out potential data leakage and influence on the accessibility 
 of MLLM-generated code, this question compares the models' performance across
 three distinct datasets: the public benchmark dataset used in previous 

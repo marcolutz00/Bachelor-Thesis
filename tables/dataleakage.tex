@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+  \centering
+  \small
+  \setlength{\tabcolsep}{2pt}
+  \begin{tabular}{l
+                ccc            % GPT columns
+                @{\hspace{10pt}}
+                ccc}           % Gemini columns
+    \toprule
+    \multirow{2}{*}{\textbf{Dataset}} &
+      \multicolumn{3}{c}{\textbf{GPT}} &
+      \multicolumn{3}{c}{\textbf{Gemini}} \\
+    \cmidrule(lr){2-4}\cmidrule(l){5-7}
+      & CodeSim & IR & IWIR
+      & CodeSim & IR & IWIR \\
+    \midrule
+    Benchmark & 88.96\% & 12.22\% & 47.10\%
+              & 87.12\% & 11.42\% & 47.70\% \\
+    Synthetic & 89.17\% & 11.64\% & 49.47\%
+              & 88.01\% & 12.06\% & 50.30\% \\
+    \bottomrule
+  \end{tabular}
+  \caption{Code similarity (CodeSim) and accessibility rates (IR, IWIR) on the \emph{Benchmark} and \emph{Synthetic} datasets.}
+  \label{tab:dataleakage}
+\end{table}

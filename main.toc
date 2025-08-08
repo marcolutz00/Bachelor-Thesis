@@ -16,53 +16,44 @@
 \contentsline {section}{\numberline {2.4}Benchmarks}{7}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Code Similarity}{7}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Accessibility Metrics}{7}{subsection.2.4.2}%
-\contentsline {chapter}{\numberline {3}Related Work}{8}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Background}{8}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Image-to-Code}{8}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Web Accessibility}{8}{section.3.3}%
-\contentsline {section}{\numberline {3.4}AI-enhanced GUI testing}{9}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Empirical Study}{10}{chapter.4}%
-\contentsline {section}{\numberline {4.1}RQ1: Do MLLMs generate accessible code from UI screenshots?}{10}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Experiment Setup}{10}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Results}{10}{subsection.4.1.2}%
-\contentsline {subsubsection}{\nonumberline Most common violations}{11}{subsubsection*.9}%
-\contentsline {section}{\numberline {4.2}RQ2: Do different MLLMs vary in their ability to generate accessible UI code?}{12}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Experiment Setup}{12}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Results}{12}{subsection.4.2.2}%
-\contentsline {subsubsection}{\nonumberline Training Data Biases.}{12}{subsubsection*.12}%
-\contentsline {subsubsection}{\nonumberline Instructional Alignments.}{13}{subsubsection*.14}%
-\contentsline {subsubsection}{\nonumberline Code Generation Capabilities.}{14}{subsubsection*.17}%
-\contentsline {section}{\numberline {4.3}RQ3: Does advanced prompt engineering lead to more accessible MLLM-generated UI code?}{14}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Experiment Setup}{14}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Results}{16}{subsection.4.3.2}%
-\contentsline {subsubsection}{\nonumberline Impact of Zero-Shot Prompting}{16}{subsubsection*.21}%
-\contentsline {subsubsection}{\nonumberline Impact of Few-Shot Prompting}{17}{subsubsection*.24}%
-\contentsline {subsubsection}{\nonumberline Impact of Chain-of-Thought Prompting}{17}{subsubsection*.26}%
-\contentsline {subsubsection}{\nonumberline Impact of Agentic Prompting}{17}{subsubsection*.28}%
-\contentsline {subsubsection}{\nonumberline Impact of ReAct Prompting}{18}{subsubsection*.30}%
-\contentsline {subsubsection}{\nonumberline Impact of Color-Aware Prompting}{19}{subsubsection*.32}%
-\contentsline {section}{\numberline {4.4}RQ4: Does data leakage affect the accessibility of MLLM-generated UI code?}{19}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Experiment Setup}{19}{subsection.4.4.1}%
-\contentsline {chapter}{\numberline {5}Evaluation}{21}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Accessibility Results}{21}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Quantitive Analysis}{21}{subsection.5.1.1}%
-\contentsline {subsubsection}{\nonumberline Prompting Techniques}{21}{subsubsection*.35}%
-\contentsline {paragraph}{\nonumberline Key observations:}{21}{paragraph*.37}%
-\contentsline {paragraph}{\nonumberline Error Distribution:}{21}{paragraph*.39}%
-\contentsline {subsection}{\numberline {5.1.2}Qualitive Analysis}{22}{subsection.5.1.2}%
-\contentsline {subsubsection}{\nonumberline Consistency}{22}{subsubsection*.42}%
-\contentsline {subsubsection}{\nonumberline Concentration of Violations}{22}{subsubsection*.44}%
-\contentsline {subsubsection}{\nonumberline Dominance of Default Colors}{23}{subsubsection*.46}%
-\contentsline {section}{\numberline {5.2}Image-to-Code Similarity}{24}{section.5.2}%
-\contentsline {subsubsection}{\nonumberline Prompting Techniques}{24}{subsubsection*.49}%
-\contentsline {subsubsection}{\nonumberline Advanced Strategies}{24}{subsubsection*.51}%
-\contentsline {chapter}{\numberline {6}Conclusion}{25}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Section}{25}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Future Directions}{25}{subsection.6.1.1}%
-\contentsline {chapter}{\numberline {7}Appendix}{26}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Results Data Leakage}{26}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Results Code Similarity}{27}{section.7.2}%
-\contentsline {chapter}{\nonumberline List of Figures}{31}{chapter*.59}%
-\contentsline {chapter}{\nonumberline List of Tables}{32}{chapter*.60}%
-\contentsline {chapter}{\nonumberline Bibliography}{33}{chapter*.61}%
+\contentsline {chapter}{\numberline {3}Empirical Study}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}RQ1: Do MLLMs generate accessible code from UI screenshots?}{8}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Experiment Setup}{8}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Results}{8}{subsection.3.1.2}%
+\contentsline {subsubsection}{\nonumberline Most common violations}{9}{subsubsection*.9}%
+\contentsline {section}{\numberline {3.2}RQ2: Do different MLLMs vary in their ability to generate accessible UI code?}{10}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Experiment Setup}{10}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Results}{10}{subsection.3.2.2}%
+\contentsline {subsubsection}{\nonumberline Training Data Biases.}{10}{subsubsection*.12}%
+\contentsline {subsubsection}{\nonumberline Instructional Alignments.}{11}{subsubsection*.14}%
+\contentsline {subsubsection}{\nonumberline Code Generation Capabilities.}{12}{subsubsection*.17}%
+\contentsline {section}{\numberline {3.3}RQ3: Does advanced prompt engineering lead to more accessible MLLM-generated UI code?}{12}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Experiment Setup}{12}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Results}{14}{subsection.3.3.2}%
+\contentsline {subsubsection}{\nonumberline Impact of Zero-Shot Prompting}{14}{subsubsection*.21}%
+\contentsline {subsubsection}{\nonumberline Impact of Few-Shot Prompting}{15}{subsubsection*.24}%
+\contentsline {subsubsection}{\nonumberline Impact of Chain-of-Thought Prompting}{15}{subsubsection*.26}%
+\contentsline {subsubsection}{\nonumberline Impact of Agentic Prompting}{15}{subsubsection*.28}%
+\contentsline {subsubsection}{\nonumberline Impact of ReAct Prompting}{16}{subsubsection*.30}%
+\contentsline {subsubsection}{\nonumberline Impact of Color-Aware Prompting}{17}{subsubsection*.32}%
+\contentsline {section}{\numberline {3.4}RQ4: How consistent are the accessibility violations across different MLLMs on the same UI screenshot?}{17}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Experiment Setup}{17}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Results}{18}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}RQ5: Does data leakage affect the accessibility of MLLM-generated UI code?}{18}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Experiment Setup}{18}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Results}{20}{subsection.3.5.2}%
+\contentsline {chapter}{\numberline {4}Discussion}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Rethinking Accessibility as a First-Class Objective in Code Generation}{21}{section.4.1}%
+\contentsline {section}{\numberline {4.2}From UI Description to Code: An Even Greater Accessibility Challenge}{21}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Threats to Validity}{23}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Related Work}{24}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Web Accessibility}{24}{section.6.1}%
+\contentsline {section}{\numberline {6.2}MLLMs for UI code generation}{24}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Conclusion}{26}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Appendix}{27}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Results Data Leakage}{27}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Results Code Similarity}{28}{section.8.2}%
+\contentsline {chapter}{\nonumberline List of Figures}{32}{chapter*.43}%
+\contentsline {chapter}{\nonumberline List of Tables}{33}{chapter*.44}%
+\contentsline {chapter}{\nonumberline Bibliography}{34}{chapter*.45}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

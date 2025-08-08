@@ -1,0 +1,80 @@
+\chapter{Discussion}\label{chapter:discussion}
+This section discusses the findings of this thesis 
+and explores possible implication for the future 
+of accessibility-aware code generation.
+
+\section{Rethinking Accessibility as a First-Class Objective in Code Generation}
+Even though state-of-the-art MLLMs have shown impressive 
+capabilities in generating UI images into syntactically 
+valid HTML/CSS code, accessibility remains a significant 
+challenge. Even the most advanced and capable models, 
+GPT-4o and Gemini-2.0 flash, show only marginal awareness 
+of accessibility best practices when prompted natively. 
+These models often generate code which is similar to the 
+original UI image, yet consistently fails to meet 
+the accessibility standards set by the WCAG.
+This finding highlights the necessity of a paradigm 
+shift in the approach of code generation. 
+In practice, the finding in this thesis 
+often reveal that improving 
+the overall model quality is not sufficient to guarantee
+accessibility. 
+Functional and visual correctness of the generated code 
+can be orthogonal, or even in conflict with accessibility. 
+A layout that renders properly, might still not be navigationable 
+by keyboard users or usable for screen reader users.\newline 
+Therefore, these findings highlight the need to rethink 
+accessibility as a first-class objective in model
+development, prompting and evaluation. This shift 
+means more than just incorporating accessibility 
+checks as a post-processing step, but rather
+integrating it proactively into the design principles 
+of the models. For instance, this would include that 
+accessibility metrics should be reported alongside traditional 
+code quality metrics, especially in domains 
+where accessibility is crucial, such as web development.\newline 
+In order to get insights of developers working on 
+a daily basis with LLMs, a small survey and discussions~\cite{feng2025ux, lutz2025mot} 
+has been conducted in a couple of developer communities.
+The feedback from these discussions and some private 
+questioning also highlights how 
+LLMs change the picture: \textit{``LLMs can point 
+you in the right direction, but they struggle with specific fixes''}.
+Others also mention that \textit{``over-reliance without fact-checking will 
+ultimately worsen the experience for the user''}. This 
+feedback underlines the importance of explicit 
+optimisation for accessibility.
+
+
+\section{From UI Description to Code: An Even Greater Accessibility Challenge}
+While the scope of this thesis focused on the evaluation of 
+generated code from UI screenshots, recent advancements could 
+shift the focus from \emph{image-based generation} to 
+\emph{description-based generation}. In this context, 
+the model is prompted via natural language or structured 
+descriptions and generates code directly from these inputs.
+However, this shift introduces even greater challenges 
+and a greater risk of omission of accessibility features.\newline
+Unlike with screenshots, where the model can visually get 
+information about layout and stylistic details, text 
+descriptions may not mention accessibility requirements at all.
+The burden of including accessibility information falls entirely 
+on the developer, who must ensure that the description 
+contains all necessary details. However, this assumes that 
+the developer is aware of the accessibility requirements, 
+which is often not the case. For instance, a developer
+might write \textit{``Create a login form with username 
+and password fields''}, without mentioning that specific 
+labels, keyboard focus orders or ARIA roles are required.
+Additionally, accessibility-related information such as
+the choice of colors, alt-texts for images or keyboard 
+navigation details can be dependent on the context and 
+subjective to each individual developer. Understanding these 
+details from language alone is a significant challenge for
+LLMs. For example, a model might not be capable to determine 
+which elements on a webpage should be reachable via keyboard
+or if the color contrast is sufficient for the user. \newline
+Therefore, the shift from image-based to description-based
+code generation poses even more challenges for accessibility and 
+demonstrated the need for explicit alignment and prompt design 
+to ensure that accessibility considerations are adequately addressed.

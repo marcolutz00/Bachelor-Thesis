@@ -344,6 +344,49 @@
       \field{title}{Disability}
       \field{year}{2025}
     \endentry
+    \entry{duarte2025expanding}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=23552cfe0d8b82234b702915e461e2d5}{%
+           family={Duarte},
+           familyi={D\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ed473a69f7450a61ffe7a52c084b1332}{%
+           family={Costa},
+           familyi={C\bibinitperiod},
+           given={Miguel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f3c8045e1a697ac3980a7aeda9b3418c}{%
+           family={Seixas\bibnamedelima Pereira},
+           familyi={S\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={Leticia},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ad432bfa55ef7a41fb0817e941c600c6}{%
+           family={Guerreiro},
+           familyi={G\bibinitperiod},
+           given={Joao},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e78995e7c40a71adee605c15934a3c51}
+      \strng{fullhash}{e78995e7c40a71adee605c15934a3c51}
+      \strng{bibnamehash}{e78995e7c40a71adee605c15934a3c51}
+      \strng{authorbibnamehash}{e78995e7c40a71adee605c15934a3c51}
+      \strng{authornamehash}{e78995e7c40a71adee605c15934a3c51}
+      \strng{authorfullhash}{e78995e7c40a71adee605c15934a3c51}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Companion Proceedings of the 30th International Conference on Intelligent User Interfaces}
+      \field{title}{Expanding Automated Accessibility Evaluations: Leveraging Large Language Models for Heading-Related Barriers}
+      \field{year}{2025}
+      \field{pages}{39\bibrangedash 42}
+      \range{pages}{4}
+    \endentry
     \entry{web:EAA2019}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=e805fdc2f857f14ffdeeb073480b1449}{%
@@ -372,6 +415,36 @@
       \endverb
       \verb{url}
       \verb https://eur-lex.europa.eu/eli/dir/2019/882/oj
+      \endverb
+    \endentry
+    \entry{feng2025ux}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=63e468e704f013c919c572438980dcc9}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Sidong},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{63e468e704f013c919c572438980dcc9}
+      \strng{fullhash}{63e468e704f013c919c572438980dcc9}
+      \strng{bibnamehash}{63e468e704f013c919c572438980dcc9}
+      \strng{authorbibnamehash}{63e468e704f013c919c572438980dcc9}
+      \strng{authornamehash}{63e468e704f013c919c572438980dcc9}
+      \strng{authorfullhash}{63e468e704f013c919c572438980dcc9}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{6}
+      \field{note}{UX StackExchange Discussions post}
+      \field{title}{What’s Missing in Accessibility Testing Tools? Looking for Feedback and Ideas [closed]}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://ux.stackexchange.com/questions/153763/what-s-missing-in-accessibility-testing-tools-looking-for-feedback-and-ideas
+      \endverb
+      \verb{url}
+      \verb https://ux.stackexchange.com/questions/153763/what-s-missing-in-accessibility-testing-tools-looking-for-feedback-and-ideas
       \endverb
     \endentry
     \entry{feng2022auto}{article}{}
@@ -630,6 +703,48 @@
       \verb https://arxiv.org/abs/2404.06369
       \endverb
     \endentry
+    \entry{he2025enhancing}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=1683bfab2faf51bf603be8f87fd33db2}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Ziyao},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5f7195b4d8cbde533b3b889ee35972da}{%
+           family={Huq},
+           familyi={H\bibinitperiod},
+           given={Syed\bibnamedelima Fatiul},
+           giveni={S\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7243bc9dcb94a297bc863f672dc9db0c}{%
+           family={Malek},
+           familyi={M\bibinitperiod},
+           given={Sam},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {ACM New York, NY, USA}%
+      }
+      \strng{namehash}{4b3e00f0530b3f4fad8247b9e7b33ae8}
+      \strng{fullhash}{4b3e00f0530b3f4fad8247b9e7b33ae8}
+      \strng{bibnamehash}{4b3e00f0530b3f4fad8247b9e7b33ae8}
+      \strng{authorbibnamehash}{4b3e00f0530b3f4fad8247b9e7b33ae8}
+      \strng{authornamehash}{4b3e00f0530b3f4fad8247b9e7b33ae8}
+      \strng{authorfullhash}{4b3e00f0530b3f4fad8247b9e7b33ae8}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the ACM on Software Engineering}
+      \field{number}{FSE}
+      \field{title}{Enhancing Web Accessibility: Automated Detection of Issues with Generative AI}
+      \field{volume}{2}
+      \field{year}{2025}
+      \field{pages}{2264\bibrangedash 2287}
+      \range{pages}{24}
+    \endentry
     \entry{web:cursor}{misc}{}
       \name{author}{1}{}{%
         {{un=1,uniquepart=given,hash=771cc7ecf8a502fadfc6028654511f05}{%
@@ -730,6 +845,105 @@
       \verb https://github.com/alphaonelabs/alphaonelabs-education-website
       \endverb
     \endentry
+    \entry{web:qualweb}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d5a5c41f0b549531edea71f07fe85b24}{%
+           family={LASIGE},
+           familyi={L\bibinitperiod},
+           given={University\bibnamedelimb of\bibnamedelima Lisbon},
+           giveni={U\bibinitperiod\bibinitdelim o\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d5a5c41f0b549531edea71f07fe85b24}
+      \strng{fullhash}{d5a5c41f0b549531edea71f07fe85b24}
+      \strng{bibnamehash}{d5a5c41f0b549531edea71f07fe85b24}
+      \strng{authorbibnamehash}{d5a5c41f0b549531edea71f07fe85b24}
+      \strng{authornamehash}{d5a5c41f0b549531edea71f07fe85b24}
+      \strng{authorfullhash}{d5a5c41f0b549531edea71f07fe85b24}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{QualWeb}
+      \field{urlday}{21}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://qualweb.di.fc.ul.pt/evaluator/about
+      \endverb
+      \verb{url}
+      \verb https://qualweb.di.fc.ul.pt/evaluator/about
+      \endverb
+    \endentry
+    \entry{lopez2025turning}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=568e52dd2e3f0ae6b79c9ab1011ed597}{%
+           family={Lopez-Gil},
+           familyi={L\bibinithyphendelim G\bibinitperiod},
+           given={Juan-Miguel},
+           giveni={J\bibinithyphendelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f73857d955e71059a52ed285fdd63313}{%
+           family={Pereira},
+           familyi={P\bibinitperiod},
+           given={Juanan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{4ae0e465ecc876a906d9046cf20d21ce}
+      \strng{fullhash}{4ae0e465ecc876a906d9046cf20d21ce}
+      \strng{bibnamehash}{4ae0e465ecc876a906d9046cf20d21ce}
+      \strng{authorbibnamehash}{4ae0e465ecc876a906d9046cf20d21ce}
+      \strng{authornamehash}{4ae0e465ecc876a906d9046cf20d21ce}
+      \strng{authorfullhash}{4ae0e465ecc876a906d9046cf20d21ce}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Universal Access in the Information Society}
+      \field{number}{1}
+      \field{title}{Turning manual web accessibility success criteria into automatic: an LLM-based approach}
+      \field{volume}{24}
+      \field{year}{2025}
+      \field{pages}{837\bibrangedash 852}
+      \range{pages}{16}
+    \endentry
+    \entry{lutz2025mot}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=17f474cd48d638a9a49ec6bfd4c8dd14}{%
+           family={Lutz},
+           familyi={L\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{17f474cd48d638a9a49ec6bfd4c8dd14}
+      \strng{fullhash}{17f474cd48d638a9a49ec6bfd4c8dd14}
+      \strng{bibnamehash}{17f474cd48d638a9a49ec6bfd4c8dd14}
+      \strng{authorbibnamehash}{17f474cd48d638a9a49ec6bfd4c8dd14}
+      \strng{authornamehash}{17f474cd48d638a9a49ec6bfd4c8dd14}
+      \strng{authorfullhash}{17f474cd48d638a9a49ec6bfd4c8dd14}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{note}{Ministry of Testing Discussions post}
+      \field{title}{What’s missing in accessibility testing tools?}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://club.ministryoftesting.com/t/what-s-missing-in-accessibility-testing-tools-looking-for-feedback-and-ideas/85633
+      \endverb
+      \verb{url}
+      \verb https://club.ministryoftesting.com/t/what-s-missing-in-accessibility-testing-tools-looking-for-feedback-and-ideas/85633
+      \endverb
+    \endentry
     \entry{mowar2025codea11y}{inproceedings}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=6ca2fd407d7717f4453a9640044c8ce4}{%
@@ -778,6 +992,40 @@
       \field{year}{2025}
       \field{pages}{1\bibrangedash 15}
       \range{pages}{15}
+    \endentry
+    \entry{nguyen2015reverse}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=abbfa1ec397d042638e3f8bb730c695f}{%
+           family={Nguyen},
+           familyi={N\bibinitperiod},
+           given={Tuan\bibnamedelima Anh},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=619364a0f156039e46b6f359085c157e}{%
+           family={Csallner},
+           familyi={C\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{d697d7449335f6ac6dcba27acca7df8e}
+      \strng{fullhash}{d697d7449335f6ac6dcba27acca7df8e}
+      \strng{bibnamehash}{d697d7449335f6ac6dcba27acca7df8e}
+      \strng{authorbibnamehash}{d697d7449335f6ac6dcba27acca7df8e}
+      \strng{authornamehash}{d697d7449335f6ac6dcba27acca7df8e}
+      \strng{authorfullhash}{d697d7449335f6ac6dcba27acca7df8e}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2015 30th IEEE/ACM international conference on automated software engineering (ASE)}
+      \field{title}{Reverse engineering mobile application user interfaces with remaui (t)}
+      \field{year}{2015}
+      \field{pages}{248\bibrangedash 259}
+      \range{pages}{12}
     \endentry
     \entry{si2024design2code}{article}{}
       \name{author}{6}{}{%
@@ -1059,7 +1307,7 @@
       \verb https://www.w3.org/TR/WCAG21/
       \endverb
     \endentry
-    \entry{webaim2025million}{misc}{}
+    \entry{web:wave}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=790eee551afe5a8832859712ba1b5f4f}{%
            family={WebAIM},
@@ -1075,14 +1323,18 @@
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-06-16}
-      \field{title}{The WebAIM Million - An annual accessibility analysis of the top 1,000,000 home pages}
+      \field{title}{WAVE Web Accessibility Evaluation Tools}
+      \field{urlday}{21}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
       \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://webaim.org/projects/million/
+      \verb https://wave.webaim.org
       \endverb
       \verb{url}
-      \verb https://webaim.org/projects/million/
+      \verb https://wave.webaim.org
       \endverb
     \endentry
     \entry{wu2025ui2code}{article}{}
@@ -1405,8 +1657,11 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{axe-core}
+  \missing{lighthouse}
   \missing{web:govuk}
   \missing{web:w3c_examples}
+  \missing{zhang2024declarui}
 \endrefsection
 \endinput
 

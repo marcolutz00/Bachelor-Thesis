@@ -1,0 +1,52 @@
+ \chapter{Threats to Validity}\label{chapter:threats}
+The chapter introduces possible threats to validity of 
+this thesis and demonstrates how these threats 
+are mitigated.\newline
+First, the representativeness of the UI dataset poses 
+a potential threat to the generalizability of the findings.
+In order to mitigate this threat, the data entries are 
+collected from two publicly available datasets (Design2Code and Webcode2m).
+These two datasets are manually inspected and found to contain a diverse 
+range of UI designs, of which 53 examples are selected for the study. 
+Those examples cover a wide range of UI elements, design and 
+content types. Additionally, a synthetic dataset, consisting of 
+20 entries, is created to 
+further increase the diversity and rule out the risk of 
+potential data leakage.\newline 
+Second, the choice of models poses another potential threat 
+to this thesis. To address this, the study includes 4 widely-used 
+and state-of-the-art MLLMs, such as GPT-4o, Gemini-2.0 flash, Qwen2.5-vl:7B
+and Llava-7B. The thesis has intentionally not included 
+task-optimized or fine-tuned models to reflect realistic 
+usage scenarios. Apart from that, possible resource constraints 
+are also considered. The thesis evaluates the open-source 
+models at the scale of 7B parameters, rather than using their 
+large variants (e.g. Qwen-2.5-vl:72B), which might show 
+a stronger performance, but are less accessible to users.
+This selection of models captures the diversity of MLLMs at 
+the current state, but also acknowledges that further 
+model families and variants could enhance the representativeness of the findings.\newline
+Third, the models prompting strategies poses another potential threat 
+to the validity of the findings. To reduce the risk of 
+prompting bias, the thesis has evaluated the performances of 
+the models with a set of 7 different prompting techniques, 
+ranging from a naive prompt without any additional accessibility instructions,
+to more advanced prompts that include external accessibility
+checkers and guidelines. While there are many more techniques 
+that have shown promising results in the literature, such as 
+\textit{prompt tuning} or \textit{model context protocol} (MCP), 
+the resource constraints of this thesis limit the number of
+techniques that could be evaluated. The prompt design used 
+in this study, however, was intended to be representative of 
+general use and aligned with best practices of prior research.\newline 
+Lastly, another threat to validity is the probabilistic and 
+non-deterministic nature of MLLMs, which leads to different 
+outputs for the same input. To mitigate this threat, the 
+study has evaluated the performance of each model 
+based on 3 differnt runs and reported the aggregated, 
+averaged results. While this approach helps to reduce the 
+number of possible outliers, it does not fully eliminate 
+them. The observations in this thesis showed variations 
+between the runs, but the overall trends and findings 
+remained consistent. Nevertheless, a larger number of 
+runs could further enhance the robustness of the findings.
