@@ -6,16 +6,16 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {3.1}{\ignorespaces Performance for accessibility violations within the MLLMs-generated UI code.\relax }}{10}{table.caption.10}%
 \contentsline {table}{\numberline {3.2}{\ignorespaces Performance for advanced prompting techniques, including Average Violations (AV), Total Violations (TV), Code Similarity (CodeSim), Inaccessibility Rate (IR), and Impact Weighted Inaccessibility Rate (IWIR).\relax }}{14}{table.caption.19}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Code similarity (CodeSim) and accessibility rates (IR, IWIR) on the \emph {Benchmark} and \emph {Synthetic} datasets.\relax }}{20}{table.caption.35}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Code similarity (CodeSim) and accessibility rates (IR, IWIR) on the \emph {Benchmark} and \emph {Synthetic} datasets.\relax }}{20}{table.caption.36}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {8.1}{\ignorespaces OpenAI GPT-4o: Data Leakage (DL) based on 3 iterations\relax }}{27}{table.caption.36}%
-\contentsline {table}{\numberline {8.2}{\ignorespaces Gemini-2.0-flash: Data Leakage (DL) based on 3 iterations\relax }}{27}{table.caption.37}%
-\contentsline {table}{\numberline {8.3}{\ignorespaces Results of Code Similarity for each model based on 3 runs.\relax }}{28}{table.caption.38}%
-\contentsline {table}{\numberline {8.4}{\ignorespaces Accessibility violations (absolute and mean per file) across prompting techniques and models.\relax }}{29}{table.caption.39}%
-\contentsline {table}{\numberline {8.5}{\ignorespaces Mapped Accessibility-Violations\relax }}{31}{table.caption.42}%
+\contentsline {table}{\numberline {8.1}{\ignorespaces OpenAI GPT-4o: Data Leakage (DL) based on 3 iterations\relax }}{28}{table.caption.37}%
+\contentsline {table}{\numberline {8.2}{\ignorespaces Gemini-2.0-flash: Data Leakage (DL) based on 3 iterations\relax }}{28}{table.caption.38}%
+\contentsline {table}{\numberline {8.3}{\ignorespaces Results of Code Similarity for each model based on 3 runs.\relax }}{29}{table.caption.39}%
+\contentsline {table}{\numberline {8.4}{\ignorespaces Accessibility violations (absolute and mean per file) across prompting techniques and models.\relax }}{30}{table.caption.40}%
+\contentsline {table}{\numberline {8.5}{\ignorespaces Mapped Accessibility-Violations\relax }}{32}{table.caption.43}%
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

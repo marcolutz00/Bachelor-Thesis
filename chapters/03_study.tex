@@ -558,11 +558,21 @@ from its training data.
 Furthermore, some
 attempts to fix particular violations can 
 occasionally lead to new problems elsewhere in 
-the code. As Fig~\ref{??} suggests, the model ... .
+the code. As Fig~\ref{fig:iterativecascadingissues} suggests, the model 
+successfully solves certain violations (for example adds 
+a \texttt{label} to the form element), but at the same time 
+introduces a new issue with the color contrast of the label.
 These cascading error may arise from a limited 
 understanding of the codes underlying structure and 
 dependencies, which highlights a potential limitation 
 of current MLLMs.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.9\linewidth]{figures/iterativecascadingissues.png}
+  \caption{Login screen before (left) and after (right) the first refinement iteration. The model successfully solves the missing label violation, but introduces a new issue with the color contrast of the label.}
+  \label{fig:iterativecascadingissues} 
+\end{figure}
 
 \subsubsection{Impact of Color-Aware Prompting}
 Enhancing the ReAct prompting technique with pre-computed 

@@ -35,25 +35,25 @@
 \contentsline {subsubsection}{\nonumberline Impact of Chain-of-Thought Prompting}{15}{subsubsection*.26}%
 \contentsline {subsubsection}{\nonumberline Impact of Agentic Prompting}{15}{subsubsection*.28}%
 \contentsline {subsubsection}{\nonumberline Impact of ReAct Prompting}{16}{subsubsection*.30}%
-\contentsline {subsubsection}{\nonumberline Impact of Color-Aware Prompting}{17}{subsubsection*.32}%
-\contentsline {section}{\numberline {3.4}RQ4: How consistent are the accessibility violations across different MLLMs on the same UI screenshot?}{17}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Experiment Setup}{17}{subsection.3.4.1}%
+\contentsline {subsubsection}{\nonumberline Impact of Color-Aware Prompting}{17}{subsubsection*.33}%
+\contentsline {section}{\numberline {3.4}RQ4: How consistent are the accessibility violations across different MLLMs on the same UI screenshot?}{18}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Experiment Setup}{18}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Results}{18}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}RQ5: Does data leakage affect the accessibility of MLLM-generated UI code?}{18}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Experiment Setup}{18}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Results}{20}{subsection.3.5.2}%
-\contentsline {chapter}{\numberline {4}Discussion}{21}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Rethinking Accessibility as a First-Class Objective in Code Generation}{21}{section.4.1}%
-\contentsline {section}{\numberline {4.2}From UI Description to Code: An Even Greater Accessibility Challenge}{21}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Threats to Validity}{23}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Related Work}{24}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Web Accessibility}{24}{section.6.1}%
-\contentsline {section}{\numberline {6.2}MLLMs for UI code generation}{24}{section.6.2}%
-\contentsline {chapter}{\numberline {7}Conclusion}{26}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Appendix}{27}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Results Data Leakage}{27}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Results Code Similarity}{28}{section.8.2}%
-\contentsline {chapter}{\nonumberline List of Figures}{32}{chapter*.43}%
-\contentsline {chapter}{\nonumberline List of Tables}{33}{chapter*.44}%
-\contentsline {chapter}{\nonumberline Bibliography}{34}{chapter*.45}%
+\contentsline {section}{\numberline {3.5}RQ5: Does data leakage affect the accessibility of MLLM-generated UI code?}{19}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Experiment Setup}{19}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Results}{21}{subsection.3.5.2}%
+\contentsline {chapter}{\numberline {4}Discussion}{22}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Rethinking Accessibility as a First-Class Objective in Code Generation}{22}{section.4.1}%
+\contentsline {section}{\numberline {4.2}From UI Description to Code: An Even Greater Accessibility Challenge}{22}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Threats to Validity}{24}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Related Work}{25}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Web Accessibility}{25}{section.6.1}%
+\contentsline {section}{\numberline {6.2}MLLMs for UI code generation}{25}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Conclusion}{27}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Appendix}{28}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Results Data Leakage}{28}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Results Code Similarity}{29}{section.8.2}%
+\contentsline {chapter}{\nonumberline List of Figures}{33}{chapter*.44}%
+\contentsline {chapter}{\nonumberline List of Tables}{34}{chapter*.45}%
+\contentsline {chapter}{\nonumberline Bibliography}{35}{chapter*.46}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
