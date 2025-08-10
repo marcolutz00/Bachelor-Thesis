@@ -3,71 +3,70 @@
 
 In this section, the general methodology for evaluating the 
 accessibility of HTML/CSS code is described. It includes a combination
-of automated auditing tools and manual verification. This hybrid
-approach ensures to identify a wide range of accessibility issues,
-reconcile inconsistencies across tools and guarantee 
-reliable results. All evaluations are conducted in accordance
-with WCAG 2.1, which is the most widely adopted standard 
-supported by the tools at the time of this thesis.
+of automated auditing tools and manual verification. This hybrid approach 
+identifies a wide range of accessibility issues, reconciles inconsistencies and guarantees reliable results. 
+All evaluations are conducted following WCAG 2.1, the most widely 
+adopted standard supported by the tools at the time of this thesis.
 
 \section{Automated Accessibility Evaluation}
-A wide range of automated accessibility checkers are available to 
+A wide range of automated accessibility checkers is available to 
 detect violations in web content.
 According to former studies, automated testing can detect up to $\sim$60\% 
 of accessibility issues~\cite{deque2023accessibility}. This makes them 
-valuable for developers, however they can not replace manual testing or 
-expert review completely.
-However in practice, a combination of various tools can help to minimize the 
+valuable for developers; however they can not completely replace manual testing or 
+expert review.
+Regardless, in practice, a combination of various tools can help minimize the 
 oversight of accessibility violations during the tests.\newline
 This study uses three widely adopted automated accessibility evaluation 
-tools: \textit{Axe-Core}, \textit{Google Lighthouse Accessibility} 
+tools: \textit{Axe-Core}, \textit{Google Lighthouse Accessibility},
 and \textit{Pa11y}. Each tool offers unique detection mechanisms,
-coverage areas and reporting formats.
+coverage areas, and reporting formats.
 \begin{itemize}
-  \item \textbf{Axe-Core (4.10.3)~\cite{web:axecore}:} is a rule-based engin
+  \item \textbf{Axe-Core (4.10.3)~\cite{web:axecore}:} is a rule-based engine
   developed by Deque Systems and commonly integrated into browser 
-  extensions and CI/CD pipelines. It provides detailed issue classifications 
-  and links each violation to an own rule-set.
+  extensions and CI/CD pipelines. It provides detailed information
+  and links each violation to its own rule set.
   \item \textbf{Google Lighthouse Accessibility (12.4.0)~\cite{web:lighthouse}:} 
   embedded within Chromium-based browsers, performs accessibility audits
   alongside performance and SEO diagnostics.
   \item \textbf{Pa11y (8.0.0)~\cite{web:pa11y}:} is a flexible command-line tool 
   that uses HTML CodeSniffer as its engine and is especially useful for batch 
-  evaluation of static pages. During some tests on the benchmark dataset, we 
-  found out that Pa11y has especially strengths in areas where the other tools
-  seem to fail. Therefore, we decide to use it as our third complementary tool.
+  evaluation of static pages. During some tests on the benchmark dataset, 
+  it was found that Pa11y has strengths in areas where the other 
+  tools seem to fail (e.g., color contrast violations); therefore, it was 
+  decided to use it as the third complementary tool.
 \end{itemize}
  
 All three tools were used to evaluate the generated HTML/CSS code. 
 However, the outputs of each tool may differ. For example, 
 Pa11y flagged a missing label for a form field under WCAG
-2.1 Technique F68 (“This form field should be labelled in some way.”), 
+2.1 Technique F68 (\textit{``This form field should be labelled in some way.''}), 
 while Axe-core
-reported the same issue using its own rule IDs (e.g. “label”) and includes 
+reported the same issue using its own rule IDs (e.g. \textit{``label''}) and includes 
 WCAG success-criterion
-tags such as “4.1.2 Name, Role, Value” in the rule metadata, but it does not cite WCAG
-techniques. This discrepancy reflects a common challenge in automated accessibility evaluation,
-that the tools often differ in their interpretation, granularity and labeling of the same underlying
+tags such as \textit{``4.1.2 Name, Role, Value''} in the rule metadata, but it does not cite WCAG
+techniques. This discrepancy reflects a common challenge in automated accessibility evaluation:
+the tools often differ in their interpretation, granularity, and labeling of the same underlying
 issues.\newline
 To address this inconsistency and improve cross-tool comparability, a 
-unified taxonomy of accessibility issues is created. In order to 
-aggregate the outputs of the three tools, first all 
-detected violations are compiled. Based on the preserved 
-metadata, such as rule IDs, WCAG mappings, descriptions and affected
-HTML elements the violations are grouped into functionally 
-equivalent categories (e.g. missing labels, insufficient color contrast,
-missing alt-text). Next, overlapping rule definitions are merged 
+unified taxonomy of accessibility issues is created. First, all 
+detected violations are compiled to 
+aggregate the outputs of the three tools. Based on the preserved 
+metadata, such as rule IDs, WCAG mappings, descriptions, and affected
+HTML elements, the violations are grouped into functionally 
+equivalent categories (e.g., missing labels, insufficient color contrast,
+missing alt-text). Next, similar rule definitions are combined 
 into a single rule, leading to a consistent set of 40 
 accessibility categories, each mapped to one or more WCAG 
-success criteria. For instance, issues such as “H43.*” 
-(from pa11y) and “empty-table-header” (from axe-core) were all
-grouped under the category "Table Headers". Similarly, 
-contrast-related violations were unified
-under WCAG 2.1 1.4.3 Contrast (Minimum), 
+success criteria. For instance, issues such as \textit{``H43.*''}
+(from pa11y) and \textit{``empty-table-header''} (from axe-core) were all
+grouped under the category \textit{``Table Headers''}. Similarly,
+contrast-related violations were merged
+under \textit{``Color Contrast''}, according to WCAG 2.1 1.4.3 Contrast (Minimum), 
 regardless of variation in wording across tools.
 
 \subsection{Manual Verification}
-As mentioned, automated tools can not replace manual testing completely. 
+As mentioned, automated tools can not completely replace manual testing. 
 Certain accessibility guidelines, especially those involving 
 contextual understanding or semantic meaning still require 
 human judgment. Therefore, we support the evaluation with a 
@@ -83,33 +82,34 @@ the accessibility quality.
 \begingroup
     \input{tables/mapping.tex}
 \endgroup
-
+\newpage
 
 \section{Dataset}
 \label{subchapter:Dataset}
 \subsection{Scope and Design}
 The main goal is to gather a diverse and high-quality dataset which consists of 
 paired UI screenshots and HTML/CSS, and represents
-real-worldwebpages. The dataset should (1) include multiple domains and layouts,
-(2) contain annotated accessibility violations and (3) have a reasonable size to be
+real-world webpages. The dataset should (1) include multiple domains and layouts,
+(2) contain annotated accessibility violations, and (3) have a reasonable size to be
 statistically relevant, but is also small enough to be analyzed manually.
-There is no publicly available dataset which fullfills all requirements.
+No publicly available dataset fulfills all requirements.
 
-\section{Construction}
+\subsection{Construction}
 Two promising examples in the field of Image-to-Code are \textit{Design2Code}~\parencite{si2024design2code} 
 and \textit{Webcode2m}~\parencite{gui2024webcode2m}. 
 Both represent real-world web
 interfaces and have been widely adopted in prior work on code generation 
 and design understanding. Based on their
 dataset curation, both serve as a good base for this thesis.\newline
-To reduce redundancy, ensure layout diversity and manage computational cost, a random sample of
-28 instances from Design2Code and 25 instance from WebCode2M, resulting in a total of 53 UI–code
-pairs, is used for the study. This sampling strategy allows for representative, yet feasible evaluation 
+To reduce redundancy, ensure layout diversity, and manage computational cost, a random sample of
+28 instances from Design2Code and 25 instances from WebCode2M, resulting in a total of 53 UI–code
+pairs, is used for the study. This sampling strategy allows for a representative and feasible evaluation
 given the resource constraints of this thesis.
+
 
 \subsubsection{Content Distribution}
 Figure~\ref{fig:dataset_distribution} summarizes the content distribution in our dataset.
-It contains a variety of domains, including blogs, business and homepages, mirroring the 
+It contains a variety of domains, including blogs, business, and homepages, mirroring the 
 diversity of real-world web content.
 
 \begin{figure}[htbp]
@@ -121,27 +121,27 @@ diversity of real-world web content.
 
 \subsection{Dataset Alignment}
 Because Design2Code and Webcode2m use different strategies to purify 
-their data, we harmonize the datasets prior to the analysis. 
-The alignment contains (1) removing all external dependencies (e.g. images, audio, 
-video, external links) and substituting neutral placeholders (e.g. \texttt{src="placeholder.jpg"}
-for images or \texttt{href="\#"} for links); (2) disabling executable content, 
-such as scripts and other dynamic elements; (3) deleting non-visible content (e.g. 
+their data, the datasets are harmonized before the analysis. 
+The alignment contains (1) removing all external dependencies (e.g., images, audio, 
+video, and external links) and substituting neutral placeholders (e.g., \texttt{src="placeholder.jpg"}
+for images or \texttt{href="\#"} for links); (2) turning off executable content, 
+such as scripts and other dynamic elements; (3) deleting non-visible content (e.g.,
 advertisement-related tags or hidden elements) that are irrelevant in 
-an image-to-code context and otherwise possibly bias 
+an image-to-code context and could otherwise possibly bias 
 the accessibility metrics.
 
 
 
 \section{Benchmarks}
 The evaluation of the generated HTML/CSS is based on two complementary 
-metrics: (1) Code Similarity and (2) Accessibility metrics.
+metrics: (1) Code Similarity and (2) Accessibility Metrics.
 
 \subsection{Code Similarity}
 Code similarity measures how closely the generated code matches the ground
 truth reference. This is crucial for assessing the layout fidelity and 
 semantic correctness. Following the metric defined in~\cite{si2024design2code}, 
 the evaluation is based on a combination of high-level visual 
-conformity and low-level element matching, capturing both 
+similarity and low-level element matching, which captures both 
 structural and stylistic alignment. 
 The metric contains five components:
 text similarity (\(S_{\text{text}}\)), position similarity 
@@ -156,7 +156,7 @@ The final score is computed as a weighted sum of these components:
 \),
 where \(S_i \in \mathcal{S}\) denotes the \(i\)-th component score and \(w_i\) is its corresponding weight.
 Following the findings of previous work, we adopt a uniform weighting for all components in this study, setting \(w_i = \frac{1}{5}\) for all \(i\).
-The combination of those scores allows to get a balanced view of the visual and 
+The combination of those scores allows for a balanced view of the visual and 
 structural similarity of the input and output.
 
 
@@ -164,8 +164,8 @@ structural similarity of the input and output.
 Apart from counting violations, accessibility is evaluated along two
 further dimensions: the relative quantity of violations and their 
 severity. The combination of both metrics allows us to understand 
-whether LLMs can not only decrease
-the amount of accessibility violations, but also its severity.
+whether LLMs can decrease not only
+the amount of accessibility violations but also their severity.\newline
 
 \textbf{Inaccessibility Rate (IR):} Following prior
 research~\parencite{alshayban2020accessibility}. It measures the 
@@ -173,7 +173,7 @@ percentage of DOM nodes with violations that exhibit at least one violation
 relative to the number of nodes prone to such violations:
 \begin{equation}
     \mathrm{IR} = \frac{N_{\mathrm{violations}}}{N_{\mathrm{total}}}
-\end{equation}
+\end{equation}\newline
 
 \textbf{Impact-Weighted Inaccessibility Rate (IWIR):}
 To capture the severity according to the WCAG impact levels, IWIR

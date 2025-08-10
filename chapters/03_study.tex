@@ -1,9 +1,12 @@
 \chapter{Empirical Study}\label{chapter:EmpiricalStudy}
-To better understand the capabilities and limitations of 
-MLLMs in generating accessible UI code, a comprehensive 
-study guided by four research questions was conducted. 
-In the following, the study setup and the quantitative and
-qualitative results are presented.
+Based on five research questions, a comprehensive empirical study 
+was conducted to gain a better understanding of the 
+capabilities and constraints of MLLMs in generating accessible UI code.
+% To better understand the capabilities and limitations of 
+% MLLMs in generating accessible UI code, a comprehensive 
+% study guided by four research questions was conducted. 
+The following presents the study setup and the quantitative and
+qualitative results.
 
 \section{RQ1: Do MLLMs generate accessible code from UI screenshots?}
 \subsection{Experiment Setup}
@@ -11,12 +14,12 @@ To evaluate the baseline capability of MLLMs in generating accessible
 code from visual UI input, two widely-used MLLMs are 
 selected for this study: GPT-4o and Gemini-2.0 Flash.
 These models show strong performance in 
-multimodal tasks and their support for image inputs make
+multimodal tasks, and their support for image inputs makes
 them suitable candidates for this study.\newline
 As described in section~\ref{chapter:Methodology}, the models are 
 prompted with our dataset of UI screenshots and a corresponding 
 task description. The task description includes a naive (plain)
-prompt, which instructs the model to generate HTML/CSS code solely
+prompt, which instructs the model to generate HTML/CSS code
 based on the provided screenshot, without mentioning accessibility.
 
 \newmdenv[
@@ -33,16 +36,16 @@ based on the provided screenshot, without mentioning accessibility.
 ]{roundedbox}
 
 \begin{roundedbox}
-\textbf{Native Prompt}: Your task is to replicate 
+\textbf{Naive Prompt}: Your task is to replicate 
 the provided UI screenshot of a webpage pixel-perfectly using 
 HTML/CSS.
 \end{roundedbox}
 
-This setups allows to observe whether MLLMs can 
+This setup allows to observe whether MLLMs can 
 naturally produce accessible code without direct instruction 
 and acts as a benchmark for enhancement strategies. 
 It is important to note that each experiment is conducted three 
-times for each model, and the results presented represent the average 
+times for each model, and the results below represent the average 
 outcomes to account for stochastic fluctuations in the model's responses.
 
 

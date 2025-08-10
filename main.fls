@@ -1849,10 +1849,10 @@ INPUT ./chapters/01_introduction.tex
 INPUT ./chapters/01_introduction.tex
 INPUT chapters/01_introduction.tex
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/palatino/pplb9e.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/palatino/pplb9e.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/vf/adobe/palatino/pplb9e.vf
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/mathpazo/fplmb.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/palatino/pplb9e.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/vf/adobe/palatino/pplb9e.vf
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/mathpazo/fplmb.tfm

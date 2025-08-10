@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.5)  8 AUG 2025 19:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.5)  10 AUG 2025 12:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1543,46 +1543,56 @@ LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <10.95> not available
 (Font)              Font shape `T1/pplx/m/it' tried instead on input line 73.
  [6] (./chapters/01_introduction.tex
 chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--87
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--87
+
+ []
+
 [1
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 72--86
+Underfull \hbox (badness 10000) in paragraph at lines 88--107
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--101
+Underfull \hbox (badness 10000) in paragraph at lines 109--139
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--125
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--144
+Underfull \hbox (badness 10000) in paragraph at lines 141--158
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 148--161
+Underfull \hbox (badness 10000) in paragraph at lines 162--176
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--179
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--186
+Underfull \hbox (badness 10000) in paragraph at lines 191--195
 
  []
 
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 191.
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--202
+
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 207.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
@@ -1591,77 +1601,82 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--192
+Underfull \hbox (badness 10000) in paragraph at lines 203--208
 
  []
 
 ) (./chapters/02_methodology.tex [3]
 chapter 2.
-LaTeX Font Info:    Trying to load font information for TS1+pplx on input line 27.
+LaTeX Font Info:    Trying to load font information for TS1+pplx on input line 25.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1pplx.fd
 File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
 ) [4
 
 
-] (./tables/mapping.tex
-Underfull \hbox (badness 10000) in alignment at lines 145--145
-[][][][] 
- []
-
-) [5]
-<figures/dataset_distribution.png, id=208, 442.65375pt x 376.40625pt>
+] (./tables/mapping.tex) [5]
+<figures/dataset_distribution.png, id=204, 442.65375pt x 376.40625pt>
 File: figures/dataset_distribution.png Graphic file (type png)
 <use figures/dataset_distribution.png>
 Package pdftex.def Info: figures/dataset_distribution.png  used on input line 117.
 (pdftex.def)             Requested size: 136.57463pt x 116.13335pt.
- [6 <./figures/dataset_distribution.png>]) (./chapters/03_study.tex [7]
+ [6 <./figures/dataset_distribution.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 164--169
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
+
+ []
+
+) (./chapters/03_study.tex [7]
 chapter 3.
 [8
 
 
 ]
-<figures/colorcontrastlandmarkexample.png, id=241, 3312.375pt x 927.465pt>
+<figures/colorcontrastlandmarkexample.png, id=237, 3312.375pt x 927.465pt>
 File: figures/colorcontrastlandmarkexample.png Graphic file (type png)
 <use figures/colorcontrastlandmarkexample.png>
-Package pdftex.def Info: figures/colorcontrastlandmarkexample.png  used on input line 82.
+Package pdftex.def Info: figures/colorcontrastlandmarkexample.png  used on input line 85.
 (pdftex.def)             Requested size: 409.71696pt x 114.71576pt.
  (./tables/violations.tex [9 <./figures/colorcontrastlandmarkexample.png>])
 
-LaTeX Warning: Reference `web:bootstrapv4' on page 10 undefined on input line 198.
+LaTeX Warning: Reference `web:bootstrapv4' on page 10 undefined on input line 201.
 
 [10]
-<figures/generalcapability.png, id=261, 2413.015pt x 606.265pt>
+<figures/generalcapability.png, id=257, 2413.015pt x 606.265pt>
 File: figures/generalcapability.png Graphic file (type png)
 <use figures/generalcapability.png>
-Package pdftex.def Info: figures/generalcapability.png  used on input line 244.
+Package pdftex.def Info: figures/generalcapability.png  used on input line 247.
 (pdftex.def)             Requested size: 455.24417pt x 114.37747pt.
  [11 <./figures/generalcapability.png>]
-<figures/prompts_new_new.png, id=273, 2252.415pt x 762.85pt>
+<figures/prompts_new_new.png, id=269, 2252.415pt x 762.85pt>
 File: figures/prompts_new_new.png Graphic file (type png)
 <use figures/prompts_new_new.png>
-Package pdftex.def Info: figures/prompts_new_new.png  used on input line 292.
+Package pdftex.def Info: figures/prompts_new_new.png  used on input line 295.
 (pdftex.def)             Requested size: 386.96031pt x 131.04468pt.
  [12 <./figures/prompts_new_new.png>]
 
-LaTeX Warning: Citation 'web:w3c_examples' on page 13 undefined on input line 311.
+LaTeX Warning: Citation 'web:w3c_examples' on page 13 undefined on input line 314.
 
 
-LaTeX Warning: Citation 'web:govuk' on page 13 undefined on input line 312.
+LaTeX Warning: Citation 'web:govuk' on page 13 undefined on input line 315.
 
 [13] (./tables/violations_allprompts.tex)
-<figures/zeroshot-example.png, id=295, 1624.0675pt x 152.57pt>
+<figures/zeroshot-example.png, id=291, 1624.0675pt x 152.57pt>
 File: figures/zeroshot-example.png Graphic file (type png)
 <use figures/zeroshot-example.png>
-Package pdftex.def Info: figures/zeroshot-example.png  used on input line 418.
+Package pdftex.def Info: figures/zeroshot-example.png  used on input line 421.
 (pdftex.def)             Requested size: 455.24417pt x 42.76587pt.
  [14] [15 <./figures/zeroshot-example.png>]
-<figures/iterativecascadingissues.png, id=317, 2083.785pt x 887.315pt>
+<figures/iterativecascadingissues.png, id=313, 2083.785pt x 887.315pt>
 File: figures/iterativecascadingissues.png Graphic file (type png)
 <use figures/iterativecascadingissues.png>
-Package pdftex.def Info: figures/iterativecascadingissues.png  used on input line 572.
+Package pdftex.def Info: figures/iterativecascadingissues.png  used on input line 575.
 (pdftex.def)             Requested size: 409.71696pt x 174.46767pt.
  [16] [17 <./figures/iterativecascadingissues.png>]
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 655.
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 658.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
@@ -1670,16 +1685,16 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [18]
-<figures/cosinesim.png, id=342, 433.62pt x 650.43pt>
+<figures/cosinesim.png, id=338, 433.62pt x 650.43pt>
 File: figures/cosinesim.png Graphic file (type png)
 <use figures/cosinesim.png>
-Package pdftex.def Info: figures/cosinesim.png  used on input line 730.
+Package pdftex.def Info: figures/cosinesim.png  used on input line 733.
 (pdftex.def)             Requested size: 182.09488pt x 273.13904pt.
  [19 <./figures/cosinesim.png>]
-<figures/dataleakage.png, id=352, 2710.125pt x 955.57pt>
+<figures/dataleakage.png, id=348, 2710.125pt x 955.57pt>
 File: figures/dataleakage.png Graphic file (type png)
 <use figures/dataleakage.png>
-Package pdftex.def Info: figures/dataleakage.png  used on input line 796.
+Package pdftex.def Info: figures/dataleakage.png  used on input line 799.
 (pdftex.def)             Requested size: 409.71696pt x 144.45203pt.
  (./tables/dataleakage.tex) [20 <./figures/dataleakage.png>]) (./chapters/04_discussion.tex [21]
 chapter 4.
@@ -1773,7 +1788,7 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
-<figures/landmarkwebpageexample.png, id=435, 810.02625pt x 397.485pt>
+<figures/landmarkwebpageexample.png, id=432, 810.02625pt x 397.485pt>
 File: figures/landmarkwebpageexample.png Graphic file (type png)
 <use figures/landmarkwebpageexample.png>
 Package pdftex.def Info: figures/landmarkwebpageexample.png  used on input line 268.
@@ -1783,7 +1798,7 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <8> not available
 
 
 pdfTeX warning: pdflatex (file ./figures/prompts.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/prompts.pdf, id=436, page=1, 597.19106pt x 845.07718pt>
+<figures/prompts.pdf, id=433, page=1, 597.19106pt x 845.07718pt>
 File: figures/prompts.pdf Graphic file (type pdf)
 <use figures/prompts.pdf, page 1>
 Package pdftex.def Info: figures/prompts.pdf , page1 used on input line 314.
@@ -1830,18 +1845,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 59274 strings out of 478268
- 1352796 string characters out of 5846347
- 2377295 words of memory out of 5000000
- 75640 multiletter control sequences out of 15000+600000
- 583661 words of font info for 603 fonts, out of 8000000 for 9000
+ 59284 strings out of 478268
+ 1352760 string characters out of 5846347
+ 2377230 words of memory out of 5000000
+ 75637 multiletter control sequences out of 15000+600000
+ 584498 words of font info for 613 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  110i,19n,106p,10683b,2678s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfit0800.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (44 pages, 1978507 bytes).
+Output written on main.pdf (44 pages, 1978896 bytes).
 PDF statistics:
- 1044 PDF objects out of 1200 (max. 8388607)
- 792 compressed objects within 8 object streams
- 186 named destinations out of 1000 (max. 500000)
+ 1039 PDF objects out of 1200 (max. 8388607)
+ 787 compressed objects within 8 object streams
+ 185 named destinations out of 1000 (max. 500000)
  183229 words of extra memory for PDF output out of 184870 (max. 10000000)
 

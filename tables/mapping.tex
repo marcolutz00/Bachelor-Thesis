@@ -1,8 +1,8 @@
 % Spaltentypen, Abstand, Farbe
 \newcolumntype{M}{>{\raggedright\arraybackslash}m{2.5cm}}
-\newcolumntype{T}{>{\centering\arraybackslash}m{2.0cm}}
+\newcolumntype{T}{>{\raggedright\arraybackslash}m{2.8cm}}
 \newcolumntype{R}{>{\raggedright\arraybackslash}m{3.4cm}}
-\newcolumntype{D}{>{\raggedright\arraybackslash}m{4.58cm}}
+\newcolumntype{D}{>{\raggedright\arraybackslash}m{5.58cm}}
 \renewcommand{\arraystretch}{1.15}
 \definecolor{darkgray}{gray}{.85}
 
@@ -14,18 +14,18 @@
   \tiny\centering
   \begin{tabularx}{\linewidth}{M|T|R|D}
   \hline
-  \rowcolor{darkgray}\textbf{VIOLATIONS} & \textbf{TOOLS} & \textbf{RULE ID(S) (TECHNIQUE ID)} & \textbf{DESCRIPTION}\\
+  \rowcolor{darkgray}\textbf{VIOLATIONS} & \textbf{TOOLS} & \textbf{RULE ID (TECHNIQUE ID)} & \textbf{DESCRIPTION}\\
   \hline
 
   % 1) Color Contrast
-  Color Contrast
+  \textbf{Color Contrast}
     & \toolsfmt
     & \makecell[l]{\rulepair{color-contrast}{G18, G145}}
     & Text/background contrast below WCAG AA threshold. (SC 1.4.3)\\
   \hline
 
   % 2) Landmark & Region
-  Landmark \& Region
+  \textbf{Landmark \& Region}
     & \toolsfmt
     & \makecell[l]{%
         \rulepair{landmark-one-main}{–}\\
@@ -37,14 +37,14 @@
   \hline
 
   % 3) Label Form Control
-  Label Form Control
+  \textbf{Label Form Control}
     & \toolsfmt
     & \makecell[l]{\rulepair{label}{H44, H91, F68}}
     & Form control lacks an accessible label or label text. (SC 1.3.1, 4.1.2)\\
   \hline
 
   % 4) Headings
-  Headings
+  \textbf{Headings}
     & \toolsfmt
     & \makecell[l]{%
         \rulepair{page-has-heading-one}{–}\\
@@ -54,14 +54,14 @@
   \hline
 
   % 5) Distinguishable Color Links
-  Distinguishable Links
+  \textbf{Distinguishable Links}
     & \toolsfmt
     & \makecell[l]{\rulepair{link-in-text-block}{–}}
-    & Only color or a distinct styling distinguishes the link from body text. (SC 1.4.1)\\
+    & Only color or a distinct styling distinguishes the link from the surrounding text. (SC 1.4.1)\\
   \hline
 
   % 6) Document Language
-  Document Language
+  \textbf{Document Language}
     & \toolsfmt
     & \makecell[l]{%
         \rulepair{html-has-lang}{H57}\\
@@ -72,21 +72,21 @@
   \hline
 
   % 7) Target Size
-  Target Size
+  \textbf{Target Size}
     & \toolsfmt
     & \makecell[l]{\rulepair{target-size}{–}}
     & Interactive element’s touch target is smaller than WCAG threshold. (SC 2.5.5)\\
   \hline
 
   % 8) Incomplete Links
-  Incomplete Links
+  \textbf{Incomplete Links}
     & \toolsfmt
     & \makecell[l]{\rulepair{link-name}{H30, H91.A}}
     & Link has no perceivable name or content. (SC 2.4.4, 2.4.9, 4.1.2)\\
   \hline
 
   % 9) Image Alt-Text
-  Image Alt-Text
+  \textbf{Image Alt-Text}
     & \toolsfmt
     & \makecell[l]{%
         \rulepair{image-alt}{H36, H67}\\
@@ -95,7 +95,7 @@
   \hline
 
   % 10) Labels of Buttons
-  Labels of Buttons
+  \textbf{Labels of Buttons}
     & \toolsfmt
     & \makecell[l]{%
         \rulepair{input-button-name}{H91}\\
@@ -104,7 +104,7 @@
   \hline
 
   % 11) Table Headers
-  Table Headers
+  \textbf{Table Headers}
     & \toolsfmt
     & \makecell[l]{%
         \rulepair{empty-table-header}{H43}\\
@@ -113,28 +113,28 @@
   \hline
 
   % 12) Document Title
-  Document Title
+  \textbf{Document Title}
     & \toolsfmt
     & \makecell[l]{\rulepair{document-title}{H25}}
     & Page \texttt{<title>} element missing or empty. (SC 2.4.2)\\
   \hline
 
   % 13) Form Submit Button
-  Form Submit Button
+  \textbf{Form Submit Button}
     & \toolsfmt
     & \makecell[l]{\rulepair{–}{H32}}
     & Form lacks a submit button. (SC 3.2.2)\\
   \hline
 
   % 14) Duplicate IDs
-  Duplicate IDs
+  \textbf{Duplicate IDs}
     & \toolsfmt
     & \makecell[l]{\rulepair{–}{F77}}
     & Multiple elements share identical \texttt{id} attribute. (SC 4.1.1)\\
   \hline
 
   % 15) Incorrect List Structure
-  Incorrect List Structure
+  \textbf{Incorrect List Structure}
     & \toolsfmt
     & \makecell[l]{%
         \rulepair{list}{H48}\\
@@ -143,6 +143,6 @@
   \hline
 
   \end{tabularx}
-  \caption{Taxonomy of the Top-15 automatically detected accessibility issues and their rule identifiers across the different tools. Axe-Core and Lighthouse report their violations based on the same rule set, while Pa11y uses WCAG techniques as reporting base which are shown in the parentheses.}
+  \caption{Taxonomy of the Top-15 automatically detected accessibility issues and their rule identifiers across the different tools. Axe-Core and Lighthouse report their violations based on the same rule set, while Pa11y uses WCAG techniques as reporting base which are shown in parentheses.}
   \label{tab:taxonomy}
 \end{table}

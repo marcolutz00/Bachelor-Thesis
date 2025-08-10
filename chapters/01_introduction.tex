@@ -4,38 +4,38 @@
 \chapter{Introduction}\label{chapter:introduction}
 
 \section{Motivation}
-High quality webpages are the backbone of our modern society. 
-For billions of people the internet and thus webpages are the central access point 
-for information, education, work, trade and culture. 
+High-quality webpages are the backbone of our modern society. 
+For billions of people, the internet and thus webpages are the central access point 
+for information, education, work, trade, and culture. 
 As of 2024, there are an estimated 1.1 billion active websites 
 globally, with approximately 252,000 new sites launched each
 day~\cite{web:website}.\newline
 Among the many attributes that define a successful website, \emph{accessibility} stands 
 out as a fundamental requirement. It ensures that individual users
-with visual, hearing or cognitive
+with visual, hearing, or cognitive
 impairments, as well as users of assistive technologies, can follow the content
 of a website.
 International standards, such as the Web
-Content Accessibility Guidelines (WCAG)~\cite{wcag21} guide developers 
+Content Accessibility Guidelines (WCAG)~\cite{wcag21}, guide developers 
 to build inclusive digital experiences by adhering to the official 
 principles. According to WCAG, accessible web content must be 
-perceivable, operable, understandable and robust.
+perceivable, operable, understandable, and robust.
 Yet, despite its importance, accessibility is frequently overlooked in
-practice, resulting in persistent barriers for the over one billion people globally who live with some
+practice, resulting in persistent barriers for over one billion people globally who live with some
 form of disability~\cite{web:disability}.\newline
 The motivation for this rethinking is not purely technical but deeply ethical and societal. It is a
 legal requirement and a civil right in many jurisdictions, protected by laws such as the Americans
-with Disabilities Act (ADA) in the United States~\cite{web:ADA1990} and the European Accessibility Act (EAA) in
-the EU~\cite{web:EAA2019}. Neglecting to follow these regulations, could result in warnings,
-reputational damage and loss of sales in the future.\newline
-At the same time, Large-Language Models (LLMs) have demonstrated signifant 
+with Disabilities Act (ADA) in the United States~\cite{web:ADA1990} and the more recent European Accessibility Act (EAA) in
+the EU~\cite{web:EAA2019}. Neglecting to follow these regulations could result in warnings,
+reputational damage and future sales loss.\newline
+At the same time, Large-Language Models (LLMs) have demonstrated significant     
 improvements in code-related tasks, including code generation, completion and 
 summarization. Current Tools, such as  GitHub Copilot~\cite{web:copilot}, 
-Cursor~\cite{web:cursor}, Windsurf~\cite{web:windsurf},
-are capable to support developers by generating functional code 
+Cursor~\cite{web:cursor}, and Windsurf~\cite{web:windsurf},
+are capable of supporting developers by generating functional code 
 snippets from natural language descriptions. Recent developments in 
 Multimodal Large Language Models (MLLMs) have further extended this capability to
-\textit{Image-to-Code} tasks where based on a (UI) screenshot or design 
+\textit{Image-to-Code} tasks, where, based on a (UI) screenshot or design 
 artifact,
 MLLMs generate functional HTML/CSS code. This workflow closely aligns 
 with how developers and designers intuitively approach UI
@@ -45,23 +45,24 @@ reduces the need for manual markup creation. Based on this idea,
 an increasing number of research has explored techniques to improve 
 UI code generation~\cite{cali2025prototype,mowar2025codea11y,wu2025ui2code}, 
 leveraging MLLMs to better capture layout structures, semantics 
-and component hierarchies. For instance, DCGen~\cite{wan2024dcgen}
-uses a divide-and-conquer pipeline to segment UI screenshots and then 
-generate code for each segment respectively. 
-DeclarUI~\cite{zhou2024declarui} integrates MLLMs with advanced 
-prompting strategies, particullary a self-refinement loop in which 
-a multimodal model reviews and revises its draft to improve code
-quality.\newline
-While many MLLMs have demonstrated impressive capabilities 
+and component hierarchies. 
+% For instance, DCGen~\cite{wan2024dcgen}
+% uses a divide-and-conquer pipeline to segment UI screenshots and then 
+% generate code for each segment respectively. 
+% DeclarUI~\cite{zhou2024declarui} integrates MLLMs with advanced 
+% prompting strategies, particularly a self-refinement loop in which 
+% a multimodal model reviews and revises its draft to improve code
+% quality.
+\newline While many MLLMs have demonstrated impressive capabilities 
 in generating functional and visually accurate web UI code, 
 their performance in generating accessible code remains unclear.
 This question has hardly been investigated to date. 
-Aljedaani et al\cite{aljedaani2024chatgpt} evaluated ChatGPT's
+Aljedaani et al.~\cite{aljedaani2024chatgpt} evaluated ChatGPT's
 capabilities to generate accessible websites based on natural 
 language prompts provided by developers. Similarly, Suh et 
-al~\cite{suh2025accessiblecode} compared LLM-generated code
-with human counterparts in terms of accessibility compliance.
-However, these studies rely on natural language inputs which do
+al.~\cite{suh2025accessiblecode} compared LLM-generated code
+with human counterparts regarding accessibility compliance.
+However, these studies rely on natural language inputs, which do
 not reflect the real-world UI development workflows where visual 
 UI designs (e.g. screenshots) serve as the primary input. Therefore,
 this thesis tries to close this gap by investigating the capabilities 
@@ -69,59 +70,72 @@ of MLLMs to generate accessible HTML/CSS code from visual web
 UI inputs. 
 
 \subsection{Research Questions}
-The investigation is based on the following research 
-questions:\newline
+This thesis investigates the following research questions: 
+\newline\newline
 \textbf{RQ1: Do MLLMs generate accessible code from UI screenshots?}
-This question investigates wether leading MLLMs, such as GPT-4o and 
+This question investigates whether leading MLLMs, such as GPT-4o and 
 Gemini 2.0 Flash, can generate accessible HTML/CSS code from UI 
-screenshots sampled from real-world public datasets(Design2Code and 
+screenshots sampled from real-world public datasets (Design2Code and 
 WebCode2M). The experiment is based on a naive prompting strategy 
 that requests code generation and does not explicitly instruct 
 the model to prioritize accessibility. The generated code is 
-then evaluated using automated accessibility auditing tools and 
+then automatically evaluated through accessibility auditing tools and 
 manual analysis to identify potential violations of the WCAG 2.1
-guidelines. This question seeks to uncover wether current MLLMs
+guidelines. This question seeks to uncover whether current MLLMs
 inherently incorporate accessibility during 
 code generation.\newline
 
 \textbf{RQ2: Do different MLLMs vary in their ability to generate accessible UI code?}
-To investigate how different models and their size affect the 
+To investigate how different models and their sizes affect the 
 accessibility performance, this question compares the performance of 
 a broader set of MLLMs, including both closed-source models
 (e.g., GPT-4o, Gemini 2.0 Flash) and open-source
-models (e.g., Qwen2.5-VL 7B). Using the same benchmark dataset and 
+models (e.g., Qwen2.5-VL-7B, Llava-7B). Using the same benchmark dataset and 
 naive prompting approach, the numbers and types of accessibility 
-violations for each model are compared. This comparison allows to
+violations for each model are compared. This comparison helps to
 identify the differences in model behavior and analyze potential 
-sources of bias or limitations in accessibility compliance. A
-qualitative analysis of the generated code further explores how 
-factors such as training data biases, model instructions and 
-internal reasoning abilities contribute to the variance in
-performance across different models.\newline
+sources of bias or limitations in accessibility compliance. 
+% A qualitative analysis of the generated code further explores how 
+% factors such as training data biases, model instructions, and 
+% internal reasoning abilities contribute to the variance in
+% performance across different models.
+Through a qualitative analysis of the generated code, this question 
+explores how various factors, such as training data biases, model instructions, and
+internal reasoning abilities, contribute to the variance in
+performance across different models.
+\newline
 
-\textbf{RQ3: Does advanced prompt engineering and (post-)processing steps lead to more accessible MLLM-generated UI
+\textbf{RQ3: Do advanced prompt engineering and (post-)processing steps lead to more accessible MLLM-generated UI
 code?}
-This question explores wether advanced prompting strategies can guide 
-MLLMs to generate more accessible code. Particularly, it investigates
+This question explores whether advanced prompting strategies can guide 
+MLLMs in generating more accessible code. Particularly, it investigates
 the effectiveness of seven prompting strategies. Naive prompting as the
 baseline, zero-shot prompting with explicit accessibility instructions,
 few-shot prompting with examples of accessibility guidelines,
-chain-of-thought prompting to encourage step-by-step reasoning, 
+chain-of-thought prompting to encourage step-by-step reasoning, and
 agentic prompting where multiple agents split the tasks of
-detecting, classifying and solving violations. 
-Lastly, two strategies use external tools to enhance their output:
-ReAct prompting where the model iteratively critiques and improves 
-its own output based on violations found by accessibility tools, 
-color-aware prompting uses ReAct to critique its own violations, but 
-further instructs the model with color contrast information and 
-potential fixes. Those strategies are evaluated based on the same 
-benchmark dataset across the different MLLMs and resulting violations 
-are assessed. This investigation reveals the effectiveness of prompting 
-as a controllable factor in improving accessibility violations, 
-also highlighting potential side effects, such as cascading 
-errors introduced during refinement steps. Those finding provide 
-insights for developer and reseachers aiming to guide MLLMs towards 
-more inclusive code generation.\newline
+detecting, classifying, and solving violations. 
+Lastly, two strategies use external automatic accessibility auditing tools to enhance their output:
+ReAct prompting, where the model iteratively critiques and improves 
+its output based on violations found by accessibility tools, 
+and color-aware prompting, which uses ReAct to critique its violations but 
+further instructs the model with color contrast information and proposes
+potential solutions. Those strategies are evaluated based on the same 
+benchmark dataset across the different MLLMs, and resulting violations 
+are analyzed. 
+% This investigation reveals the effectiveness of prompting 
+% as a controllable factor in improving accessibility violations, 
+% also highlighting potential side effects, such as cascading 
+% errors introduced during refinement steps. 
+The results show that prompting techniques are a controllable
+factor in improving accessibility violations, but also highlight
+potential side effects, such as cascading
+errors introduced during refinement steps.
+These findings serve as valuable insights for developers and researchers
+who aim to guide MLLMs towards more inclusive code generation.\newline
+% Those findings provide
+% insights for developers and researchers aiming to guide MLLMs towards
+% more inclusive code generation.\newline
 
 
 \textbf{RQ4: How consistent are the accessibility violations across different MLLMs on the same UI screenshot?}
@@ -134,11 +148,11 @@ blind spots. Therefore, this analysis uses the same WCAG
 2.1 pipeline as in previous RQs, combined with the naive prompting 
 strategy. The accessibility violations for each webpage 
 and every model are combined into a single vector whose 
-dimensions count the violations per WCAG rule. The 
-pairwise similarity between models and their corresponding
-webpages is then calculated using cosine similarity of 
-the violations vectors. While low similarity would reveal 
-complementary failure modes that could be used by ensemble 
+dimensions count the violations per WCAG rule. The pairwise similarity 
+between models and their corresponding webpages is then calculated 
+using the cosine similarity of the violations vectors. While 
+low similarity would reveal 
+complementary failure modes that could be exploited by ensemble 
 repair, high similarity would indicate systemic blind spots 
 inherited from shared training data.\newline
 
@@ -148,29 +162,31 @@ inherited from shared training data.\newline
 \textbf{RQ5: Does data leakage influence the accessibility of MLLM-generated UI code?}
 To rule out potential data leakage and influence on the accessibility 
 of MLLM-generated code, this question compares the models' performance across
-three distinct datasets: the public benchmark dataset used in previous 
-RQs, a synthetic dataset created through structural mutations and 
+two distinct datasets: the public benchmark dataset used in previous 
+RQs, and a synthetic dataset composed of two subsets. The first 
+subset is created through structural mutations. The second subset contains
 a fresh real-world dataset curated from open-source web projects, 
 released after the knowledge cut-off of the affected MLLMs. By 
-evaluating the code similarity and accessibility violations across
-these datasets, this questions tries to identify wether the 
-performance is driven by memorization of training data or by 
-true generalization. This analysis helps to reinforce findings 
+evaluating the code similarity and accessibility metrics across
+these datasets, this question tries to identify whether the
+performance is driven by memorization of training data or by
+true generalization. This analysis helps to reinforce findings
 of previous RQs and ensures that observed model behaviors reflect
 robust capabilities rather than overfitting to familiar data.\newline
 
-This empirical study demonstrates both the potential and 
+This thesis and its underlying empirical study demonstrate the potential and 
 limitations of current MLLMs in generating accessible UI code 
 from visual inputs. 
-Motivated by these findings, this thesis reflects on broader implications
-for the design and deployment of generative models in web development. Especially, it 
+Motivated by these findings, this thesis discusses broader implications
+for designing and deploying generative models in web development. It 
 intends to rethink accessibility as a primary design objective, rather than a 
-post-hoc concern. These perspectives offer possible directions for enhancing accessibility in the era of multimodal code generation.
+post-hoc consideration. These perspectives offer possible directions for 
+enhancing accessibility in the era of multimodal code generation.
 
 
 
-\subsection{Our Contributions}
-In summary, this thesis makes the following contributions:
+\subsection{Our Contributions - nochmal überarbeiten}
+In summary, this thesis makes the following contributions:\newline
 
 \textbf{Accessibility evaluation pipeline}
 The first large scale accessibility study and evaluation pipeline of LLM-based
