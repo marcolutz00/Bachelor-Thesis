@@ -166,6 +166,14 @@
       \verb https://arxiv.org/abs/1705.07962
       \endverb
     \endentry
+    \entry{web:bootstrapv4}{misc}{}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://getbootstrap.com/docs/4.0/getting-started/theming/}}
+      \field{title}{Bootstrap v4 Documentation: Theming Bootstrap}
+      \field{year}{2018}
+    \endentry
     \entry{cali2025prototype}{inproceedings}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=4ecbca3120439b811e8602c78d44cd3b}{%

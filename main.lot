@@ -4,7 +4,7 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {2.1}{\ignorespaces Taxonomy of the Top-15 automatically detected accessibility issues and their rule identifiers across the different tools. Axe-Core and Lighthouse report their violations based on the same rule set, while Pa11y uses WCAG techniques as reporting base which are shown in parentheses.\relax }}{5}{table.caption.3}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Performance for accessibility violations within the MLLMs-generated UI code.\relax }}{10}{table.caption.10}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Quantitative comparison of accessibility performance metrics across GPT-4o, Gemini-2.0 Flash, Qwen2.5-VL-7B, and Llava-7B.\relax }}{10}{table.caption.10}%
 \contentsline {table}{\numberline {3.2}{\ignorespaces Performance for advanced prompting techniques, including Average Violations (AV), Total Violations (TV), Code Similarity (CodeSim), Inaccessibility Rate (IR), and Impact Weighted Inaccessibility Rate (IWIR).\relax }}{14}{table.caption.19}%
 \contentsline {table}{\numberline {3.3}{\ignorespaces Code similarity (CodeSim) and accessibility rates (IR, IWIR) on the \emph {Benchmark} and \emph {Synthetic} datasets.\relax }}{20}{table.caption.36}%
 \addvspace {10\p@ }
