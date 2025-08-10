@@ -5,8 +5,18 @@ In this section, the general methodology for evaluating the
 accessibility of HTML/CSS code is described. It includes a combination
 of automated auditing tools and manual verification. This hybrid approach 
 identifies a wide range of accessibility issues, reconciles inconsistencies and guarantees reliable results. 
+Figure~\ref{fig:pipeline} provides an overview of the evaluation pipeline, 
+from data collection, prompt design to code generation, accessibility and similarity analysis,
+and post-processing.
 All evaluations are conducted following WCAG 2.1, the most widely 
 adopted standard supported by the tools at the time of this thesis.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\linewidth]{figures/pipeline_modern.png}
+  \caption{Overview of the evaluation pipeline, from data collection and prompt design to code generation, accessibility and similarity analysis, and post-processing.}
+  \label{fig:pipeline} 
+\end{figure}
 
 \section{Automated Accessibility Evaluation}
 A wide range of automated accessibility checkers is available to 
@@ -37,6 +47,7 @@ coverage areas, and reporting formats.
   decided to use it as the third complementary tool.
 \end{itemize}
  
+\noindent
 All three tools were used to evaluate the generated HTML/CSS code. 
 However, the outputs of each tool may differ. For example, 
 Pa11y flagged a missing label for a form field under WCAG

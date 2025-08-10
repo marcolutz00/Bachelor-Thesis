@@ -238,7 +238,7 @@ descriptive alt-text and labels by default.\newline
 While the reasons remain speculative, a plausible explanation 
 could be GPT's accessibility-oriented use cases and 
 alignment practices. For example, GPT has been used 
-in real-world assistive technologies like \textit{Be My Eyes}. 
+in real-world assistive technologies like \textit{Be My Eyes}~\cite{web:bemyeyes}. 
 This application helps to interpret visual information into 
 textual descriptions, which is crucial for visually impaired users.
 This practical integration into a real-world scenario might 
@@ -294,7 +294,9 @@ to be a powerful technique in prior work to improve and influence the
 behavior of LLMs, especially in structured tasks. Therefore, this study 
 takes 7 different prompting strategies into account, ranging from 
 naive to externally supported techniques. Note that the prompts follow 
-the established best practices of prior research~\cite{suh2025accessiblecode, xiao2024interaction2code}.\newline
+the established best practices of prior research~\cite{suh2025accessiblecode, xiao2024interaction2code} and
+that all prompting techniques are tested on GPT and Gemini by using the 
+same benchmark dataset as in previous RQs.\newline
 
 \begin{figure}
   \centering
@@ -304,7 +306,7 @@ the established best practices of prior research~\cite{suh2025accessiblecode, xi
 \end{figure}
 
 
-
+\noindent
 \textbf{Naive Prompting (Baseline)}: 
   Without explicit accessibility instructions, the model is
   instructed to generate HTML/CSS code based on a screenshot of a webpage.\newline\newline
@@ -324,7 +326,7 @@ the established best practices of prior research~\cite{suh2025accessiblecode, xi
   Design System~\cite{web:govuk}, which are known for their accessibility
   best practices.
   Eight examples, which differ in their content (e.g., image alt-text, 
-  form labels, landmarks) are manually collected. They serve as an 
+  form labels, landmarks), are manually collected. They serve as an 
   additional context for the model to lead the models towards a more 
   accessible code generation.\newline\newline
 \textbf{Chain-of-Thought Prompting}: 
@@ -344,20 +346,20 @@ the established best practices of prior research~\cite{suh2025accessiblecode, xi
   of snippets with violations, including their location in the code. The 
   second agent, the \textit{Identifier}, is responsible for classifying 
   the violations into their respective WCAG guidelines (e.g., 
-  color contrast, landmarks, etc.) and enrich the each violation with 
+  color contrast, landmarks, etc.) and enrichich the each violation with 
   its severity level. The third agent, the \textit{Resolver}, is 
   instructed to resolve the list of violations in the code. In order to 
   prevent cascading errors, this agent is instructed to solve batches 
   of violations, having a size of \(n = 5\). The goal of this strategy 
   is to evaluate whether decomposing the task into smaller and more 
   manageable subtasks can improve the overall accessibility.\newline\newline
-\textbf{ReAct Prompting}: 
+\textbf{React Prompting}: 
   This strategy first instructs the model to generate HTML/CSS code, 
-  according to the naive prompt and then critique its accessibility
+  according to the naive prompt, and then to critique its accessibility
   violations detected by the automated tools. As shown in 
   Fig.~\ref{fig:prompts_new}, the model is then asked to revise
   all violations found, prioritize those with the highest 
-  severity and output the revised code.
+  severity, and output the revised code.
   This multi-step approach evaluates the capability of the model to 
   self-correct and iteratively apply accessibility standards. 
   Each self-refinement loop runs for three iterations or until 
@@ -365,13 +367,13 @@ the established best practices of prior research~\cite{suh2025accessiblecode, xi
 \textbf{Color Aware Prompting}: 
   As previous RQs have shown, color contrast violations are a common 
   issue in MLLM-generated code. Due to their mathematical nature, they
-  can be difficult to solve. Therefore, this strategy extends the ReAct 
+  can be difficult to solve. Therefore, this strategy extends the React 
   prompting by adding a color-aware step. It uses a pre-processing 
-  step which extracts the color values from the screenshot, analyzes 
-  the color contrast violations found and provides the model with a 
-  possible solution for each violation. Similar to the ReAct prompting,
+  step that extracts the color values from the screenshot, analyzes 
+  the color contrast violations found, and provides the model with a 
+  possible solution for each violation. Similar to the React prompting,
   the model is then instructed to output the revised code. 
-  By basing the model on extracted color values and recommended 
+  By supplying the model with extracted color values and recommended 
   replacements that satisfy WCAG thresholds, the objective is to 
   decrease color-contrast accessibility violations. The model is 
   directed to generate code that maintains visual consistency while 
@@ -380,22 +382,20 @@ the established best practices of prior research~\cite{suh2025accessiblecode, xi
   Note that the refinement loop runs only for one iteration.\newline
 
 
-Note that all prompting techniques are tested on GPT and Gemini by using the 
-same benchmark dataset.
 
 
 \subsection{Results}
 Table~\ref{tab:access-viol-models} presents the average number of accessibility 
 violations (AV), total violations (TV), code similarity (CodeSim),
-inaccessibility rate (IR) and impact weighted inaccessibility rate (IWIR).
+inaccessibility rate (IR), and impact weighted inaccessibility rate (IWIR).
 The results demonstrate that advanced prompting techniques can significantly
-reduce the amount of accessibility issues in the generated code. For instance,
-when using the most advanced prompt (ReAct), 95.75\% of the violations for 
-GPT and 82.07\% for Gemini are resolved, compared to the naive counterpart.
+reduce the number of accessibility issues in the generated code. For instance,
+when using the most advanced prompt (React), 95.75\% of the violations for 
+GPT and 82.07\% for Gemini are resolved, compared to their naive counterpart.
 A similar trend can be observed for the IR and IWIR. While the 
-IR is reduced to 0.68\% for GPT and 1.36\% for Gemini using the ReAct 
+IR is reduced to 0.44\% for GPT and 1.36\% for Gemini using the React 
 prompt, the IWIR is reduced to 13.56\% and 21.48\%, respectively. However, 
-the effectiveness of each prompting strategy varies across the models and 
+the effectiveness of each prompting strategy varies across the models, and 
 some strategies are more suited for certain models than others.
 
 
@@ -407,7 +407,7 @@ some strategies are more suited for certain models than others.
 All models show a moderate, but measurable improvement in accessibility 
 violations when a simple instruction about accessibility is added to 
 the prompt. For instance, GPT reduces the average amount of 
-violations by 10.33\% and Gemini by 7.76\%, compared to the 
+violations by 10.33\% and Gemini by 7.76\% compared to the 
 naive prompt. However, while the IR shows a similar trend with 
 a considerable reduction for both models, the IWIR remains almost 
 unchanged, even showing a slight increase. This suggests that even 
@@ -429,61 +429,73 @@ does not necessarily resolve accessibility gaps and inconsistencies.
 \begin{figure}
   \centering
   \includegraphics[width=1\linewidth]{figures/zeroshot-example.png}
-  \caption{Failure example for zero-shot prompting.}
+  \caption{Accessibility gap in zero-shot prompting: omission of an accessible label in the generated code compared to the correctly labeled ground truth.}
   \label{fig:zero-shot-example} 
 \end{figure}
 
 \subsubsection{Impact of Few-Shot Prompting}
 The few-shot prompting technique results in a 30.98\% improvement
 in accessibility performance for GPT, with the average number 
-of violations dropping from 13.75 to 9.49 and the IR 
-decreasing from 12.22\% to 7.96\%. By observing 8 
+of violations dropping from 13.75 to 9.49, while the IR 
+decreases from 12.22\% to 7.96\%. By observing eight 
 high-quality, concrete examples, the model is capable of 
 copying the underlying patterns and structure. For instance,
 when provided with an example of correct heading structures, such 
 as \texttt{<h1>}, GPT is able to incorporate this pattern into its
 generation, reducing the average number of heading violations 
 from 26 to 15. Furthermore, the examples presented 
-reflect important accessibility guidelines, having a 
-significant impact on users and therefore also a high 
-severity. This is reflected in the IR, which drops from 
+reflect only important accessibility guidelines, which 
+significantly impact users and therefore also a have high 
+severity. This is reflected in the IWIR, which drops from 
 47.10\% to 44.64\%.
 This demonstrates the importance of concrete 
 examples in guiding the model, especially for concepts like
 accessibility, which may be underrepresented in the training data.\newline
-However, surprisingly Gemini does not show similar improvements, in fact, 
-it performs slightly worse with an increase of 1.88\% in the average
-number of violations. Based on the qualitative analysis, this 
-effect can be attributed to two primary factors. First, Gemini 
-exhibits a 56.52\% increase in violations related to the 
-\emph{Distinguishable Links} category. Due to its exposure 
-to link-related examples, it tends to generate links more 
+However, surprisingly, Gemini does not show similar improvements.
+It performs slightly worse with an increase of 1.88\% in the average
+number of violations. Based on the qualitative analysis, this
+effect can be attributed to two primary factors. First, Gemini
+exhibits a 56.52\% increase in violations related to the
+\emph{Distinguishable Links} category. Due to its exposure
+to link-related few-shot examples, it tends to generate links more 
 frequently, but often without sufficient contrast or 
 styling, violating the WCAG requirements. This phenomenon 
 may be directly linked to the color bias in the training data,
 which has been observed in RQ2. Gemini tends to use generic, default 
-colors and links, such as the primary blue from the Bootstrap framework,
-that is used as the main color for links. This leads to 
-a lack of distinction between links and the body text.\newline
+colors for links, such as the primary blue from the Bootstrap framework,
+which used to be the primary color for links in this framework. 
+Since it also fails to apply distinct stylings for the links, this
+combination leads to 
+a lack of distinction between links and the surrounding text.
+As Figure~\ref{fig:distinguishablecolorlinks} illustrates, 
+Gemini generates links with insufficient contrast and no distinct styling.
+\newline
 The second violation category 
 \emph{Landmark \& Region} increases by 12.83\%, due to 
 Gemini's tendency to misuse the semantic 
 elements, such as \texttt{<main>} or \texttt{<nav>}. This 
 can likely be attributed to a misinterpretation of 
 the few-shot examples, which might be replicated 
-directly without deeper semantic understanding in 
+directly without a deeper semantic understanding of 
 how those elements contribute to accessibility.
 
+\begin{figure}
+  \centering
+  \includegraphics[width=1\linewidth]{figures/distinguishablecolorlinks.png}
+  \caption{Example of a Distinguishable Links violation in Gemini’s few-shot output. The generated code does not include the underline and relies solely on a low-contrast orange (1.97:1), whereas the ground truth includes the underline to ensure link distinction despite insufficient contrast.}
+  \label{fig:distinguishablecolorlinks} 
+\end{figure}
+
 \subsubsection{Impact of Chain-of-Thought Prompting}
-Chain-of-Thought prompting results in notable improvements 
+Chain-of-Thought (CoT) prompting results in notable improvements 
 over the naive prompt, i.e., averaging 10.04 vs 13.75 violations
 per UI for GPT and 14.28 vs 15.45 for Gemini. Due to 
 the reasoning instruction before generating code, 
 the models are able to reflect possible accessibility 
-constaints often missed in direct code generation.
+constraints often missed in direct code generation.
 Interestingly, GPT benefits significantly more 
 than Gemini, with a relative improvement of 26.98\% vs 
-7.57\%. This is probably due to the fact that GPT constantly 
+7.57\%. This is probably because GPT constantly 
 outlines an organized structure to reasoning by 
 recognizing particular accessibility issues 
 (such as contrast ratios and alt text) and integrating them into 
@@ -497,54 +509,54 @@ Splitting the task into three agents only leads to
 moderate improvements, as GPT reduces its violations 
 by 17.53\% and Gemini by 14.82\% compared to the naive 
 baseline. Similar to the prior strategies, the IR follows 
-the same trend, dropping from 12.22\% to 8.86\% for GPT and
-from 11.42\% to 8.36\% for Gemini, but the IWIR decreases much less
+the same trend, dropping from 12.22\% to 8.86\% for GPT (27.50\%) and
+from 11.42\% to 8.36\% for Gemini (26.80\%), but the IWIR decreases much less,
 with 11.25\% for GPT and only 1.47\% for Gemini.\newline
 The qualitative analysis reveals two main reasons for these 
-results. First, the \textit{Detector} agent misses some 
+results. First, the Detector agent misses some 
 violations in the generated code and occasionally even reports 
-false positives. As a result, the \textit{Resolver} agent 
+false positives. As a result, the Resolver agent 
 either does not resolve all violations within the code 
 or changes already correct markup, which leads to new 
-violations. Second, the resolver resolves the violations in 
-batch sizes. This can prevent the Resolver in understanding 
-layout dependencies, leading to small, but significant changes 
-that decrease the layout fidelity which results in the 
+violations. Second, the Resolver resolves the violations in 
+batch sizes. This can prevent the Resolver from understanding 
+layout dependencies, leading to small but significant changes 
+that decrease the layout fidelity, which results in the 
 lowest code similarity of all prompting techniques
 (86.12\% for GPT and 85.07\% for Gemini). In general, 
 while the agentic prompting reduces the load per step of 
-the models, it introduces additional noise which 
+the models, it introduces additional noise that 
 propagates through the agents.
 
-\subsubsection{Impact of ReAct Prompting}
+\subsubsection{Impact of React Prompting}
 The experiment shows that both GPT and Gemini significantly 
-improve their accessibility performance when using the ReAct 
+improve their accessibility performance when using the React 
 prompting strategy. Across three iterative refinement 
-cycles, GPT achieves reductions of 82.33\%, 92.07\% and 95.05\% 
+cycles, GPT achieves reductions of 82.33\%, 92.07\%, and 95.05\% 
 in accessibility violations compared to the naive prompt, while 
-Gemini improved by 62.14\%, 77.67\% and 82.07\%, respectively.
+Gemini improved by 62.14\%, 77.67\%, and 82.07\%, respectively.
 Similar improvements can be observed for the IR and IWIR. 
-After 3 iterations, only 0.44\% of nodes in GPT's code
-contain accessibility violations, while Gemini has an IR of 1.36\%.
-Interestingly, not only the amount of violations, but also 
-their severity is reduced. For instance the IWIR drops from 
+After three iterations, only 0.44\% of nodes in GPT's code
+contain accessibility violations, while Gemini remains with 1.36\%.
+Interestingly, not only the number of violations but also 
+their severities are reduced. For instance, the IWIR drops from 
 47.10\% to 13.56\% for GPT and from 47.70\% to 21.48\% for Gemini.
 This indicates that the model is not only capable of 
 resolving violations, but also prioritizes the violations 
-with severity \emph{serious} or \emph{critical}. After 3 
+with severity \emph{serious} or \emph{critical}. After three 
 refinement iterations, neither GPT nor Gemini produces 
-any violations with severity \emph{critical} and only 
+any violations with severity \emph{critical}, and only 
 few with \emph{serious}.\newline 
-The results suggest that even if models not inherently 
+The results suggest that even if models do not inherently 
 obey all accessibility guidelines, they can be
 guided towards more accessible code by incorporating 
 external observations of the automated tools. GPT 
 consistently outperforms Gemini across all iterations,
 possibly due to its stronger alignment with 
-Reinforcement Learning from Human Feedback (RLHF) which 
+Reinforcement Learning from Human Feedback (RLHF), which 
 equips it with a better capacity to self-correct and 
 obey instructions based on user-oriented feedback.\newline 
-A notable observation from the ReAct prompting is that the 
+A notable observation from the React prompting is that the 
 two main categories of accessibility violations, 
 color contrast and landmarks, are significantly reduced.
 While landmark violations are reduced by 98.21\% for GPT and
@@ -553,30 +565,30 @@ While landmark violations are reduced by 98.21\% for GPT and
 These results reflect a growing capacity of MLLMs 
 to add feedback into their stylistic choices, which 
 leads to more accessible and visually consistent webpages.\newline 
-However, also the ReAct prompting has its limitations.
-Even though, both 
+However, the React prompting also has its limitations.
+Even though both 
 models decrease the dependency on framework-based 
 colors, the results still 
 vary across the models. For instance, especially 
 during the first refinement iterations, Gemini still 
 heavily relies on framework-based color palettes, 
-especially, Bootstrap's primary blue, which leads to 
+especially Bootstrap's primary blue, which leads to 
 an increase in those violations of 23\% with 
 this exact color, even though overall the amount 
 of color contrast violations is reduced by 22\%. 
-This suggests that the model might not be able to 
+This finding suggests that the model might not be able to 
 synthesize its own new colors, but rather tries to
-substitute problematic colors with known colors 
+substitute problematic colors with known ones
 from its training data.
 Furthermore, some
 attempts to fix particular violations can 
 occasionally lead to new problems elsewhere in 
-the code. As Fig~\ref{fig:iterativecascadingissues} suggests, the model 
-successfully solves certain violations (for example adds 
-a \texttt{label} to the form element), but at the same time 
+the code. As Figure ~\ref{fig:iterativecascadingissues} suggests, the model 
+successfully solves certain violations (for example, adds 
+a \texttt{<label>} to the form element), but at the same time 
 introduces a new issue with the color contrast of the label.
-These cascading error may arise from a limited 
-understanding of the codes underlying structure and 
+These cascading errors may arise from a limited 
+understanding of the code's underlying structure and 
 dependencies, which highlights a potential limitation 
 of current MLLMs.
 
@@ -588,28 +600,28 @@ of current MLLMs.
 \end{figure}
 
 \subsubsection{Impact of Color-Aware Prompting}
-Enhancing the ReAct prompting technique with pre-computed 
+Enhancing the React prompting technique with pre-computed 
 and WCAG-compliant colors has a different impact on both models.
 While Gemini struggles to invent new colors, it 
 benefits the most with its average number of violations 
-dropping by 83.30\%, compared to the naive prompt and 
+dropping by 83.30\%, compared to the naive prompt, and 
 is even able to reduce its number by 6.86\%, compared to 
-the ReAct prompting. While GPT also benefits from this 
+the React prompting. While GPT also benefits from this 
 strategy, by reducing its violations by 75.64\%, it does not
-match the improvements of the ReAct prompting strategy.\newline
-Two main reasons can be attrubuted to this finding. First,
-GPT is already able to synthesize new colors. Providing 
-new externally computed colors, occassionally leads to 
-conflicts elsewhere in the code, as the model tries to 
-incorporate these colors. Second, the bounding-box 
-detection of \textit{Design2Code} occasionally groups elements
-together that are not visually connected in the UI. This 
-can lead to situations where the model applies external 
-colors for an entire region, rather than the specific node.
-Overall, the results suggest that adding explicit WCAG-compliant 
-colors can significantly lower contrast violations. However, 
-the underlying model's design capabilities and accuracy 
-determines how beneficial this strategy is.
+match the improvements of the React prompting strategy.\newline
+Two main reasons can be attributed to this finding. First,
+GPT is already able to synthesize new colors. Providing
+new externally computed colors occasionally leads to
+conflicts elsewhere in the code, as the model tries to
+incorporate these colors. Second, the bounding-box detection
+of \textit{Design2Code} occasionally groups elements
+together that are not visually connected in the UI. This
+can lead to situations where the model applies external
+colors for an entire region, rather than a specific node.
+Overall, the results suggest that adding explicit WCAG-compliant
+colors can significantly lower contrast violations. However,
+the underlying model's design capabilities and accuracy
+determine how beneficial this strategy is.
 
 
 \begin{center}
@@ -617,7 +629,7 @@ determines how beneficial this strategy is.
 \textit{\textbf{Finding:}} Prompting strategies significantly 
 influence the accessibility of MLLM-generated UI code. 
 While the models benefit from explicit guidance, 
-advanced techniques like ReAct prompting yield the most 
+advanced techniques like React prompting yield the most 
 substantial improvements. However, each strategy may also 
 introduce model-specific limitations and, in some cases, 
 create new issues. These findings underscore the importance 
@@ -629,19 +641,19 @@ to enhance accessibility outcomes.
 
 \section{RQ4: How consistent are the accessibility violations across different MLLMs on the same UI screenshot?}
 \subsection{Experiment Setup}
-The objective of this RQ is find out wether different MLLMs 
+The objective of this RQ is to find out whether different MLLMs 
 cause similar or complementary accessibility violations when 
 asked to generate HTML/CSS from the same UI screenshot.
 Consistent error patterns would indicate that systematic 
-limitations, caused by a similar training data, exist. 
+limitations, caused by similar training data, exist. 
 In contrast, complementary violations would motivate 
 ensemble or shared approaches between the models to improve the 
 overall accessibility of the generated code.
-To investigate this, the benchmark dataset is used, which 
-is prompted to GPT-4o and Gemini-2.0 flash with 
-the naive prompting technique. For every tuple of
+To investigate this, combined with 
+the naive prompting technique, the benchmark dataset is used as 
+input for GPT and Gemini. For every tuple of
 screenshot and model, the list of accessibility violations
-is extracted, sorted and represented by a violation 
+is extracted, sorted and, represented by a violation 
 vector, which counts the number of issues per 
 WCAG class. 
 
@@ -653,7 +665,12 @@ WCAG class.
 \newcommand{\vy}{\mathbf y}
 
 \textbf{Violation Vectors:}  
-  For each tuple of screenshot and model, the number of violations per class is counted as follows:
+  Each violation vector is a numerical representation of the accessibility 
+  violations found in the generated HTML/CSS. Given a model-screenshot pair, each 
+  dimension corresponds to a specific violation class, and its value 
+  represents how many violations of that class were found. This representation 
+  makes comparing error patterns across different models and
+  screenshots easier. The violation vector is defined as follows:
   \[
   \left(
     \begin{array}{@{}l r@{}}
@@ -669,8 +686,8 @@ WCAG class.
 \]
 
 To compare the similarity of the violation vectors, the 
-cosine similarity is used, which is common metric in 
-other research areas. 
+cosine similarity is used, a common metric in 
+other research fields. 
 
 \textbf{Cosine Similarity}  
   Given two vectors with $\vx,\vy\in\mathbb R^{\issues}$, the cosine similarity is defined as:
@@ -682,50 +699,51 @@ other research areas.
 
 
 \subsection{Results}
-Figure~\ref{fig:cosinesimilarity} shows the cosine similarity matrix 
+Figure~\ref{fig:cosinesimilarity} illustrates the cosine similarity matrix 
 plotted as a heatmap, where each cell represents the similarity between 
 the violation vectors of different model runs. 
-As the figure shows, the majority of the cells 
+Overall, most cells 
 are light-colored, indicating a high cosine similarity 
-between the runs of the models. This is especially true 
+between the runs of the models, suggesting that GPT and Gemini
+produce similar violation patterns.\newline
+This is especially true 
 for the upper part of the heatmap, representing the 
-dataset entries of the Design2Code dataset, reaching 
-from example 1 to 28. In this section, the models 
-show a high degree of consistency and similarity, across 
-both models, but also across the individual runs.
+dataset entries of the Design2Code dataset (examples 1-28). 
+Here, both models 
+show a high degree of consistency and similarity across 
+each other and also across the individual runs.
 The lower part of the heatmap, representing the
-dataset entries from the dataset Webcode2m, show 
+dataset entries from the dataset Webcode2m, displays 
 a more diverse pattern, with a mix of lighter and 
-darker cells. Nevertheless, also in this section, 
+darker cells. Nonetheless, even in this section, 
 the majority of the cells are light-colored, showing
-that the models are still consistent in their violation 
-patterns. A manual inspection of the darker cells reveals 
+that the models are still largely consistent in their violation 
+patterns.\newline
+A manual inspection of the darker cells reveals 
 that a great number of lower similarity scores stems from 
 two main reasons: 1) In some runs, a model is capable 
-to generate code with only few violations, leading to 
-a violation vector with many zeros or small values. 
-Even if the other model achieves to generate code 
-which has a relatively low number of violations too, 
-the cosine similarity is highly sensitive to 
-small values, which leads to a low similarity score. 
-This is especially true for the section which stems from 
-the Webcode2m dataset, where the models are able to
-generate code with fewer violations. 
+of generating code with only few violations, leading to 
+a violation vector with many zeros or small values.
+Because the cosine similarity is highly sensitive to 
+small magnitudes, even another run with a comparable low
+number of violations can result in a lower cosine similarity score. 
+This effect is especially true for Webcode2m examples, where the models generally 
+produce fewer violations. 
 2) The second reason for lower similarity scores stems 
-from possible cascading errors in the code generation. 
-For instance, if one model generates a code snippet with
-a color palette that is not compliant with WCAG, it 
-is likely that the amount of color contrast violations 
-in this snippet is higher than in other runs which 
-might use a different and better color palette. 
-This can lead to a lower cosine similarity score, even
-if the other violations are similar.\newline 
+from possible recurring errors in the code generation. 
+For instance, if one run uses a non-WCAG-compliant color 
+palette, the resulting number of color contrast violations 
+might be considerably higher than in other runs with 
+more compliant colors.
+This difference in a single category can significantly 
+reduce the cosine similarity, even if other categories
+show comparable patterns.\newline 
 Overall, the results suggest that the models generate 
-code snippets with similar amounts of accessibility violations
-and error distributions. The high similarity score 
-indicates that the models are likely to share similar
-limitations and biases, which can be attributed to the
-underlying training data.
+code snippets with very similar numbers, 
+categories, and distributions of accessibility violations. 
+The high similarity score indicates that the models share systemic
+limitations and biases, which are likely to be inherited 
+from the underlying training data.
 
 \begin{center}
 \begin{tcolorbox}[colback=black!5!white,colframe=black!75!black,bottom=-0.05pt,top=-0.05pt]
@@ -757,22 +775,24 @@ A concern that is often raised in the context of MLLMs is
 the possibility of data leakage, where the models have 
 already been exposed to the test data during pretraining, 
 thus leading to inflated performance. This RQ aims to 
-investigate whether such leakage has an impact on the
-the accessibility of the generated code.\newline
-To investigate this, 2 distinct datasets have been created 
-in order to compare model performance. 1) \textbf{Benchmark Dataset},
+investigate whether such leakage has an impact on the 
+accessibility of the generated code.\newline
+To investigate this, two distinct datasets have been created 
+to compare model performance. 1) \textbf{Benchmark Dataset},
 which has been used and described in the previous RQs. 2)
-\textbf{Synthetic Dataset}, consists of two distinct 
+\textbf{Synthetic Dataset}, which consists of two distinct 
 subsets. The first subset is
-created with layout mutation and 
-hybrid synthesis techniques. This subset contains new 
-UI compositions and code which is not likely to have 
-exact matches in the pretraining data. Therefore, 
-heuristic transformation rules have been created to 
-mutate layout structures, elements arragements,
-component colors and text content. In a second step,
+created using layout mutation and
+hybrid synthesis techniques. Therefore,
+heuristic transformation rules have been created to
+mutate layout structures, elements arrangements,
+component colors, and text content. In a second step,
 some layouts and components are then interchanged across 
-the UIs, which leads to new compositions. An example 
+the UIs, which leads to new compositions. 
+It contains new
+UI compositions and code that are not likely to have
+exact matches in the pretraining data.
+An example 
 of this synthetic dataset is shown in Fig.~\ref{fig:dataleakagemutation}.
 As a result, 10 webpages are synthesized, which are 
 rendered into screenshots and paired with their 
@@ -785,19 +805,19 @@ that are created after the official knowledge cutoff
 dates of the MLLMs. These projects contain new samples 
 that are unlikely to have been seen during pretraining.
 However, web code from open repositories often 
-includes dynamically generated content, external dependencies 
+includes dynamically generated content, external dependencies, 
 and redundant content, which can bias this accessibility-focused 
 analysis negatively. Therefore, the collected code 
 is manually cleaned according to the previous 
 steps, described in Section~\ref{subchapter:Dataset}.
-Through this process, 10 new webpages are collected and
-their corresponding HTML/CSS and rendered UI screenshots 
+Through this process, 10 new webpages are collected, and
+their corresponding HTML/CSS together with the rendered UI screenshots 
 are added to the subset.\newline
 The two subsets are then combined into a single 
 synthetic dataset, which is used to compare the 
 models' performance against the benchmark dataset.\newline
 All experiments use the same naive prompting setup 
-and are conducted on GPT-4o and Gemini-2.0 flash. 
+and are conducted on GPT and Gemini.
 By comparing the code similarity and distribution of 
 accessibility violations across the 
 different datasets, it can be evaluated 
@@ -807,7 +827,7 @@ memorization or data leakage effects.
 \begin{figure}
   \centering
   \includegraphics[width=0.9\linewidth]{figures/dataleakage.png}
-  \caption{Original web page (left), a heuristically mutated version (middle) with altered colour, layout and text, and a cross-site hybrid combining sections from multiple pages (right). May get drawing inspiration from this paper: GUIGAN: Learning to Generate GUI Designs Using Generative Adversarial Networks}
+  \caption{Original web page (left), a heuristically mutated version (middle) with altered color, layout and text, and a cross-site hybrid composition combining sections from multiple pages (right).}
   \label{fig:dataleakagemutation} 
 \end{figure}
 
@@ -836,7 +856,7 @@ Lastly, both models show a modest increase in the
 IWIR, with GPT increasing from 47.10\% to 49.47\% 
 and Gemini from 47.70\% to 50.30\%. Manual inspection 
 reveals that the synthetic dataset, especially 
-the 10 mutated UIs, contain more composite sections, 
+the 10 mutated UIs, contains more composite sections, 
 which tend to trigger slightly more color 
 contrast violations, and therefore lead 
 to a higher IWIR.\newline
@@ -852,11 +872,11 @@ this thesis.
 
 \begin{center}
 \begin{tcolorbox}[colback=black!5!white,colframe=black!75!black,bottom=-0.05pt,top=-0.05pt]
-\textit{Finding:} The consistent performance of 
+\textit{\textbf{Finding:}} The consistent performance of 
 MLLMs across the benchmark and synthetic datasets 
 suggests that data leakage is minimal 
 and the models' behavior observed in earlier 
-experiments is not an artifact of memorization 
+experiments is not a result of memorization 
 or pretraining exposure.
 \end{tcolorbox}
 \end{center}

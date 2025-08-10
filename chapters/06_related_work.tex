@@ -1,36 +1,40 @@
 \chapter{Related Work}\label{chapter:RelatedWork}
 The related work in this chapter is structured into 
 two main areas: 1) studies in web accessibility and 
-2) studies MLLMs for UI code generation.
+2) studies of MLLMs for UI code generation.
 
 
 \section{Web Accessibility}
-Despite becoming more accessible over the past years,
+Despite improvements in web accessibility over the past years,
 the web still does not fully comply with the accessibility standards 
 set by the Web Content Accessibility Guidelines (WCAG)~\parencite{wcag21}.
-To support developers in the creation of accessible webpages, 
-numerous tools have been developed. For instance, 
-Axe-Core~\parencite{axe-core} is widely used in development 
-pipelines and browser extensions due to its rule-based approach.
-Lighthouse~\parencite{lighthouse} is another popular tool that 
+Numerous tools have been developed to tackle this issue and to 
+support developers in the creation of accessible web pages.
+For instance, 
+Axe-Core~\parencite{web:axecore} is widely used in development 
+pipelines and browser extensions because of its rule-based approach.
+Lighthouse~\parencite{web:lighthouse} is another popular tool that 
 is integrated into the Chromium-based browser and provides 
 a set of accessibility checks as part of its performance audits.
-Other tools, such as WAVE~\parencite{web:wave}, QualWeb~\parencite{web:qualweb} or
-Pa11y~\parencite{web:pa11y}, also offer similar functionalities and 
-integrations for developers.\newline 
+Other tools, such as WAVE~\parencite{web:wave}, QualWeb~\parencite{web:qualweb}, or
+Pa11y~\parencite{web:pa11y}, offer similar functionalities and 
+integrations for developers. 
+Their shared objective is to automatically detect common accessibility violations
+directly within the development process by providing visual reports 
+or highlighting problematic elements in the code.\newline 
 The potential of LLMs to improve or even automate accessibility evaluation 
 has been investigated in recent developments in AI-assisted 
 accessibility~\cite{cali2025prototype, duarte2025expanding,mowar2025codea11y}.
 For instance, \textcite{lopez2025turning} explored the use of 
-Chat-GPT and Github Copilot to detect accessibility issues, 
+Chat-GPT and GitHub Copilot to detect accessibility issues, 
 but their approach is limited to only 3 WCAG guidelines. 
 \textcite{he2025enhancing} proposed a framework, called 
 \textit{GenA11y}, which uses LLMs to extract page elements 
 relevant to 37 WCAG guidelines and create prompts to 
-detect possible violations. This prior research show 
+detect possible violations. This prior research shows 
 the potential of LLMs to bridge gaps in existing 
 accessibility tools, particularly in the area of 
-automated code generation. Even though, they have 
+automated code generation. Even though they have 
 marked an important step towards a more accessible web, they 
 still face limitations. For instance, they often only offer 
 a limited set of WCAG guidelines and do not cover 
@@ -47,20 +51,19 @@ been a topic of research in recent years.
 Early attempts, like \textit{REMAUI}~\parencite{nguyen2015reverse}, focused on
 code generation from screenshots through traditional image processing 
 techniques and heuristic rules. Later, more advanced approaches, such as 
-\textit{pix2code}~\parencite{beltramelli2017pix2code} integrated 
+\textit{pix2code}~\parencite{beltramelli2017pix2code}, integrated 
 computer vision (CV) and deep learning techniques. This 
 approach used a convolutional neural network (CNN) to extract
 features from a screenshot and a recurrent neural network (RNN) to 
-generate a frontend specific language.\newline
-
-Within the recent years, LLMs have improved their performance 
+generate a frontend-specific language.\newline
+Within recent years, LLMs have improved their performance 
 and capabilities in coding-related tasks. This has led to improved 
-code generation, completion and translation across different 
+code generation, completion, and translation across different 
 programming languages and software engineering domains. 
 A prominent example is Cursor~\cite{web:cursor}, which is 
 an LLM-based code editor that supports developers in daily 
 coding tasks. The combination of LLMs and programming environments 
-with tools like Cursor has demonstrated practical impact of LLMs 
+with tools like Cursor has demonstrated the practical impact of LLMs 
 in real-world development scenarios.\newline
 The advancements in vision capabilities of MLLMs have 
 enabled new possibilities for image-to-code generation.
@@ -68,11 +71,11 @@ A prominent example is \textit{DCGen}~\parencite{wan2024dcgen},
 a pipeline that segments screenshots into smaller visual segments 
 and then generates code snippets for each of them. Those 
 snippets are then reassembled to create the final code.
-Another example is \textit{DeclarUI}~\parencite{zhang2024declarui}, which
+Another example is \textit{DeclarUI}~\parencite{zhou2024declarui}, which
 improves the generation of UI code by using self-refinement 
 prompt engineering techniques. This approach lets the
-models first generate a code snippet, then critique it and 
-finally refine in an iterative process.\newline
+models first generate a code snippet, then critique it, and 
+finally refine it in an iterative process.\newline
 Despite this progress, the evaluation of accessibility of 
 MLLM-generated code remains an underexplored area. One of 
 a few studies by \textcite{aljedaani2024chatgpt} evaluated 
@@ -81,20 +84,17 @@ They conducted a study which involved web developers who
 used natural language descriptions to instruct ChatGPT to
 generate website code. Their study demonstrated that 
 84\% of generated sites contained accessibility violations.\newline 
-However, these studies have limitations, e.g. they relied on 
+However, these studies have limitations, e.g., they relied on 
 natural language descriptions, which limits the 
 applicability to real-world scenarios. Nowadays, visual 
 design artifacts, such as screenshots or design mockups, are 
 often the primary input. Therefore, this thesis 
-focuses UI screenshots as input for MLLMs, which allows 
-to evaluate the models' capabilities to work out 
+focuses on UI screenshots as input for MLLMs, which makes it 
+possible to evaluate the models' capabilities to work out 
 semantic structures and accessibility features. This study 
 is the first empirical study to systematically evaluate the 
 accessibility of MLLM-generated code from visual inputs, while 
-also taking the deversity of prompting techniques and model 
-types into account. The findings of this thesis fills 
+also taking the diversity of prompting techniques and model 
+types into account. The findings of this thesis fill
 a gap in the existing literature and might provide 
 actionable insights for future directions.
-
-
- 

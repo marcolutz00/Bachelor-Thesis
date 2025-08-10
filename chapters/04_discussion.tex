@@ -1,31 +1,31 @@
 \chapter{Discussion}\label{chapter:discussion}
 This section discusses the findings of this thesis 
-and explores possible implication for the future 
+and explores possible implications for the future 
 of accessibility-aware code generation.
 
 \section{Rethinking Accessibility as a First-Class Objective in Code Generation}
 Even though state-of-the-art MLLMs have shown impressive 
 capabilities in generating UI images into syntactically 
 valid HTML/CSS code, accessibility remains a significant 
-challenge. Even the most advanced and capable models, 
-GPT-4o and Gemini-2.0 flash, show only marginal awareness 
-of accessibility best practices when prompted natively. 
-These models often generate code which is similar to the 
-original UI image, yet consistently fails to meet 
+challenge. When prompted natively, even the most advanced models, 
+GPT-4o and Gemini-2.0 flash, show only little awareness 
+of accessibility best practices.
+These models often generate code that is similar to the 
+original UI image but consistently fails to meet 
 the accessibility standards set by the WCAG.
-This finding highlights the necessity of a paradigm 
+This highlights the necessity of a paradigm 
 shift in the approach of code generation. 
-In practice, the finding in this thesis 
+In practice, the conclusions of this thesis 
 often reveal that improving 
 the overall model quality is not sufficient to guarantee
 accessibility. 
 Functional and visual correctness of the generated code 
 can be orthogonal, or even in conflict with accessibility. 
-A layout that renders properly, might still not be navigationable 
+A layout that renders correctly, might still not be navigable 
 by keyboard users or usable for screen reader users.\newline 
 Therefore, these findings highlight the need to rethink 
 accessibility as a first-class objective in model
-development, prompting and evaluation. This shift 
+development, prompting, and evaluation. This shift 
 means more than just incorporating accessibility 
 checks as a post-processing step, but rather
 integrating it proactively into the design principles 
@@ -33,17 +33,20 @@ of the models. For instance, this would include that
 accessibility metrics should be reported alongside traditional 
 code quality metrics, especially in domains 
 where accessibility is crucial, such as web development.\newline 
-In order to get insights of developers working on 
+To get insights from developers working on 
 a daily basis with LLMs, a small survey and discussions~\cite{feng2025ux, lutz2025mot} 
 has been conducted in a couple of developer communities.
-The feedback from these discussions and some private 
-questioning also highlights how 
-LLMs change the picture: \textit{``LLMs can point 
+The feedback from these discussions and some private interviews 
+highlights how 
+LLMs are perceived in practice: \textit{``LLMs can point 
 you in the right direction, but they struggle with specific fixes''}.
-Others also mention that \textit{``over-reliance without fact-checking will 
+Others cautioned that \textit{``over-reliance without fact-checking will 
 ultimately worsen the experience for the user''}. This 
-feedback underlines the importance of explicit 
-optimisation for accessibility.
+feedback underlines an important point: while LLMs can 
+assist and accelerate the development process, they can not yet
+be trusted to ensure accessibility without human oversight. 
+This highlights the necessity for accessibility to be 
+an optimization goal in the entire code generation process.
 
 
 \section{From UI Description to Code: An Even Greater Accessibility Challenge}
@@ -58,23 +61,23 @@ and a greater risk of omission of accessibility features.\newline
 Unlike with screenshots, where the model can visually get 
 information about layout and stylistic details, text 
 descriptions may not mention accessibility requirements at all.
-The burden of including accessibility information falls entirely 
-on the developer, who must ensure that the description 
-contains all necessary details. However, this assumes that 
-the developer is aware of the accessibility requirements, 
+The responsibility of including accessibility information falls entirely 
+on the developer, who must make sure that the description 
+contains all necessary details. However, this includes the 
+assumption that the developer is aware of the accessibility requirements, 
 which is often not the case. For instance, a developer
 might write \textit{``Create a login form with username 
 and password fields''}, without mentioning that specific 
-labels, keyboard focus orders or ARIA roles are required.
-Additionally, accessibility-related information such as
-the choice of colors, alt-texts for images or keyboard 
-navigation details can be dependent on the context and 
-subjective to each individual developer. Understanding these 
+labels, keyboard focus orders, or ARIA roles are required.
+Additionally, accessibility-related information, such as
+the choice of colors, alt-texts for images, or keyboard 
+navigation details, can be dependent on the context and 
+subjective for each individual developer. Understanding these 
 details from language alone is a significant challenge for
-LLMs. For example, a model might not be capable to determine 
+LLMs. For example, a model might not be capable of determining
 which elements on a webpage should be reachable via keyboard
 or if the color contrast is sufficient for the user. \newline
 Therefore, the shift from image-based to description-based
 code generation poses even more challenges for accessibility and 
-demonstrated the need for explicit alignment and prompt design 
+demonstrates the need for explicit alignment and prompt design 
 to ensure that accessibility considerations are adequately addressed.

@@ -69,7 +69,7 @@ this thesis tries to close this gap by investigating the capabilities
 of MLLMs to generate accessible HTML/CSS code from visual web 
 UI inputs. 
 
-\subsection{Research Questions}
+\section{Research Questions}
 This thesis investigates the following research questions: 
 \newline\newline
 \textbf{RQ1: Do MLLMs generate accessible code from UI screenshots?}
@@ -174,6 +174,7 @@ true generalization. This analysis helps to reinforce findings
 of previous RQs and ensures that observed model behaviors reflect
 robust capabilities rather than overfitting to familiar data.\newline
 
+\noindent
 This thesis and its underlying empirical study demonstrate the potential and 
 limitations of current MLLMs in generating accessible UI code 
 from visual inputs. 
@@ -185,30 +186,41 @@ enhancing accessibility in the era of multimodal code generation.
 
 
 
-\subsection{Our Contributions - nochmal überarbeiten}
-In summary, this thesis makes the following contributions:\newline
-
-\textbf{Accessibility evaluation pipeline}
-The first large scale accessibility study and evaluation pipeline of LLM-based
-Image-to-Code generation is proposed. This pipeline combines visual and structural 
-fidelity with an automatic WCAG 2.1 conformity check.\newline
-
-\textbf{Realistic dataset}
-This study uses a realistic dataset that contains of 53 real-world webpage 
-examples which have been gathered from existing datasets and slightly mutated to
-minimize noise within the data. It covers a wide spectrum of layouts, content 
-areas and accessibility features. This dataset combines the screenshots 
-and HTML/CSS code of each webpage.\newline
-
-\textbf{Model and prompting comparison}
-This study compares multiple MLLMs and prompting strategies across diverse benchmarks and
-conducts a qualitative analysis to understand their impact on the accessibility of generated code.
-We release our experimental dataset, the code and the results on 
+\section{Contributions}
+In summary, this thesis makes the following contributions: \newline
+Note that all experimental datasets, the code, and the results are made available on 
 Github\footnote{\url{https://github.com/marcolutz00/Image2Code}}.\newline
 
-\textbf{In-depth quantitative and qualitative discussion}
-This study presents an in-depth discussion of our findings and proposes 
-future directions for improving MLLM-driven UI-workflows.
+\textbf{Accessibility Evaluation Pipeline:}
+The first large scale accessibility study and evaluation pipeline for LLM-based
+Image-to-Code generation is proposed. This pipeline combines visual and structural 
+fidelity with an automatic WCAG 2.1 conformity check. This comprehensive 
+approach can be reused and extended in the future.\newline
+
+\textbf{Realistic and Diverse Benchmark Dataset:}
+This study uses a realistic dataset that contains 53 real-world webpage 
+examples which have been collected from existing datasets and slightly mutated to
+minimize noise while preserving authenticity. It covers a wide spectrum of layouts, content 
+areas and accessibility features, combining the screenshots 
+and HTML/CSS code of each webpage. Additionally, a synthetic 
+dataset is created to mitigate the risk of potential 
+data leakage.\newline
+
+\textbf{Model and Prompting Comparison:}
+This study compares multiple MLLMs (both open-source and closed-source) across 7 prompting strategies, ranging 
+from naive prompting to more advanced techniques. This thesis does not 
+only quantify the results of the accessibility outcomes but also 
+qualitatively analyzes violation patterns, and model-specific
+strengths and weaknesses.
+\newline
+
+\textbf{Insights into Accessibility Limitations of MLLMs:}
+This thesis provides insights into recurring WCAG 2.1 violations across 
+different MLLMs and prompting strategies. It highlights systemic 
+blind spots, which are likely caused by training data biases, 
+and architectural constraints. Finally, a discussion and a
+possible guidance for researchers and developers will 
+wrap up this thesis.
 
 
 
