@@ -79,13 +79,7 @@ analysis of the violations observed in the generated output
 has been conducted. This process makes it possible to identify recurring 
 failure patterns and model limitations.
 
-\begin{figure}
-  \centering
-  % \includegraphics[width=0.8\linewidth]{images/common.png}
-  \includegraphics[width=0.9\linewidth]{figures/colorcontrastlandmarkexample.png}
-  \caption{Example of common accessibility violations.}
-  \label{fig:common} 
-\end{figure}
+
 
 \subsubsection{Most common violations}
 The detailed analysis reveals that two primary categories of accessibility
@@ -138,6 +132,13 @@ visible indicators, and second, the model’s limited exposure to
 the underlying meaning of UI elements, which is the type of 
 information that human designers often gain from accessibility training or work experience.
 
+\begin{figure}[htbp]
+  \centering
+  % \includegraphics[width=0.8\linewidth]{images/common.png}
+  \includegraphics[width=0.9\linewidth]{figures/colorcontrastlandmarkexample.png}
+  \caption{Example of common accessibility violations.}
+  \label{fig:common} 
+\end{figure}
 
 
 \begin{center}
@@ -153,6 +154,7 @@ a fundamental gap between visual accuracy and accessibility compliance.
 \begingroup
     \input{tables/violations.tex}
 \endgroup
+
 
 
 \section{RQ2: Do different MLLMs vary in their ability to generate accessible UI code?}
@@ -189,6 +191,7 @@ a closer analysis was conducted, and three key factors
 influencing the accessibility results were identified: 
 training data biases, instructional alignments, and 
 code generation capabilities.
+
 
 \subsubsection{Training Data Biases.} Even if the 
 internal training data of closed-source models is not publicly 
@@ -255,6 +258,7 @@ other MLLMs.
   \label{fig:generalcapabilities} 
 \end{figure}
 
+\newpage
 \subsubsection{Code Generation Capabilities.} Despite generating
 code with fewer violations, the open-source models Qwen and 
 Llava do not necessarily produce accessible webpages.
@@ -298,7 +302,7 @@ the established best practices of prior research~\cite{suh2025accessiblecode, xi
 that all prompting techniques are tested on GPT and Gemini by using the 
 same benchmark dataset as in previous RQs.\newline
 
-\begin{figure}
+\begin{figure}[htbp]
   \centering
   \includegraphics[width=0.85\linewidth]{figures/prompts_new_new.png}
   \caption{Overview of the advanced prompting strategies.}
@@ -309,13 +313,15 @@ same benchmark dataset as in previous RQs.\newline
 \noindent
 \textbf{Naive Prompting (Baseline)}: 
   Without explicit accessibility instructions, the model is
-  instructed to generate HTML/CSS code based on a screenshot of a webpage.\newline\newline
+  instructed to generate HTML/CSS code based on a screenshot of a webpage.\newline
+\noindent
 \textbf{Zero-Shot Prompting}: 
   The MLLMs are explicitly instructed to 
   generate accessible code by adding the instruction \textit{``comply with WCAG 2.1 standards''}, 
   as shown in Figure~\ref{fig:prompts_new}. 
   This explores the model's ability to generalize accessibility guidelines 
-  only based on an instruction and without examples.\newline\newline
+  only based on an instruction and without examples.\newline
+\noindent
 \textbf{Few-Shot Prompting}: 
   This strategy resembles the zero-shot prompt,
   but is enriched with several examples of WCAG 2.1 guidelines, combined 
@@ -328,14 +334,16 @@ same benchmark dataset as in previous RQs.\newline
   Eight examples, which differ in their content (e.g., image alt-text, 
   form labels, landmarks), are manually collected. They serve as an 
   additional context for the model to lead the models towards a more 
-  accessible code generation.\newline\newline
+  accessible code generation.\newline
+\noindent
 \textbf{Chain-of-Thought Prompting}: 
   As shown in Fig.~\ref{fig:prompts_new}, 
   the prompt encourages the model to think step-by-step. 
   The objective is to guide the model to describe its 
   considerations in a structured plan and finally output the code.
   This helps to show intermediate reasoning steps that possibly 
-  highlight accessibility-aware thinking.\newline\newline
+  highlight accessibility-aware thinking.\newline
+\noindent
 \textbf{Agentic Prompting}: 
   As prior research~\cite{wu2023autogen} has shown, the use of multi-agent 
   systems, where each agent has a specific task, can lead to better
@@ -352,7 +360,8 @@ same benchmark dataset as in previous RQs.\newline
   prevent cascading errors, this agent is instructed to solve batches 
   of violations, having a size of \(n = 5\). The goal of this strategy 
   is to evaluate whether decomposing the task into smaller and more 
-  manageable subtasks can improve the overall accessibility.\newline\newline
+  manageable subtasks can improve the overall accessibility.\newline
+\noindent
 \textbf{React Prompting}: 
   This strategy first instructs the model to generate HTML/CSS code, 
   according to the naive prompt, and then to critique its accessibility
@@ -363,7 +372,8 @@ same benchmark dataset as in previous RQs.\newline
   This multi-step approach evaluates the capability of the model to 
   self-correct and iteratively apply accessibility standards. 
   Each self-refinement loop runs for three iterations or until 
-  no further violations are detected.\newline\newline
+  no further violations are detected.\newline
+\noindent
 \textbf{Color Aware Prompting}: 
   As previous RQs have shown, color contrast violations are a common 
   issue in MLLM-generated code. Due to their mathematical nature, they
@@ -425,8 +435,9 @@ e.g, neither a \texttt{<label>} nor an \texttt{aria-label} attribute.
 This indicates that zero-shot prompting triggers awareness, it 
 does not necessarily resolve accessibility gaps and inconsistencies.
 
+\enlargethispage{2\baselineskip}
 
-\begin{figure}
+\begin{figure}[htbp]
   \centering
   \includegraphics[width=1\linewidth]{figures/zeroshot-example.png}
   \caption{Accessibility gap in zero-shot prompting: omission of an accessible label in the generated code compared to the correctly labeled ground truth.}
@@ -479,7 +490,7 @@ the few-shot examples, which might be replicated
 directly without a deeper semantic understanding of 
 how those elements contribute to accessibility.
 
-\begin{figure}
+\begin{figure}[htbp]
   \centering
   \includegraphics[width=1\linewidth]{figures/distinguishablecolorlinks.png}
   \caption{Example of a Distinguishable Links violation in Gemini’s few-shot output. The generated code does not include the underline and relies solely on a low-contrast orange (1.97:1), whereas the ground truth includes the underline to ensure link distinction despite insufficient contrast.}

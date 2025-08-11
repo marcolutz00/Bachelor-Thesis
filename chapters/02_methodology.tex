@@ -11,7 +11,7 @@ and post-processing.
 All evaluations are conducted following WCAG 2.1, the most widely 
 adopted standard supported by the tools at the time of this thesis.
 
-\begin{figure}
+\begin{figure}[htbp]
   \centering
   \includegraphics[width=0.5\linewidth]{figures/pipeline_modern.png}
   \caption{Overview of the evaluation pipeline, from data collection and prompt design to code generation, accessibility and similarity analysis, and post-processing.}
@@ -74,7 +74,11 @@ success criteria. For instance, issues such as \textit{``H43.*''}
 grouped under the category \textit{``Table Headers''}. Similarly,
 contrast-related violations were merged
 under \textit{``Color Contrast''}, according to WCAG 2.1 1.4.3 Contrast (Minimum), 
-regardless of variation in wording across tools.
+regardless of variation in wording across tools. \newline
+
+\begingroup
+    \input{tables/mapping.tex}
+\endgroup
 
 \subsection{Manual Verification}
 As mentioned, automated tools can not completely replace manual testing. 
@@ -89,11 +93,6 @@ violations that may be overlooked by automated tools
 ambiguous structures). This manual layer of analysis helps 
 to provide a more comprehensive and realistic assessment of
 the accessibility quality.
-
-\begingroup
-    \input{tables/mapping.tex}
-\endgroup
-\newpage
 
 \section{Dataset}
 \label{subchapter:Dataset}
@@ -125,7 +124,7 @@ diversity of real-world web content.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.3\textwidth]{figures/dataset_distribution.png}
+  \includegraphics[width=0.4\textwidth]{figures/dataset_distribution.png}
   \caption{Distribution of Topics in Dataset}
   \label{fig:dataset_distribution}
 \end{figure}
@@ -140,7 +139,6 @@ such as scripts and other dynamic elements; (3) deleting non-visible content (e.
 advertisement-related tags or hidden elements) that are irrelevant in 
 an image-to-code context and could otherwise possibly bias 
 the accessibility metrics.
-
 
 
 \section{Benchmarks}
@@ -169,7 +167,6 @@ where \(S_i \in \mathcal{S}\) denotes the \(i\)-th component score and \(w_i\) i
 Following the findings of previous work, we adopt a uniform weighting for all components in this study, setting \(w_i = \frac{1}{5}\) for all \(i\).
 The combination of those scores allows for a balanced view of the visual and 
 structural similarity of the input and output.
-
 
 \subsection{Accessibility Metrics}
 Apart from counting violations, accessibility is evaluated along two

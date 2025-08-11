@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.5)  10 AUG 2025 22:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.5)  11 AUG 2025 08:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1532,17 +1532,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--139
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--158
+Underfull \hbox (badness 10000) in paragraph at lines 140--157
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 162--176
+Underfull \hbox (badness 10000) in paragraph at lines 161--175
 
  []
 
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 192.
-(/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
+[3]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 191.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1550,26 +1551,26 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--193
+Underfull \hbox (badness 10000) in paragraph at lines 189--192
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 194--199
+Underfull \hbox (badness 10000) in paragraph at lines 193--198
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--208
+Underfull \hbox (badness 10000) in paragraph at lines 199--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--216
+Underfull \hbox (badness 10000) in paragraph at lines 208--215
 
  []
 
-[3]) (./chapters/02_methodology.tex [4]
+) (./chapters/02_methodology.tex [4]
 chapter 2.
 <figures/pipeline_modern.png, id=181, 1069.9975pt x 525.965pt>
 File: figures/pipeline_modern.png Graphic file (type png)
@@ -1579,107 +1580,82 @@ Package pdftex.def Info: figures/pipeline_modern.png  used on input line 16.
 LaTeX Font Info:    Trying to load font information for TS1+pplx on input line 35.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1pplx.fd
 File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
-) [5
+)
+Underfull \hbox (badness 10000) in paragraph at lines 50--78
+
+ []
+
+[5
 
 
  <./figures/pipeline_modern.png>] (./tables/mapping.tex) [6]
-<figures/dataset_distribution.png, id=206, 442.65375pt x 376.40625pt>
+<figures/dataset_distribution.png, id=208, 442.65375pt x 376.40625pt>
 File: figures/dataset_distribution.png Graphic file (type png)
 <use figures/dataset_distribution.png>
-Package pdftex.def Info: figures/dataset_distribution.png  used on input line 128.
-(pdftex.def)             Requested size: 136.57463pt x 116.13335pt.
- [7]
-Underfull \hbox (badness 10000) in paragraph at lines 175--180
+Package pdftex.def Info: figures/dataset_distribution.png  used on input line 127.
+(pdftex.def)             Requested size: 182.09488pt x 154.84447pt.
+ [7 <./figures/dataset_distribution.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 172--177
 
  []
 
-[8 <./figures/dataset_distribution.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
 
  []
 
-) (./chapters/03_study.tex [9]
+) (./chapters/03_study.tex [8]
 chapter 3.
-[10
+[9
 
 
 ]
-<figures/colorcontrastlandmarkexample.png, id=243, 3312.375pt x 927.465pt>
+<figures/colorcontrastlandmarkexample.png, id=241, 3312.375pt x 927.465pt>
 File: figures/colorcontrastlandmarkexample.png Graphic file (type png)
 <use figures/colorcontrastlandmarkexample.png>
-Package pdftex.def Info: figures/colorcontrastlandmarkexample.png  used on input line 85.
+Package pdftex.def Info: figures/colorcontrastlandmarkexample.png  used on input line 138.
 (pdftex.def)             Requested size: 409.71696pt x 114.71576pt.
- (./tables/violations.tex [11 <./figures/colorcontrastlandmarkexample.png>]) [12]
-<figures/generalcapability.png, id=266, 2413.015pt x 606.265pt>
+ (./tables/violations.tex [10 <./figures/colorcontrastlandmarkexample.png>]) [11]
+<figures/generalcapability.png, id=261, 2413.015pt x 606.265pt>
 File: figures/generalcapability.png Graphic file (type png)
 <use figures/generalcapability.png>
-Package pdftex.def Info: figures/generalcapability.png  used on input line 253.
+Package pdftex.def Info: figures/generalcapability.png  used on input line 256.
 (pdftex.def)             Requested size: 455.24417pt x 114.37747pt.
- [13 <./figures/generalcapability.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 290--300
+ [12 <./figures/generalcapability.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 294--304
 
  []
 
-<figures/prompts_new_new.png, id=280, 2252.415pt x 762.85pt>
+<figures/prompts_new_new.png, id=276, 2252.415pt x 762.85pt>
 File: figures/prompts_new_new.png Graphic file (type png)
 <use figures/prompts_new_new.png>
-Package pdftex.def Info: figures/prompts_new_new.png  used on input line 303.
+Package pdftex.def Info: figures/prompts_new_new.png  used on input line 307.
 (pdftex.def)             Requested size: 386.96031pt x 131.04468pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--383
+Underfull \hbox (badness 10000) in paragraph at lines 313--393
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 309--383
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 309--383
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 309--383
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 309--383
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 309--383
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 309--383
-
- []
-
-[14] [15 <./figures/prompts_new_new.png>] (./tables/violations_allprompts.tex)
-<figures/zeroshot-example.png, id=306, 1624.0675pt x 152.57pt>
+[13 <./figures/prompts_new_new.png>] [14] (./tables/violations_allprompts.tex)
+<figures/zeroshot-example.png, id=302, 1624.0675pt x 152.57pt>
 File: figures/zeroshot-example.png Graphic file (type png)
 <use figures/zeroshot-example.png>
-Package pdftex.def Info: figures/zeroshot-example.png  used on input line 431.
+Package pdftex.def Info: figures/zeroshot-example.png  used on input line 442.
 (pdftex.def)             Requested size: 455.24417pt x 42.76587pt.
- [16]
-<figures/distinguishablecolorlinks.png, id=316, 3205.9775pt x 586.19pt>
+ [15 <./figures/zeroshot-example.png>]
+<figures/distinguishablecolorlinks.png, id=313, 3205.9775pt x 586.19pt>
 File: figures/distinguishablecolorlinks.png Graphic file (type png)
 <use figures/distinguishablecolorlinks.png>
-Package pdftex.def Info: figures/distinguishablecolorlinks.png  used on input line 484.
+Package pdftex.def Info: figures/distinguishablecolorlinks.png  used on input line 495.
 (pdftex.def)             Requested size: 455.24417pt x 83.23776pt.
- [17 <./figures/zeroshot-example.png> <./figures/distinguishablecolorlinks.png>] [18]
-<figures/iterativecascadingissues.png, id=338, 2083.785pt x 887.315pt>
+ [16 <./figures/distinguishablecolorlinks.png>] [17]
+<figures/iterativecascadingissues.png, id=333, 2083.785pt x 887.315pt>
 File: figures/iterativecascadingissues.png Graphic file (type png)
 <use figures/iterativecascadingissues.png>
-Package pdftex.def Info: figures/iterativecascadingissues.png  used on input line 597.
+Package pdftex.def Info: figures/iterativecascadingissues.png  used on input line 608.
 (pdftex.def)             Requested size: 409.71696pt x 174.46767pt.
- [19 <./figures/iterativecascadingissues.png>]
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 685.
+ [18 <./figures/iterativecascadingissues.png>]
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 696.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
@@ -1687,26 +1663,26 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [20]
-<figures/cosinesim.png, id=356, 433.62pt x 650.43pt>
+ [19]
+<figures/cosinesim.png, id=352, 433.62pt x 650.43pt>
 File: figures/cosinesim.png Graphic file (type png)
 <use figures/cosinesim.png>
-Package pdftex.def Info: figures/cosinesim.png  used on input line 761.
+Package pdftex.def Info: figures/cosinesim.png  used on input line 772.
 (pdftex.def)             Requested size: 182.09488pt x 273.13904pt.
- [21]
-<figures/dataleakage.png, id=368, 2710.125pt x 955.57pt>
+ [20 <./figures/cosinesim.png>]
+<figures/dataleakage.png, id=362, 2710.125pt x 955.57pt>
 File: figures/dataleakage.png Graphic file (type png)
 <use figures/dataleakage.png>
-Package pdftex.def Info: figures/dataleakage.png  used on input line 829.
+Package pdftex.def Info: figures/dataleakage.png  used on input line 840.
 (pdftex.def)             Requested size: 409.71696pt x 144.45203pt.
- (./tables/dataleakage.tex) [22 <./figures/cosinesim.png>]) (./chapters/04_discussion.tex [23 <./figures/dataleakage.png>]
+ (./tables/dataleakage.tex) [21 <./figures/dataleakage.png>]) (./chapters/04_discussion.tex [22]
 chapter 4.
-) (./chapters/05_threats.tex [24
+[23
 
 
-] [25]
+]) (./chapters/05_threats.tex [24]
 chapter 5.
-) (./chapters/06_related_work.tex [26
+) (./chapters/06_related_work.tex [25
 
 
 ]
@@ -1716,12 +1692,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--44
 
  []
 
-) (./chapters/07_conclusion.tex [27
+) (./chapters/07_conclusion.tex [26
 
 
-] [28]
+] [27]
 chapter 7.
-) [29
+) [28
 
 
 ]
@@ -1730,7 +1706,7 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 93.
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
- [30
+ [29
 
 
 ]
@@ -1739,7 +1715,7 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 94.
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
- [31
+ [30
 
 
 ]
@@ -1747,12 +1723,12 @@ chapter without number
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplx/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-[32
+[31
 
 
-] [33]
+] [32]
 No complaints by nag.
-[34] (./main.aux)
+[33] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1760,18 +1736,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 58636 strings out of 478268
- 1346704 string characters out of 5846347
+ 58639 strings out of 478268
+ 1346736 string characters out of 5846347
  2321250 words of memory out of 5000000
  75105 multiletter control sequences out of 15000+600000
- 573037 words of font info for 544 fonts, out of 8000000 for 9000
+ 573247 words of font info for 547 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  110i,19n,106p,10683b,2678s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (41 pages, 2109714 bytes).
+Output written on main.pdf (40 pages, 2109086 bytes).
 PDF statistics:
- 766 PDF objects out of 1000 (max. 8388607)
- 668 compressed objects within 7 object streams
- 166 named destinations out of 1000 (max. 500000)
+ 762 PDF objects out of 1000 (max. 8388607)
+ 665 compressed objects within 7 object streams
+ 165 named destinations out of 1000 (max. 500000)
  158111 words of extra memory for PDF output out of 184870 (max. 10000000)
 
