@@ -21,9 +21,9 @@ adopted standard supported by the tools at the time of this thesis.
 \section{Automated Accessibility Evaluation}
 A wide range of automated accessibility checkers is available to 
 detect violations in web content.
-According to former studies, automated testing can detect up to $\sim$60\% 
+According to prior studies, automated testing can detect up to $\sim$60\% 
 of accessibility issues~\cite{deque2023accessibility}. This makes them 
-valuable for developers; however they can not completely replace manual testing or 
+valuable for developers; however they cannot completely replace manual testing or 
 expert review.
 Regardless, in practice, a combination of various tools can help minimize the 
 oversight of accessibility violations during the tests.\newline
@@ -52,7 +52,7 @@ All three tools were used to evaluate the generated HTML/CSS code.
 However, the outputs of each tool may differ. For example, 
 Pa11y flagged a missing label for a form field under WCAG
 2.1 Technique F68 (\textit{``This form field should be labelled in some way.''}), 
-while Axe-core
+while Axe-Core
 reported the same issue using its own rule IDs (e.g. \textit{``label''}) and includes 
 WCAG success-criterion
 tags such as \textit{``4.1.2 Name, Role, Value''} in the rule metadata, but it does not cite WCAG
@@ -70,7 +70,7 @@ missing alt-text). Next, similar rule definitions are combined
 into a single rule, leading to a consistent set of 40 
 accessibility categories, each mapped to one or more WCAG 
 success criteria. For instance, issues such as \textit{``H43.*''}
-(from pa11y) and \textit{``empty-table-header''} (from axe-core) were all
+(from pa11y) and \textit{``empty-table-header''} (from Axe-Core) were all
 grouped under the category \textit{``Table Headers''}. Similarly,
 contrast-related violations were merged
 under \textit{``Color Contrast''}, according to WCAG 2.1 1.4.3 Contrast (Minimum), 
@@ -81,7 +81,7 @@ regardless of variation in wording across tools. \newline
 \endgroup
 
 \subsection{Manual Verification}
-As mentioned, automated tools can not completely replace manual testing. 
+As mentioned, automated tools cannot completely replace manual testing. 
 Certain accessibility guidelines, especially those involving 
 contextual understanding or semantic meaning still require 
 human judgment. Therefore, we support the evaluation with a 
@@ -106,7 +106,7 @@ No publicly available dataset fulfills all requirements.
 
 \subsection{Construction}
 Two promising examples in the field of Image-to-Code are \textit{Design2Code}~\parencite{si2024design2code} 
-and \textit{Webcode2m}~\parencite{gui2024webcode2m}. 
+and \textit{WebCode2m}~\parencite{gui2024webcode2m}. 
 Both represent real-world web
 interfaces and have been widely adopted in prior work on code generation 
 and design understanding. Based on their
@@ -130,7 +130,7 @@ diversity of real-world web content.
 \end{figure}
 
 \subsection{Dataset Alignment}
-Because Design2Code and Webcode2m use different strategies to purify 
+Because Design2Code and WebCode2m use different strategies to purify 
 their data, the datasets are harmonized before the analysis. 
 The alignment contains (1) removing all external dependencies (e.g., images, audio, 
 video, and external links) and substituting neutral placeholders (e.g., \texttt{src="placeholder.jpg"}
@@ -162,7 +162,7 @@ These scores collectively form the set
 The final score is computed as a weighted sum of these components:
 \(
 \textit{CodeSim} = \sum_{i=1}^{5} w_i \cdot S_i,
-\),
+\)
 where \(S_i \in \mathcal{S}\) denotes the \(i\)-th component score and \(w_i\) is its corresponding weight.
 Following the findings of previous work, we adopt a uniform weighting for all components in this study, setting \(w_i = \frac{1}{5}\) for all \(i\).
 The combination of those scores allows for a balanced view of the visual and 

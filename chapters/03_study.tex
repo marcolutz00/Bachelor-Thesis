@@ -12,11 +12,11 @@ qualitative results.
 \subsection{Experiment Setup}
 To evaluate the baseline capability of MLLMs in generating accessible
 code from visual UI input, two widely-used MLLMs are 
-selected for this study: \textit{GPT-4o} and \textit{Gemini-2.0 Flash}.
+selected for this study: \textit{GPT-4o} and \textit{Gemini 2.0 Flash}.
 These models show strong performance in 
 multimodal tasks, and their support for image inputs makes
 them suitable candidates for this study.\newline
-As described in section~\ref{chapter:Methodology}, the models are 
+As described in Section~\ref{chapter:Methodology}, the models are 
 prompted with our dataset of UI screenshots and a corresponding 
 task description. The task description includes a naive (plain)
 prompt, which instructs the model to generate HTML/CSS code
@@ -64,7 +64,7 @@ achieving high layout and structural fidelity, both models produce
 a significant amount of accessibility issues. On average, GPT 
 generates 13.75 violations per UI, while Gemini produces 15.45, or 12.4\% 
 more. The IR is 12.22\% for GPT and 11.42\% for Gemini,
-while IWIR is 47.10\% and 47.70\%, respectively. Although Gemini yields
+while the IWIR is 47.10\% and 47.70\%, respectively. Although Gemini yields
 more total violations than GPT on average, an analysis of its DOM size 
 reveals that it generates larger code snippets, which explains
 its lower IR because the violations are distributed over a larger 
@@ -81,7 +81,7 @@ failure patterns and model limitations.
 
 
 
-\subsubsection{Most common violations}
+\subsubsection{Most Common Violations}
 The detailed analysis reveals that two primary categories of accessibility
 issues are dominant in the generated code across both models.
 The first category is insufficient color contrast. For instance,
@@ -162,7 +162,7 @@ a fundamental gap between visual accuracy and accessibility compliance.
 To understand how the choice of MLLMs influences the generation of 
 accessible HTML/CSS, the analysis is extended beyond the two 
 closed-sourced models used in RQ1. This included two additional 
-open-source models, \textit{Qwen2.5-VL-7B} and \textit{Llava-7B}, 
+open-source models, \textit{Qwen2.5-VL-7B} and \textit{LLaVA-7B}, 
 selected for their strong performance in multimodal tasks and 
 wide adoption in the research community. 
 The 7B parameter variations are used to capture substantial 
@@ -219,7 +219,7 @@ background color into account. Especially combined with
 light-colored layouts, this increases the risk of insufficient 
 color contrast. In contrast, GPT's color contrast violations are 
 caused by a set of 83 distinct colors. The majority of these 
-colors (71.47\%) are uniquely synthesized by the model and can not 
+colors (71.47\%) are uniquely synthesized by the model and cannot 
 be linked to any framework or library. Even if this 
 independent color selection does not prevent color contrast 
 violations, it tends to more closely match the visual 
@@ -328,7 +328,7 @@ same benchmark dataset as in previous RQs.\newline
   with a description of the task, an incorrect code snippet, and a 
   corresponding correct code snippet.
   The examples are sourced from the ARIA Authoring Practices Guide 
-  (by W3C)~\cite{web:w3c_examples} and Accessible Components by Gov.uk 
+  (by W3C)~\cite{web:w3c_examples} and Accessible Components by GOV.UK
   Design System~\cite{web:govuk}, which are known for their accessibility
   best practices.
   Eight examples, which differ in their content (e.g., image alt-text, 
@@ -337,7 +337,7 @@ same benchmark dataset as in previous RQs.\newline
   accessible code generation.\newline
 \noindent
 \textbf{Chain-of-Thought Prompting}: 
-  As shown in Fig.~\ref{fig:prompts_new}, 
+  As shown in Figure~\ref{fig:prompts_new}, 
   the prompt encourages the model to think step-by-step. 
   The objective is to guide the model to describe its 
   considerations in a structured plan and finally output the code.
@@ -354,7 +354,7 @@ same benchmark dataset as in previous RQs.\newline
   of snippets with violations, including their location in the code. The 
   second agent, the \textit{Identifier}, is responsible for classifying 
   the violations into their respective WCAG guidelines (e.g., 
-  color contrast, landmarks, etc.) and enrichich the each violation with 
+  color contrast, landmarks, etc.) and enriching each violation with 
   its severity level. The third agent, the \textit{Resolver}, is 
   instructed to resolve the list of violations in the code. In order to 
   prevent cascading errors, this agent is instructed to solve batches 
@@ -366,7 +366,7 @@ same benchmark dataset as in previous RQs.\newline
   This strategy first instructs the model to generate HTML/CSS code, 
   according to the naive prompt, and then to critique its accessibility
   violations detected by the automated tools. As shown in 
-  Fig.~\ref{fig:prompts_new}, the model is then asked to revise
+  Figure~\ref{fig:prompts_new}, the model is then asked to revise
   all violations found, prioritize those with the highest 
   severity, and output the revised code.
   This multi-step approach evaluates the capability of the model to 
@@ -374,7 +374,7 @@ same benchmark dataset as in previous RQs.\newline
   Each self-refinement loop runs for three iterations or until 
   no further violations are detected.\newline
 \noindent
-\textbf{Color Aware Prompting}: 
+\textbf{Color-Aware Prompting}: 
   As previous RQs have shown, color contrast violations are a common 
   issue in MLLM-generated code. Due to their mathematical nature, they
   can be difficult to solve. Therefore, this strategy extends the React 
@@ -385,10 +385,9 @@ same benchmark dataset as in previous RQs.\newline
   the model is then instructed to output the revised code. 
   By supplying the model with extracted color values and recommended 
   replacements that satisfy WCAG thresholds, the objective is to 
-  decrease color-contrast accessibility violations. The model is 
+  decrease color contrast violations. The model is 
   directed to generate code that maintains visual consistency while 
-  utilizing compliant color pairs by supplying this analysis and 
-  asking for a revision.
+  utilizing compliant color pairs supplied by this analysis.
   Note that the refinement loop runs only for one iteration.\newline
 
 
@@ -431,7 +430,7 @@ label, alt, role, aria-*) but misuse them and fail to apply them
 in a consistent manner. Figure~\ref{fig:zero-shot-example} demonstrates
 a representative example. While Gemini generates an e-mail 
 subscription form field, it fails to provide any accessible name,
-e.g, neither a \texttt{<label>} nor an \texttt{aria-label} attribute.
+e.g., neither a \texttt{<label>} nor an \texttt{aria-label} attribute.
 This indicates that zero-shot prompting triggers awareness, it 
 does not necessarily resolve accessibility gaps and inconsistencies.
 
@@ -453,10 +452,10 @@ high-quality, concrete examples, the model is capable of
 copying the underlying patterns and structure. For instance,
 when provided with an example of correct heading structures, such 
 as \texttt{<h1>}, GPT is able to incorporate this pattern into its
-generation, reducing the average number of heading violations 
-from 26 to 15. Furthermore, the examples presented 
+generation, reducing the average number of \emph{Headings} violations 
+from 26 to 15. Furthermore, the examples presented to the models
 reflect only important accessibility guidelines, which 
-significantly impact users and therefore also a have high 
+significantly impact users and therefore also have a high 
 severity. This is reflected in the IWIR, which drops from 
 47.10\% to 44.64\%.
 This demonstrates the importance of concrete 
@@ -474,11 +473,11 @@ styling, violating the WCAG requirements. This phenomenon
 may be directly linked to the color bias in the training data,
 which has been observed in RQ2. Gemini tends to use generic, default 
 colors for links, such as the primary blue from the Bootstrap framework,
-which used to be the primary color for links in this framework. 
+which used to be the default color for links in this framework. 
 Since it also fails to apply distinct stylings for the links, this
 combination leads to 
 a lack of distinction between links and the surrounding text.
-As Figure~\ref{fig:distinguishablecolorlinks} illustrates, 
+Figure~\ref{fig:distinguishablecolorlinks} illustrates an example, where 
 Gemini generates links with insufficient contrast and no distinct styling.
 \newline
 The second violation category 
@@ -724,7 +723,7 @@ Here, both models
 show a high degree of consistency and similarity across 
 each other and also across the individual runs.
 The lower part of the heatmap, representing the
-dataset entries from the dataset Webcode2m, displays 
+dataset entries from the dataset WebCode2m, displays 
 a more diverse pattern, with a mix of lighter and 
 darker cells. Nonetheless, even in this section, 
 the majority of the cells are light-colored, showing
@@ -738,7 +737,7 @@ a violation vector with many zeros or small values.
 Because the cosine similarity is highly sensitive to 
 small magnitudes, even another run with a comparable low
 number of violations can result in a lower cosine similarity score. 
-This effect is especially true for Webcode2m examples, where the models generally 
+This effect is especially true for WebCode2m examples, where the models generally 
 produce fewer violations. 
 2) The second reason for lower similarity scores stems 
 from possible recurring errors in the code generation. 
@@ -804,14 +803,14 @@ It contains new
 UI compositions and code that are not likely to have
 exact matches in the pretraining data.
 An example 
-of this synthetic dataset is shown in Fig.~\ref{fig:dataleakagemutation}.
+of this synthetic dataset is shown in Figure~\ref{fig:dataleakagemutation}.
 As a result, 10 webpages are synthesized, which are 
 rendered into screenshots and paired with their 
 corresponding mutated HTML/CSS code. 
 The second subset is created to complement 
 more up-to-date and real-world examples in the synthetic 
 dataset. This subset is curated by selecting two 
-open-source web projects~\cite{web:alphaonelabsedu, web:ecommerceferhan}
+open-source web projects~\cite{web:ecommerceferhan, web:alphaonelabsedu}
 that are created after the official knowledge cutoff 
 dates of the MLLMs. These projects contain new samples 
 that are unlikely to have been seen during pretraining.
@@ -857,7 +856,7 @@ achieves 87.12\% vs 88.01\%, respectively. This
 suggests that the models are not merely memorizing and 
 reproducing the training data, but rather are 
 able to generalize and synthesize new code. The 
-IR changes by 0.5-0.6 percentage points (GPT 
+IR changes by 0.5-0.7 percentage points (GPT 
 slightly lower, Gemini slightly higher), which is 
 considered within the variance of the models 
 shown in RQ3. This indicates that the number of 

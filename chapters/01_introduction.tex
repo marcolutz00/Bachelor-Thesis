@@ -28,7 +28,7 @@ legal requirement and a civil right in many jurisdictions, protected by laws suc
 with Disabilities Act (ADA) in the United States~\cite{web:ADA1990} and the more recent European Accessibility Act (EAA) in
 the EU~\cite{web:EAA2019}. Neglecting to follow these regulations could result in warnings,
 reputational damage and future sales loss.\newline
-At the same time, Large-Language Models (LLMs) have demonstrated significant     
+At the same time, Large Language Models (LLMs) have demonstrated significant     
 improvements in code-related tasks, including code generation, completion and 
 summarization. Current Tools, such as  GitHub Copilot~\cite{web:copilot}, 
 Cursor~\cite{web:cursor}, and Windsurf~\cite{web:windsurf},
@@ -40,7 +40,7 @@ artifact,
 MLLMs generate functional HTML/CSS code. This workflow closely aligns 
 with how developers and designers intuitively approach UI
 creation~\cite{chen2018ui,feng2022auto}. This image-to-code 
-principle significantly simplifies the front-end development process and 
+principle significantly simplifies the frontend development process and 
 reduces the need for manual markup creation. Based on this idea,
 an increasing number of research has explored techniques to improve 
 UI code generation~\cite{cali2025prototype,mowar2025codea11y,wu2025ui2code}, 
@@ -90,7 +90,7 @@ To investigate how different models and their sizes affect the
 accessibility performance, this question compares the performance of 
 a broader set of MLLMs, including both closed-source models
 (e.g., GPT-4o, Gemini 2.0 Flash) and open-source
-models (e.g., Qwen2.5-VL-7B, Llava-7B). Using the same benchmark dataset and 
+models (e.g., Qwen2.5-VL-7B, LLaVA-7B). Using the same benchmark dataset and 
 naive prompting approach, the numbers and types of accessibility 
 violations for each model are compared. This comparison helps to
 identify the differences in model behavior and analyze potential 
@@ -116,9 +116,9 @@ chain-of-thought prompting to encourage step-by-step reasoning, and
 agentic prompting where multiple agents split the tasks of
 detecting, classifying, and solving violations. 
 Lastly, two strategies use external automatic accessibility auditing tools to enhance their output:
-ReAct prompting, where the model iteratively critiques and improves 
+React prompting, where the model iteratively critiques and improves 
 its output based on violations found by accessibility tools, 
-and color-aware prompting, which uses ReAct to critique its violations but 
+and color-aware prompting, which uses React to critique its violations but 
 further instructs the model with color contrast information and proposes
 potential solutions. Those strategies are evaluated based on the same 
 benchmark dataset across the different MLLMs, and resulting violations 
