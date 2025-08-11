@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.5)  11 AUG 2025 12:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.5)  11 AUG 2025 12:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1508,65 +1508,20 @@ LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <10.95> not available
  [6] (./chapters/01_introduction.tex
 chapter 1.
 
-LaTeX Warning: Citation 'web:website' on page 1 undefined on input line 12.
+Underfull \hbox (badness 10000) in paragraph at lines 73--87
+
+ []
 
 
-LaTeX Warning: Citation 'wcag21' on page 1 undefined on input line 19.
+Underfull \hbox (badness 10000) in paragraph at lines 73--87
 
-
-LaTeX Warning: Citation 'web:disability' on page 1 undefined on input line 25.
-
-
-LaTeX Warning: Citation 'web:ADA1990' on page 1 undefined on input line 28.
-
-
-LaTeX Warning: Citation 'web:EAA2019' on page 1 undefined on input line 29.
-
-
-LaTeX Warning: Citation 'web:copilot' on page 1 undefined on input line 33.
-
-
-LaTeX Warning: Citation 'web:cursor' on page 1 undefined on input line 34.
-
-
-LaTeX Warning: Citation 'web:windsurf' on page 1 undefined on input line 34.
-
-
-LaTeX Warning: Citation 'chen2018ui' on page 1 undefined on input line 42.
-
-
-LaTeX Warning: Citation 'feng2022auto' on page 1 undefined on input line 42.
-
-
-LaTeX Warning: Citation 'cali2025prototype' on page 1 undefined on input line 46.
-
-
-LaTeX Warning: Citation 'mowar2025codea11y' on page 1 undefined on input line 46.
-
-
-LaTeX Warning: Citation 'wu2025ui2code' on page 1 undefined on input line 46.
-
-
-LaTeX Warning: Citation 'aljedaani2024chatgpt' on page 1 undefined on input line 60.
-
-
-LaTeX Warning: Citation 'suh2025accessiblecode' on page 1 undefined on input line 63.
+ []
 
 [1
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 73--87
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--87
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 88--107
 
  []
@@ -1617,33 +1572,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 208--215
 
 ) (./chapters/02_methodology.tex [4]
 chapter 2.
-<figures/pipeline_modern.png, id=150, 1069.9975pt x 525.965pt>
+<figures/pipeline_modern.png, id=183, 1069.9975pt x 525.965pt>
 File: figures/pipeline_modern.png Graphic file (type png)
 <use figures/pipeline_modern.png>
 Package pdftex.def Info: figures/pipeline_modern.png  used on input line 16.
 (pdftex.def)             Requested size: 227.62209pt x 111.88445pt.
-
-LaTeX Warning: Citation 'deque2023accessibility' on page 5 undefined on input line 25.
-
 LaTeX Font Info:    Trying to load font information for TS1+pplx on input line 35.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1pplx.fd
 File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
 )
-
-LaTeX Warning: Citation 'web:axecore' on page 5 undefined on input line 35.
-
-
-LaTeX Warning: Citation 'web:lighthouse' on page 5 undefined on input line 39.
-
-
-Overfull \hbox (1.47884pt too wide) in paragraph at lines 39--42
-[]\T1/pplx/b/n/10.95 (-20) Google Light-house Ac-ces-si-bil-ity (12.4.0) [[]]: \T1/pplx/m/n/10.95 (-20) em-bed-ded within Chromium-
- []
-
-
-LaTeX Warning: Citation 'web:pa11y' on page 5 undefined on input line 42.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 50--78
 
  []
@@ -1652,108 +1589,72 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--78
 
 
  <./figures/pipeline_modern.png>] (./tables/mapping.tex) [6]
-
-LaTeX Warning: Citation 'si2024design2code' on page 7 undefined on input line 108.
-
-
-LaTeX Warning: Citation 'gui2024webcode2m' on page 7 undefined on input line 109.
-
-<figures/dataset_distribution.png, id=168, 442.65375pt x 376.40625pt>
+<figures/dataset_distribution.png, id=210, 442.65375pt x 376.40625pt>
 File: figures/dataset_distribution.png Graphic file (type png)
 <use figures/dataset_distribution.png>
 Package pdftex.def Info: figures/dataset_distribution.png  used on input line 127.
 (pdftex.def)             Requested size: 182.09488pt x 154.84447pt.
-[7 <./figures/dataset_distribution.png>]
-
-LaTeX Warning: Citation 'si2024design2code' on page 8 undefined on input line 151.
-
-
+ [7 <./figures/dataset_distribution.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 172--177
 
  []
-
-
-LaTeX Warning: Citation 'alshayban2020accessibility' on page 8 undefined on input line 179.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 184--185
 
  []
 
-[8]) (./chapters/03_study.tex [9]
+) (./chapters/03_study.tex [8]
 chapter 3.
-[10
+[9
 
 
 ]
-<figures/colorcontrastlandmarkexample.png, id=200, 3312.375pt x 927.465pt>
+<figures/colorcontrastlandmarkexample.png, id=243, 3312.375pt x 927.465pt>
 File: figures/colorcontrastlandmarkexample.png Graphic file (type png)
 <use figures/colorcontrastlandmarkexample.png>
 Package pdftex.def Info: figures/colorcontrastlandmarkexample.png  used on input line 138.
 (pdftex.def)             Requested size: 409.71696pt x 114.71576pt.
- (./tables/violations.tex [11 <./figures/colorcontrastlandmarkexample.png>])
-
-LaTeX Warning: Citation 'web:bootstrapv4' on page 12 undefined on input line 210.
-
-[12]
-
-LaTeX Warning: Citation 'web:bemyeyes' on page 13 undefined on input line 244.
-
-<figures/generalcapability.png, id=219, 2413.015pt x 606.265pt>
+ (./tables/violations.tex [10 <./figures/colorcontrastlandmarkexample.png>]) [11]
+<figures/generalcapability.png, id=263, 2413.015pt x 606.265pt>
 File: figures/generalcapability.png Graphic file (type png)
 <use figures/generalcapability.png>
 Package pdftex.def Info: figures/generalcapability.png  used on input line 256.
 (pdftex.def)             Requested size: 455.24417pt x 114.37747pt.
-[13 <./figures/generalcapability.png>]
-
-LaTeX Warning: Citation 'suh2025accessiblecode' on page 14 undefined on input line 301.
-
-
-LaTeX Warning: Citation 'xiao2024interaction2code' on page 14 undefined on input line 301.
-
-
+ [12 <./figures/generalcapability.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 294--304
 
  []
 
-<figures/prompts_new_new.png, id=229, 2252.415pt x 764.8575pt>
+<figures/prompts_new_new.png, id=278, 2252.415pt x 764.8575pt>
 File: figures/prompts_new_new.png Graphic file (type png)
 <use figures/prompts_new_new.png>
 Package pdftex.def Info: figures/prompts_new_new.png  used on input line 307.
 (pdftex.def)             Requested size: 386.96031pt x 131.38953pt.
 
-LaTeX Warning: Citation 'web:w3c_examples' on page 14 undefined on input line 331.
-
-
-LaTeX Warning: Citation 'web:govuk' on page 14 undefined on input line 332.
-
-
-LaTeX Warning: Citation 'wu2023autogen' on page 14 undefined on input line 348.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 313--392
 
  []
 
-[14 <./figures/prompts_new_new.png>] [15] (./tables/violations_allprompts.tex)
-<figures/zeroshot-example.png, id=247, 1624.0675pt x 152.57pt>
+[13 <./figures/prompts_new_new.png>] [14] (./tables/violations_allprompts.tex)
+<figures/zeroshot-example.png, id=304, 1624.0675pt x 152.57pt>
 File: figures/zeroshot-example.png Graphic file (type png)
 <use figures/zeroshot-example.png>
 Package pdftex.def Info: figures/zeroshot-example.png  used on input line 441.
 (pdftex.def)             Requested size: 455.24417pt x 42.76587pt.
- [16 <./figures/zeroshot-example.png>]
-<figures/distinguishablecolorlinks.png, id=258, 3205.9775pt x 586.19pt>
+ [15 <./figures/zeroshot-example.png>]
+<figures/distinguishablecolorlinks.png, id=315, 3205.9775pt x 586.19pt>
 File: figures/distinguishablecolorlinks.png Graphic file (type png)
 <use figures/distinguishablecolorlinks.png>
 Package pdftex.def Info: figures/distinguishablecolorlinks.png  used on input line 494.
 (pdftex.def)             Requested size: 455.24417pt x 83.23776pt.
- [17 <./figures/distinguishablecolorlinks.png>] [18]
-<figures/iterativecascadingissues.png, id=280, 2083.785pt x 887.315pt>
+ [16 <./figures/distinguishablecolorlinks.png>] [17]
+<figures/iterativecascadingissues.png, id=335, 2083.785pt x 887.315pt>
 File: figures/iterativecascadingissues.png Graphic file (type png)
 <use figures/iterativecascadingissues.png>
 Package pdftex.def Info: figures/iterativecascadingissues.png  used on input line 607.
 (pdftex.def)             Requested size: 409.71696pt x 174.46767pt.
- [19 <./figures/iterativecascadingissues.png>]
+ [18 <./figures/iterativecascadingissues.png>]
 LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 695.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
@@ -1762,115 +1663,46 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [20]
-<figures/cosinesim.png, id=298, 433.62pt x 650.43pt>
+ [19]
+<figures/cosinesim.png, id=354, 433.62pt x 650.43pt>
 File: figures/cosinesim.png Graphic file (type png)
 <use figures/cosinesim.png>
 Package pdftex.def Info: figures/cosinesim.png  used on input line 771.
 (pdftex.def)             Requested size: 182.09488pt x 273.13904pt.
-
-
-LaTeX Warning: Citation 'web:ecommerceferhan' on page 21 undefined on input line 813.
-
-
-LaTeX Warning: Citation 'web:alphaonelabsedu' on page 21 undefined on input line 813.
-
-[21 <./figures/cosinesim.png>]
-<figures/dataleakage.png, id=306, 2710.125pt x 955.57pt>
+ [20 <./figures/cosinesim.png>]
+<figures/dataleakage.png, id=364, 2710.125pt x 955.57pt>
 File: figures/dataleakage.png Graphic file (type png)
 <use figures/dataleakage.png>
 Package pdftex.def Info: figures/dataleakage.png  used on input line 839.
 (pdftex.def)             Requested size: 409.71696pt x 144.45203pt.
- (./tables/dataleakage.tex) [22 <./figures/dataleakage.png>]) (./chapters/04_discussion.tex [23]
+ (./tables/dataleakage.tex) [21 <./figures/dataleakage.png>]) (./chapters/04_discussion.tex [22]
 chapter 4.
-
-LaTeX Warning: Citation 'feng2025ux' on page 24 undefined on input line 37.
-
-
-LaTeX Warning: Citation 'lutz2025mot' on page 24 undefined on input line 37.
-
-[24
+[23
 
 
-]) (./chapters/05_threats.tex [25]
+]) (./chapters/05_threats.tex [24]
 chapter 5.
-) (./chapters/06_related_work.tex [26
+) (./chapters/06_related_work.tex [25
 
 
 ]
 chapter 6.
 
-LaTeX Warning: Citation 'wcag21' on page 27 undefined on input line 10.
-
-
-LaTeX Warning: Citation 'web:axecore' on page 27 undefined on input line 14.
-
-
-LaTeX Warning: Citation 'web:lighthouse' on page 27 undefined on input line 16.
-
-
-LaTeX Warning: Citation 'web:wave' on page 27 undefined on input line 19.
-
-
-LaTeX Warning: Citation 'web:qualweb' on page 27 undefined on input line 19.
-
-
-LaTeX Warning: Citation 'web:pa11y' on page 27 undefined on input line 20.
-
-
-LaTeX Warning: Citation 'cali2025prototype' on page 27 undefined on input line 27.
-
-
-LaTeX Warning: Citation 'duarte2025expanding' on page 27 undefined on input line 27.
-
-
-LaTeX Warning: Citation 'mowar2025codea11y' on page 27 undefined on input line 27.
-
-
-LaTeX Warning: Citation 'lopez2025turning' on page 27 undefined on input line 28.
-
-
-LaTeX Warning: Citation 'he2025enhancing' on page 27 undefined on input line 31.
-
-
-Overfull \hbox (17.87987pt too wide) in paragraph at lines 8--44
-\T1/pplx/m/n/10.95 (-20) gated in re-cent de-vel-op-ments in AI-assisted ac-ces-si-bil-ity [[], [],
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 8--44
 
  []
 
-
-LaTeX Warning: Citation 'nguyen2015reverse' on page 27 undefined on input line 51.
-
-
-LaTeX Warning: Citation 'beltramelli2017pix2code' on page 27 undefined on input line 54.
+) (./chapters/07_conclusion.tex [26
 
 
-LaTeX Warning: Citation 'web:cursor' on page 27 undefined on input line 63.
-
-
-LaTeX Warning: Citation 'wan2024dcgen' on page 27 undefined on input line 70.
-
-
-LaTeX Warning: Citation 'zhou2024declarui' on page 27 undefined on input line 74.
-
-
-LaTeX Warning: Citation 'aljedaani2024chatgpt' on page 27 undefined on input line 81.
-
-) (./chapters/07_conclusion.tex [27
-
-
-] [28]
+] [27]
 chapter 7.
-) (./pages/declarationai.tex [29
+) (./pages/declarationai.tex [28
 
 
 ]
 chapter 8.
-) [30
+) [29
 
 
 ]
@@ -1879,7 +1711,7 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 95.
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
- [31
+ [30
 
 
 ]
@@ -1888,42 +1720,39 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 96.
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
+ [31
 
 
-LaTeX Warning: Empty bibliography on input line 98.
-
-No complaints by nag.
+]
+chapter without number
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/pplx/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
 [32
 
 
-] (./main.aux)
-
-LaTeX Warning: There were undefined references.
-
+] [33]
+No complaints by nag.
+[34] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 58404 strings out of 478268
- 1339102 string characters out of 5846347
- 2320308 words of memory out of 5000000
- 74951 multiletter control sequences out of 15000+600000
- 567539 words of font info for 514 fonts, out of 8000000 for 9000
+ 58665 strings out of 478268
+ 1347063 string characters out of 5846347
+ 2321414 words of memory out of 5000000
+ 75111 multiletter control sequences out of 15000+600000
+ 573965 words of font info for 558 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  110i,19n,106p,10683b,2678s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (39 pages, 2066966 bytes).
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (41 pages, 2111812 bytes).
 PDF statistics:
- 615 PDF objects out of 1000 (max. 8388607)
- 522 compressed objects within 6 object streams
- 124 named destinations out of 1000 (max. 500000)
- 154015 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 784 PDF objects out of 1000 (max. 8388607)
+ 686 compressed objects within 7 object streams
+ 168 named destinations out of 1000 (max. 500000)
+ 158119 words of extra memory for PDF output out of 184870 (max. 10000000)
 
